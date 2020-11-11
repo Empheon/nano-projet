@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Linux" BasePlatform="Linux" SchemaVersion="12" SoundbankVersion="135">
+	<RootPaths>
+		<ProjectRoot>D:\theo\projects\unity\Nano_Project\Nano_Project_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\theo\projects\unity\Nano_Project\Nano_Project_WwiseProject\.cache\Linux\</SourceFilesRoot>
+		<SoundBanksRoot>D:\theo\projects\unity\Nano_Project\Nano_Project_WwiseProject\GeneratedSoundBanks\Linux\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\theo\projects\unity\Nano_Project\Nano_Project_WwiseProject\GeneratedSoundBanks\Linux</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="2334219478">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
