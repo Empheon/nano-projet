@@ -18,6 +18,7 @@ public class UIActionsManager : MonoBehaviour
 
     // Temporary, to replace with hide/show when player is near
     public Button DisplayButton;
+    public Button FixButton;
 
     [SerializeField]
     private GameObject m_actionPanel;
@@ -25,9 +26,10 @@ public class UIActionsManager : MonoBehaviour
 
     private void Start()
     {
-        m_mecha.GetRoom(m_roomType).OnActionableStatusChanged += OnVisibilityChange;
+        m_mecha.GetRoom(m_roomType).OnActionableStatusChanged += OnActionsVisibilityChange;
+        m_mecha.GetRoom(m_roomType).OnFixableStatusChanged += OnFixVisibilityChange;
 
-        foreach(UIActionRoomItem item in GetComponentsInChildren<UIActionRoomItem>())
+        foreach (UIActionRoomItem item in GetComponentsInChildren<UIActionRoomItem>())
         {
             item.Init(m_mecha, m_actionType);
         }
@@ -35,9 +37,10 @@ public class UIActionsManager : MonoBehaviour
         // force hide
         m_isPanelVisible = false;
         m_actionPanel.transform.DOScale(0, 0);
+        FixButton.transform.DOScale(0, 0);
     }
 
-    private void OnVisibilityChange(bool b)
+    private void OnActionsVisibilityChange(bool b)
     {
         // TODO change this to a show/hide system when character is near
         if (b)
@@ -49,6 +52,20 @@ public class UIActionsManager : MonoBehaviour
             DisplayButton.enabled = false;
             DisplayButton.transform.DOScale(0, 0.2f);
             HidePanel();
+        }
+    }
+
+    private void OnFixVisibilityChange(bool b)
+    {
+        // TODO change this to a show/hide system when character is near
+        if (b)
+        {
+            FixButton.enabled = true;
+            FixButton.transform.DOScale(1, 0.2f);
+        } else
+        {
+            FixButton.enabled = false;
+            FixButton.transform.DOScale(0, 0.2f);
         }
     }
 
@@ -73,5 +90,10 @@ public class UIActionsManager : MonoBehaviour
     {
         m_isPanelVisible = false;
         m_actionPanel.transform.DOScale(0, 0.2f);
+    }
+
+    public void DoFixAction()
+    {
+        m_mecha.DoAction(MechaActionType.FIX, m_roomType);
     }
 }

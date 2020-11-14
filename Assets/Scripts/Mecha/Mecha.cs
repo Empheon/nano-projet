@@ -97,6 +97,9 @@ public class Mecha : MonoBehaviour
                 m_jammingRoom.DoAction(m_otherMecha.GetRoom(targetRoomType),
                                      () => m_otherMecha.ReceiveAction(MechaActionType.JAMMING, targetRoomType));
                 break;
+            case MechaActionType.FIX:
+                ReceiveAction(MechaActionType.FIX, targetRoomType);
+                break;
         }
     }
 

@@ -21,6 +21,7 @@ public abstract class Room : MonoBehaviour
     protected Light2D m_lightJam;
 
     public Action<bool> OnActionableStatusChanged;
+    public Action<bool> OnFixableStatusChanged;
     private bool m_prevActionStatus = true;
 
     public bool IsProtected { get; private set; }
@@ -69,6 +70,7 @@ public abstract class Room : MonoBehaviour
     protected virtual void OnAttackReceived()
     {
         IsDamaged = true;
+        OnFixableStatusChanged?.Invoke(true);
     }
 
     protected virtual void OnDefenceReceived()
@@ -89,6 +91,7 @@ public abstract class Room : MonoBehaviour
     protected virtual void OnFixReceived()
     {
         IsDamaged = false;
+        OnFixableStatusChanged?.Invoke(false);
         OnUnjammingReceived();
     }
 
