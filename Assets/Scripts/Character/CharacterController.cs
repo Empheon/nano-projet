@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 
 namespace Character
 {
+    [RequireComponent(typeof(Rigidbody2D))]
     public class CharacterController : MonoBehaviour
     {
         [Header("Ground detection")]
@@ -30,23 +31,20 @@ namespace Character
         private bool _keepInAir;
         private float _currentTimeJumping;
 
-        private bool IsGrounded
+        private bool IsGrounded()
         {
-            get
-            {
-                var hit = Physics2D.BoxCast(
-                    _transform.TransformPoint(groundCastOffset), 
-                    groundCastSize, 
-                    0,
-                    Vector2.zero,
-                    0,
-                    whatIsGround);
-                return hit;
-            }
+            var hit = Physics2D.BoxCast(
+                _transform.TransformPoint(groundCastOffset), 
+                groundCastSize, 
+                0,
+                Vector2.zero,
+                0,
+                whatIsGround);
+            return hit;
         }
 
-        // will be called by CharacterSpawner
-        public void OnSpawn(Gamepad gamepad)
+        // message is send by CharacterSpawner
+        private void OnSpawn(Gamepad gamepad)
         {
             _gamepad = gamepad;
         }
@@ -60,7 +58,7 @@ namespace Character
         private void Update()
         {
             // computed prop is better cached.
-            var grounded = IsGrounded;
+            var grounded = IsGrounded();
             
             // updating some jump properties
             if (_hasJumped && !grounded)
@@ -76,9 +74,6 @@ namespace Character
             // input for jump
             if (grounded && _gamepad.buttonSouth.isPressed) _shouldJump = true;
             _keepInAir = _hasJumped && _gamepad.buttonSouth.isPressed;
-            
-            // interaction
-            if (_gamepad.buttonWest.wasPressedThisFrame) Interact();
 
             _movement = _gamepad.leftStick.x.ReadValue() * moveSpeed;
         }
@@ -97,12 +92,6 @@ namespace Character
             {
                 _rb.AddForce(Vector2.down * (accDownForce * Time.fixedDeltaTime), ForceMode2D.Impulse);
             }
-        }
-        
-        private void Interact()
-        {
-            // need to keep track of interactable in range / closest interactable
-            // do something with object in range.
         }
 
         private void OnDrawGizmosSelected()

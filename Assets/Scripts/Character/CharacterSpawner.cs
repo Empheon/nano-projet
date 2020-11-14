@@ -16,8 +16,8 @@ namespace Character
                 var spawn = player.team == PlayerManager.Team.Left ? teamLeftSpawn : teamRightSpawn;
                 var character = Instantiate(characterPrefab, spawn.position, Quaternion.Euler(0, 0, 0));
 
-                var controller = character.GetComponent<CharacterController>();
-                controller.OnSpawn(player.gamepad);
+                // send gamepad to all object who might need it.
+                character.BroadcastMessage("OnSpawn", player.gamepad, SendMessageOptions.DontRequireReceiver);
             }
         }
     }
