@@ -5,9 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using DG.Tweening;
+using Global;
 
 public class DefenceRoom : Room
 {
+    private void Start()
+    {
+        m_actionCooldown = GameSettings.Instance.DefenceCooldown;
+    }
     protected override void OnAttackReceived()
     {
         base.OnAttackReceived();

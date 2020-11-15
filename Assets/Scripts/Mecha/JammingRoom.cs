@@ -5,9 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using DG.Tweening;
+using Global;
 
 public class JammingRoom : Room
 {
+    private void Start()
+    {
+        m_actionCooldown = GameSettings.Instance.JammingCooldown;
+    }
     protected override void OnAttackReceived()
     {
         base.OnAttackReceived();

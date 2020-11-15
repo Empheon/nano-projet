@@ -5,13 +5,25 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-public class GameSettings : ScriptableObject
+namespace Global
 {
-    [Header("Settings")]
+    public class GameSettings : MonoBehaviour
+    {
+        public static GameSettings Instance;
 
-    public float AttackCooldown;
+        private void Start()
+        {
+            Instance = this;
+        }
 
-    public float DefenceCooldown;
+        [Header("Settings")]
 
-    public float JammingCooldown;
+        public float AttackCooldown;
+
+        public float DefenceCooldown;
+
+        public float JammingCooldown;
+
+        public float JammingDuration;
+    }
 }
