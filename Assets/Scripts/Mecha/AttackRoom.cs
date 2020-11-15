@@ -9,7 +9,7 @@ using Global;
 
 public class AttackRoom : Room
 {
-    private void Start()
+    protected void Start()
     {
         m_actionCooldown = GameSettings.Instance.AttackCooldown;
     }
@@ -50,6 +50,16 @@ public class AttackRoom : Room
         m_lightJam.color = Color.white;
     }
 
+    protected override void OnLoadReceived()
+    {
+        base.OnLoadReceived();
+    }
+
+    protected override void OnUnLoadReceived()
+    {
+        base.OnUnLoadReceived();
+    }
+
     protected override void DoActionAux(Room room, Action callback)
     {
         // TODO: Do animation
@@ -60,5 +70,10 @@ public class AttackRoom : Room
         seq.Append(room.transform.DOScale(1f, 0.5f));
 
         seq.OnComplete(() => callback());
+    }
+
+    public override bool CanDoAction()
+    {
+        return base.CanDoAction() && IsLoaded;
     }
 }

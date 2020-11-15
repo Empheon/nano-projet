@@ -1,6 +1,6 @@
 ﻿
 public enum MechaActionType
 {
-    ATTACK, DEFENCE, JAMMING, FIX, UNJAM
+    ATTACK, DEFENCE, JAMMING, FIX, UNJAM, LOAD
 }
 

@@ -57,7 +57,8 @@ public class Mecha : MonoBehaviour
                                      () => m_otherMecha.ReceiveAction(MechaActionType.JAMMING, targetRoomType));
                 break;
             case MechaActionType.FIX:
-                ReceiveAction(MechaActionType.FIX, targetRoomType);
+            case MechaActionType.LOAD:
+                ReceiveAction(mechaActionType, targetRoomType);
                 break;
         }
     }

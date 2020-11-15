@@ -22,11 +22,13 @@ public abstract class Room : MonoBehaviour
 
     public Action<bool> OnActionableStatusChanged;
     public Action<bool> OnFixableStatusChanged;
+    public Action<bool> OnLoadableStatusChanged;
     private bool m_prevActionStatus = true;
 
     public bool IsProtected { get; private set; }
     public bool IsJammed { get; private set; }
     public bool IsDamaged { get; private set; }
+    public bool IsLoaded { get; private set; }
 
     protected float m_actionCooldown;
     protected float m_timeAtLastAction;
@@ -67,6 +69,9 @@ public abstract class Room : MonoBehaviour
             case MechaActionType.UNJAM:
                 OnUnjammingReceived();
                 break;
+            case MechaActionType.LOAD:
+                OnLoadReceived();
+                break;
         }
     }
 
@@ -103,10 +108,23 @@ public abstract class Room : MonoBehaviour
         IsJammed = false;
     }
 
+    protected virtual void OnLoadReceived()
+    {
+        IsLoaded = true;
+        OnLoadableStatusChanged?.Invoke(false);
+    }
+
+    protected virtual void OnUnLoadReceived()
+    {
+        IsLoaded = false;
+        OnLoadableStatusChanged?.Invoke(true);
+    }
+
     public void DoAction(Room room, Action callback)
     {
         if (CanDoAction())
         {
+            OnUnLoadReceived();
             DoActionAux(room, callback);
             m_timeAtLastAction = Time.time;
         }

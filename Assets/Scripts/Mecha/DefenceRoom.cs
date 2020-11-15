@@ -9,7 +9,7 @@ using Global;
 
 public class DefenceRoom : Room
 {
-    private void Start()
+    protected void Start()
     {
         m_actionCooldown = GameSettings.Instance.DefenceCooldown;
     }

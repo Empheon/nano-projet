@@ -19,6 +19,7 @@ public class UIActionsManager : MonoBehaviour
     // Temporary, to replace with hide/show when player is near
     public Button DisplayButton;
     public Button FixButton;
+    public Button LoadButton;
 
     [SerializeField]
     private GameObject m_actionPanel;
@@ -28,6 +29,7 @@ public class UIActionsManager : MonoBehaviour
     {
         m_mecha.GetRoom(m_roomType).OnActionableStatusChanged += OnActionsVisibilityChange;
         m_mecha.GetRoom(m_roomType).OnFixableStatusChanged += OnFixVisibilityChange;
+        m_mecha.GetRoom(m_roomType).OnLoadableStatusChanged += OnLoadVisibilityChange;
 
         foreach (UIActionRoomItem item in GetComponentsInChildren<UIActionRoomItem>())
         {
@@ -38,6 +40,13 @@ public class UIActionsManager : MonoBehaviour
         m_isPanelVisible = false;
         m_actionPanel.transform.DOScale(0, 0);
         FixButton.transform.DOScale(0, 0);
+
+        // force show
+        if (LoadButton != null && LoadButton.gameObject.activeSelf)
+        {
+            LoadButton.enabled = true;
+            LoadButton.transform.DOScale(1, 0);
+        }
     }
 
     private void OnActionsVisibilityChange(bool b)
@@ -69,6 +78,26 @@ public class UIActionsManager : MonoBehaviour
         }
     }
 
+    private void OnLoadVisibilityChange(bool b)
+    {
+        // Loading is optional
+        if (LoadButton == null || !LoadButton.gameObject.activeSelf)
+        {
+            return;
+        }
+
+        // TODO change this to a show/hide system when character is near
+        if (b)
+        {
+            LoadButton.enabled = true;
+            LoadButton.transform.DOScale(1, 0.2f);
+        } else
+        {
+            LoadButton.enabled = false;
+            LoadButton.transform.DOScale(0, 0.2f);
+        }
+    }
+
     public void SwitchPanelVisibility()
     {
         if (m_isPanelVisible)
@@ -95,5 +124,10 @@ public class UIActionsManager : MonoBehaviour
     public void DoFixAction()
     {
         m_mecha.DoAction(MechaActionType.FIX, m_roomType);
+    }
+
+    public void DoLoadAction()
+    {
+        m_mecha.DoAction(MechaActionType.LOAD, m_roomType);
     }
 }
