@@ -115,6 +115,14 @@ public class Mecha : MonoBehaviour
                 break;
             case RoomType.JAMMING:
                 m_jammingRoom.OnReceive(actionType);
+
+                // Unjam other mecha's rooms if our jamming room is out of service
+                if (m_jammingRoom.IsDamaged || m_jammingRoom.IsJammed)
+                {
+                    m_otherMecha.ReceiveAction(MechaActionType.UNJAM, RoomType.ATTACK);
+                    m_otherMecha.ReceiveAction(MechaActionType.UNJAM, RoomType.DEFENCE);
+                    m_otherMecha.ReceiveAction(MechaActionType.UNJAM, RoomType.JAMMING);
+                }
                 break;
         }
     }

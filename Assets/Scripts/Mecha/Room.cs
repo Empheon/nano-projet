@@ -64,6 +64,9 @@ public abstract class Room : MonoBehaviour
             case MechaActionType.FIX:
                 OnFixReceived();
                 break;
+            case MechaActionType.UNJAM:
+                OnUnjammingReceived();
+                break;
         }
     }
 
