@@ -9,7 +9,10 @@ namespace Ladder
         {
             if (character.TryGetComponent(out CharacterLadderController ladderController))
             {
-                ladderController.StartClimbing(transform.position);
+                // use character Y to make it not start from bottom each time
+                var startPoint = new Vector2(transform.position.x, character.transform.position.y);
+                
+                ladderController.StartClimbing(startPoint);
             }
         }
     }
