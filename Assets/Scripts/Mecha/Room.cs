@@ -8,7 +8,7 @@ using UnityEngine.Experimental.Rendering.Universal;
 
 public enum RoomType
 {
-    ATTACK, DEFENCE, JAMMING
+    ATTACK, DEFENCE, JAMMING, AMMUNITION, ENERGY, FIX
 }
 
 public abstract class Room : MonoBehaviour

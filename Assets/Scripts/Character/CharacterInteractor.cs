@@ -67,7 +67,13 @@ namespace Character
 
             if (_gamepad.buttonWest.wasPressedThisFrame && _lastClosestInteractable != null)
             {
-                _lastClosestInteractable.BroadcastMessage("OnCharacterInteract", gameObject);
+                if (_gamepad.buttonWest.wasPressedThisFrame)
+                {
+                    _lastClosestInteractable.BroadcastMessage("OnCharacterInteractPositive", gameObject);
+                } else if (_gamepad.buttonEast.wasPressedThisFrame)
+                {
+                    _lastClosestInteractable.BroadcastMessage("OnCharacterInteractNegative", gameObject);
+                }
             }
         }
 
