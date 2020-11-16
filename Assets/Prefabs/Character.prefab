@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6386115114080336265}
   - component: {fileID: 5198597167476344919}
   - component: {fileID: 7294214434191426977}
+  - component: {fileID: 7954831191108606519}
   m_Layer: 0
   m_Name: Character
   m_TagString: Character
@@ -105,7 +106,7 @@ MonoBehaviour:
   accDownForce: 300
   maxKeepInAirTime: 0.6
   stickCrouchThreshold: -0.5
-  ignoreCollisionTime: 1.5
+  ignoreCollisionTime: 0.8
   oneWayPlatformTag: One-way Platform
   moveSpeed: 7
 --- !u!58 &5198597167476344919
@@ -137,6 +138,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableTag: Interactable
+--- !u!114 &7954831191108606519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4621001505216861089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51359c3a247f42dbabea6da3d6560e4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storedResourcePosOffset: {x: 0.5, y: 0.5}
 --- !u!1 &5980463635366524008
 GameObject:
   m_ObjectHideFlags: 0
