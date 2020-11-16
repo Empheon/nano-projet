@@ -44,8 +44,7 @@ namespace Global
 
         private IEnumerator FetchControllers()
         {
-            Players = Gamepad.all.Select((gamePad, index) => new Player
-            {
+            Players = Gamepad.all.Select((gamePad, index) => new Player {
                 gamepad = gamePad,
                 team = index % 2 == 0 ? Team.Left : Team.Right,
             }).ToArray();
