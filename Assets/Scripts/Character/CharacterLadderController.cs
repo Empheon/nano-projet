@@ -19,7 +19,6 @@ namespace Character
         [SerializeField] [Range(0f, 1f)] private float ejectUpPower = 0.5f; 
         
         private Gamepad _gamepad;
-        private Transform _transform;
         private Rigidbody2D _rb;
         private CharacterController _controller;
         private CharacterInteractor _interactor;
@@ -33,7 +32,6 @@ namespace Character
 
         private void Awake()
         {
-            _transform = GetComponent<Transform>();
             _rb = GetComponent<Rigidbody2D>();
             
             _controller = GetComponent<CharacterController>();

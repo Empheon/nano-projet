@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Interactable
   - Character
+  - One-way Platform
   layers:
   - Default
   - TransparentFX
