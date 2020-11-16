@@ -70,6 +70,13 @@ public class Mecha : MonoBehaviour
             m_roomJammedTimes[roomType] = Time.time;
         }
 
+        if (actionType == MechaActionType.DEFENCE)
+        {
+            ReceiveAction(MechaActionType.BREAK_DEFENCE, RoomType.ATTACK);
+            ReceiveAction(MechaActionType.BREAK_DEFENCE, RoomType.DEFENCE);
+            ReceiveAction(MechaActionType.BREAK_DEFENCE, RoomType.JAMMING);
+        }
+
         switch (roomType)
         {
             case RoomType.ATTACK:

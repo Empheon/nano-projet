@@ -72,6 +72,9 @@ public abstract class Room : MonoBehaviour
             case MechaActionType.LOAD:
                 OnLoadReceived();
                 break;
+            case MechaActionType.BREAK_DEFENCE:
+                OnBreakDefenceReceived();
+                break;
         }
     }
 

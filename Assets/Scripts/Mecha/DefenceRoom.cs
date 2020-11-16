@@ -60,4 +60,9 @@ public class DefenceRoom : Room
 
         seq.OnComplete(() => callback());
     }
+
+    public override bool CanDoAction()
+    {
+        return base.CanDoAction() && IsLoaded;
+    }
 }
