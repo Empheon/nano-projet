@@ -11,6 +11,7 @@ namespace Character
         [SerializeField] private LayerMask whatIsGround;
         [SerializeField] private Vector2 groundCastOffset = Vector2.zero;
         [SerializeField] private Vector2 groundCastSize = Vector2.one;
+        [SerializeField] private float timeBeforeGroundCheck = 0.1f;
         
         [Header("Jump")]
         [SerializeField] private float jumpForce = 20f;
@@ -57,9 +58,12 @@ namespace Character
 
         private void Update()
         {
-            // computed prop is better cached.
-            var grounded = IsGrounded();
-            
+            bool grounded;
+
+            // skip check for the beginning of the jump
+            if (_hasJumped && _currentTimeJumping < timeBeforeGroundCheck) grounded = false;
+            else grounded = IsGrounded();
+
             // updating some jump properties
             if (_hasJumped && !grounded)
             {
@@ -72,9 +76,10 @@ namespace Character
             }
             
             // input for jump
-            if (grounded && _gamepad.buttonSouth.isPressed) _shouldJump = true;
-            _keepInAir = _hasJumped && _gamepad.buttonSouth.isPressed;
+            if (grounded && _gamepad.buttonSouth.wasPressedThisFrame) _shouldJump = true;
+            _keepInAir = _gamepad.buttonSouth.isPressed;
 
+            // input for movement
             _movement = _gamepad.leftStick.x.ReadValue() * moveSpeed;
         }
 
@@ -88,7 +93,9 @@ namespace Character
                 _shouldJump = false;
                 _hasJumped = true;
             }
-            else if (!_keepInAir || _currentTimeJumping > maxKeepInAirTime)
+            
+            // accelerate falling when not maintaining jump action (or after max time)
+            if (!_keepInAir || _currentTimeJumping > maxKeepInAirTime)
             {
                 _rb.AddForce(Vector2.down * (accDownForce * Time.fixedDeltaTime), ForceMode2D.Impulse);
             }
