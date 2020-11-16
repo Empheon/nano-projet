@@ -45,5 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AttackCooldown: 5
   DefenceCooldown: 0
-  JammingCooldown: 5
+  JammingCooldown: 8
   JammingDuration: 5

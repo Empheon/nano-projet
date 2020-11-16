@@ -9,6 +9,8 @@ using Global;
 
 public class JammingRoom : Room
 {
+    private bool IsJamming;
+
     protected void Start()
     {
         m_actionCooldown = GameSettings.Instance.JammingCooldown;
@@ -40,17 +42,34 @@ public class JammingRoom : Room
     protected override void OnFixReceived()
     {
         base.OnFixReceived();
+        ResetJammingStatus();
         m_lightAtt.color = Color.white;
     }
 
     protected override void OnUnjammingReceived()
     {
         base.OnUnjammingReceived();
+        ResetJammingStatus();
         m_lightJam.color = Color.white;
+    }
+
+    // Called when jamming cooldown is done
+    public void StopJammingAction()
+    {
+        // TODO: Do animation
+
+        ResetJammingStatus();
     }
 
     protected override void DoActionAux(Room room, Action callback)
     {
+        if (IsJamming)
+        {
+            // Should not happen
+            Debug.Log("Tried to jam when not possible");
+            return;
+        }
+
         // TODO: Do animation
         Sequence seq = DOTween.Sequence();
         seq.Append(gameObject.transform.DOScale(1.5f, 0.5f));
@@ -59,5 +78,18 @@ public class JammingRoom : Room
         seq.Append(room.transform.DOScale(1f, 0.5f));
 
         seq.OnComplete(() => callback());
+
+        IsJamming = true;
+    }
+
+    private void ResetJammingStatus()
+    {
+        IsJamming = false;
+        m_timeAtLastAction = Time.time;
+    }
+
+    public override bool CanDoAction()
+    {
+        return base.CanDoAction() && !IsJamming;
     }
 }

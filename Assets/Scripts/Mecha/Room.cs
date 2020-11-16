@@ -31,7 +31,7 @@ public abstract class Room : MonoBehaviour
     public bool IsLoaded { get; private set; }
 
     protected float m_actionCooldown;
-    protected float m_timeAtLastAction;
+    protected float m_timeAtLastAction = float.NegativeInfinity;
 
 
     private void Update()
@@ -58,21 +58,45 @@ public abstract class Room : MonoBehaviour
                 OnAttackReceived();
                 break;
             case MechaActionType.DEFENCE:
+                if (IsProtected)
+                {
+                    return;
+                }
                 OnDefenceReceived();
                 break;
             case MechaActionType.JAMMING:
+                if (IsJammed)
+                {
+                    return;
+                }
                 OnJammingReceived();
                 break;
             case MechaActionType.FIX:
+                if (!IsDamaged)
+                {
+                    return;
+                }
                 OnFixReceived();
                 break;
             case MechaActionType.UNJAM:
+                if (!IsJammed)
+                {
+                    return;
+                }
                 OnUnjammingReceived();
                 break;
             case MechaActionType.LOAD:
+                if (IsLoaded)
+                {
+                    return;
+                }
                 OnLoadReceived();
                 break;
             case MechaActionType.BREAK_DEFENCE:
+                if (!IsProtected)
+                {
+                    return;
+                }
                 OnBreakDefenceReceived();
                 break;
         }

@@ -36,6 +36,7 @@ public class Mecha : MonoBehaviour
             if (room.IsJammed && now - kv.Value > GameSettings.Instance.JammingDuration)
             {
                 ReceiveAction(MechaActionType.UNJAM, kv.Key);
+                ((JammingRoom)m_otherMecha.GetRoom(RoomType.JAMMING)).StopJammingAction();
             }
         }
     }
@@ -70,6 +71,7 @@ public class Mecha : MonoBehaviour
             m_roomJammedTimes[roomType] = Time.time;
         }
 
+        // Prevent from defending several rooms at the same time
         if (actionType == MechaActionType.DEFENCE)
         {
             ReceiveAction(MechaActionType.BREAK_DEFENCE, RoomType.ATTACK);
