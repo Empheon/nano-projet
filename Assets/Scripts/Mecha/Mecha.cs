@@ -138,7 +138,33 @@ public class Mecha : MonoBehaviour
                 return m_defenceRoom;
             case RoomType.JAMMING:
                 return m_jammingRoom;
+            case RoomType.FIX:
+                return m_fixRoom;
+            case RoomType.AMMUNITION:
+                return m_munRoom;
+            case RoomType.ENERGY:
+                return m_eneRoom;
         }
         return null;
     }
-}
+
+    public List<Room> GetFixableRooms()
+    {
+        List<Room> fixableRooms = new List<Room>(3);
+
+        if (m_attackRoom.IsDamaged)
+        {
+            fixableRooms.Add(m_attackRoom);
+        }
+        if (m_defenceRoom.IsDamaged)
+        {
+            fixableRooms.Add(m_defenceRoom);
+        }
+        if (m_jammingRoom.IsDamaged)
+        {
+            fixableRooms.Add(m_jammingRoom);
+        }
+
+        return fixableRooms;
+    }
+} 

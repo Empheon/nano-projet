@@ -42,14 +42,18 @@ public class JammingRoom : Room
     protected override void OnFixReceived()
     {
         base.OnFixReceived();
-        ResetJammingStatus();
+        //ResetJammingStatus();
+        IsJamming = false;
+        m_timeAtLastAction = float.NegativeInfinity;
         m_lightAtt.color = Color.white;
     }
 
     protected override void OnUnjammingReceived()
     {
         base.OnUnjammingReceived();
-        ResetJammingStatus();
+        //ResetJammingStatus();
+        IsJamming = false;
+        m_timeAtLastAction = float.NegativeInfinity;
         m_lightJam.color = Color.white;
     }
 

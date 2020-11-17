@@ -7,8 +7,7 @@ using UnityEngine;
 
 public class UIActionRoomItem : MonoBehaviour
 {
-    [SerializeField]
-    private RoomType m_targetRoomType;
+    public RoomType TargetRoomType;
 
     private MechaActionType m_actionType;
 
@@ -21,7 +20,7 @@ public class UIActionRoomItem : MonoBehaviour
 
     public void DoAction()
     {
-        OnDoAction?.Invoke(m_targetRoomType, m_actionType);
+        OnDoAction?.Invoke(TargetRoomType, m_actionType);
     }
 }
 

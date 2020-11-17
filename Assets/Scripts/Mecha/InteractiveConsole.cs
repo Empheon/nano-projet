@@ -24,7 +24,9 @@ public class InteractiveConsole : InteractiveItem
     private Room m_room;
     private bool m_isCharacterFocused;
     private bool m_hoverCalled;
-    private Mecha m;
+
+    private Mecha m_mecha;
+
     private void Start()
     {
         m_renderer = GetComponent<SpriteRenderer>();
@@ -32,7 +34,7 @@ public class InteractiveConsole : InteractiveItem
 
     public void Init(Mecha mecha)
     {
-        m = mecha;
+        m_mecha = mecha;
         m_room = mecha.GetRoom(m_roomType);
     }
 
@@ -43,9 +45,6 @@ public class InteractiveConsole : InteractiveItem
             return;
         }
 
-        Debug.Log(m.name + " " + m_actionType + " " + m_roomType + " " + m_isCharacterFocused + " " + m_room.CanDoAction());
-
-      
         if (!m_hoverCalled && m_isCharacterFocused && CheckIfCanInteract())
         {
             m_hoverCalled = true;
@@ -64,9 +63,9 @@ public class InteractiveConsole : InteractiveItem
         if (m_actionType == MechaActionType.LOAD)
         {
             return !m_room.IsLoaded;
-        } else if (false /* check if there are fixable rooms */)
+        } else if (m_actionType == MechaActionType.FIX)
         {
-            
+            return m_mecha.GetFixableRooms().Count > 0;
         } else
         {
             return m_room.CanDoAction();
@@ -119,14 +118,6 @@ public class InteractiveConsole : InteractiveItem
                 OnCloseRoomPanel?.Invoke(m_roomType);
                 break;
         }
-    }
-
-    protected override void OnEnterCharacterRange()
-    {
-    }
-
-    protected override void OnExitCharacterRange()
-    {
     }
 }
 

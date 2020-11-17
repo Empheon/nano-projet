@@ -65,7 +65,7 @@ namespace Character
                 _lastClosestInteractable = closest;
             }
 
-            if (_gamepad.buttonWest.wasPressedThisFrame && _lastClosestInteractable != null)
+            if (_lastClosestInteractable != null)
             {
                 if (_gamepad.buttonWest.wasPressedThisFrame)
                 {

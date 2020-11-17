@@ -76,6 +76,11 @@ PrefabInstance:
       propertyPath: m_targetRoomType
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3124326652363103523, guid: 873706fd5e0ab3742b33c3aa05e3b49f,
+        type: 3}
+      propertyPath: TargetRoomType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7464113656018731009, guid: 873706fd5e0ab3742b33c3aa05e3b49f,
         type: 3}
       propertyPath: m_Name
@@ -204,6 +209,11 @@ PrefabInstance:
     - target: {fileID: 3124326652363103523, guid: 873706fd5e0ab3742b33c3aa05e3b49f,
         type: 3}
       propertyPath: m_targetRoomType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3124326652363103523, guid: 873706fd5e0ab3742b33c3aa05e3b49f,
+        type: 3}
+      propertyPath: TargetRoomType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7464113656018731009, guid: 873706fd5e0ab3742b33c3aa05e3b49f,

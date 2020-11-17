@@ -88,6 +88,11 @@ public class UIActionsManager : MonoBehaviour
                 OpenPanelAnim(m_jamPanel);
                 break;
             case RoomType.FIX:
+                foreach (UIActionRoomItem item in m_fixPanel.GetComponentsInChildren<UIActionRoomItem>())
+                {
+                    item.gameObject.SetActive(m_mecha.GetRoom(item.TargetRoomType).IsDamaged);
+                }
+
                 OpenPanelAnim(m_fixPanel);
                 break;
         }
