@@ -35,7 +35,7 @@ namespace Character
             {
                 var nbObjectFound = Physics2D.OverlapCircleNonAlloc(_transform.position, checkRadius, _foundObjects, checkLayers);
 
-                Debug.Log(nbObjectFound);
+                //Debug.Log(nbObjectFound);
             
                 _closest = null;
                 var distSqrClosest = Mathf.Infinity;
