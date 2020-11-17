@@ -82,7 +82,7 @@ public class InteractiveConsole : InteractiveItem
         m_isCharacterFocused = true;
     }
 
-    protected override void OnCharacterInteractPositive(GameObject character)
+    protected override void OnCharacterInteract(GameObject character)
     {
         // If the action is unavailable action, do not do it
         if (!m_hoverCalled)
@@ -106,7 +106,7 @@ public class InteractiveConsole : InteractiveItem
         }
     }
 
-    protected override void OnCharacterInteractNegative(GameObject character)
+    protected override void OnStopInteraction()
     {
         switch (m_actionType)
         {

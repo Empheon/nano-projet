@@ -104,6 +104,13 @@ public class Mecha : MonoBehaviour
                 break;
             case RoomType.DEFENCE:
                 m_defenceRoom.OnReceive(actionType);
+
+                if (m_defenceRoom.IsDamaged || m_defenceRoom.IsJammed)
+                {
+                    ReceiveAction(MechaActionType.BREAK_DEFENCE, RoomType.ATTACK);
+                    ReceiveAction(MechaActionType.BREAK_DEFENCE, RoomType.DEFENCE);
+                    ReceiveAction(MechaActionType.BREAK_DEFENCE, RoomType.JAMMING);
+                }
                 break;
             case RoomType.JAMMING:
                 m_jammingRoom.OnReceive(actionType);
@@ -167,4 +174,4 @@ public class Mecha : MonoBehaviour
 
         return fixableRooms;
     }
-} 
+}

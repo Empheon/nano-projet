@@ -9,6 +9,6 @@ public abstract class InteractiveItem : MonoBehaviour
 {
     protected abstract void OnCharacterFocus();
     protected abstract void OnCharacterBlur();
-    protected abstract void OnCharacterInteractPositive(GameObject character);
-    protected abstract void OnCharacterInteractNegative(GameObject character);
+    protected abstract void OnCharacterInteract(GameObject character);
+    protected abstract void OnStopInteraction();
 }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Character
@@ -16,12 +17,18 @@ namespace Character
         [SerializeField] private float jumpForce = 20f;
         [SerializeField] private float accDownForce = 200f;
         [SerializeField] private float maxKeepInAirTime = 0.8f;
+
+        [Header("Crouch")] 
+        [SerializeField] [Range(0f, -1f)] private float stickCrouchThreshold = -0.5f;
+        [SerializeField] private float ignoreCollisionTime = 1.5f;
+        [SerializeField] private string oneWayPlatformTag = "One-way Platform";
         
         [Header("Movement")]
         [SerializeField] private float moveSpeed = 5f;
         
         private Gamepad _gamepad;
         private Transform _transform;
+        private BoxCollider2D _col;
         private Rigidbody2D _rb;
         
         private float _movement;
@@ -53,6 +60,7 @@ namespace Character
         {
             _transform = GetComponent<Transform>();
             _rb = GetComponent<Rigidbody2D>();
+            _col = GetComponent<BoxCollider2D>();
         }
 
         private void Update()
@@ -73,9 +81,21 @@ namespace Character
                 _currentTimeJumping = 0;
                 _hasJumped = false;
             }
+
+            var crouching = _gamepad.leftStick.y.ReadValue() < stickCrouchThreshold;
+
+            if (_gamepad.buttonSouth.wasPressedThisFrame)
+            {
+                if (crouching)
+                {
+                    StartCoroutine(FallThroughPlatform());
+                }
+                else if(grounded)
+                {
+                    _shouldJump = true;
+                }
+            }
             
-            // input for jump
-            if (grounded && _gamepad.buttonSouth.wasPressedThisFrame) _shouldJump = true;
             _keepInAir = _gamepad.buttonSouth.isPressed;
 
             // input for movement
@@ -100,10 +120,32 @@ namespace Character
             }
         }
 
+        private IEnumerator FallThroughPlatform()
+        {
+            var hit = Physics2D.BoxCast(_transform.TransformPoint(groundCastOffset), groundCastSize, 0, Vector2.zero,0, whatIsGround);
+            if(!hit) yield break;
+
+            var hitCollider = hit.collider;
+            var hitGO = hitCollider.gameObject;
+            
+            if (hitGO.CompareTag(oneWayPlatformTag))
+            {
+                Physics2D.IgnoreCollision(hitCollider, _col, true);
+                yield return new WaitForSeconds(ignoreCollisionTime);
+                Physics2D.IgnoreCollision(hitCollider, _col, false);
+            }
+            
+            yield return null;
+        }
+
+#if UNITY_EDITOR
+            
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.cyan;
             Gizmos.DrawWireCube(transform.TransformPoint(groundCastOffset), groundCastSize);
         }
+        
+#endif
     }
 }
