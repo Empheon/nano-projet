@@ -11,6 +11,12 @@ public class Mecha : MonoBehaviour
     private DefenceRoom m_defenceRoom;
     [SerializeField]
     private JammingRoom m_jammingRoom;
+    [SerializeField]
+    private FixRoom m_fixRoom;
+    [SerializeField]
+    private ResourceRoom m_munRoom;
+    [SerializeField]
+    private ResourceRoom m_eneRoom;
 
     public Mecha m_otherMecha;
 
@@ -58,8 +64,20 @@ public class Mecha : MonoBehaviour
                                      () => m_otherMecha.ReceiveAction(MechaActionType.JAMMING, targetRoomType));
                 break;
             case MechaActionType.FIX:
+                m_fixRoom.DoAction(GetRoom(targetRoomType),
+                                     () => ReceiveAction(mechaActionType, targetRoomType));
+                break;
             case MechaActionType.LOAD:
                 ReceiveAction(mechaActionType, targetRoomType);
+                break;
+            case MechaActionType.POP_RESOURCE:
+                if (targetRoomType == RoomType.AMMUNITION)
+                {
+                    m_munRoom.DoAction(null, null);
+                } else if (targetRoomType == RoomType.ENERGY)
+                {
+                    m_eneRoom.DoAction(null, null);
+                }
                 break;
         }
     }
@@ -86,6 +104,13 @@ public class Mecha : MonoBehaviour
                 break;
             case RoomType.DEFENCE:
                 m_defenceRoom.OnReceive(actionType);
+
+                if (m_defenceRoom.IsDamaged || m_defenceRoom.IsJammed)
+                {
+                    ReceiveAction(MechaActionType.BREAK_DEFENCE, RoomType.ATTACK);
+                    ReceiveAction(MechaActionType.BREAK_DEFENCE, RoomType.DEFENCE);
+                    ReceiveAction(MechaActionType.BREAK_DEFENCE, RoomType.JAMMING);
+                }
                 break;
             case RoomType.JAMMING:
                 m_jammingRoom.OnReceive(actionType);
@@ -97,6 +122,15 @@ public class Mecha : MonoBehaviour
                     m_otherMecha.ReceiveAction(MechaActionType.UNJAM, RoomType.DEFENCE);
                     m_otherMecha.ReceiveAction(MechaActionType.UNJAM, RoomType.JAMMING);
                 }
+                break;
+            case RoomType.FIX:
+                m_fixRoom.OnReceive(actionType);
+                break;
+            case RoomType.AMMUNITION:
+                m_munRoom.OnReceive(actionType);
+                break;
+            case RoomType.ENERGY:
+                m_eneRoom.OnReceive(actionType);
                 break;
         }
     }
@@ -111,7 +145,33 @@ public class Mecha : MonoBehaviour
                 return m_defenceRoom;
             case RoomType.JAMMING:
                 return m_jammingRoom;
+            case RoomType.FIX:
+                return m_fixRoom;
+            case RoomType.AMMUNITION:
+                return m_munRoom;
+            case RoomType.ENERGY:
+                return m_eneRoom;
         }
         return null;
+    }
+
+    public List<Room> GetFixableRooms()
+    {
+        List<Room> fixableRooms = new List<Room>(3);
+
+        if (m_attackRoom.IsDamaged)
+        {
+            fixableRooms.Add(m_attackRoom);
+        }
+        if (m_defenceRoom.IsDamaged)
+        {
+            fixableRooms.Add(m_defenceRoom);
+        }
+        if (m_jammingRoom.IsDamaged)
+        {
+            fixableRooms.Add(m_jammingRoom);
+        }
+
+        return fixableRooms;
     }
 }

@@ -9,125 +9,211 @@ using UnityEngine.UI;
 
 public class UIActionsManager : MonoBehaviour
 {
+    // Consoles
+    [SerializeField]
+    private InteractiveConsole m_fixConsole;
+    [SerializeField]
+    private InteractiveConsole m_munConsole;
+    [SerializeField]
+    private InteractiveConsole m_eneConsole;
+
+    [SerializeField]
+    private InteractiveConsole m_loadAttConsole;
+    [SerializeField]
+    private InteractiveConsole m_loadDefConsole;
+
+    [SerializeField]
+    private InteractiveConsole m_actionAttConsole;
+    [SerializeField]
+    private InteractiveConsole m_actionDefConsole;
+    [SerializeField]
+    private InteractiveConsole m_actionJamConsole;
+
+    // Panels
+    [SerializeField]
+    private GameObject m_fixPanel;
+    [SerializeField]
+    private GameObject m_attPanel;
+    [SerializeField]
+    private GameObject m_defPanel;
+    [SerializeField]
+    private GameObject m_jamPanel;
+
+
     [SerializeField]
     private Mecha m_mecha;
-    [SerializeField]
-    private RoomType m_roomType;
-    [SerializeField]
-    private MechaActionType m_actionType;
-
-    // Temporary, to replace with hide/show when player is near
-    public Button DisplayButton;
-    public Button FixButton;
-    public Button LoadButton;
-
-    [SerializeField]
-    private GameObject m_actionPanel;
-    private bool m_isPanelVisible;
 
     private void Start()
     {
-        m_mecha.GetRoom(m_roomType).OnActionableStatusChanged += OnActionsVisibilityChange;
-        m_mecha.GetRoom(m_roomType).OnFixableStatusChanged += OnFixVisibilityChange;
-        m_mecha.GetRoom(m_roomType).OnLoadableStatusChanged += OnLoadVisibilityChange;
-
-        foreach (UIActionRoomItem item in GetComponentsInChildren<UIActionRoomItem>())
+        foreach (InteractiveConsole ic in m_mecha.GetComponentsInChildren<InteractiveConsole>())
         {
-            item.Init(m_mecha, m_actionType);
+            ic.Init(m_mecha);
+            ic.OnOpenRoomPanel += OpenRoomPanel;
+            ic.OnCloseRoomPanel += CloseRoomPanel;
+            ic.OnDoAction += DoAction;
         }
 
-        // force hide
-        m_isPanelVisible = false;
-        m_actionPanel.transform.DOScale(0, 0);
-        FixButton.transform.DOScale(0, 0);
+        SubscribeToPanelButtons(m_attPanel, MechaActionType.ATTACK);
+        SubscribeToPanelButtons(m_defPanel, MechaActionType.DEFENCE);
+        SubscribeToPanelButtons(m_jamPanel, MechaActionType.JAMMING);
+        SubscribeToPanelButtons(m_fixPanel, MechaActionType.FIX);
 
-        // force show
-        if (LoadButton != null && LoadButton.gameObject.activeSelf)
-        {
-            LoadButton.enabled = true;
-            LoadButton.transform.DOScale(1, 0);
-        }
+        // Force close all panels
+        ClosePanelAnim(m_attPanel, 0);
+        ClosePanelAnim(m_defPanel, 0);
+        ClosePanelAnim(m_jamPanel, 0);
+        ClosePanelAnim(m_fixPanel, 0);
     }
 
-    private void OnActionsVisibilityChange(bool b)
+    private void SubscribeToPanelButtons(GameObject panel, MechaActionType actionType)
     {
-        // TODO change this to a show/hide system when character is near
-        if (b)
+        foreach (UIActionRoomItem roomItem in panel.GetComponentsInChildren<UIActionRoomItem>())
         {
-            DisplayButton.enabled = true;
-            DisplayButton.transform.DOScale(1, 0.2f);
-        } else
-        {
-            DisplayButton.enabled = false;
-            DisplayButton.transform.DOScale(0, 0.2f);
-            HidePanel();
+            roomItem.Init(actionType);
+            roomItem.OnDoAction += DoAction;
         }
     }
 
-    private void OnFixVisibilityChange(bool b)
+    private void OpenRoomPanel(RoomType roomType)
     {
-        // TODO change this to a show/hide system when character is near
-        if (b)
+        switch (roomType)
         {
-            FixButton.enabled = true;
-            FixButton.transform.DOScale(1, 0.2f);
-        } else
-        {
-            FixButton.enabled = false;
-            FixButton.transform.DOScale(0, 0.2f);
+            case RoomType.ATTACK:
+                OpenPanelAnim(m_attPanel);
+                break;
+            case RoomType.DEFENCE:
+                OpenPanelAnim(m_defPanel);
+                break;
+            case RoomType.JAMMING:
+                OpenPanelAnim(m_jamPanel);
+                break;
+            case RoomType.FIX:
+                foreach (UIActionRoomItem item in m_fixPanel.GetComponentsInChildren<UIActionRoomItem>())
+                {
+                    item.gameObject.SetActive(m_mecha.GetRoom(item.TargetRoomType).IsDamaged);
+                }
+
+                OpenPanelAnim(m_fixPanel);
+                break;
         }
     }
 
-    private void OnLoadVisibilityChange(bool b)
+    private void CloseRoomPanel(RoomType roomType)
     {
-        // Loading is optional
-        if (LoadButton == null || !LoadButton.gameObject.activeSelf)
+        switch (roomType)
         {
-            return;
-        }
-
-        // TODO change this to a show/hide system when character is near
-        if (b)
-        {
-            LoadButton.enabled = true;
-            LoadButton.transform.DOScale(1, 0.2f);
-        } else
-        {
-            LoadButton.enabled = false;
-            LoadButton.transform.DOScale(0, 0.2f);
-        }
-    }
-
-    public void SwitchPanelVisibility()
-    {
-        if (m_isPanelVisible)
-        {
-            HidePanel();
-        } else
-        {
-            DisplayPanel();
+            case RoomType.ATTACK:
+                ClosePanelAnim(m_attPanel);
+                break;
+            case RoomType.DEFENCE:
+                ClosePanelAnim(m_defPanel);
+                break;
+            case RoomType.JAMMING:
+                ClosePanelAnim(m_jamPanel);
+                break;
+            case RoomType.FIX:
+                ClosePanelAnim(m_fixPanel);
+                break;
         }
     }
 
-    public void DisplayPanel()
+    private void OpenPanelAnim(GameObject gO, float duration = 0.2f)
     {
-        m_isPanelVisible = true;
-        m_actionPanel.transform.DOScale(1, 0.2f);
+        gO.transform.DOScale(1, duration);
     }
 
-    public void HidePanel()
+    private void ClosePanelAnim(GameObject gO, float duration = 0.2f)
     {
-        m_isPanelVisible = false;
-        m_actionPanel.transform.DOScale(0, 0.2f);
+        gO.transform.DOScale(0, duration);
     }
 
-    public void DoFixAction()
+    private void DoAction(RoomType targetRoomType, MechaActionType mechaActionType)
     {
-        m_mecha.DoAction(MechaActionType.FIX, m_roomType);
+        m_mecha.DoAction(mechaActionType, targetRoomType);
     }
 
-    public void DoLoadAction()
-    {
-        m_mecha.DoAction(MechaActionType.LOAD, m_roomType);
-    }
+    //private void OnActionsVisibilityChange(bool b)
+    //{
+    //    // TODO change this to a show/hide system when character is near
+    //    if (b)
+    //    {
+    //        DisplayButton.enabled = true;
+    //        DisplayButton.transform.DOScale(1, 0.2f);
+    //    } else
+    //    {
+    //        DisplayButton.enabled = false;
+    //        DisplayButton.transform.DOScale(0, 0.2f);
+    //        HidePanel();
+    //    }
+    //}
+
+    //private void OnFixVisibilityChange(bool b)
+    //{
+    //    // TODO change this to a show/hide system when character is near
+    //    if (b)
+    //    {
+    //        FixButton.enabled = true;
+    //        FixButton.transform.DOScale(1, 0.2f);
+    //    } else
+    //    {
+    //        FixButton.enabled = false;
+    //        FixButton.transform.DOScale(0, 0.2f);
+    //    }
+    //}
+
+    //private void OnLoadVisibilityChange(bool b)
+    //{
+    //    // Loading is optional
+    //    if (LoadButton == null || !LoadButton.gameObject.activeSelf)
+    //    {
+    //        return;
+    //    }
+
+    //    // TODO change this to a show/hide system when character is near
+    //    if (b)
+    //    {
+    //        LoadButton.enabled = true;
+    //        LoadButton.transform.DOScale(1, 0.2f);
+    //    } else
+    //    {
+    //        LoadButton.enabled = false;
+    //        LoadButton.transform.DOScale(0, 0.2f);
+    //    }
+    //}
+
+    //public void SwitchPanelVisibility()
+    //{
+    //    if (m_isPanelVisible)
+    //    {
+    //        HidePanel();
+    //    } else
+    //    {
+    //        DisplayPanel();
+    //    }
+    //}
+
+    //public void DisplayPanel()
+    //{
+    //    m_isPanelVisible = true;
+    //    m_actionPanel.transform.DOScale(1, 0.2f);
+    //}
+
+    //public void HidePanel()
+    //{
+    //    m_isPanelVisible = false;
+    //    m_actionPanel.transform.DOScale(0, 0.2f);
+    //}
+
+    //public void DoFixAction()
+    //{
+    //    m_mecha.DoAction(MechaActionType.FIX, m_roomType);
+    //}
+
+    //public void DoLoadAction()
+    //{
+    //    m_mecha.DoAction(MechaActionType.LOAD, m_roomType);
+    //}
+
+
+
 }

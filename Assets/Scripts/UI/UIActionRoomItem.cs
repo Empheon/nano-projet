@@ -7,21 +7,20 @@ using UnityEngine;
 
 public class UIActionRoomItem : MonoBehaviour
 {
-    [SerializeField]
-    private RoomType m_targetRoomType;
+    public RoomType TargetRoomType;
 
-    private Mecha m_mecha;
     private MechaActionType m_actionType;
 
-    public void Init(Mecha mecha, MechaActionType actionType)
+    public Action<RoomType, MechaActionType> OnDoAction;
+
+    public void Init(MechaActionType actionType)
     {
-        m_mecha = mecha;
         m_actionType = actionType;
     }
 
     public void DoAction()
     {
-        m_mecha.DoAction(m_actionType, m_targetRoomType);
+        OnDoAction?.Invoke(TargetRoomType, m_actionType);
     }
 }
 
