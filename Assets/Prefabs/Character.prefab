@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6386115114080336265}
   - component: {fileID: 7294214434191426977}
   - component: {fileID: 7954831191108606519}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: Character
   m_TagString: Character
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ MonoBehaviour:
   jumpForce: 100
   accDownForce: 300
   maxKeepInAirTime: 0.6
-  stickCrouchThreshold: -0.5
+  stickCrouchThreshold: -0.8
   ignoreCollisionTime: 0.8
   oneWayPlatformTag: One-way Platform
   moveSpeed: 7
@@ -123,7 +123,7 @@ MonoBehaviour:
   interactableTag: Interactable
   checkLayers:
     serializedVersion: 2
-    m_Bits: 257
+    m_Bits: 2048
   checkFrequency: 10
   checkRadius: 1
 --- !u!114 &7954831191108606519
@@ -150,7 +150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8050848317654366022}
   - component: {fileID: 8575174635512385466}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}

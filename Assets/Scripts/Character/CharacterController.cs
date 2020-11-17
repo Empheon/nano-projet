@@ -82,18 +82,19 @@ namespace Character
                 _hasJumped = false;
             }
 
-            var crouching = _gamepad.leftStick.y.ReadValue() < stickCrouchThreshold;
-
-            if (_gamepad.buttonSouth.wasPressedThisFrame)
+            if (_gamepad.leftStick.y.ReadValue() < stickCrouchThreshold)
             {
-                if (crouching)
+                var found = Physics2D.OverlapBox(_transform.TransformPoint(groundCastOffset), groundCastSize, 0, whatIsGround);
+                
+                if (found && found.CompareTag(oneWayPlatformTag))
                 {
-                    StartCoroutine(FallThroughPlatform());
+                    StartCoroutine(FallThroughPlatform(found));
                 }
-                else if(grounded)
-                {
-                    _shouldJump = true;
-                }
+            }
+
+            if (_gamepad.buttonSouth.wasPressedThisFrame && grounded)
+            {
+                _shouldJump = true;
             }
             
             _keepInAir = _gamepad.buttonSouth.isPressed;
@@ -120,22 +121,11 @@ namespace Character
             }
         }
 
-        private IEnumerator FallThroughPlatform()
+        private IEnumerator FallThroughPlatform(Collider2D platformCollider)
         {
-            var hit = Physics2D.BoxCast(_transform.TransformPoint(groundCastOffset), groundCastSize, 0, Vector2.zero,0, whatIsGround);
-            if(!hit) yield break;
-
-            var hitCollider = hit.collider;
-            var hitGO = hitCollider.gameObject;
-            
-            if (hitGO.CompareTag(oneWayPlatformTag))
-            {
-                Physics2D.IgnoreCollision(hitCollider, _col, true);
-                yield return new WaitForSeconds(ignoreCollisionTime);
-                Physics2D.IgnoreCollision(hitCollider, _col, false);
-            }
-            
-            yield return null;
+            Physics2D.IgnoreCollision(platformCollider, _col, true);
+            yield return new WaitForSeconds(ignoreCollisionTime);
+            Physics2D.IgnoreCollision(platformCollider, _col, false);
         }
 
 #if UNITY_EDITOR
