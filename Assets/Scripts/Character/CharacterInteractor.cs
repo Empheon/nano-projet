@@ -80,7 +80,7 @@ namespace Character
                     _closest.BroadcastMessage("OnCharacterInteract", gameObject);
                     
                     // prevent from interacting 2 times with object
-                    _closest = null; 
+                    _closest = null;
                 }
                 else
                 {

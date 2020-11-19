@@ -10,6 +10,10 @@ using UnityEngine.UI;
 
 namespace NeoMecha
 {
+    
+    [Serializable]
+    public class RoomEvent : UnityEvent<Room> { }
+    
     public abstract class TargetConsole : MonoBehaviour
     {
         [Serializable]
@@ -18,9 +22,9 @@ namespace NeoMecha
             public ConsolePanelButton Button;
             public Room Room;
         }
-
-        public UnityEvent<Room> OnActionStart;
-        public UnityEvent<Room> OnActionEnd;
+        
+        public RoomEvent OnActionStart;
+        public RoomEvent OnActionEnd;
 
         [SerializeField]
         private float actionDuration;

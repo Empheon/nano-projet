@@ -34,6 +34,11 @@ namespace NeoMecha
             EnterPanel();
         }
 
+        private void OnStopInteraction()
+        {
+            ExitPanel();
+        }
+
         private void Update()
         {
             _timeSinceLastSnap += Time.deltaTime;
@@ -42,7 +47,7 @@ namespace NeoMecha
             
             var x = _gamepad.leftStick.x.ReadValue();
             
-            if (_gamepad.buttonEast.wasPressedThisFrame || x > getOutValueThreshHold || x < -getOutValueThreshHold)
+            if (x > getOutValueThreshHold || x < -getOutValueThreshHold)
             {
                 ExitPanel();
                 return;
