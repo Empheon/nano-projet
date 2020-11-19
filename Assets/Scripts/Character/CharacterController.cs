@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -38,6 +39,11 @@ namespace Character
         private bool _keepInAir;
         private float _currentTimeJumping;
 
+        public Gamepad GetGamepad()
+        {
+            return _gamepad;
+        } 
+        
         private bool IsGrounded()
         {
             var hit = Physics2D.BoxCast(
