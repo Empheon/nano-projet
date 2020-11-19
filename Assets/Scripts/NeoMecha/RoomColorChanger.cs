@@ -5,37 +5,46 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Experimental.Rendering.Universal;
 
 namespace NeoMecha
 {
     public class RoomColorChanger : MonoBehaviour
     {
-        private SpriteRenderer m_spriteRenderer;
+        [SerializeField]
+        private Light2D jamLight;
+        [SerializeField]
+        private Light2D dmgDefLight;
 
         private void Start()
         {
-            m_spriteRenderer = GetComponent<SpriteRenderer>();
+            jamLight.color = Color.black;
+            dmgDefLight.color = Color.green;
         }
 
-        public void ChangeColor(int index)
+        public void JamOn()
         {
-            Color color = default;
-            switch(index)
-            {
-                case 0:
-                    color = Color.white;
-                    break;
-                case 1:
-                    color = Color.red;
-                    break;
-                case 2:
-                    color = Color.cyan;
-                    break;
-                case 3:
-                    color = Color.yellow;
-                    break;
-            }
-            m_spriteRenderer.DOColor(color, 0.2f);
+            DOTween.To(() => jamLight.color, (x) => jamLight.color = x, Color.yellow, 0.2f);
+        }
+
+        public void JamOff()
+        {
+            DOTween.To(() => jamLight.color, (x) => jamLight.color = x, Color.black, 0.2f);
+        }
+
+        public void DmgOn()
+        {
+            DOTween.To(() => dmgDefLight.color, (x) => dmgDefLight.color = x, Color.red, 0.2f);
+        }
+
+        public void DefOn()
+        {
+            DOTween.To(() => dmgDefLight.color, (x) => dmgDefLight.color = x, Color.cyan, 0.2f);
+        }
+
+        public void DmgOrDefOff()
+        {
+            DOTween.To(() => dmgDefLight.color, (x) => dmgDefLight.color = x, Color.green, 0.2f);
         }
     }
 }
