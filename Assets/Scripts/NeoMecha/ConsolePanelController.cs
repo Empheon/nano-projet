@@ -82,9 +82,8 @@ namespace NeoMecha
         private void Validate()
         {
             var currentButton = _buttons[_currentButtonIndex];
+            currentButton.OnValidate.AddListener(ExitPanel);
             currentButton.Validate();
-            
-            ExitPanel();
         }
 
         private void Next()

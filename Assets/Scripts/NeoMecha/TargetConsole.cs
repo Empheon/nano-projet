@@ -15,7 +15,7 @@ namespace NeoMecha
         [Serializable]
         public struct Target
         {
-            public Button Button;
+            public ConsolePanelButton Button;
             public Room Room;
         }
 
@@ -35,7 +35,7 @@ namespace NeoMecha
         {
             foreach (Target target in TargetList)
             {
-                target.Button.onClick.AddListener(() => {
+                target.Button.OnValidate.AddListener(() => {
                     if (CanDoAction())
                     {
                         StartCoroutine(StartAction(target.Room));

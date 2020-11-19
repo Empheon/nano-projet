@@ -58,6 +58,7 @@ namespace NeoMecha
             
             yield return new WaitForSeconds(validateTime);
             
+            _renderer.color = baseColor;
             OnValidate.Invoke();
         }
         
