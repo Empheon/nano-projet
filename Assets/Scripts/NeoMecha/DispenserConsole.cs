@@ -1,5 +1,6 @@
 ﻿using Resources;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,13 +36,16 @@ namespace NeoMecha
 
             PickableResource pickableResource = Instantiate(resourcePrefab, transform.position, Quaternion.identity);
             pickableResource.Init();
-            pickableResource.Rb.AddForce(velocity, ForceMode2D.Impulse);
+            
+            var resourceRb = pickableResource.GetComponent<Rigidbody2D>();
+            resourceRb.AddForce(velocity, ForceMode2D.Impulse);
 
             pickableResource.ResourceObject.OnConsumed += () => ConsumeResource(pickableResource);
             m_resources.Add(pickableResource.ResourceObject);
         }
 
-        public void ConsumeResource(PickableResource pickableResource)
+
+        private void ConsumeResource(PickableResource pickableResource)
         {
             m_resources.Remove(pickableResource.ResourceObject);
             Destroy(pickableResource.gameObject);

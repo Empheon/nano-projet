@@ -18,6 +18,8 @@ namespace NeoMecha
 
         public void OnCharacterInteract(GameObject character)
         {
+            if (IsLoaded) return;
+            
             CharacterResource characterResource = character.GetComponent<CharacterResource>();
 
             if (characterResource.HasResource(resourceType))

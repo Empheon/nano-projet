@@ -56,7 +56,7 @@ namespace NeoMecha
             {
                 foreach (Target target in TargetList)
                 {
-                    target.Button.enabled = IsRoomTargetable(target.Room);
+                    target.Button.IsActive = IsRoomTargetable(target.Room);
                 }
 
                 yield return new WaitForSeconds(1 / refreshFrequency);
@@ -77,7 +77,7 @@ namespace NeoMecha
 
         protected abstract void DoAction(Room room);
 
-        protected virtual bool CanDoAction()
+        public virtual bool CanDoAction()
         {
             return true;
         }
