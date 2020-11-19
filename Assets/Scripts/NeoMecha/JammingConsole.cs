@@ -16,6 +16,7 @@ namespace NeoMecha
         private float cooldown;
 
         private bool m_isCoolingDown;
+        private bool m_isJamming;
 
         private Coroutine m_coroutine;
 
@@ -30,11 +31,13 @@ namespace NeoMecha
         private IEnumerator DoJam(Room room)
         {
             room.OnJammingReceived();
+            m_isJamming = true;
 
             yield return new WaitForSeconds(duration);
 
             room.OnUnjammingReceived();
 
+            m_isJamming = false;
             m_isCoolingDown = true;
 
             yield return new WaitForSeconds(duration);
@@ -47,11 +50,12 @@ namespace NeoMecha
             StopCoroutine(m_coroutine);
             m_currentRoom.OnUnjammingReceived();
             m_isCoolingDown = false;
+            m_isJamming = false;
         }
 
         public override bool CanDoAction()
         {
-            return m_isCoolingDown;
+            return !m_isCoolingDown && !m_isJamming;
         }
 
         protected override bool IsRoomTargetable(Room room)
