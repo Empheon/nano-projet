@@ -14,12 +14,15 @@ namespace NeoMecha
         [SerializeField]
         private Light2D jamLight;
         [SerializeField]
-        private Light2D dmgDefLight;
+        private Light2D dmgLight;
+        [SerializeField]
+        private Light2D defLight;
 
         private void Start()
         {
             jamLight.color = Color.black;
-            dmgDefLight.color = Color.green;
+            dmgLight.color = Color.black;
+            defLight.color = Color.black;
         }
 
         public void JamOn()
@@ -34,17 +37,22 @@ namespace NeoMecha
 
         public void DmgOn()
         {
-            DOTween.To(() => dmgDefLight.color, (x) => dmgDefLight.color = x, Color.red, 0.2f);
+            DOTween.To(() => dmgLight.color, (x) => dmgLight.color = x, Color.red, 0.2f);
+        }
+
+        public void DmgOff()
+        {
+            DOTween.To(() => dmgLight.color, (x) => dmgLight.color = x, Color.black, 0.2f);
         }
 
         public void DefOn()
         {
-            DOTween.To(() => dmgDefLight.color, (x) => dmgDefLight.color = x, Color.cyan, 0.2f);
+            DOTween.To(() => defLight.color, (x) => defLight.color = x, Color.cyan, 0.2f);
         }
 
-        public void DmgOrDefOff()
+        public void DefOff()
         {
-            DOTween.To(() => dmgDefLight.color, (x) => dmgDefLight.color = x, Color.green, 0.2f);
+            DOTween.To(() => defLight.color, (x) => defLight.color = x, Color.black, 0.2f);
         }
     }
 }

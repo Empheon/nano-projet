@@ -70,6 +70,9 @@ namespace NeoMecha
             OnUnJammed.Invoke();
         }
 
-
+        public bool IsFunctional()
+        {
+            return !IsDamaged && !IsJammed;
+        }
     }
 }

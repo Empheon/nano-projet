@@ -35,6 +35,9 @@ namespace NeoMecha
         [SerializeField]
         private float refreshFrequency = 10;
 
+        [SerializeField]
+        protected Room room;
+
         private void Start()
         {
             foreach (Target target in TargetList)
