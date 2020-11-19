@@ -14,7 +14,7 @@ namespace NeoMecha
     [Serializable]
     public class RoomEvent : UnityEvent<Room> { }
     
-    public abstract class TargetConsole : MonoBehaviour
+    public abstract class TargetConsole : Console
     {
         [Serializable]
         public struct Target
@@ -38,8 +38,9 @@ namespace NeoMecha
         [SerializeField]
         protected Room room;
 
-        private void Start()
+        protected override void Start()
         {
+            base.Start();
             foreach (Target target in TargetList)
             {
                 target.Button.OnValidate.AddListener(() => {
@@ -83,6 +84,11 @@ namespace NeoMecha
         public virtual bool CanDoAction()
         {
             return true;
+        }
+
+        protected override bool CanInteract()
+        {
+            return CanDoAction();
         }
     }
 }

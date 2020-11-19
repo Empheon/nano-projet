@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace NeoMecha
 {
-    public class DispenserConsole : MonoBehaviour
+    public class DispenserConsole : Console
     {
         [SerializeField]
         private int maxResourcesNb;
@@ -22,8 +22,9 @@ namespace NeoMecha
 
         private List<Resource> m_resources;
 
-        private void Start()
+        protected override void Start()
         {
+            base.Start();
             m_resources = new List<Resource>();
         }
 
@@ -49,6 +50,11 @@ namespace NeoMecha
         {
             m_resources.Remove(pickableResource.ResourceObject);
             Destroy(pickableResource.gameObject);
+        }
+
+        protected override bool CanInteract()
+        {
+            return m_resources.Count < maxResourcesNb;
         }
     }
 }
