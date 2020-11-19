@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Resources;
+using System.Collections;
 
 namespace Character
 {
@@ -50,7 +51,14 @@ namespace Character
         public Resource ConsumeResource(Vector3 moveToPosition)
         {
             _getTargetObjectPos = () => moveToPosition;
+            StartCoroutine(ConsumeResourceDelayed(_storedResource));
             return _storedResource;
+        }
+
+        private IEnumerator ConsumeResourceDelayed(Resource resource)
+        {
+            yield return new WaitForSeconds(1);
+            resource.Consume();
         }
 
         private void OnNoInteractableFound()

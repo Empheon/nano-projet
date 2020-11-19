@@ -35,7 +35,7 @@ namespace Character
             {
                 var nbObjectFound = Physics2D.OverlapCircleNonAlloc(_transform.position, checkRadius, _foundObjects, checkLayers);
 
-                Debug.Log(nbObjectFound);
+                //Debug.Log(nbObjectFound);
             
                 _closest = null;
                 var distSqrClosest = Mathf.Infinity;
@@ -80,7 +80,7 @@ namespace Character
                     _closest.BroadcastMessage("OnCharacterInteract", gameObject);
                     
                     // prevent from interacting 2 times with object
-                    _closest = null; 
+                    _closest = null;
                 }
                 else
                 {

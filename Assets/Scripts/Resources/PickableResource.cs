@@ -11,29 +11,32 @@ namespace Resources
 
         private string _baseTag;
         
-        private Rigidbody2D _rb;
+        public Rigidbody2D Rb { get; private set; }
 
-        private void Awake()
+        [HideInInspector]
+        public Resource ResourceObject;
+
+        public void Init()
         {
-            _rb = GetComponent<Rigidbody2D>();
+            Rb = GetComponent<Rigidbody2D>();
             _baseTag = gameObject.tag;
+            ResourceObject = new Resource(type, gameObject);
         }
 
         private void OnCharacterInteract(GameObject character)
         {
-            var resource = new Resource(type, gameObject);
             var characterResource = character.GetComponent<CharacterResource>();
 
-            _rb.simulated = false;
+            Rb.simulated = false;
             gameObject.tag = duringInteractionTag;
 
-            characterResource.StoreResource(resource);
+            characterResource.StoreResource(ResourceObject);
         }
 
         private void OnLetResourceDown(Vector2 baseVelocity)
         {
-            _rb.simulated = true;
-            _rb.velocity = baseVelocity;
+            Rb.simulated = true;
+            Rb.velocity = baseVelocity;
             gameObject.tag = _baseTag;
         }
         
