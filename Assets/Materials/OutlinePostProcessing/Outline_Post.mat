@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Outline
+  m_Name: Outline_Post
   m_Shader: {fileID: -6465566751694194690, guid: ff4d4a1ae46b71b468b337f5f8df40db,
     type: 3}
   m_ShaderKeywords: 
@@ -51,11 +51,11 @@ Material:
     m_Floats:
     - Vector1_24CC0309: 1.15
     - Vector1_2E5B31DE: 0.5
-    - Vector1_33818C7B: 23.77
+    - Vector1_33818C7B: 10
     - Vector1_3EFADD6F: 0.758
     - Vector1_76431C75: 0.2
     - Vector1_7CE10667: 0.35
-    - Vector1_8E6DB8B: 3.6
+    - Vector1_8E6DB8B: 10
     - Vector1_93C6B85B: 1
     - Vector1_95E99C31: 1
     - Vector1_B6634C80: 1
