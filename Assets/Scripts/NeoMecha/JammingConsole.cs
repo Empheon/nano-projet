@@ -53,7 +53,7 @@ namespace NeoMecha
             m_isJamming = false;
         }
 
-        protected override bool CanDoAction()
+        public override bool CanDoAction()
         {
             return !m_isCoolingDown && !m_isJamming;
         }

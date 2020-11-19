@@ -20,7 +20,7 @@ namespace NeoMecha
             m_loadConsole.IsLoaded = false;
         }
 
-        protected override bool CanDoAction()
+        public override bool CanDoAction()
         {
             return m_loadConsole.IsLoaded;
         }

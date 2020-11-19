@@ -8,11 +8,12 @@ namespace Character
     public class CharacterInteractor : MonoBehaviour
     {
         [SerializeField] private string interactableTag = "Interactable";
+        [SerializeField] private string interactingTag = "Interacting";
         [SerializeField] private LayerMask checkLayers;
         [SerializeField] private float checkFrequency = 10;
         [SerializeField] private float checkRadius = 1;
 
-        private Collider2D[] _foundObjects = new Collider2D[20];
+        private readonly Collider2D[] _foundObjects = new Collider2D[20];
         private GameObject _lastClosest;
         private GameObject _closest;
         
@@ -35,8 +36,6 @@ namespace Character
             {
                 var nbObjectFound = Physics2D.OverlapCircleNonAlloc(_transform.position, checkRadius, _foundObjects, checkLayers);
 
-                //Debug.Log(nbObjectFound);
-            
                 _closest = null;
                 var distSqrClosest = Mathf.Infinity;
 
@@ -90,10 +89,16 @@ namespace Character
 
             if (_gamepad.buttonEast.wasPressedThisFrame)
             {
-                gameObject.BroadcastMessage("OnStopInteraction");
+                foreach (var foundObject in _foundObjects)
+                {
+                    if (foundObject && foundObject.CompareTag(interactingTag))
+                    {
+                        foundObject.BroadcastMessage("OnStopInteraction");
+                    }
+                }
             }
         }
-        
+
 #if UNITY_EDITOR
             
         private void OnDrawGizmosSelected()

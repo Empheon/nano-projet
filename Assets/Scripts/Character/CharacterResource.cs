@@ -9,23 +9,21 @@ namespace Character
         [SerializeField] private Vector2 storedResourcePosOffset = Vector2.zero;
         [SerializeField] private float followSmoothing = 0.2f;
         
-        private Resource _storedResource = new Resource(ResourceTypes.None, null);
+        private Resource _storedResource = null;
 
         delegate Vector2 PositionGetter();
         private PositionGetter _getTargetObjectPos = () => Vector2.zero;
         
         private Transform _transform;
-        private Rigidbody2D _rb;
         
         private void Awake()
         {
             _transform = GetComponent<Transform>();
-            _rb = GetComponent<Rigidbody2D>();
         }
 
         private void Update()
         {
-            if (_storedResource.GO != null)
+            if (_storedResource != null)
             {
                 var objTransform = _storedResource.GO.transform;
                 objTransform.position = Vector2.Lerp(objTransform.position, _getTargetObjectPos(), followSmoothing);
@@ -34,17 +32,15 @@ namespace Character
 
         public void StoreResource(Resource resource)
         {
-            if (_storedResource.GO != null)
-            {
-                _storedResource.GO.BroadcastMessage("OnLetResourceDown", _rb.velocity);
-            }
-            
+            _storedResource?.GO.BroadcastMessage("OnStopInteraction");
+
             _getTargetObjectPos = () => _transform.TransformPoint(storedResourcePosOffset);
             _storedResource = resource;
         }
 
         public bool HasResource(ResourceTypes ofType)
         {
+            if (_storedResource == null) return false;
             return _storedResource.Type == ofType;
         }
 
@@ -58,16 +54,18 @@ namespace Character
         private IEnumerator ConsumeResourceDelayed(Resource resource)
         {
             yield return new WaitForSeconds(1);
+            _storedResource = null;
             resource.Consume();
+        }
+
+        public void LetResourceDown()
+        {
+            _storedResource = null;
         }
 
         private void OnNoInteractableFound()
         {
-            if (_storedResource.GO != null)
-            {
-                _storedResource.GO.BroadcastMessage("OnLetResourceDown", _rb.velocity);
-                _storedResource = new Resource(ResourceTypes.None, null);
-            }
+            _storedResource?.GO.BroadcastMessage("OnStopInteraction");
         }
 
 #if UNITY_EDITOR

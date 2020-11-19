@@ -4,17 +4,22 @@ using CharacterController = Character.CharacterController;
 
 namespace NeoMecha
 {
+    [RequireComponent(typeof(TargetConsole))]
     public class ConsolePanelController : MonoBehaviour
     {
+        [SerializeField] private string interactingTag = "Interacting";
         [SerializeField] private GameObject uiPanel;
         [SerializeField] [Range(0, 1)] private float getOutValueThreshHold = 0.9f;
         [SerializeField] [Range(0, 1)] private float snapValueThreshHold = 0.5f;
         [SerializeField] private float snapCooldown = 0.2f;
         
+        private TargetConsole _console;
+        
         private ConsolePanelButton[] _buttons;
         private CharacterController _characterController;
         private Gamepad _gamepad;
 
+        private string _baseTag;
         private int _currentButtonIndex = 0;
         private float _timeSinceLastSnap = 0f;
 
@@ -23,15 +28,31 @@ namespace NeoMecha
             enabled = false;
             uiPanel.SetActive(false);
 
+            _baseTag = tag;
+
+            _console = GetComponent<TargetConsole>();
             _buttons = GetComponentsInChildren<ConsolePanelButton>(true);
         }
 
         private void OnCharacterInteract(GameObject character)
         {
+            if(!_console.CanDoAction() || !HasAnyButtonActivated()) return;
+            
             _characterController = character.GetComponent<CharacterController>();
             _gamepad = _characterController.GetGamepad();
+            tag = interactingTag;
             
             EnterPanel();
+        }
+
+        private bool HasAnyButtonActivated()
+        {
+            foreach (var button in _buttons)
+            {
+                if (button.IsActive) return true;
+            }
+
+            return false;
         }
 
         private void OnStopInteraction()
@@ -41,6 +62,8 @@ namespace NeoMecha
 
         private void Update()
         {
+            if(!HasAnyButtonActivated()) ExitPanel();
+            
             _timeSinceLastSnap += Time.deltaTime;
             
             if(_gamepad == null) return;
@@ -79,6 +102,7 @@ namespace NeoMecha
         {
             _characterController.enabled = true;
             _gamepad = null;
+            tag = _baseTag;
             
             uiPanel.SetActive(false);
             enabled = false;
@@ -100,9 +124,8 @@ namespace NeoMecha
             currentButton.Blur();
             nextButton.Focus();
             
-            if(!nextButton.enabled) Next();
-
-            _timeSinceLastSnap = 0;
+            if(!nextButton.IsActive) Next();
+            else _timeSinceLastSnap = 0;
         }
 
         private void Previous()
@@ -114,9 +137,8 @@ namespace NeoMecha
             currentButton.Blur();
             prevButton.Focus();
             
-            if(!prevButton.enabled) Previous();
-            
-            _timeSinceLastSnap = 0;
+            if(!prevButton.IsActive) Previous();
+            else _timeSinceLastSnap = 0;
         }
     }
 }

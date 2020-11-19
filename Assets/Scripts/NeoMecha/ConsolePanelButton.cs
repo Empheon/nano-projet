@@ -11,6 +11,8 @@ namespace NeoMecha
         public UnityEvent OnFocus;
         public UnityEvent OnBlur;
         public UnityEvent OnValidate;
+        public UnityEvent OnActivate;
+        public UnityEvent OnDesactivate;
 
         [Header("Button Look")] 
         [SerializeField] private Color baseColor;
@@ -19,8 +21,29 @@ namespace NeoMecha
         [SerializeField] private float validateTime = 0.05f;
 
         private bool _isFocused = false;
+        private bool _isActive = true;
         private SpriteRenderer _renderer;
 
+        public bool IsActive
+        {
+            get => _isActive;
+            set
+            {
+                if(_isActive == value) return;
+                
+                if (value)
+                {
+                    OnActivate.Invoke();
+                }
+                else
+                {
+                    OnDesactivate.Invoke();
+                }
+
+                _isActive = value;
+            }
+        }
+        
         private void Awake()
         {
             _renderer = GetComponent<SpriteRenderer>();
