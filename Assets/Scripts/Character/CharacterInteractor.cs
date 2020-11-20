@@ -56,12 +56,12 @@ namespace Character
 
                 if (_closest != _lastClosest && _lastClosest!= null)
                 {
-                    _lastClosest.BroadcastMessage("OnCharacterBlur", SendMessageOptions.DontRequireReceiver);
+                    _lastClosest.BroadcastMessage("OnCharacterBlur", gameObject, SendMessageOptions.DontRequireReceiver);
                 }
 
                 if (_closest != null)
                 {
-                    _closest.BroadcastMessage("OnCharacterFocus", SendMessageOptions.DontRequireReceiver);
+                    _closest.BroadcastMessage("OnCharacterFocus", gameObject, SendMessageOptions.DontRequireReceiver);
                 }
             
                 _lastClosest = _closest;

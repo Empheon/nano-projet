@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Character;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -86,9 +87,19 @@ namespace NeoMecha
             return true;
         }
 
-        protected override bool CanInteract()
+        protected override bool CanInteract(CharacterResource characterResource)
         {
-            return CanDoAction();
+            bool isTargettable = false;
+            foreach(Target target in TargetList)
+            {
+                if (IsRoomTargetable(target.Room))
+                {
+                    isTargettable = true;
+                    break;
+                }
+            }
+
+            return CanDoAction() && isTargettable;
         }
     }
 }

@@ -126,7 +126,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   checkFrequency: 10
-  checkRadius: 1
+  checkRadius: 0.55
 --- !u!114 &7954831191108606519
 MonoBehaviour:
   m_ObjectHideFlags: 0

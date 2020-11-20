@@ -1533,7 +1533,7 @@ MonoBehaviour:
   - {x: -0.5, y: 0.5, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 290962
+  m_InstanceId: 21056
 --- !u!1 &2410553407307212092
 GameObject:
   m_ObjectHideFlags: 0
@@ -2113,7 +2113,7 @@ MonoBehaviour:
   - {x: -0.5, y: 0.5, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 290932
+  m_InstanceId: 21026
 --- !u!1 &3559301727364241593
 GameObject:
   m_ObjectHideFlags: 0
@@ -2478,7 +2478,7 @@ MonoBehaviour:
   - {x: -0.5, y: 0.5, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 290868
+  m_InstanceId: 20962
 --- !u!1 &4632239375532062383
 GameObject:
   m_ObjectHideFlags: 0
@@ -3055,7 +3055,7 @@ MonoBehaviour:
   - {x: -0.5, y: 0.5, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 290652
+  m_InstanceId: 20746
 --- !u!1 &5622507505431180516
 GameObject:
   m_ObjectHideFlags: 0
@@ -3145,7 +3145,7 @@ MonoBehaviour:
   - {x: -0.5, y: 0.5, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 290920
+  m_InstanceId: 21014
 --- !u!1 &6089224625116975201
 GameObject:
   m_ObjectHideFlags: 0
@@ -3635,7 +3635,7 @@ MonoBehaviour:
   - {x: -0.5, y: 0.5, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 290814
+  m_InstanceId: 20908
 --- !u!1 &7555311495260159335
 GameObject:
   m_ObjectHideFlags: 0
@@ -3692,7 +3692,7 @@ MonoBehaviour:
   - {x: -0.5, y: 0.5, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 290712
+  m_InstanceId: 20806
 --- !u!1 &7564910504419783903
 GameObject:
   m_ObjectHideFlags: 0
@@ -3749,7 +3749,7 @@ MonoBehaviour:
   - {x: -0.5, y: 0.5, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 290774
+  m_InstanceId: 20868
 --- !u!1 &7736092499036602580
 GameObject:
   m_ObjectHideFlags: 0
@@ -4306,7 +4306,7 @@ MonoBehaviour:
   - {x: -0.5, y: 0.5, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 290964
+  m_InstanceId: 21058
 --- !u!1 &9110770395544851459
 GameObject:
   m_ObjectHideFlags: 0
@@ -4363,7 +4363,7 @@ MonoBehaviour:
   - {x: -0.5, y: 0.5, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 290648
+  m_InstanceId: 20742
 --- !u!1001 &1547314164967387239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4375,6 +4375,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AttackConsole
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839090303976546058, guid: a1cda01589d1fb248a077c520b03b48a,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.9150943
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839090303976546058, guid: a1cda01589d1fb248a077c520b03b48a,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.19059555
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839090303976546058, guid: a1cda01589d1fb248a077c520b03b48a,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.17697577
       objectReference: {fileID: 0}
     - target: {fileID: 6254101041982602672, guid: a1cda01589d1fb248a077c520b03b48a,
         type: 3}
@@ -4456,6 +4471,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DispenserConsole
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839090303976546058, guid: a1cda01589d1fb248a077c520b03b48a,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.6132076
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839090303976546058, guid: a1cda01589d1fb248a077c520b03b48a,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.054957267
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839090303976546058, guid: a1cda01589d1fb248a077c520b03b48a,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.07070959
       objectReference: {fileID: 0}
     - target: {fileID: 6123562712820910370, guid: a1cda01589d1fb248a077c520b03b48a,
         type: 3}
@@ -4547,6 +4577,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: JammingConsole
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839090303976546058, guid: a1cda01589d1fb248a077c520b03b48a,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.9056604
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839090303976546058, guid: a1cda01589d1fb248a077c520b03b48a,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.80118036
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839090303976546058, guid: a1cda01589d1fb248a077c520b03b48a,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.20932718
       objectReference: {fileID: 0}
     - target: {fileID: 6123562712820910370, guid: a1cda01589d1fb248a077c520b03b48a,
         type: 3}
@@ -4780,6 +4825,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: DefenceConsole
       objectReference: {fileID: 0}
+    - target: {fileID: 3839090303976546058, guid: a1cda01589d1fb248a077c520b03b48a,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.20024922
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839090303976546058, guid: a1cda01589d1fb248a077c520b03b48a,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.20824005
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839090303976546058, guid: a1cda01589d1fb248a077c520b03b48a,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.9433962
+      objectReference: {fileID: 0}
     - target: {fileID: 6123562712820910370, guid: a1cda01589d1fb248a077c520b03b48a,
         type: 3}
       propertyPath: m_roomType
@@ -4951,6 +5011,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: DispenserConsole
       objectReference: {fileID: 0}
+    - target: {fileID: 3839090303976546058, guid: a1cda01589d1fb248a077c520b03b48a,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.12127958
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839090303976546058, guid: a1cda01589d1fb248a077c520b03b48a,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.054901943
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839090303976546058, guid: a1cda01589d1fb248a077c520b03b48a,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.6117647
+      objectReference: {fileID: 0}
     - target: {fileID: 6123562712820910370, guid: a1cda01589d1fb248a077c520b03b48a,
         type: 3}
       propertyPath: m_roomType
@@ -5041,6 +5116,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LoadConsole
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839090303976546058, guid: a1cda01589d1fb248a077c520b03b48a,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.5737475
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839090303976546058, guid: a1cda01589d1fb248a077c520b03b48a,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.5411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839090303976546058, guid: a1cda01589d1fb248a077c520b03b48a,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6123562712820910370, guid: a1cda01589d1fb248a077c520b03b48a,
         type: 3}
@@ -5368,6 +5458,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LoadConsole
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839090303976546058, guid: a1cda01589d1fb248a077c520b03b48a,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839090303976546058, guid: a1cda01589d1fb248a077c520b03b48a,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.66283953
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839090303976546058, guid: a1cda01589d1fb248a077c520b03b48a,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.5424528
       objectReference: {fileID: 0}
     - target: {fileID: 6123562712820910370, guid: a1cda01589d1fb248a077c520b03b48a,
         type: 3}
@@ -5736,6 +5841,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FixConsole
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839090303976546058, guid: a1cda01589d1fb248a077c520b03b48a,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.20277743
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839090303976546058, guid: a1cda01589d1fb248a077c520b03b48a,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.8301887
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839090303976546058, guid: a1cda01589d1fb248a077c520b03b48a,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.19971518
       objectReference: {fileID: 0}
     - target: {fileID: 6123562712820910370, guid: a1cda01589d1fb248a077c520b03b48a,
         type: 3}

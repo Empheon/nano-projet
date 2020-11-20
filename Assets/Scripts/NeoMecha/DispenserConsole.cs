@@ -1,4 +1,5 @@
-﻿using Resources;
+﻿using Character;
+using Resources;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -52,7 +53,7 @@ namespace NeoMecha
             Destroy(pickableResource.gameObject);
         }
 
-        protected override bool CanInteract()
+        protected override bool CanInteract(CharacterResource characterResource)
         {
             return m_resources.Count < maxResourcesNb;
         }
