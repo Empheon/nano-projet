@@ -107,9 +107,12 @@ namespace NeoMecha
             _characterController.enabled = true;
             _gamepad = null;
             tag = _baseTag;
-            
+
             uiPanel.SetActive(false);
             enabled = false;
+            
+            var currentButton = _buttons[_currentButtonIndex];
+            currentButton.Blur();
         }
 
         private void Validate()
