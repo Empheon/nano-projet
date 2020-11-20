@@ -11,10 +11,10 @@ namespace NeoMecha
 {
     public class LoadConsole : Console
     {
-        [SerializeField]
-        private ResourceTypes resourceType;
-        [HideInInspector]
-        public bool IsLoaded;
+        [SerializeField] private ResourceTypes resourceType;
+        [SerializeField] private Transform loadTo;
+        
+        [HideInInspector] public bool IsLoaded;
 
         public void OnCharacterInteract(GameObject character)
         {
@@ -24,7 +24,7 @@ namespace NeoMecha
 
             if (characterResource.HasResource(resourceType))
             {
-                characterResource.ConsumeResource(transform.position);
+                characterResource.ConsumeResource(loadTo.position);
                 IsLoaded = true;
             }
         }

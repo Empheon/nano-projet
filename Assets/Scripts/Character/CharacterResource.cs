@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using Resources;
 using System.Collections;
+using DG.Tweening;
 
 namespace Character
 {
@@ -9,11 +10,8 @@ namespace Character
         [SerializeField] private Vector2 storedResourcePosOffset = Vector2.zero;
         [SerializeField] private float followSmoothing = 0.2f;
         
-        private Resource _storedResource = null;
+        private Resource _storedResource;
 
-        delegate Vector2 PositionGetter();
-        private PositionGetter _getTargetObjectPos = () => Vector2.zero;
-        
         private Transform _transform;
         
         private void Awake()
@@ -25,16 +23,18 @@ namespace Character
         {
             if (_storedResource != null)
             {
-                var objTransform = _storedResource.GO.transform;
-                objTransform.position = Vector2.Lerp(objTransform.position, _getTargetObjectPos(), followSmoothing);
+                var nextPos = Vector2.Lerp(
+                    _storedResource.GO.transform.position, 
+                    _transform.TransformPoint(storedResourcePosOffset), 
+                    followSmoothing);
+                
+                _storedResource.GO.transform.position = nextPos;
             }
         }
 
         public void StoreResource(Resource resource)
         {
             _storedResource?.GO.BroadcastMessage("OnStopInteraction");
-
-            _getTargetObjectPos = () => _transform.TransformPoint(storedResourcePosOffset);
             _storedResource = resource;
         }
 
@@ -46,15 +46,19 @@ namespace Character
 
         public Resource ConsumeResource(Vector3 moveToPosition)
         {
-            _getTargetObjectPos = () => moveToPosition;
+            _storedResource.GO.transform.DOScale(0,0.4f);
+            _storedResource.GO.transform.DOMove(moveToPosition, 0.4f);
+            
             StartCoroutine(ConsumeResourceDelayed(_storedResource));
+            
             return _storedResource;
         }
 
         private IEnumerator ConsumeResourceDelayed(Resource resource)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForEndOfFrame();
             _storedResource = null;
+            yield return new WaitForSeconds(1);
             resource.Consume();
         }
 
