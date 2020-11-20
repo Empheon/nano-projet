@@ -42,7 +42,7 @@ namespace Global
         public void RightGetHit()
         {
             m_teamHp[Team.Right] -= 1;
-            OnLeftHPChange?.Invoke(m_teamHp[Team.Right]);
+            OnRightHPChange?.Invoke(m_teamHp[Team.Right]);
             CheckEndGame(Team.Right);
         }
 

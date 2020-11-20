@@ -45,13 +45,13 @@ namespace UI
                 Instantiate(roundPinPrefab, rightRoundPinWrapper.transform);
             }
 
-            int leftIndex = 0;
+            int leftIndex = Match.Instance.RequiredWinningRounds - 1;
             int rightIndex = 0;
             foreach(Round wonRound in Match.Instance.FinishedRounds)
             {
                 if (wonRound.WinnerTeam == PlayerManager.Team.Left)
                 {
-                    leftRoundPinWrapper.transform.GetChild(leftIndex++).GetComponent<UIRoundPin>().DisplayFiller(true);
+                    leftRoundPinWrapper.transform.GetChild(leftIndex--).GetComponent<UIRoundPin>().DisplayFiller(true);
                 } else
                 {
                     rightRoundPinWrapper.transform.GetChild(rightIndex++).GetComponent<UIRoundPin>().DisplayFiller(true);
@@ -89,8 +89,6 @@ namespace UI
                 List<GameObject> toDestroy = new List<GameObject>();
                 for (int i = 0; i < lifebar.transform.childCount - hp; i++)
                 {
-                    //lifebar.transform.GetChild(i).gameObject.SetActive(false);
-                    //toDestroy.Add()
                     Destroy(lifebar.transform.GetChild(i).gameObject);
                 }
             } else if (lifebar.transform.childCount < hp)
