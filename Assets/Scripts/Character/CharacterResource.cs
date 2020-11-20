@@ -13,6 +13,7 @@ namespace Character
         private Resource _storedResource;
 
         private Transform _transform;
+        private Rigidbody2D _resourceRb;
         
         private void Awake()
         {
@@ -28,7 +29,7 @@ namespace Character
                     _transform.TransformPoint(storedResourcePosOffset), 
                     followSmoothing);
                 
-                _storedResource.GO.transform.position = nextPos;
+                _resourceRb.MovePosition(nextPos);
             }
         }
 
@@ -36,6 +37,7 @@ namespace Character
         {
             _storedResource?.GO.BroadcastMessage("OnStopInteraction");
             _storedResource = resource;
+            _resourceRb = _storedResource.GO.GetComponent<Rigidbody2D>();
         }
 
         public bool HasResource(ResourceTypes ofType)
@@ -58,6 +60,7 @@ namespace Character
         {
             yield return new WaitForEndOfFrame();
             _storedResource = null;
+            _resourceRb = null;
             yield return new WaitForSeconds(1);
             resource.Consume();
         }
@@ -65,6 +68,7 @@ namespace Character
         public void LetResourceDown()
         {
             _storedResource = null;
+            _resourceRb = null;
         }
 
         private void OnNoInteractableFound()
