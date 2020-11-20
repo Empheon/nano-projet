@@ -72,12 +72,12 @@ public class InteractiveConsole : InteractiveItem
         }
     }
 
-    protected override void OnCharacterBlur()
+    protected override void OnCharacterBlur(GameObject character)
     {
         m_isCharacterFocused = false;
     }
 
-    protected override void OnCharacterFocus()
+    protected override void OnCharacterFocus(GameObject character)
     {
         m_isCharacterFocused = true;
     }

@@ -62,7 +62,7 @@ namespace NeoMecha
 
         private void Update()
         {
-            if(!HasAnyButtonActivated()) ExitPanel();
+            if(!HasAnyButtonActivated() || !_console.CanDoAction()) ExitPanel();
             
             _timeSinceLastSnap += Time.deltaTime;
             
@@ -96,6 +96,11 @@ namespace NeoMecha
             
             var currentButton = _buttons[_currentButtonIndex];
             currentButton.Focus();
+
+            if (!currentButton.IsActive)
+            {
+                Next();
+            }
         }
 
         private void ExitPanel()

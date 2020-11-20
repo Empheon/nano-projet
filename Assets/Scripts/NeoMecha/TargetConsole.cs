@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Character;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace NeoMecha
     [Serializable]
     public class RoomEvent : UnityEvent<Room> { }
     
-    public abstract class TargetConsole : MonoBehaviour
+    public abstract class TargetConsole : Console
     {
         [Serializable]
         public struct Target
@@ -35,8 +36,12 @@ namespace NeoMecha
         [SerializeField]
         private float refreshFrequency = 10;
 
-        private void Start()
+        [SerializeField]
+        protected Room room;
+
+        protected override void Start()
         {
+            base.Start();
             foreach (Target target in TargetList)
             {
                 target.Button.OnValidate.AddListener(() => {
@@ -80,6 +85,21 @@ namespace NeoMecha
         public virtual bool CanDoAction()
         {
             return true;
+        }
+
+        protected override bool CanInteract(CharacterResource characterResource)
+        {
+            bool isTargettable = false;
+            foreach(Target target in TargetList)
+            {
+                if (IsRoomTargetable(target.Room))
+                {
+                    isTargettable = true;
+                    break;
+                }
+            }
+
+            return CanDoAction() && isTargettable;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Resources;
+﻿using Character;
+using Resources;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using UnityEngine;
 
 namespace NeoMecha
 {
-    public class DispenserConsole : MonoBehaviour
+    public class DispenserConsole : Console
     {
         [SerializeField]
         private int maxResourcesNb;
@@ -22,8 +23,9 @@ namespace NeoMecha
 
         private List<Resource> m_resources;
 
-        private void Start()
+        protected override void Start()
         {
+            base.Start();
             m_resources = new List<Resource>();
         }
 
@@ -49,6 +51,11 @@ namespace NeoMecha
         {
             m_resources.Remove(pickableResource.ResourceObject);
             Destroy(pickableResource.gameObject);
+        }
+
+        protected override bool CanInteract(CharacterResource characterResource)
+        {
+            return m_resources.Count < maxResourcesNb;
         }
     }
 }

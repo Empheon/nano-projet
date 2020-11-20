@@ -9,7 +9,7 @@ using Resources;
 
 namespace NeoMecha
 {
-    public class LoadConsole : MonoBehaviour
+    public class LoadConsole : Console
     {
         [SerializeField]
         private ResourceTypes resourceType;
@@ -27,6 +27,11 @@ namespace NeoMecha
                 characterResource.ConsumeResource(transform.position);
                 IsLoaded = true;
             }
+        }
+
+        protected override bool CanInteract(CharacterResource characterResource)
+        {
+            return !IsLoaded && characterResource.HasResource(resourceType);
         }
     }
 }
