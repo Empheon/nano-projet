@@ -108,6 +108,7 @@ MonoBehaviour:
   ignoreCollisionTime: 0.8
   oneWayPlatformTag: One-way Platform
   moveSpeed: 7
+  deadZone: 0.25
   _spriteRenderer: {fileID: 8575174635512385466}
 --- !u!114 &7294214434191426977
 MonoBehaviour:

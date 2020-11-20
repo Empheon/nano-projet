@@ -26,6 +26,7 @@ namespace Character
         
         [Header("Movement")]
         [SerializeField] private float moveSpeed = 5f;
+        [SerializeField] [Range(0f, 0.6f)] private float deadZone = 0.15f;
 
         [Header("Sprites & Animations")] 
         [SerializeField] private SpriteRenderer _spriteRenderer;
@@ -109,7 +110,13 @@ namespace Character
             _keepInAir = _gamepad.buttonSouth.isPressed;
 
             // input for movement
-            _movement = _gamepad.leftStick.x.ReadValue() * moveSpeed;
+            _movement = _gamepad.leftStick.x.ReadValue();
+            
+            // dead zone
+            if (_movement < deadZone && _movement > -deadZone) _movement = 0;
+
+            // i am speed
+            _movement *= moveSpeed;
             
             // animations update
             // need to not change if equals to 0
