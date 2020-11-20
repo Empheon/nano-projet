@@ -26,6 +26,9 @@ namespace Character
         
         [Header("Movement")]
         [SerializeField] private float moveSpeed = 5f;
+
+        [Header("Sprites & Animations")] 
+        [SerializeField] private SpriteRenderer _spriteRenderer;
         
         private Gamepad _gamepad;
         private Transform _transform;
@@ -107,6 +110,11 @@ namespace Character
 
             // input for movement
             _movement = _gamepad.leftStick.x.ReadValue() * moveSpeed;
+            
+            // animations update
+            // need to not change if equals to 0
+            if (_movement > 0 && !_spriteRenderer.flipX) _spriteRenderer.flipX = true;
+            else if (_movement < 0 && _spriteRenderer.flipX) _spriteRenderer.flipX = false;
         }
 
         private void FixedUpdate()
