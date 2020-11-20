@@ -21,23 +21,39 @@ namespace Animations
         [SerializeField]
         private PathCreator pathCreatorJam;
 
-        private const string ATTACK_KEY = "attack";
-        private const string DEFENCE_KEY = "defence";
-        private const string JAMMING_KEY = "jam";
+        private Animator m_animator;
+        private Room m_roomToShoot;
+        private Action m_callback;
 
-        public void Shoot(Room room)
+        private void Start()
+        {
+            m_animator = GetComponent<Animator>();
+        }
+
+        public void Shoot(Room room, Action callback)
+        {
+            m_roomToShoot = room;
+            m_callback = callback;
+            m_animator.SetTrigger("Shoot");
+        }
+
+        public void OnShoot()
         {
             Rocket rocket = Instantiate(rocketPrefab);
-            switch (room.RoomType)
+            var pos = rocket.transform.position;
+            pos.z = transform.position.z;
+            rocket.transform.position = pos;
+
+            switch (m_roomToShoot.RoomType)
             {
                 case RoomType.ATTACK:
-                    rocket.Init(pathCreatorAtt);
+                    rocket.Init(pathCreatorAtt, m_callback);
                     break;
                 case RoomType.DEFENCE:
-                    rocket.Init(pathCreatorDef);
+                    rocket.Init(pathCreatorDef, m_callback);
                     break;
                 case RoomType.JAMMING:
-                    rocket.Init(pathCreatorJam);
+                    rocket.Init(pathCreatorJam, m_callback);
                     break;
             }
         }

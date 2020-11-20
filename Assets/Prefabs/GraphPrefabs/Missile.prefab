@@ -65,8 +65,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58af66495b4278d43a9aaa36e6c1c45a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 1
-  easing: 1
+  duration: 4
+  rotationNumbers: 3
+  easing: 5
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1.9197531
+      outSlope: 1.9197531
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.098943755
+      value: 0.18994758
+      inSlope: 1.0375202
+      outSlope: 1.0375202
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.5263654
+      outWeight: 0.20462133
+    - serializedVersion: 3
+      time: 0.59317267
+      value: 0.5627024
+      inSlope: 0.91455615
+      outSlope: 0.91455615
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1.0748973
+      outSlope: 1.0748973
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1492765244396930349
 GameObject:
   m_ObjectHideFlags: 0

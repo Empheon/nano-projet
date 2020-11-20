@@ -14,15 +14,26 @@ namespace Animations
         [SerializeField]
         private float duration;
         [SerializeField]
+        private float rotationNumbers;
+        [SerializeField]
         private Ease easing = Ease.Linear;
 
-        private PathCreator m_pathCreator;
-        private float m_distanceTravelled;
+        [SerializeField]
+        private AnimationCurve animationCurve;
 
-        public void Init(PathCreator pathCreator)
+        private PathCreator m_pathCreator;
+        private float m_timeOnPath;
+        private float m_normalAngleOnPath;
+
+        public void Init(PathCreator pathCreator, Action callback)
         {
             m_pathCreator = pathCreator;
-            DOTween.To(() => m_distanceTravelled, (x) => m_distanceTravelled = x, 1, duration).SetEase(easing);
+            DOTween.To(() => m_timeOnPath, (x) => m_timeOnPath = x, 1, duration).SetEase(animationCurve).OnComplete(() => {
+                callback();
+                Destroy(gameObject);
+            });
+
+            DOTween.To(() => m_normalAngleOnPath, (x) => m_normalAngleOnPath = x, 360 * rotationNumbers, duration).SetEase(animationCurve);
             UpdatePositionAndRotation();
         }
 
@@ -35,8 +46,13 @@ namespace Animations
 
         private void UpdatePositionAndRotation()
         {
-            transform.position = m_pathCreator.path.GetPointAtDistance(m_distanceTravelled, EndOfPathInstruction.Stop);
-            transform.rotation = m_pathCreator.path.GetRotationAtDistance(m_distanceTravelled, EndOfPathInstruction.Stop);
+            m_pathCreator.bezierPath.GlobalNormalsAngle = m_normalAngleOnPath % 360;
+            m_pathCreator.EditorData.VertexPathSettingsChanged();
+
+            var newPos = m_pathCreator.path.GetPointAtTime(m_timeOnPath, EndOfPathInstruction.Stop);
+            newPos.z = transform.position.z;
+            transform.position = newPos;
+            transform.rotation = m_pathCreator.path.GetRotation(m_timeOnPath, EndOfPathInstruction.Stop);
         }
     }
 }
