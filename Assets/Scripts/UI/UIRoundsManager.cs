@@ -29,11 +29,14 @@ namespace UI
         [SerializeField]
         private GameObject rightRoundPinWrapper;
 
-        private void Start()
+        private void Awake()
         {
             round.OnLeftHPChange += UpdateLeftBar;
             round.OnRightHPChange += UpdateRightBar;
+        }
 
+        private void Start()
+        {            
             SetupRounds();
         }
 
@@ -86,7 +89,6 @@ namespace UI
         {
             if (lifebar.transform.childCount > hp)
             {
-                List<GameObject> toDestroy = new List<GameObject>();
                 for (int i = 0; i < lifebar.transform.childCount - hp; i++)
                 {
                     Destroy(lifebar.transform.GetChild(i).gameObject);

@@ -8,12 +8,19 @@ using UnityEngine.Events;
 
 namespace NeoMecha
 {
+    public enum RoomType
+    {
+        ATTACK, DEFENCE, JAMMING, FIX, AMMUNITION, ENERGY
+    }
+
     public class Room : MonoBehaviour
     {
         public bool IsDefended { get; private set; }
         public bool IsJammed { get; private set; }
         public bool IsDamaged { get; private set; }
 
+        [SerializeField]
+        public RoomType RoomType;
 
         public UnityEvent OnDefended;
         public UnityEvent OnDamaged;

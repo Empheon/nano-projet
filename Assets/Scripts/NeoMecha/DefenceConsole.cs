@@ -29,7 +29,7 @@ namespace NeoMecha
 
         public override bool CanDoAction()
         {
-            return m_loadConsole.IsLoaded && room.IsFunctional();
+            return base.CanDoAction() && m_loadConsole.IsLoaded && room.IsFunctional();
         }
 
         protected override bool IsRoomTargetable(Room room)
