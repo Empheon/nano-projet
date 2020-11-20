@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,6 +15,7 @@ namespace Character
         [SerializeField] private float checkRadius = 1;
 
         private readonly Collider2D[] _foundObjects = new Collider2D[20];
+        private int _nbObjectFound = 0;
         private GameObject _lastClosest;
         private GameObject _closest;
         
@@ -34,12 +36,12 @@ namespace Character
         {
             for (;;)
             {
-                var nbObjectFound = Physics2D.OverlapCircleNonAlloc(_transform.position, checkRadius, _foundObjects, checkLayers);
+                _nbObjectFound = Physics2D.OverlapCircleNonAlloc(_transform.position, checkRadius, _foundObjects, checkLayers);
 
                 _closest = null;
                 var distSqrClosest = Mathf.Infinity;
 
-                for (int i = 0; i < nbObjectFound; i++)
+                for (int i = 0; i < _nbObjectFound; i++)
                 {
                     var foundObject = _foundObjects[i];
                 
@@ -89,14 +91,17 @@ namespace Character
 
             if (_gamepad.buttonEast.wasPressedThisFrame)
             {
-                foreach (var foundObject in _foundObjects)
+                for (int i = 0; i < _nbObjectFound; i++)
                 {
-                    if (foundObject && foundObject.CompareTag(interactingTag))
+                    var foundObject = _foundObjects[i];
+
+                    if (foundObject.CompareTag(interactingTag))
                     {
                         foundObject.BroadcastMessage("OnStopInteraction");
                     }
                 }
             }
+            
         }
 
 #if UNITY_EDITOR

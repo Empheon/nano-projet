@@ -27,7 +27,10 @@ namespace Resources
         {
             _characterResource = character.GetComponent<CharacterResource>();
 
-            _rb.simulated = false;
+            _rb.gravityScale = 0;
+            _rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            _rb.isKinematic = true;
+            
             tag = interactingTag;
 
             _characterResource.StoreResource(ResourceObject);
@@ -35,8 +38,12 @@ namespace Resources
 
         private void OnStopInteraction()
         {
-            _rb.simulated = true;
+            _rb.gravityScale = 1;
+            _rb.constraints = RigidbodyConstraints2D.None;
+            _rb.isKinematic = false;
+            
             tag = _baseTag;
+            
             _characterResource.LetResourceDown();
         }
         

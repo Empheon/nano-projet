@@ -101,13 +101,15 @@ MonoBehaviour:
   groundCastOffset: {x: 0, y: -0.525}
   groundCastSize: {x: 0.3, y: 0.05}
   timeBeforeGroundCheck: 0.1
-  jumpForce: 100
+  jumpForce: 85
   accDownForce: 300
   maxKeepInAirTime: 0.6
   stickCrouchThreshold: -0.8
   ignoreCollisionTime: 0.8
   oneWayPlatformTag: One-way Platform
   moveSpeed: 7
+  deadZone: 0.25
+  _spriteRenderer: {fileID: 8575174635512385466}
 --- !u!114 &7294214434191426977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,7 +128,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   checkFrequency: 10
-  checkRadius: 0.55
+  checkRadius: 0.35
 --- !u!114 &7954831191108606519
 MonoBehaviour:
   m_ObjectHideFlags: 0
