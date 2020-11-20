@@ -1,4 +1,5 @@
-﻿using PathCreation;
+﻿using NeoMecha;
+using PathCreation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,18 +25,18 @@ namespace Animations
         private const string DEFENCE_KEY = "defence";
         private const string JAMMING_KEY = "jam";
 
-        public void Shoot(string pathKey)
+        public void Shoot(Room room)
         {
             Rocket rocket = Instantiate(rocketPrefab);
-            switch (pathKey)
+            switch (room.RoomType)
             {
-                case ATTACK_KEY:
+                case RoomType.ATTACK:
                     rocket.Init(pathCreatorAtt);
                     break;
-                case DEFENCE_KEY:
+                case RoomType.DEFENCE:
                     rocket.Init(pathCreatorDef);
                     break;
-                case JAMMING_KEY:
+                case RoomType.JAMMING:
                     rocket.Init(pathCreatorJam);
                     break;
             }
