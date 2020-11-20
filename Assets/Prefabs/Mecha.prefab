@@ -3269,6 +3269,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7969608828666511507, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae,
+        type: 3}
+      propertyPath: focusColor.r
+      value: 0.14509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969608828666511507, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae,
+        type: 3}
+      propertyPath: focusColor.g
+      value: 0.5058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969608828666511507, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae,
+        type: 3}
+      propertyPath: focusColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969608829115684827, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae,
+        type: 3}
+      propertyPath: focusColor.r
+      value: 0.14509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969608829115684827, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae,
+        type: 3}
+      propertyPath: focusColor.g
+      value: 0.5058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969608829115684827, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae,
+        type: 3}
+      propertyPath: focusColor.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae, type: 3}
 --- !u!4 &6974974407805055371 stripped
@@ -3487,6 +3517,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7969608828621434359, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae,
+        type: 3}
+      propertyPath: focusColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969608828621434359, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae,
+        type: 3}
+      propertyPath: focusColor.g
+      value: 0.8784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969608828621434359, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae,
+        type: 3}
+      propertyPath: focusColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969608828666511507, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae,
+        type: 3}
+      propertyPath: focusColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969608828666511507, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae,
+        type: 3}
+      propertyPath: focusColor.g
+      value: 0.8784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969608828666511507, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae,
+        type: 3}
+      propertyPath: focusColor.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae, type: 3}
 --- !u!1 &6390441254062762320 stripped
@@ -3634,6 +3694,51 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7969608828621434359, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae,
+        type: 3}
+      propertyPath: focusColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969608828621434359, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae,
+        type: 3}
+      propertyPath: focusColor.g
+      value: 0.74509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969608828621434359, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae,
+        type: 3}
+      propertyPath: focusColor.b
+      value: 0.28627452
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969608828666511507, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae,
+        type: 3}
+      propertyPath: focusColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969608828666511507, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae,
+        type: 3}
+      propertyPath: focusColor.g
+      value: 0.745283
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969608828666511507, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae,
+        type: 3}
+      propertyPath: focusColor.b
+      value: 0.2865832
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969608829115684827, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae,
+        type: 3}
+      propertyPath: focusColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969608829115684827, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae,
+        type: 3}
+      propertyPath: focusColor.g
+      value: 0.74509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969608829115684827, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae,
+        type: 3}
+      propertyPath: focusColor.b
+      value: 0.28627452
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae, type: 3}
 --- !u!114 &4926136005635854759 stripped
@@ -3765,6 +3870,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969608828621434359, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae,
+        type: 3}
+      propertyPath: focusColor.r
+      value: 0.99215686
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969608828621434359, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae,
+        type: 3}
+      propertyPath: focusColor.g
+      value: 0.101960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969608828621434359, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae,
+        type: 3}
+      propertyPath: focusColor.b
+      value: 0.015686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969608829115684827, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae,
+        type: 3}
+      propertyPath: focusColor.r
+      value: 0.99215686
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969608829115684827, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae,
+        type: 3}
+      propertyPath: focusColor.g
+      value: 0.101960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969608829115684827, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae,
+        type: 3}
+      propertyPath: focusColor.b
+      value: 0.015686275
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2acd8596bf4eaaa43a0c5f7b9fac99ae, type: 3}
