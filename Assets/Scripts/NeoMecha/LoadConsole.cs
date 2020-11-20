@@ -29,7 +29,7 @@ namespace NeoMecha
             }
         }
 
-        protected override bool CanInteract(CharacterResource characterResource)
+        public override bool CanInteract(CharacterResource characterResource)
         {
             return !IsLoaded && characterResource.HasResource(resourceType);
         }

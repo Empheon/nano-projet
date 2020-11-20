@@ -23,9 +23,8 @@ namespace NeoMecha
 
         private List<Resource> m_resources;
 
-        protected override void Start()
+        protected void Start()
         {
-            base.Start();
             m_resources = new List<Resource>();
         }
 
@@ -53,7 +52,7 @@ namespace NeoMecha
             Destroy(pickableResource.gameObject);
         }
 
-        protected override bool CanInteract(CharacterResource characterResource)
+        public override bool CanInteract(CharacterResource characterResource)
         {
             return m_resources.Count < maxResourcesNb;
         }

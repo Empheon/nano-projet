@@ -4,7 +4,6 @@ using CharacterController = Character.CharacterController;
 
 namespace NeoMecha
 {
-    [RequireComponent(typeof(TargetConsole))]
     public class ConsolePanelController : MonoBehaviour
     {
         [SerializeField] private string interactingTag = "Interacting";
