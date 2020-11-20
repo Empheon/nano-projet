@@ -2,12 +2,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
 
 namespace NeoMecha
 {
@@ -39,9 +35,8 @@ namespace NeoMecha
         [SerializeField]
         protected Room room;
 
-        protected override void Start()
+        protected void Start()
         {
-            base.Start();
             foreach (Target target in TargetList)
             {
                 target.Button.OnValidate.AddListener(() => {
@@ -87,7 +82,7 @@ namespace NeoMecha
             return true;
         }
 
-        protected override bool CanInteract(CharacterResource characterResource)
+        public override bool CanInteract(CharacterResource characterResource)
         {
             bool isTargettable = false;
             foreach(Target target in TargetList)
