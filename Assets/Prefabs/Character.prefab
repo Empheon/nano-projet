@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableTag: Interactable
+  interactingTag: Interacting
   checkLayers:
     serializedVersion: 2
     m_Bits: 2048

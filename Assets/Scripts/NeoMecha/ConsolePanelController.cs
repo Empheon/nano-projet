@@ -84,7 +84,7 @@ namespace NeoMecha
                 else if (y < -snapValueThreshHold) Next();
             }
 
-            if (_gamepad.buttonSouth.wasPressedThisFrame) Validate();
+            if (_gamepad.buttonWest.wasPressedThisFrame) Validate();
         }
 
         private void EnterPanel()
