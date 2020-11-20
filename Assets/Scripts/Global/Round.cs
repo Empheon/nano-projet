@@ -18,7 +18,8 @@ namespace Global
         public Action<int> OnLeftHPChange;
         public Action<int> OnRightHPChange;
 
-        public Team WinnerTeam;
+        [HideInInspector]
+        public Team WinnerTeam { get; private set; }
 
         private void Start()
         {
@@ -28,7 +29,7 @@ namespace Global
             m_teamHp[Team.Right] = baseHitPoints;
 
             OnLeftHPChange?.Invoke(m_teamHp[Team.Left]);
-            OnLeftHPChange?.Invoke(m_teamHp[Team.Right]);
+            OnRightHPChange?.Invoke(m_teamHp[Team.Right]);
         }
 
         public void LeftGetHit()
@@ -49,7 +50,7 @@ namespace Global
         {
             if (m_teamHp[team] <= 0)
             {
-                WinnerTeam = team;
+                WinnerTeam = team == Team.Left ? Team.Right : Team.Left;
                 Match.Instance.FinishRound(this);
             }
         }

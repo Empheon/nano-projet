@@ -1,10 +1,12 @@
 ﻿using Global;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UI
 {
@@ -55,6 +57,18 @@ namespace UI
                     rightRoundPinWrapper.transform.GetChild(rightIndex++).GetComponent<UIRoundPin>().DisplayFiller(true);
                 }
             }
+
+            StartCoroutine(DisableWidthChildControl());
+        }
+
+        private IEnumerator DisableWidthChildControl()
+        {
+            yield return new WaitForSeconds(0.5f);
+
+            leftLifeBarWrapper.GetComponent<HorizontalLayoutGroup>().childControlWidth = false;
+            rightLifeBarWrapper.GetComponent<HorizontalLayoutGroup>().childControlWidth = false;
+            leftLifeBarWrapper.GetComponent<HorizontalLayoutGroup>().childForceExpandWidth = false;
+            rightLifeBarWrapper.GetComponent<HorizontalLayoutGroup>().childForceExpandWidth = false;
         }
 
         public void UpdateLeftBar(int hp)
@@ -72,17 +86,22 @@ namespace UI
         {
             if (lifebar.transform.childCount > hp)
             {
-                while (lifebar.transform.childCount > hp)
+                List<GameObject> toDestroy = new List<GameObject>();
+                for (int i = 0; i < lifebar.transform.childCount - hp; i++)
                 {
-                    Destroy(lifebar.transform.GetChild(0));
+                    //lifebar.transform.GetChild(i).gameObject.SetActive(false);
+                    //toDestroy.Add()
+                    Destroy(lifebar.transform.GetChild(i).gameObject);
                 }
             } else if (lifebar.transform.childCount < hp)
             {
-                while (lifebar.transform.childCount < hp)
+                for (int i = 0; i <= hp - lifebar.transform.childCount + 1; i++)
                 {
                     Instantiate(lifeBarPrefab, lifebar.transform);
                 }
             }
+
+            
         }
     }
 }

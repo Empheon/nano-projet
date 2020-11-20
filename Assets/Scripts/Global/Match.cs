@@ -4,11 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 namespace Global
 {
     public class Match : MonoBehaviour
     {
+        [SerializeField] private int gameSceneIndex = -1;
+        [SerializeField] private int menuSceneIndex = -1;
+
         public static Match Instance { get; private set; }
 
         public int RequiredWinningRounds;
@@ -18,6 +23,11 @@ namespace Global
         private void Start()
         {
             Instance = this;
+            Reset();
+        }
+
+        private void Reset()
+        {
             FinishedRounds = new List<Round>();
         }
 
@@ -30,7 +40,13 @@ namespace Global
 
             if (leftWonRounds < RequiredWinningRounds && rightWonRounds < RequiredWinningRounds)
             {
-
+                DOTween.KillAll();
+                SceneManager.LoadScene(gameSceneIndex);
+            } else
+            {
+                DOTween.KillAll();
+                Reset();
+                SceneManager.LoadScene(menuSceneIndex);
             }
         }
 

@@ -29,7 +29,7 @@ namespace NeoMecha
                 OnBreakDefenceReceived();
                 return;
             }
-            if (IsDamaged) return;
+            //if (IsDamaged) return;
             IsDamaged = true;
             OnDamaged.Invoke();
         }
