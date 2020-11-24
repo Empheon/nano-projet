@@ -35,6 +35,10 @@ namespace NeoMecha
                 return;
             }
 
+            character
+                .GetComponentInChildren<Animator>()
+                ?.SetTrigger("PushButton");
+
             PickableResource pickableResource = Instantiate(resourcePrefab, transform.position, Quaternion.identity);
             pickableResource.Init();
             
