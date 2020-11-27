@@ -29,7 +29,11 @@ namespace Character
         [SerializeField] [Range(0f, 0.6f)] private float deadZone = 0.15f;
 
         [Header("Sprites & Animations")] 
-        [SerializeField] private SpriteRenderer _spriteRenderer;
+        [SerializeField] private Animator animator;
+        [SerializeField] private SpriteRenderer spriteRenderer;
+        [SerializeField] private float fallingThreshold = -0.05f;
+        [SerializeField] private float blinkFrequency = 0.3f;
+        [SerializeField] private float scratchFrequency = 0.3f;
         
         private Gamepad _gamepad;
         private Transform _transform;
@@ -105,6 +109,7 @@ namespace Character
             if (_gamepad.buttonSouth.wasPressedThisFrame && grounded)
             {
                 _shouldJump = true;
+                animator.SetTrigger("Jump");
             }
             
             _keepInAir = _gamepad.buttonSouth.isPressed;
@@ -120,8 +125,14 @@ namespace Character
             
             // animations update
             // need to not change if equals to 0
-            if (_movement > 0 && !_spriteRenderer.flipX) _spriteRenderer.flipX = true;
-            else if (_movement < 0 && _spriteRenderer.flipX) _spriteRenderer.flipX = false;
+            if (_movement > 0) spriteRenderer.flipX = true;
+            else if (_movement < 0) spriteRenderer.flipX = false;
+
+            animator.SetBool("IsRunning", Mathf.Abs(_movement) > 0f);
+            animator.SetBool("IsFalling",  !grounded && _rb.velocity.y < fallingThreshold);
+
+            if(Random.Range(0f, 1f) < blinkFrequency * Time.deltaTime) animator.SetTrigger("Blink");
+            if(Random.Range(0f, 1f) < scratchFrequency * Time.deltaTime) animator.SetTrigger("Scratch");
         }
 
         private void FixedUpdate()
