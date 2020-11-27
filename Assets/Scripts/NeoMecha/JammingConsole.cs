@@ -55,7 +55,7 @@ namespace NeoMecha
 
         public override bool CanDoAction()
         {
-            return !m_isCoolingDown && !m_isJamming && room.IsFunctional();
+            return base.CanDoAction() && !m_isCoolingDown && !m_isJamming && room.IsFunctional();
         }
 
         protected override bool IsRoomTargetable(Room room)

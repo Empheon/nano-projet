@@ -1,0 +1,189 @@
+fileFormatVersion: 2
+guid: 98eb63d9315cc0d4aaa247a581236c72
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      74: 8776092703937974824
+    second: Windmill|Armature.001Action
+  - first:
+      74: 2572318675574353879
+    second: Windmill|ArmatureMissileAction
+  - first:
+      74: 5464386734307202785
+    second: Windmill|EmptyAction
+  - first:
+      74: 8526508497418616937
+    second: Windmill|LaserParentAction
+  - first:
+      74: 6713789790571712864
+    second: Windmill|MissileAction
+  - first:
+      74: -7279470407346891014
+    second: Windmill
+  - first:
+      74: 8349735068401687741
+    second: Windmill|WindmillParentAction
+  - first:
+      74: -647306025777646939
+    second: LaserParent|Armature.001Action
+  - first:
+      74: -7185726983837065662
+    second: LaserParent|ArmatureMissileAction
+  - first:
+      74: 1195208725892932277
+    second: LaserParent|EmptyAction
+  - first:
+      74: -8959514424110608108
+    second: LaserParent|LaserParentAction
+  - first:
+      74: 1619003841624260747
+    second: LaserParent|MissileAction
+  - first:
+      74: -8002767678496949291
+    second: LaserParent|WindmillAction
+  - first:
+      74: 1794937349440185349
+    second: LaserParent|WindmillParentAction
+  - first:
+      74: 4593561211152997153
+    second: WindmillParent|Armature.001Action
+  - first:
+      74: -6089031532797951915
+    second: WindmillParent|ArmatureMissileAction
+  - first:
+      74: -4505165087906657032
+    second: WindmillParent|EmptyAction
+  - first:
+      74: 8563871078014928146
+    second: WindmillParent|LaserParentAction
+  - first:
+      74: -5083713198651123793
+    second: WindmillParent|MissileAction
+  - first:
+      74: 4095095089603456900
+    second: WindmillParent|WindmillAction
+  - first:
+      74: 6813133320537820658
+    second: WindmillParent|WindmillParentAction
+  externalObjects: {}
+  materials:
+    materialImportMode: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Windmill
+      takeName: Windmill|WindmillAction
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 119
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.2
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.2
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -9,7 +9,7 @@ namespace NeoMecha
 {
     
     [Serializable]
-    public class RoomEvent : UnityEvent<Room> { }
+    public class RoomEvent : UnityEvent<Room, Action> { }
     
     public abstract class TargetConsole : Console
     {
@@ -21,7 +21,7 @@ namespace NeoMecha
         }
         
         public RoomEvent OnActionStart;
-        public RoomEvent OnActionEnd;
+        //public RoomEvent OnActionEnd;
 
         [SerializeField]
         private float actionDuration;
@@ -35,6 +35,8 @@ namespace NeoMecha
         [SerializeField]
         protected Room room;
 
+        private bool m_lockAction;
+
         protected void Start()
         {
             foreach (Target target in TargetList)
@@ -42,7 +44,18 @@ namespace NeoMecha
                 target.Button.OnValidate.AddListener(() => {
                     if (CanDoAction())
                     {
-                        StartCoroutine(StartAction(target.Room));
+                        m_lockAction = true;
+                        OnActionStart.Invoke(target.Room, () => {
+                            m_lockAction = false;
+                            DoAction(target.Room);
+                        });
+
+                        if (OnActionStart.GetPersistentEventCount() == 0)
+                        {
+                            m_lockAction = false;
+                            DoAction(target.Room);
+                        }
+                        //StartCoroutine(StartAction(target.Room));
                     }
                 });
             }
@@ -65,21 +78,26 @@ namespace NeoMecha
 
         protected abstract bool IsRoomTargetable(Room room);
 
-        private IEnumerator StartAction(Room room)
-        {
-            OnActionStart.Invoke(room);
+        //private IEnumerator StartAction(Room room)
+        //{
+        //    OnActionStart.Invoke(room, () => DoAction(room));
 
-            yield return new WaitForSeconds(actionDuration);
+        //    if (OnActionStart.GetPersistentEventCount() == 0)
+        //    {
+        //        DoAction(room);
+        //    }
 
-            OnActionEnd.Invoke(room);
-            DoAction(room);
-        }
+        //    yield return new WaitForSeconds(actionDuration);
+
+        //    //OnActionEnd.Invoke(room);
+        //    DoAction(room);
+        //}
 
         protected abstract void DoAction(Room room);
 
         public virtual bool CanDoAction()
         {
-            return true;
+            return !m_lockAction;
         }
 
         public override bool CanInteract(CharacterResource characterResource)
