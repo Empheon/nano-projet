@@ -51,14 +51,14 @@ namespace YorfLib
 			s_fields.Clear();
 
 #if UNITY_EDITOR
-			if (EditorApplication.isPlayingOrWillChangePlaymode && !isFallback)
-			{
-				lang = LanguageISOCode((SystemLanguage) EditorPrefs.GetInt("i18n_lang", (int) SystemLanguage.English));
-			}
-			else if (!EditorApplication.isPlayingOrWillChangePlaymode && !isFallback)
-			{
-				lang = "en";
-			}
+			//if (EditorApplication.isPlayingOrWillChangePlaymode && !isFallback)
+			//{
+			//	lang = LanguageISOCode((SystemLanguage) EditorPrefs.GetInt("i18n_lang", (int) SystemLanguage.English));
+			//}
+			//else if (!EditorApplication.isPlayingOrWillChangePlaymode && !isFallback)
+			//{
+			//	lang = "en";
+			//}
 #endif
 
 			CurrentLang = lang;
