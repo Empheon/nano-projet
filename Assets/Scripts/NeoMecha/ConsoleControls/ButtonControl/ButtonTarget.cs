@@ -10,7 +10,6 @@ namespace NeoMecha.ConsoleControls.ButtonControl
         [SerializeField] private Color focusColor;
         [SerializeField] private Color inactiveColor;
         
-        public bool IsActive { get; private set; }
         private SpriteRenderer _renderer;
         private Color _originalColor;
         

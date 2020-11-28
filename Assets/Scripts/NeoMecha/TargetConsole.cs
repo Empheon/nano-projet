@@ -70,11 +70,12 @@ namespace NeoMecha
             {
                 foreach (Target target in TargetList)
                 {
-                    if (IsRoomTargetable(target.Room))
+                    var targetable = IsRoomTargetable(target.Room);
+                    if (targetable && !target.Button.IsActive)
                     {
                         target.Button.Activate();
                     }
-                    else
+                    else if (!targetable && target.Button.IsActive)
                     {
                         target.Button.Desactivate();
                     }

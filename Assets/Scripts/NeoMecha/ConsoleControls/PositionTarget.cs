@@ -2,10 +2,9 @@
 
 namespace NeoMecha.ConsoleControls
 {
-    public class LaserTarget : ConsoleTarget
+    public class PositionTarget : ConsoleTarget
     {
-        [SerializeField] private Transform target;
-        public bool IsActive { get; private set; }
+        public Transform target;
 
         public override void Activate()
         {
