@@ -30,6 +30,12 @@ namespace Tutorial
             transform.DOScale(1, 0.5f);
         }
 
+        public void Hide()
+        {
+            m_isEnabled = false;
+            transform.DOScale(0, 0.5f);
+        }
+
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (!m_isEnabled || m_isPressed) return;
