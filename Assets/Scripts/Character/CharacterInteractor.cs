@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,11 +9,13 @@ namespace Character
     public class CharacterInteractor : MonoBehaviour
     {
         [SerializeField] private string interactableTag = "Interactable";
+        [SerializeField] private string interactingTag = "Interacting";
         [SerializeField] private LayerMask checkLayers;
         [SerializeField] private float checkFrequency = 10;
         [SerializeField] private float checkRadius = 1;
 
-        private Collider2D[] _foundObjects = new Collider2D[20];
+        private readonly Collider2D[] _foundObjects = new Collider2D[20];
+        private int _nbObjectFound = 0;
         private GameObject _lastClosest;
         private GameObject _closest;
         
@@ -33,14 +36,12 @@ namespace Character
         {
             for (;;)
             {
-                var nbObjectFound = Physics2D.OverlapCircleNonAlloc(_transform.position, checkRadius, _foundObjects, checkLayers);
+                _nbObjectFound = Physics2D.OverlapCircleNonAlloc(_transform.position, checkRadius, _foundObjects, checkLayers);
 
-                Debug.Log(nbObjectFound);
-            
                 _closest = null;
                 var distSqrClosest = Mathf.Infinity;
 
-                for (int i = 0; i < nbObjectFound; i++)
+                for (int i = 0; i < _nbObjectFound; i++)
                 {
                     var foundObject = _foundObjects[i];
                 
@@ -57,12 +58,12 @@ namespace Character
 
                 if (_closest != _lastClosest && _lastClosest!= null)
                 {
-                    _lastClosest.BroadcastMessage("OnCharacterBlur", SendMessageOptions.DontRequireReceiver);
+                    _lastClosest.BroadcastMessage("OnCharacterBlur", gameObject, SendMessageOptions.DontRequireReceiver);
                 }
 
                 if (_closest != null)
                 {
-                    _closest.BroadcastMessage("OnCharacterFocus", SendMessageOptions.DontRequireReceiver);
+                    _closest.BroadcastMessage("OnCharacterFocus", gameObject, SendMessageOptions.DontRequireReceiver);
                 }
             
                 _lastClosest = _closest;
@@ -80,7 +81,7 @@ namespace Character
                     _closest.BroadcastMessage("OnCharacterInteract", gameObject);
                     
                     // prevent from interacting 2 times with object
-                    _closest = null; 
+                    _closest = null;
                 }
                 else
                 {
@@ -90,10 +91,19 @@ namespace Character
 
             if (_gamepad.buttonEast.wasPressedThisFrame)
             {
-                gameObject.BroadcastMessage("OnStopInteraction");
+                for (int i = 0; i < _nbObjectFound; i++)
+                {
+                    var foundObject = _foundObjects[i];
+
+                    if (foundObject.CompareTag(interactingTag))
+                    {
+                        foundObject.BroadcastMessage("OnStopInteraction");
+                    }
+                }
             }
+            
         }
-        
+
 #if UNITY_EDITOR
             
         private void OnDrawGizmosSelected()

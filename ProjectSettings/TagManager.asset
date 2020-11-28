@@ -7,6 +7,7 @@ TagManager:
   - Interactable
   - Character
   - One-way Platform
+  - Interacting
   layers:
   - Default
   - TransparentFX
@@ -49,6 +50,9 @@ TagManager:
     locked: 0
   - name: Gameplay
     uniqueID: 2237366629
+    locked: 0
+  - name: Player
+    uniqueID: 652520279
     locked: 0
   - name: Front
     uniqueID: 1977546687

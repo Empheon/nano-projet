@@ -51,19 +51,19 @@ namespace YorfLib
 			s_fields.Clear();
 
 #if UNITY_EDITOR
-			if (EditorApplication.isPlayingOrWillChangePlaymode && !isFallback)
-			{
-				lang = LanguageISOCode((SystemLanguage) EditorPrefs.GetInt("i18n_lang", (int) SystemLanguage.English));
-			}
-			else if (!EditorApplication.isPlayingOrWillChangePlaymode && !isFallback)
-			{
-				lang = "en";
-			}
+			//if (EditorApplication.isPlayingOrWillChangePlaymode && !isFallback)
+			//{
+			//	lang = LanguageISOCode((SystemLanguage) EditorPrefs.GetInt("i18n_lang", (int) SystemLanguage.English));
+			//}
+			//else if (!EditorApplication.isPlayingOrWillChangePlaymode && !isFallback)
+			//{
+			//	lang = "en";
+			//}
 #endif
 
 			CurrentLang = lang;
 
-			TextAsset textAsset = (TextAsset) Resources.Load(@"I18n/" + lang);
+			TextAsset textAsset = Resources.Load<TextAsset>(@"I18n/" + lang);
 			if (textAsset == null && lang != "en")
 			{
 				LoadLanguage("en", true);
@@ -76,7 +76,7 @@ namespace YorfLib
 				return;
 			}
 
-			string allTexts = (textAsset as TextAsset).text;
+			string allTexts = textAsset.text;
 			if (allTexts == "")
 			{
 				allTexts = System.Text.Encoding.UTF8.GetString((textAsset as TextAsset).bytes);

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6386115114080336265}
   - component: {fileID: 7294214434191426977}
   - component: {fileID: 7954831191108606519}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Character
   m_TagString: Character
   m_Icon: {fileID: 0}
@@ -29,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4621001505216861089}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.27, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0}
   m_Children:
   - {fileID: 8050848317654366022}
   m_Father: {fileID: 0}
@@ -45,7 +45,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 4621001505216861089}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c98a92e987bf87c4190af9cf7dcd1a39, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -60,7 +60,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 0.9}
+  m_Size: {x: 0.4, y: 0.8}
   m_EdgeRadius: 0.05
 --- !u!50 &2759944408345352635
 Rigidbody2D:
@@ -101,13 +101,19 @@ MonoBehaviour:
   groundCastOffset: {x: 0, y: -0.525}
   groundCastSize: {x: 0.3, y: 0.05}
   timeBeforeGroundCheck: 0.1
-  jumpForce: 100
-  accDownForce: 300
-  maxKeepInAirTime: 0.6
+  jumpForce: 70
+  accDownForce: 200
+  maxKeepInAirTime: 0.7
   stickCrouchThreshold: -0.8
   ignoreCollisionTime: 0.8
   oneWayPlatformTag: One-way Platform
-  moveSpeed: 7
+  moveSpeed: 4.5
+  deadZone: 0.25
+  animator: {fileID: 8232875289791109966}
+  spriteRenderer: {fileID: 8575174635512385466}
+  fallingThreshold: -0.05
+  blinkFrequency: 0.3
+  scratchFrequency: 0.3
 --- !u!114 &7294214434191426977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,11 +127,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableTag: Interactable
+  interactingTag: Interacting
   checkLayers:
     serializedVersion: 2
     m_Bits: 2048
   checkFrequency: 10
-  checkRadius: 1
+  checkRadius: 0.35
 --- !u!114 &7954831191108606519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,7 +157,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8050848317654366022}
   - component: {fileID: 8575174635512385466}
-  m_Layer: 11
+  - component: {fileID: 8232875289791109966}
+  m_Layer: 8
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,8 +173,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5980463635366524008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.05, y: 0.065, z: 0}
+  m_LocalScale: {x: 0.18, y: 0.18, z: 0}
   m_Children: []
   m_Father: {fileID: 4621001505216861100}
   m_RootOrder: 0
@@ -207,11 +215,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 652520279
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 61a7c876de930c344aaa7a23c5ccf4a4, type: 3}
-  m_Color: {r: 0.9811321, g: 0.8453346, b: 0.43040225, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 9b4724fa98ecb174787341d53f8bab29, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -221,3 +229,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8232875289791109966
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5980463635366524008}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e0e752eb9b38d8c48a074647fa93f352, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
