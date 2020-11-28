@@ -1,26 +1,19 @@
 fileFormatVersion: 2
-guid: 56c4fa9b9aa3e504681e82b6e55ad184
+guid: 74b540d30ec0977408833144938d5428
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable:
-  - first:
-      74: 5890145927102377625
-    second: ArmatureMissile|Armature.001Action
-  - first:
-      74: 409130628691415445
-    second: ArmatureMissile|ArmatureMissileAction
-  - first:
-      74: 8623819155370959136
-    second: MissileOpenWings
-  - first:
-      74: -3429980063169694311
-    second: ArmatureMissile|MissileAction
+  internalIDToNameTable: []
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Cannon.001
+      name: Cannon
     second: {fileID: 2100000, guid: fbdbf86b1772b194681439e2c11e8c72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Coils
+    second: {fileID: 2100000, guid: a9cf4365f0a2abe47a43deda28cc9ab9, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -29,7 +22,7 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleCurves: 0
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
     rigImportErrors: 
@@ -40,43 +33,14 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 0
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: MissileOpenWings
-      takeName: ArmatureMissile|ArmatureMissileAction.001
-      internalID: 0
-      firstFrame: 0
-      lastFrame: 19
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 0
   meshes:
     lODScreenPercentages: []
