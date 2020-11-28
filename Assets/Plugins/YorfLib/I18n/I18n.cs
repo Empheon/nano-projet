@@ -63,7 +63,7 @@ namespace YorfLib
 
 			CurrentLang = lang;
 
-			TextAsset textAsset = (TextAsset) Resources.Load(@"I18n/" + lang);
+			TextAsset textAsset = Resources.Load<TextAsset>(@"I18n/" + lang);
 			if (textAsset == null && lang != "en")
 			{
 				LoadLanguage("en", true);
@@ -76,7 +76,7 @@ namespace YorfLib
 				return;
 			}
 
-			string allTexts = (textAsset as TextAsset).text;
+			string allTexts = textAsset.text;
 			if (allTexts == "")
 			{
 				allTexts = System.Text.Encoding.UTF8.GetString((textAsset as TextAsset).bytes);

@@ -1,0 +1,23 @@
+#English translation file
+menu_play_game;Jouer
+menu_quit;Quitter
+
+tuto_main_1;Terrassez la forteresse ennemie !
+tuto_main_2;Voici votre système d'attaque.
+tuto_main_3;Pour l'utiliser, vous devez y apporter une munition...
+tuto_main_4;Puis choisir quel système ennemi attaquer.
+tuto_main_5;Celui-ci sera alors endommagé, et l'ennemi perdra un point de vie.
+tuto_main_6;Pour retrouver l'usage de cette salle, il devra utiliser son système de réparation.
+tuto_main_7;Voici votre système de défense.
+tuto_main_8;Pour l'utiliser, vous devez y apporter une énergie. 
+tuto_main_9;Puis choisir lequel de vos systèmes défendre.
+tuto_main_10;Enfin, le système de piratage !
+tuto_main_11;Il permet de paralyser un système ennemi.
+tuto_main_12;Après utilisation, le système doit se recharger. 
+tuto_main_13;Coordonnez vos actions, 
+tuto_main_14;Observez les mouvements de l'adversaire, 
+tuto_main_15;Et la victoire est à vous !
+
+tuto_sub_2;Pressez le bouton dans le système d'attaque.
+tuto_sub_7;Pressez le bouton dans le système de défense.
+tuto_sub_10;Pressez le bouton dans le système de pirate.
