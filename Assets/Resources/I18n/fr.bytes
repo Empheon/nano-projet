@@ -1,5 +1,7 @@
 #French translation file
 menu_play_game;Jouer
+menu_tutorial;Tutoriel
+menu_settings;Options
 menu_quit;Quitter
 
 tuto_main_1;Terrassez la forteresse ennemie !
@@ -13,7 +15,7 @@ tuto_main_8;Pour l'utiliser, vous devez y apporter une énergie.
 tuto_main_9;Puis choisir lequel de vos systèmes défendre.
 tuto_main_10;Enfin, le système de piratage !
 tuto_main_11;Il permet de paralyser un système ennemi.
-tuto_main_12;Après utilisation, le système doit se recharger. 
+tuto_main_12;Après utilisation, le système de piratage doit se recharger. 
 tuto_main_13;Coordonnez vos actions, 
 tuto_main_14;Observez les mouvements de l'adversaire, 
 tuto_main_15;Et la victoire est à vous !

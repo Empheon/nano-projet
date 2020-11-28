@@ -3,6 +3,7 @@ using DG.Tweening;
 using Global;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 namespace Menu
 {
@@ -16,7 +17,7 @@ namespace Menu
         [SerializeField] private float checkFrequency = 10;
         
         private Gamepad _gamepad;
-        private SpriteRenderer _indicRenderer;
+        private Image _indicRenderer;
         private Transform _indicTransform;
         
         private Color _baseColor;
@@ -29,7 +30,7 @@ namespace Menu
             indicatorObject.SetActive(false);
             _indicTransform = indicatorObject.GetComponent<Transform>();
             _indicTransform.localScale = Vector3.zero;
-            _indicRenderer = indicatorObject.GetComponent<SpriteRenderer>();
+            _indicRenderer = indicatorObject.GetComponent<Image>();
             _baseColor = _indicRenderer.color;
             
             for (;;)

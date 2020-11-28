@@ -2,18 +2,21 @@
 using System.Linq;
 using Global;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 namespace Menu
 {
     public class GamepadCheckManager : MonoBehaviour
     {
-        [SerializeField] private int sceneIndex = -1;
+        //[SerializeField] private int sceneIndex = -1;
         
         private GamepadCheck[] _checkers;
-        private int _nextSceneIndex;
+        //private int _nextSceneIndex;
+
+        public UnityEvent LoadNextScene;
         
-        private void Start()
+        private void OnEnable()
         {
             _checkers = GetComponentsInChildren<GamepadCheck>();
         }
@@ -28,7 +31,8 @@ namespace Menu
             if (EveryOneIsReady())
             {
                 PlayerManager.Instance.Locked = true;
-                SceneManager.LoadScene(sceneIndex);
+                LoadNextScene.Invoke();
+                //SceneManager.LoadScene(sceneIndex);
             }
         }
     }

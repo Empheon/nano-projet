@@ -9,11 +9,15 @@ using TMPro;
 using YorfLib;
 using System.Collections;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 namespace Tutorial
 {
     public class TutorialManager : MonoBehaviour
     {
+        [SerializeField]
+        private int menuSceneIndex;
+
         [SerializeField]
         private MechaLights leftMechaLights;
         [SerializeField]
@@ -36,6 +40,13 @@ namespace Tutorial
         private Color defaultColor = Color.white;
         [SerializeField]
         private Color redColor = Color.red;
+
+        [SerializeField]
+        private List<PressurePlate> attPlates;
+        [SerializeField]
+        private List<PressurePlate> defPlates;
+        [SerializeField]
+        private List<PressurePlate> jamPlates;
 
         private int m_attButtonPressed;
         private int m_defButtonPressed;
@@ -76,13 +87,16 @@ namespace Tutorial
         private IEnumerator Tuto()
         {
             mainText.text = I18n.GetString("tuto_main_1");
-            yield return new WaitForSeconds(stepDuration);
+            yield return new WaitForSeconds(stepDuration / 2);
             mainText.text = I18n.GetString("tuto_main_2");
             subText.text = I18n.GetString("tuto_sub_2");
             leftMechaLights.AttLight.SwitchOn();
             rightMechaLights.AttLight.SwitchOn();
 
-
+            foreach(PressurePlate pp in attPlates)
+            {
+                pp.Show();
+            }
             while (m_attButtonPressed < 2)
             {
                 yield return new WaitForSeconds(0.1f);
@@ -141,6 +155,10 @@ namespace Tutorial
             leftMechaLights.DefLight.SwitchOn();
             rightMechaLights.DefLight.SwitchOn();
 
+            foreach (PressurePlate pp in defPlates)
+            {
+                pp.Show();
+            }
             while (m_defButtonPressed < 2)
             {
                 yield return new WaitForSeconds(0.1f);
@@ -177,6 +195,10 @@ namespace Tutorial
             leftMechaLights.JamLight.SwitchOn();
             rightMechaLights.JamLight.SwitchOn();
 
+            foreach (PressurePlate pp in jamPlates)
+            {
+                pp.Show();
+            }
             while (m_jamButtonPressed < 2)
             {
                 yield return new WaitForSeconds(0.1f);
@@ -211,8 +233,8 @@ namespace Tutorial
             mainText.text = I18n.GetString("tuto_main_14");
             yield return new WaitForSeconds(fastStepDuration);
             mainText.text = I18n.GetString("tuto_main_15");
-            yield return new WaitForSeconds(stepDuration);
-            Debug.Log("mdr c fini");
+            yield return new WaitForSeconds(stepDuration / 2);
+            SceneManager.LoadScene(menuSceneIndex);
         }
 
         public void OnAttButtonPressed()
