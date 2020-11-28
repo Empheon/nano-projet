@@ -155,6 +155,10 @@ namespace Tutorial
             leftMechaLights.DefLight.SwitchOn();
             rightMechaLights.DefLight.SwitchOn();
 
+            foreach (PressurePlate pp in attPlates)
+            {
+                pp.Hide();
+            }
             foreach (PressurePlate pp in defPlates)
             {
                 pp.Show();
@@ -195,6 +199,10 @@ namespace Tutorial
             leftMechaLights.JamLight.SwitchOn();
             rightMechaLights.JamLight.SwitchOn();
 
+            foreach (PressurePlate pp in defPlates)
+            {
+                pp.Hide();
+            }
             foreach (PressurePlate pp in jamPlates)
             {
                 pp.Show();
@@ -227,6 +235,11 @@ namespace Tutorial
             rightMechaLights.JamLight.StopBlink();
 
             DOTween.To(() => globalLight.intensity, (x) => globalLight.intensity = x, 1, 0.5f);
+
+            foreach (PressurePlate pp in jamPlates)
+            {
+                pp.Hide();
+            }
 
             mainText.text = I18n.GetString("tuto_main_13");
             yield return new WaitForSeconds(fastStepDuration);
