@@ -2542,6 +2542,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3337251508044259750, guid: ffbbe34f133644b43baa6314dceb4f77,
+        type: 3}
+      propertyPath: baseHitPoints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3337251508044259751, guid: ffbbe34f133644b43baa6314dceb4f77,
         type: 3}
       propertyPath: m_Name
@@ -4245,11 +4250,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 2576712405164699829, guid: d0196bbb97733ef4abfe4f917df98f6a,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0196bbb97733ef4abfe4f917df98f6a, type: 3}
