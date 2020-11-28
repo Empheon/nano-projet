@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MechaScene.unity
     guid: 1dfb981f596081442bdb6d754238e1b5
+  - enabled: 1
+    path: Assets/Scenes/TutoScene.unity
+    guid: d837046fbf3d39e4894bca3dc2d8f0f2
   m_configObjects: {}
