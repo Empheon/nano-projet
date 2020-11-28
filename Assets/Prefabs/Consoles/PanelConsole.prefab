@@ -91,8 +91,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7057898311975712839}
   - component: {fileID: 3228156720853839390}
-  - component: {fileID: 7517242155738149759}
   - component: {fileID: 7947244931374655973}
+  - component: {fileID: 2063830536806505858}
+  - component: {fileID: 5897187797005513907}
   m_Layer: 11
   m_Name: PanelConsole
   m_TagString: Interactable
@@ -142,23 +143,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.99346703, y: 1.2472168}
   m_EdgeRadius: 0
---- !u!114 &7517242155738149759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5610775915249022714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a30ec67752234e89bff6862c0d12bcb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactingTag: Interacting
-  uiPanel: {fileID: 7969608828884141344}
-  getOutValueThreshHold: 0.95
-  snapValueThreshHold: 0.5
-  snapCooldown: 0.2
 --- !u!114 &7947244931374655973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,6 +156,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_spriteRenderer: {fileID: 5331307570506989087}
+--- !u!114 &2063830536806505858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5610775915249022714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f8f04a13534473da331fb02ae1d0a4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactingTag: Interacting
+  getOutValueThreshHold: 0.95
+  snapValueThreshHold: 0.5
+  snapCooldown: 0.2
+--- !u!114 &5897187797005513907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5610775915249022714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69cafeb962d34aca8c6a558a177ba7cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 7969608828884141344}
 --- !u!1001 &4367216243108919159
 PrefabInstance:
   m_ObjectHideFlags: 0

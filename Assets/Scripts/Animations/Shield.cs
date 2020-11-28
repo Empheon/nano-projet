@@ -28,18 +28,25 @@ namespace Animations
             StartCoroutine(ProtectAnim(room, callback));
         }
 
+        public void Close(Room room, Action callback)
+        {
+            m_animator.SetTrigger("CloseShield");
+            callback();
+        }
+
         private IEnumerator ProtectAnim(Room room, Action callback)
         {
             transform.DOMoveY(room.transform.position.y, 0.3f).SetEase(Ease.OutBack);
 
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0f);
 
             m_animator.SetTrigger("OpenShield");
-
-            yield return new WaitForSeconds(protectionDuration);
-
-            m_animator.SetTrigger("CloseShield");
             callback();
+
+            //yield return new WaitForSeconds(protectionDuration);
+
+            //m_animator.SetTrigger("CloseShield");
+            //callback();
         }
     }
 }
