@@ -57,5 +57,26 @@ namespace Animations
                     break;
             }
         }
+
+        public void UpdatePathsWithOffset(float offset)
+        {
+            UpdatePathOffset(pathCreatorAtt, offset);
+            UpdatePathOffset(pathCreatorDef, offset);
+            UpdatePathOffset(pathCreatorJam, offset);
+        }
+
+        private void UpdatePathOffset(PathCreator path, float offset)
+        {
+            Vector3 pos = path.bezierPath.GetPoint(path.bezierPath.NumPoints - 1);
+            pos.x -= offset;
+            path.bezierPath.SetPoint(path.bezierPath.NumPoints - 1, pos);
+
+            for (int i = 1; i < path.bezierPath.NumPoints - 1; i++)
+            {
+                pos = path.bezierPath.GetPoint(i);
+                pos.x -= offset / 2;
+                path.bezierPath.SetPoint(i, pos);
+            }
+        }
     }
 }
