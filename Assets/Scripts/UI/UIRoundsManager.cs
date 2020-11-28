@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 namespace UI
 {
@@ -15,6 +16,8 @@ namespace UI
         [SerializeField]
         private Round round;
 
+        [SerializeField]
+        private GameObject firstLifeBarPrefab;
         [SerializeField]
         private GameObject lifeBarPrefab;
         [SerializeField]
@@ -36,13 +39,13 @@ namespace UI
         }
 
         private void Start()
-        {            
+        {
             SetupRounds();
         }
 
         private void SetupRounds()
         {
-            for(int i = 0; i < Match.Instance.RequiredWinningRounds; i++)
+            for (int i = 0; i < Match.Instance.RequiredWinningRounds; i++)
             {
                 Instantiate(roundPinPrefab, leftRoundPinWrapper.transform);
                 Instantiate(roundPinPrefab, rightRoundPinWrapper.transform);
@@ -50,14 +53,14 @@ namespace UI
 
             int leftIndex = Match.Instance.RequiredWinningRounds - 1;
             int rightIndex = 0;
-            foreach(Round wonRound in Match.Instance.FinishedRounds)
+            foreach (Round wonRound in Match.Instance.FinishedRounds)
             {
                 if (wonRound.WinnerTeam == PlayerManager.Team.Left)
                 {
-                    leftRoundPinWrapper.transform.GetChild(leftIndex--).GetComponent<UIRoundPin>().DisplayFiller(true);
+                    leftRoundPinWrapper.transform.GetChild(leftIndex--).GetComponent<UIRoundPin>().DisplayFiller();
                 } else
                 {
-                    rightRoundPinWrapper.transform.GetChild(rightIndex++).GetComponent<UIRoundPin>().DisplayFiller(true);
+                    rightRoundPinWrapper.transform.GetChild(rightIndex++).GetComponent<UIRoundPin>().DisplayFiller();
                 }
             }
 
@@ -76,32 +79,61 @@ namespace UI
 
         public void UpdateLeftBar(int hp)
         {
-            UpdateLifeBar(leftLifeBarWrapper, hp);
+            UpdateLifeBar(leftLifeBarWrapper, hp, true);
         }
 
         public void UpdateRightBar(int hp)
         {
 
-            UpdateLifeBar(rightLifeBarWrapper, hp);
+            UpdateLifeBar(rightLifeBarWrapper, hp, false);
         }
 
-        private void UpdateLifeBar(GameObject lifebar, int hp)
+        private void UpdateLifeBar(GameObject lifebar, int hp, bool ascending)
         {
-            if (lifebar.transform.childCount > hp)
+            int childCount = lifebar.transform.childCount;
+            if (childCount > hp)
             {
-                for (int i = 0; i < lifebar.transform.childCount - hp; i++)
+                if (ascending)
                 {
-                    Destroy(lifebar.transform.GetChild(i).gameObject);
+                    for (int i = childCount - 1; i >= hp; i--)
+                    {
+                        DestroyLifebar(lifebar.transform.GetChild(i));
+                    }
+                } else
+                {
+                    for (int i = 0; i < childCount - hp; i++)
+                    {
+                        DestroyLifebar(lifebar.transform.GetChild(i));
+                    }
                 }
-            } else if (lifebar.transform.childCount < hp)
+            } else if (childCount < hp)
             {
-                for (int i = 0; i <= hp - lifebar.transform.childCount + 1; i++)
+                for (int i = 0; i < hp - childCount; i++)
                 {
-                    Instantiate(lifeBarPrefab, lifebar.transform);
+                    GameObject go;
+                    if (i == (ascending ? 0 : hp - childCount - 1))
+                    {
+                        go = Instantiate(firstLifeBarPrefab, lifebar.transform);
+                    } else
+                    {
+                        go = Instantiate(lifeBarPrefab, lifebar.transform);
+                    }
+                    if (!ascending)
+                    {
+                        go.transform.Rotate(Vector3.up * 180);
+                    }
                 }
             }
+        }
 
-            
+        private void DestroyLifebar(Transform trsf)
+        {
+            trsf.DOScale(1.5f, 1.5f).SetEase(Ease.OutCubic);
+            trsf.DOLocalMoveY(50, 1.5f).SetEase(Ease.OutCubic);
+            trsf.DOLocalMoveZ(-1, 0);
+
+            Image img = trsf.GetComponent<Image>();
+            img.DOColor(img.color * new Color(1, 1, 1, 0), 1.55f).OnComplete(() => Destroy(trsf.gameObject));
         }
     }
 }

@@ -15,9 +15,14 @@ ModelImporter:
   - first:
       74: -3429980063169694311
     second: ArmatureMissile|MissileAction
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cannon.001
+    second: {fileID: 2100000, guid: fbdbf86b1772b194681439e2c11e8c72, type: 2}
   materials:
-    materialImportMode: 0
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
