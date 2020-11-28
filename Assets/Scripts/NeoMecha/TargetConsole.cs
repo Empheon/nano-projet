@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using NeoMecha.ConsoleControls;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,7 +17,7 @@ namespace NeoMecha
         [Serializable]
         public struct Target
         {
-            public ConsolePanelButton Button;
+            public ConsoleTarget Button;
             public Room Room;
         }
         
@@ -65,11 +66,18 @@ namespace NeoMecha
 
         private IEnumerator RefreshButtonVisibility()
         {
-            for (; ; )
+            for (;;)
             {
                 foreach (Target target in TargetList)
                 {
-                    target.Button.IsActive = IsRoomTargetable(target.Room);
+                    if (IsRoomTargetable(target.Room))
+                    {
+                        target.Button.Activate();
+                    }
+                    else
+                    {
+                        target.Button.Desactivate();
+                    }
                 }
 
                 yield return new WaitForSeconds(1 / refreshFrequency);
