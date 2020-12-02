@@ -13,7 +13,7 @@ namespace NeoMecha.ConsoleControls.ButtonControl
         private SpriteRenderer _renderer;
         private Color _originalColor;
         
-        private void Awake()
+        private void Start()
         {
             _renderer = GetComponent<SpriteRenderer>();
             _originalColor = _renderer.color;
