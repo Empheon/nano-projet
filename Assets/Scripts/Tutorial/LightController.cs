@@ -72,9 +72,9 @@ namespace Tutorial
         {
             while(true)
             {
-                SwitchOn();
+                SwitchOnClean();
                 yield return new WaitForSeconds(DEFAULT_DURATION);
-                SwitchOff();
+                SwitchOffClean();
                 yield return new WaitForSeconds(DEFAULT_DURATION);
             }
         }

@@ -7,31 +7,60 @@ using UnityEngine.UI;
 
 namespace Menu
 {
+    public enum GamepadButton
+    {
+        NORTH, SOUTH, EAST, WEST
+    }
+
     public class GamepadCheck : MonoBehaviour
     {
-        [SerializeField] private GameObject indicatorObject;
+        [SerializeField] protected GameObject indicatorObject;
         [SerializeField] private PlayerManager.Team team;
 
         [SerializeField] private Color validatedColor;
 
         [SerializeField] private float checkFrequency = 10;
+
+        [SerializeField] private GamepadButton buttonToCheck = GamepadButton.SOUTH;
         
         private Gamepad _gamepad;
-        private Image _indicRenderer;
-        private Transform _indicTransform;
+        protected Image _indicRenderer;
+        protected Transform _indicTransform;
         
-        private Color _baseColor;
+        protected Color _baseColor;
 
-        public bool IsConnected { get; private set; } = false;
+        public bool IsConnected { get; protected set; } = false;
         public bool IsReady { get; private set; } = false;
 
-        private IEnumerator Start()
+        private void OnDisable()
+        {
+            if (_indicRenderer == null || _indicTransform == null) return;
+
+            // force "unready" without anim
+            IsReady = false;
+
+            _indicRenderer.DOKill();
+            _indicTransform.DOKill();
+
+            if (_baseColor != null)
+            {
+                _indicRenderer.color = _baseColor;
+            }
+        }
+
+        protected virtual void Setup()
         {
             indicatorObject.SetActive(false);
             _indicTransform = indicatorObject.GetComponent<Transform>();
-            _indicTransform.localScale = Vector3.zero;
+            //_indicTransform.localScale = Vector3.zero;
             _indicRenderer = indicatorObject.GetComponent<Image>();
             _baseColor = _indicRenderer.color;
+        }
+
+
+        private IEnumerator Start()
+        {
+            Setup();
             
             for (;;)
             {
@@ -68,14 +97,31 @@ namespace Menu
 
         private void Update()
         {
-            if (IsConnected && _gamepad.buttonSouth.wasPressedThisFrame)
+            if (IsConnected && CheckButtonPressed())
             {
                 if (IsReady) Unready();
                 else Ready();
             }
         }
 
-        private void Connected()
+        private bool CheckButtonPressed()
+        {
+            switch(buttonToCheck)
+            {
+                case GamepadButton.NORTH:
+                    return _gamepad.buttonNorth.wasPressedThisFrame;
+                case GamepadButton.SOUTH:
+                    return _gamepad.buttonSouth.wasPressedThisFrame;
+                case GamepadButton.EAST:
+                    return _gamepad.buttonEast.wasPressedThisFrame;
+                case GamepadButton.WEST:
+                    return _gamepad.buttonWest.wasPressedThisFrame;
+                default:
+                    return false;
+            }
+        }
+
+        protected virtual void Connected()
         {
             IsConnected = true;
 
@@ -124,7 +170,7 @@ namespace Menu
                 .Play();
         }
 
-        private void Disconnected()
+        protected virtual void Disconnected()
         {
             IsConnected = false;
             IsReady = false;
