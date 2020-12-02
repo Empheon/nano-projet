@@ -10,8 +10,10 @@ namespace NeoMecha.ConsoleControls.ShieldAim
     public class ShieldAimSystem : ConsoleControlSystem
     {
         [SerializeField] private GameObject targetContainer;
+        [SerializeField] private GameObject shieldObject;
 
         private PositionTarget[] m_targets;
+        private int m_currentIndex;
 
         private void Start()
         {
@@ -29,7 +31,7 @@ namespace NeoMecha.ConsoleControls.ShieldAim
 
         public override void Desactivate()
         {
-            throw new NotImplementedException();
+            m_currentIndex = 0;
         }
 
         public override void Next()
