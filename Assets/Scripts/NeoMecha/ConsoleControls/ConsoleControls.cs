@@ -35,6 +35,7 @@ namespace NeoMecha.ConsoleControls
 
             _controller = character.GetComponent<CharacterController>();
             _controller.enabled = false;
+            _controller.Stop();
             
             _gamepad = _controller.GetGamepad();
             _hasControl = true;
