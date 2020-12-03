@@ -1,40 +1,54 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening;
-using UnityEngine.Events;
 using System.Collections;
+using System.Linq;
+using UnityEngine.Events;
 
 namespace NeoMecha
 {
-    public class FixConsole : TargetConsole
+    public class FixConsole : Console
     {
-        private bool m_isFixing;
+        [SerializeField] private float repairCooldown;
+        [SerializeField] private float repairDelay;
+        [SerializeField] private List<Room> rooms;
 
-        protected override void DoAction(Room room)
+        [SerializeField] private UnityEvent OnRepairStart;
+        [SerializeField] private UnityEvent OnRepairFinished;
+        
+        private float _timeSinceLastRepair;
+        private bool _isFixing;
+        
+        private void Start()
         {
-            StartCoroutine(DelayAction(room));
+            _timeSinceLastRepair = repairCooldown;
         }
 
-        private IEnumerator DelayAction(Room room)
+        private void Update()
         {
-            m_isFixing = true;
-            yield return new WaitForSeconds(3);
-            m_isFixing = false;
-            room.OnFixReceived();
+            _timeSinceLastRepair += Time.deltaTime;
         }
 
-        protected override bool IsRoomTargetable(Room room)
+        public void OnCharacterInteract(GameObject character)
         {
-            return room.IsDamaged;
+            StartCoroutine(WaitAndFix());
         }
 
-        public override bool CanDoAction()
+        private IEnumerator WaitAndFix()
         {
-            return base.CanDoAction() && !m_isFixing;
+            _isFixing = true;
+            yield return new WaitForSeconds(repairDelay);
+            _isFixing = false;
+            
+            foreach (var room in rooms)
+            {
+                if (room.IsDamaged) room.OnFixReceived();
+            }
+        }
+
+        public override bool CanInteract(GameObject character)
+        {
+            var anyRoomDamaged = rooms.Any(room => room.IsDamaged);
+            return anyRoomDamaged && !_isFixing && _timeSinceLastRepair > repairCooldown;
         }
     }
 }
