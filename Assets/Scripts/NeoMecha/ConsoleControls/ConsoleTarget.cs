@@ -5,7 +5,7 @@ namespace NeoMecha.ConsoleControls
 {
     public abstract class ConsoleTarget : MonoBehaviour
     {
-        public UnityEvent OnValidate;
+        [HideInInspector] public UnityEvent OnValidate;
         public bool IsActive { get; protected set; }
         
         public abstract void Activate();

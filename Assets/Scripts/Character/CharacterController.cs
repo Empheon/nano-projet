@@ -50,7 +50,17 @@ namespace Character
         public Gamepad GetGamepad()
         {
             return _gamepad;
-        } 
+        }
+
+        /**
+         * Reset the controller's movement
+         * /!\ does not disable the controller 
+         */
+        public void Stop()
+        {
+            _rb.velocity = Vector2.zero;
+            _movement = 0;
+        }
         
         private bool IsGrounded()
         {

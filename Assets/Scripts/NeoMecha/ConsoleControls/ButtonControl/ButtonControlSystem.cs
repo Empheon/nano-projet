@@ -22,11 +22,17 @@ namespace NeoMecha.ConsoleControls.ButtonControl
             if (_buttons.All(btn => !btn.IsActive)) return false;
             
             panel.SetActive(true);
+            
+            var currentButton = _buttons[_currentButtonIndex];
+            currentButton.Focus();
+            
             return true;
         }
 
         public override void Desactivate()
         {
+            var currentButton = _buttons[_currentButtonIndex];
+            currentButton.Blur();
             panel.SetActive(false);
         }
 
