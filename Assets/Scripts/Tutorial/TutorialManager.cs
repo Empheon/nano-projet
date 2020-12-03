@@ -10,6 +10,7 @@ using YorfLib;
 using System.Collections;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
+using Menu;
 
 namespace Tutorial
 {
@@ -19,9 +20,9 @@ namespace Tutorial
         private int menuSceneIndex;
 
         [SerializeField]
-        private MechaLights leftMechaLights;
+        private MechaInfo leftMechaInfo;
         [SerializeField]
-        private MechaLights rightMechaLights;
+        private MechaInfo rightMechaInfo;
 
         [SerializeField]
         private Light2D globalLight;
@@ -32,48 +33,115 @@ namespace Tutorial
         private TextMeshProUGUI subText;
 
         [SerializeField]
-        private float stepDuration = 5;
+        private GamepadCheck leftActivationButton;
         [SerializeField]
-        private float fastStepDuration = 2;
+        private GamepadCheck rightActivationButton;
+
+        [SerializeField]
+        private GameObject leftMecha;
+        [SerializeField]
+        private GameObject rightMecha;
+
+        [SerializeField]
+        private GameObject endPanel;
+
+        //[SerializeField]
+        //private float stepDuration = 5;
+        //[SerializeField]
+        //private float fastStepDuration = 2;
 
         [SerializeField]
         private Color defaultColor = Color.white;
         [SerializeField]
         private Color redColor = Color.red;
 
-        [SerializeField]
-        private List<PressurePlate> attPlates;
-        [SerializeField]
-        private List<PressurePlate> defPlates;
-        [SerializeField]
-        private List<PressurePlate> jamPlates;
+        //[SerializeField]
+        //private List<PressurePlate> attPlates;
+        //[SerializeField]
+        //private List<PressurePlate> defPlates;
+        //[SerializeField]
+        //private List<PressurePlate> jamPlates;
 
-        private int m_attButtonPressed;
-        private int m_defButtonPressed;
-        private int m_jamButtonPressed;
+        //private int m_attButtonPressed;
+        //private int m_defButtonPressed;
+        //private int m_jamButtonPressed;
+        private int m_confirmButtonPressed;
 
         private Coroutine m_coroutine;
 
+        private GamepadCheck[] m_checkers;
+
         private void Start()
         {
-            leftMechaLights.AttLight.SwitchOff(0);
-            leftMechaLights.DefLight.SwitchOff(0);
-            leftMechaLights.JamLight.SwitchOff(0);
-            leftMechaLights.EneLight.SwitchOff(0);
-            leftMechaLights.MunLight.SwitchOff(0);
-            leftMechaLights.FixLight.SwitchOff(0);
+            m_checkers = new GamepadCheck[2];
+            m_checkers[0] = leftActivationButton;
+            m_checkers[1] = rightActivationButton;
 
-            rightMechaLights.AttLight.SwitchOff(0);
-            rightMechaLights.DefLight.SwitchOff(0);
-            rightMechaLights.JamLight.SwitchOff(0);
-            rightMechaLights.EneLight.SwitchOff(0);
-            rightMechaLights.MunLight.SwitchOff(0);
-            rightMechaLights.FixLight.SwitchOff(0);
+            endPanel.SetActive(false);
+
+            foreach (ButtonActivator buttonActivator in leftMecha.GetComponentsInChildren<ButtonActivator>())
+            {
+                buttonActivator.Init(leftActivationButton.gameObject);
+            }
+
+            foreach (ButtonActivator buttonActivator in rightMecha.GetComponentsInChildren<ButtonActivator>())
+            {
+                buttonActivator.Init(rightActivationButton.gameObject);
+            }
+
+            DisableButtons();
+            DisableAllColliders();
+
+            leftMechaInfo.AttLight.SwitchOff(0);
+            leftMechaInfo.DefLight.SwitchOff(0);
+            leftMechaInfo.JamLight.SwitchOff(0);
+            leftMechaInfo.EneLight.SwitchOff(0);
+            leftMechaInfo.MunLight.SwitchOff(0);
+            leftMechaInfo.FixLight.SwitchOff(0);
+
+            rightMechaInfo.AttLight.SwitchOff(0);
+            rightMechaInfo.DefLight.SwitchOff(0);
+            rightMechaInfo.JamLight.SwitchOff(0);
+            rightMechaInfo.EneLight.SwitchOff(0);
+            rightMechaInfo.MunLight.SwitchOff(0);
+            rightMechaInfo.FixLight.SwitchOff(0);
 
             mainText.text = "";
             subText.text = "";
 
             m_coroutine = StartCoroutine(Tuto());
+        }
+
+        private void DisableButtons()
+        {
+            foreach(GamepadCheck gamepadCheck in m_checkers)
+            {
+                gamepadCheck.gameObject.SetActive(false);
+            }
+        }
+
+        private void EnableButtons()
+        {
+            foreach (GamepadCheck gamepadCheck in m_checkers)
+            {
+                gamepadCheck.gameObject.SetActive(true);
+            }
+        }
+
+        private void DisableAllColliders()
+        {
+            leftMechaInfo.AttCollider.gameObject.SetActive(false);
+            rightMechaInfo.AttCollider.gameObject.SetActive(false);
+            leftMechaInfo.DefCollider.gameObject.SetActive(false);
+            rightMechaInfo.DefCollider.gameObject.SetActive(false);
+            leftMechaInfo.JamCollider.gameObject.SetActive(false);
+            rightMechaInfo.JamCollider.gameObject.SetActive(false);
+            leftMechaInfo.MunCollider.gameObject.SetActive(false);
+            rightMechaInfo.MunCollider.gameObject.SetActive(false);;
+            leftMechaInfo.EneCollider.gameObject.SetActive(false);;
+            rightMechaInfo.EneCollider.gameObject.SetActive(false);;
+            leftMechaInfo.FixCollider.gameObject.SetActive(false);;
+            rightMechaInfo.FixCollider.gameObject.SetActive(false);;
         }
 
         private void OnDestroy()
@@ -87,188 +155,210 @@ namespace Tutorial
         private IEnumerator Tuto()
         {
             mainText.text = I18n.GetString("tuto_main_1");
-            yield return new WaitForSeconds(stepDuration / 2);
-            mainText.text = I18n.GetString("tuto_main_2");
-            subText.text = I18n.GetString("tuto_sub_2");
-            leftMechaLights.AttLight.SwitchOn();
-            rightMechaLights.AttLight.SwitchOn();
+            yield return new WaitForSeconds(5);
 
-            foreach(PressurePlate pp in attPlates)
-            {
-                pp.Show();
-            }
-            while (m_attButtonPressed < 2)
-            {
-                yield return new WaitForSeconds(0.1f);
-            }
+
+            mainText.text = I18n.GetString("tuto_main_2");
+            subText.text = I18n.GetString("tuto_sub_goto_att");
+            leftMechaInfo.AttLight.SwitchOn();
+            rightMechaInfo.AttLight.SwitchOn();
+
+            leftMechaInfo.AttCollider.gameObject.SetActive(true);;
+            rightMechaInfo.AttCollider.gameObject.SetActive(true);;
+
+            yield return StartCoroutine(CheckButtonsConfirmed());
+            DisableAllColliders();
 
             subText.text = "";
             mainText.text = I18n.GetString("tuto_main_3");
-            leftMechaLights.MunLight.StartBlink();
-            rightMechaLights.MunLight.StartBlink();
-            yield return new WaitForSeconds(stepDuration);
+            subText.text = I18n.GetString("tuto_sub_goto_mun");
+            leftMechaInfo.MunLight.StartBlink();
+            rightMechaInfo.MunLight.StartBlink();
+
+            leftMechaInfo.MunCollider.gameObject.SetActive(true);;
+            rightMechaInfo.MunCollider.gameObject.SetActive(true);;
+
+            yield return StartCoroutine(CheckButtonsConfirmed());
+            DisableAllColliders();
 
             mainText.text = I18n.GetString("tuto_main_4");
-            leftMechaLights.MunLight.StopBlink();
-            rightMechaLights.MunLight.StopBlink();
-            leftMechaLights.AttLight.StartBlink();
-            leftMechaLights.DefLight.StartBlink();
-            leftMechaLights.JamLight.StartBlink();
-            rightMechaLights.AttLight.StartBlink();
-            rightMechaLights.DefLight.StartBlink();
-            rightMechaLights.JamLight.StartBlink();
-            yield return new WaitForSeconds(stepDuration);
+            subText.text = I18n.GetString("tuto_sub_goto_several");
+            leftMechaInfo.MunLight.StopBlink();
+            rightMechaInfo.MunLight.StopBlink();
+            leftMechaInfo.AttLight.StartBlink();
+            leftMechaInfo.DefLight.StartBlink();
+            leftMechaInfo.JamLight.StartBlink();
+            rightMechaInfo.AttLight.StartBlink();
+            rightMechaInfo.DefLight.StartBlink();
+            rightMechaInfo.JamLight.StartBlink();
+
+            leftMechaInfo.AttCollider.gameObject.SetActive(true);;
+            rightMechaInfo.AttCollider.gameObject.SetActive(true);;
+            leftMechaInfo.DefCollider.gameObject.SetActive(true);;
+            rightMechaInfo.DefCollider.gameObject.SetActive(true);;
+            leftMechaInfo.JamCollider.gameObject.SetActive(true);;
+            rightMechaInfo.JamCollider.gameObject.SetActive(true);;
+
+            yield return StartCoroutine(CheckButtonsConfirmed());
+            DisableAllColliders();
 
             mainText.text = I18n.GetString("tuto_main_5");
-            leftMechaLights.AttLight.Color = redColor;
-            leftMechaLights.DefLight.Color = redColor;
-            leftMechaLights.JamLight.Color = redColor;
-            rightMechaLights.AttLight.Color = redColor;
-            rightMechaLights.DefLight.Color = redColor;
-            rightMechaLights.JamLight.Color = redColor;
-            yield return new WaitForSeconds(stepDuration);
+            subText.text = "";
+            leftMechaInfo.AttLight.Color = redColor;
+            leftMechaInfo.DefLight.Color = redColor;
+            leftMechaInfo.JamLight.Color = redColor;
+            rightMechaInfo.AttLight.Color = redColor;
+            rightMechaInfo.DefLight.Color = redColor;
+            rightMechaInfo.JamLight.Color = redColor;
+
+            yield return new WaitForSeconds(4);
+            EnableButtons();
+
+            yield return StartCoroutine(CheckButtonsConfirmed());
 
             mainText.text = I18n.GetString("tuto_main_6");
-            leftMechaLights.AttLight.StopBlink();
-            leftMechaLights.DefLight.StopBlink();
-            leftMechaLights.JamLight.StopBlink();
-            rightMechaLights.AttLight.StopBlink();
-            rightMechaLights.DefLight.StopBlink();
-            rightMechaLights.JamLight.StopBlink();
-            leftMechaLights.AttLight.Color = defaultColor;
-            leftMechaLights.DefLight.Color = defaultColor;
-            leftMechaLights.JamLight.Color = defaultColor;
-            rightMechaLights.AttLight.Color = defaultColor;
-            rightMechaLights.DefLight.Color = defaultColor;
-            rightMechaLights.JamLight.Color = defaultColor;
+            subText.text = I18n.GetString("tuto_sub_goto_fix");
+            leftMechaInfo.AttLight.StopBlink();
+            leftMechaInfo.DefLight.StopBlink();
+            leftMechaInfo.JamLight.StopBlink();
+            rightMechaInfo.AttLight.StopBlink();
+            rightMechaInfo.DefLight.StopBlink();
+            rightMechaInfo.JamLight.StopBlink();
+            leftMechaInfo.AttLight.Color = defaultColor;
+            leftMechaInfo.DefLight.Color = defaultColor;
+            leftMechaInfo.JamLight.Color = defaultColor;
+            rightMechaInfo.AttLight.Color = defaultColor;
+            rightMechaInfo.DefLight.Color = defaultColor;
+            rightMechaInfo.JamLight.Color = defaultColor;
+            leftMechaInfo.AttLight.SwitchOff();
+            rightMechaInfo.AttLight.SwitchOff();
 
-            leftMechaLights.FixLight.StartBlink();
-            rightMechaLights.FixLight.StartBlink();
-            yield return new WaitForSeconds(stepDuration);
+            leftMechaInfo.FixLight.StartBlink();
+            rightMechaInfo.FixLight.StartBlink();
+
+            leftMechaInfo.FixCollider.gameObject.SetActive(true);;
+            rightMechaInfo.FixCollider.gameObject.SetActive(true);;
+
+            yield return StartCoroutine(CheckButtonsConfirmed());
+            DisableAllColliders();
 
             mainText.text = I18n.GetString("tuto_main_7");
-            subText.text = I18n.GetString("tuto_sub_7");
-            leftMechaLights.FixLight.StopBlink();
-            rightMechaLights.FixLight.StopBlink();
-            leftMechaLights.AttLight.SwitchOff();
-            rightMechaLights.AttLight.SwitchOff();
-            leftMechaLights.DefLight.SwitchOn();
-            rightMechaLights.DefLight.SwitchOn();
+            subText.text = I18n.GetString("tuto_sub_goto_def");
+            leftMechaInfo.FixLight.StopBlink();
+            rightMechaInfo.FixLight.StopBlink();
+            leftMechaInfo.DefLight.SwitchOn();
+            rightMechaInfo.DefLight.SwitchOn();
 
-            foreach (PressurePlate pp in attPlates)
-            {
-                pp.Hide();
-            }
-            foreach (PressurePlate pp in defPlates)
-            {
-                pp.Show();
-            }
-            while (m_defButtonPressed < 2)
-            {
-                yield return new WaitForSeconds(0.1f);
-            }
+            leftMechaInfo.DefCollider.gameObject.SetActive(true);;
+            rightMechaInfo.DefCollider.gameObject.SetActive(true);;
 
-            subText.text = "";
+            yield return StartCoroutine(CheckButtonsConfirmed());
+            DisableAllColliders();
+
             mainText.text = I18n.GetString("tuto_main_8");
-            leftMechaLights.EneLight.StartBlink();
-            rightMechaLights.EneLight.StartBlink();
-            yield return new WaitForSeconds(stepDuration);
+            subText.text = I18n.GetString("tuto_sub_goto_ene");
+            leftMechaInfo.EneLight.StartBlink();
+            rightMechaInfo.EneLight.StartBlink();
+
+            leftMechaInfo.EneCollider.gameObject.SetActive(true);;
+            rightMechaInfo.EneCollider.gameObject.SetActive(true);;
+
+            yield return StartCoroutine(CheckButtonsConfirmed());
+            DisableAllColliders();
 
             mainText.text = I18n.GetString("tuto_main_9");
-            leftMechaLights.EneLight.StopBlink();
-            rightMechaLights.EneLight.StopBlink();
-            leftMechaLights.AttLight.StartBlink();
-            leftMechaLights.DefLight.StartBlink();
-            leftMechaLights.JamLight.StartBlink();
-            rightMechaLights.AttLight.StartBlink();
-            rightMechaLights.DefLight.StartBlink();
-            rightMechaLights.JamLight.StartBlink();
+            subText.text = I18n.GetString("tuto_sub_goto_several");
+            leftMechaInfo.EneLight.StopBlink();
+            rightMechaInfo.EneLight.StopBlink();
+            leftMechaInfo.AttLight.StartBlink();
+            leftMechaInfo.DefLight.StartBlink();
+            leftMechaInfo.JamLight.StartBlink();
+            rightMechaInfo.AttLight.StartBlink();
+            rightMechaInfo.DefLight.StartBlink();
+            rightMechaInfo.JamLight.StartBlink();
 
-            yield return new WaitForSeconds(stepDuration);
+            leftMechaInfo.AttCollider.gameObject.SetActive(true);;
+            rightMechaInfo.AttCollider.gameObject.SetActive(true);;
+            leftMechaInfo.DefCollider.gameObject.SetActive(true);;
+            rightMechaInfo.DefCollider.gameObject.SetActive(true);;
+            leftMechaInfo.JamCollider.gameObject.SetActive(true);;
+            rightMechaInfo.JamCollider.gameObject.SetActive(true);;
+
+            yield return StartCoroutine(CheckButtonsConfirmed());
+            DisableAllColliders();
 
             mainText.text = I18n.GetString("tuto_main_10");
-            subText.text = I18n.GetString("tuto_sub_10");
-            leftMechaLights.AttLight.StopBlink();
-            leftMechaLights.DefLight.StopBlink();
-            leftMechaLights.JamLight.StopBlink();
-            rightMechaLights.AttLight.StopBlink();
-            rightMechaLights.DefLight.StopBlink();
-            rightMechaLights.JamLight.StopBlink();
-            leftMechaLights.DefLight.SwitchOff();
-            rightMechaLights.DefLight.SwitchOff();
-            leftMechaLights.JamLight.SwitchOn();
-            rightMechaLights.JamLight.SwitchOn();
+            subText.text = I18n.GetString("tuto_sub_goto_jam");
+            leftMechaInfo.AttLight.StopBlink();
+            leftMechaInfo.DefLight.StopBlink();
+            leftMechaInfo.JamLight.StopBlink();
+            rightMechaInfo.AttLight.StopBlink();
+            rightMechaInfo.DefLight.StopBlink();
+            rightMechaInfo.JamLight.StopBlink();
+            leftMechaInfo.DefLight.SwitchOff();
+            rightMechaInfo.DefLight.SwitchOff();
+            leftMechaInfo.JamLight.SwitchOn();
+            rightMechaInfo.JamLight.SwitchOn();
 
-            foreach (PressurePlate pp in defPlates)
-            {
-                pp.Hide();
-            }
-            foreach (PressurePlate pp in jamPlates)
-            {
-                pp.Show();
-            }
-            while (m_jamButtonPressed < 2)
-            {
-                yield return new WaitForSeconds(0.1f);
-            }
+            leftMechaInfo.JamCollider.gameObject.SetActive(true);;
+            rightMechaInfo.JamCollider.gameObject.SetActive(true);;
 
-            subText.text = "";
+            yield return StartCoroutine(CheckButtonsConfirmed());
+            DisableAllColliders();
+
             mainText.text = I18n.GetString("tuto_main_11");
-            leftMechaLights.AttLight.StartBlink();
-            leftMechaLights.DefLight.StartBlink();
-            leftMechaLights.JamLight.StartBlink();
-            rightMechaLights.AttLight.StartBlink();
-            rightMechaLights.DefLight.StartBlink();
-            rightMechaLights.JamLight.StartBlink();
-            yield return new WaitForSeconds(stepDuration);
+            subText.text = "";
+            leftMechaInfo.AttLight.StartBlink();
+            leftMechaInfo.DefLight.StartBlink();
+            leftMechaInfo.JamLight.StartBlink();
+            rightMechaInfo.AttLight.StartBlink();
+            rightMechaInfo.DefLight.StartBlink();
+            rightMechaInfo.JamLight.StartBlink();
+
+            yield return new WaitForSeconds(4);
+            EnableButtons();
+
+            yield return StartCoroutine(CheckButtonsConfirmed());
+            DisableAllColliders();
 
             mainText.text = I18n.GetString("tuto_main_12");
-            leftMechaLights.AttLight.StopBlink();
-            leftMechaLights.DefLight.StopBlink();
-            rightMechaLights.AttLight.StopBlink();
-            rightMechaLights.DefLight.StopBlink();
+            leftMechaInfo.AttLight.StopBlink();
+            leftMechaInfo.DefLight.StopBlink();
+            rightMechaInfo.AttLight.StopBlink();
+            rightMechaInfo.DefLight.StopBlink();
 
-            yield return new WaitForSeconds(stepDuration);
-            leftMechaLights.JamLight.SwitchOff();
-            rightMechaLights.JamLight.SwitchOff();
-            leftMechaLights.JamLight.StopBlink();
-            rightMechaLights.JamLight.StopBlink();
+            yield return new WaitForSeconds(4);
+            EnableButtons();
 
-            DOTween.To(() => globalLight.intensity, (x) => globalLight.intensity = x, 1, 0.5f);
+            yield return StartCoroutine(CheckButtonsConfirmed());
+            DisableAllColliders();
 
-            foreach (PressurePlate pp in jamPlates)
-            {
-                pp.Hide();
-            }
+            leftMechaInfo.JamLight.SwitchOff();
+            rightMechaInfo.JamLight.SwitchOff();
+            leftMechaInfo.JamLight.StopBlink();
+            rightMechaInfo.JamLight.StopBlink();
 
-            mainText.text = I18n.GetString("tuto_main_13");
-            yield return new WaitForSeconds(fastStepDuration);
-            mainText.text = I18n.GetString("tuto_main_14");
-            yield return new WaitForSeconds(fastStepDuration);
-            mainText.text = I18n.GetString("tuto_main_15");
-            yield return new WaitForSeconds(stepDuration / 2);
+            //DOTween.To(() => globalLight.intensity, (x) => globalLight.intensity = x, 1, 0.5f);
+
+            endPanel.SetActive(true);
+
+            yield return new WaitForSeconds(7);
+
             SceneManager.LoadScene(menuSceneIndex);
         }
 
-        public void OnAttButtonPressed()
+        private IEnumerator CheckButtonsConfirmed()
         {
-            m_attButtonPressed++;
+            while (!m_checkers.All(checker => checker.IsReady))
+            {
+                yield return new WaitForSeconds(0.1f);
+            }
+            DisableButtons();
         }
-
-        public void OnDefButtonPressed()
-        {
-            m_defButtonPressed++;
-        }
-
-        public void OnJamButtonPressed()
-        {
-            m_jamButtonPressed++;
-        }
-
     }
 
     [Serializable]
-    public struct MechaLights
+    public struct MechaInfo
     {
         public LightController AttLight;
         public LightController DefLight;
@@ -276,5 +366,12 @@ namespace Tutorial
         public LightController MunLight;
         public LightController EneLight;
         public LightController FixLight;
+
+        public ButtonActivator AttCollider;
+        public ButtonActivator DefCollider;
+        public ButtonActivator JamCollider;
+        public ButtonActivator MunCollider;
+        public ButtonActivator EneCollider;
+        public ButtonActivator FixCollider;
     }
 }
