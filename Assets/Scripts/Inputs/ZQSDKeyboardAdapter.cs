@@ -14,12 +14,16 @@ namespace Inputs
         public bool JumpThisFrame() =>
             Keyboard.current.zKey.wasPressedThisFrame || Keyboard.current.spaceKey.wasPressedThisFrame;
 
+        public bool KeepInAir() =>
+            Keyboard.current.zKey.isPressed || Keyboard.current.spaceKey.isPressed;
+
         public Vector2 GetMovement()
         {
             var baseMove = Vector2.zero;
-            if (Keyboard.current.qKey.isPressed) baseMove += Vector2.left;
+            if (Keyboard.current.aKey.isPressed) baseMove += Vector2.left;
             if (Keyboard.current.dKey.isPressed) baseMove += Vector2.right;
             if (Keyboard.current.sKey.isPressed) baseMove += Vector2.down;
+            if (Keyboard.current.zKey.isPressed) baseMove += Vector2.up;
 
             return baseMove;
         }

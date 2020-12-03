@@ -9,10 +9,7 @@ namespace Menu
 {
     public class GamepadCheckManager : MonoBehaviour
     {
-        //[SerializeField] private int sceneIndex = -1;
-        
         private GamepadCheck[] _checkers;
-        //private int _nextSceneIndex;
 
         public UnityEvent LoadNextScene;
         
@@ -32,7 +29,6 @@ namespace Menu
             {
                 PlayerManager.Instance.Locked = true;
                 LoadNextScene.Invoke();
-                //SceneManager.LoadScene(sceneIndex);
             }
         }
     }

@@ -7,6 +7,7 @@ namespace Inputs
         bool InteractThisFrame();
         bool CancelThisFrame();
         bool JumpThisFrame();
+        bool KeepInAir();
         Vector2 GetMovement();
 
 
