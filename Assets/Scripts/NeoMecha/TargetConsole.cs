@@ -109,7 +109,7 @@ namespace NeoMecha
             return !m_lockAction;
         }
 
-        public override bool CanInteract(CharacterResource characterResource)
+        public override bool CanInteract(GameObject character)
         {
             bool isTargettable = false;
             foreach(Target target in TargetList)
