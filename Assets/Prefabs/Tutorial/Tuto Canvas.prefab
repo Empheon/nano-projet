@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 8078130342716896547}
   - component: {fileID: 8434819538079234222}
   - component: {fileID: 993134250178504225}
-  - component: {fileID: 7823500605254316480}
+  - component: {fileID: 7010434989235971985}
   m_Layer: 5
   m_Name: Right Button
   m_TagString: Untagged
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7823500605254316480
+--- !u!114 &7010434989235971985
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,14 +158,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2196534938628028696}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63f0522381e491d4e91c772b1c017a08, type: 3}
+  m_Script: {fileID: 11500000, guid: eb323510e58949038db2bdc18a0462aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indicatorObject: {fileID: 2196534938628028696}
-  team: 1
-  validatedColor: {r: 0, g: 1, b: 0, a: 1}
-  checkFrequency: 10
-  buttonToCheck: 3
+  playerIndex: 1
+  color: {r: 0.048089504, g: 1, b: 0, a: 1}
 --- !u!1 &2236113524718453885
 GameObject:
   m_ObjectHideFlags: 0
@@ -771,7 +768,7 @@ GameObject:
   - component: {fileID: 4678402656916972856}
   - component: {fileID: 2943833943609470273}
   - component: {fileID: 5648289707202728705}
-  - component: {fileID: 7852148284780277637}
+  - component: {fileID: 5779883039913802459}
   m_Layer: 5
   m_Name: Left Button
   m_TagString: Untagged
@@ -835,7 +832,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7852148284780277637
+--- !u!114 &5779883039913802459
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -844,14 +841,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6932495765408301540}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63f0522381e491d4e91c772b1c017a08, type: 3}
+  m_Script: {fileID: 11500000, guid: eb323510e58949038db2bdc18a0462aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indicatorObject: {fileID: 6932495765408301540}
-  team: 0
-  validatedColor: {r: 0, g: 1, b: 0, a: 1}
-  checkFrequency: 10
-  buttonToCheck: 3
+  playerIndex: 0
+  color: {r: 0.048089504, g: 1, b: 0, a: 1}
 --- !u!1 &9183624464548956153
 GameObject:
   m_ObjectHideFlags: 0

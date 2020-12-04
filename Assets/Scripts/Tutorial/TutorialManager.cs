@@ -33,9 +33,9 @@ namespace Tutorial
         private TextMeshProUGUI subText;
 
         [SerializeField]
-        private GamepadCheck leftActivationButton;
+        private TutorialStepChecker leftActivationButton;
         [SerializeField]
-        private GamepadCheck rightActivationButton;
+        private TutorialStepChecker rightActivationButton;
 
         [SerializeField]
         private GameObject leftMecha;
@@ -69,13 +69,14 @@ namespace Tutorial
 
         private Coroutine m_coroutine;
 
-        private GamepadCheck[] m_checkers;
+        private TutorialStepChecker[] m_checkers;
 
         private void Start()
         {
-            m_checkers = new GamepadCheck[2];
-            m_checkers[0] = leftActivationButton;
-            m_checkers[1] = rightActivationButton;
+            m_checkers = new [] {
+                leftActivationButton,
+                rightActivationButton
+            };
 
             endPanel.SetActive(false);
 
@@ -114,7 +115,7 @@ namespace Tutorial
 
         private void DisableButtons()
         {
-            foreach(GamepadCheck gamepadCheck in m_checkers)
+            foreach(var gamepadCheck in m_checkers)
             {
                 gamepadCheck.gameObject.SetActive(false);
             }
@@ -122,7 +123,7 @@ namespace Tutorial
 
         private void EnableButtons()
         {
-            foreach (GamepadCheck gamepadCheck in m_checkers)
+            foreach (var gamepadCheck in m_checkers)
             {
                 gamepadCheck.gameObject.SetActive(true);
             }

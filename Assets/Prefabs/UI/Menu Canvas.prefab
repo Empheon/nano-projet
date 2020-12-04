@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0ab1b9961f4ae49bb6313adb7bf4a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  validatedColor: {r: 0.10234961, g: 0.9433962, b: 0.1246253, a: 0}
+  validatedColor: {r: 0.10234961, g: 0.9433962, b: 0.1246253, a: 1}
 --- !u!1 &5630528114768096481
 GameObject:
   m_ObjectHideFlags: 0
@@ -1428,4 +1428,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0ab1b9961f4ae49bb6313adb7bf4a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  validatedColor: {r: 0.10234961, g: 0.9433962, b: 0.1246253, a: 0}
+  validatedColor: {r: 0.10234961, g: 0.9433962, b: 0.1246253, a: 1}
