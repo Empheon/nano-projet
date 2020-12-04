@@ -12,41 +12,34 @@ namespace Animations
 {
     public class Shield : MonoBehaviour
     {
-        [SerializeField]
-        private float protectionDuration;
+        [SerializeField] private float deployDuration;
 
-        private Animator m_animator;
-        private Room m_roomToProtect;
+        private Animator _animator;
+        private ParticleSystem _shieldParticles;
 
         private void Start()
         {
-            m_animator = GetComponent<Animator>();
+            _animator = GetComponent<Animator>();
         }
 
-        public void Protect(Room room, Action callback)
+        public void Deploy()
         {
-            StartCoroutine(ProtectAnim(room, callback));
+            _animator.SetBool("Opened", true);
+            StartCoroutine(WaitAndSetParticles(true, deployDuration));
         }
 
-        public void Close(Room room, Action callback)
+        public void Retract()
         {
-            m_animator.SetTrigger("CloseShield");
-            callback();
+            _animator.SetBool("Opened", false);
+            StartCoroutine(WaitAndSetParticles(false, deployDuration));
         }
 
-        private IEnumerator ProtectAnim(Room room, Action callback)
+        private IEnumerator WaitAndSetParticles(bool activeOrNot, float waitFor)
         {
-            transform.DOMoveY(room.transform.position.y, 0.3f).SetEase(Ease.OutBack);
-
-            yield return new WaitForSeconds(0f);
-
-            m_animator.SetTrigger("OpenShield");
-            callback();
-
-            //yield return new WaitForSeconds(protectionDuration);
-
-            //m_animator.SetTrigger("CloseShield");
-            //callback();
+            yield return new WaitForSeconds(waitFor);
+            
+            if (activeOrNot) _shieldParticles.Play(); 
+            else _shieldParticles.Stop(); 
         }
     }
 }

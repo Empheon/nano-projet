@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Animations;
 using UnityEngine;
 
 namespace NeoMecha.ConsoleControls.ShieldAim
@@ -10,43 +11,50 @@ namespace NeoMecha.ConsoleControls.ShieldAim
     public class ShieldAimSystem : ConsoleControlSystem
     {
         [SerializeField] private GameObject targetContainer;
-        [SerializeField] private GameObject shieldObject;
+        [SerializeField] private ShieldPlacement shieldPlacer;
 
-        private PositionTarget[] m_targets;
-        private int m_currentIndex;
+        private PositionTarget[] _targets;
+        private int _currentTargetIndex;
 
         private void Start()
         {
-            m_targets = targetContainer.GetComponentsInChildren<PositionTarget>(true);
-
+            _targets = targetContainer.GetComponentsInChildren<PositionTarget>(true);
+            
+            shieldPlacer.TurnOff();
         }
 
         public override bool Activate()
         {
-            if (m_targets.All(trg => !trg.IsActive)) return false;
+            if (_targets.All(trg => !trg.IsActive)) return false;
 
+            shieldPlacer.TurnOn();
+            shieldPlacer.PlaceAt(_targets[_currentTargetIndex].target.position);
 
             return true;
         }
 
         public override void Desactivate()
         {
-            m_currentIndex = 0;
+            shieldPlacer.TurnOff();
         }
 
         public override void Next()
         {
-            throw new NotImplementedException();
+            _currentTargetIndex = (_currentTargetIndex + 1) % _targets.Length;
+            
+            shieldPlacer.PlaceAt(_targets[_currentTargetIndex].target.position);
         }
 
         public override void Previous()
         {
-            throw new NotImplementedException();
+            _currentTargetIndex = (_currentTargetIndex + _targets.Length - 1) % _targets.Length;
+            
+            shieldPlacer.PlaceAt(_targets[_currentTargetIndex].target.position);
         }
 
         public override void Validate()
         {
-            throw new NotImplementedException();
+            _targets[_currentTargetIndex].Validate();
         }
     }
 }
