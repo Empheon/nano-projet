@@ -82,12 +82,12 @@ namespace Tutorial
 
             foreach (ButtonActivator buttonActivator in leftMecha.GetComponentsInChildren<ButtonActivator>())
             {
-                buttonActivator.Init(leftActivationButton.gameObject);
+                buttonActivator.Init(leftActivationButton);
             }
 
             foreach (ButtonActivator buttonActivator in rightMecha.GetComponentsInChildren<ButtonActivator>())
             {
-                buttonActivator.Init(rightActivationButton.gameObject);
+                buttonActivator.Init(rightActivationButton);
             }
 
             DisableButtons();
@@ -117,7 +117,8 @@ namespace Tutorial
         {
             foreach(var gamepadCheck in m_checkers)
             {
-                gamepadCheck.gameObject.SetActive(false);
+                //gamepadCheck.gameObject.SetActive(false);
+                gamepadCheck.Disable();
             }
         }
 
@@ -125,7 +126,8 @@ namespace Tutorial
         {
             foreach (var gamepadCheck in m_checkers)
             {
-                gamepadCheck.gameObject.SetActive(true);
+                //gamepadCheck.gameObject.SetActive(true);
+                gamepadCheck.Enable();
             }
         }
 
