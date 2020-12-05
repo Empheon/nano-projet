@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Character;
 using Resources;
+using UnityEngine.Events;
 
 namespace NeoMecha
 {
@@ -15,6 +16,9 @@ namespace NeoMecha
         [SerializeField] private Transform loadTo;
         
         [HideInInspector] public bool IsLoaded;
+
+        public UnityEvent OnLoad;
+        public UnityEvent OnUnload;
 
         public void OnCharacterInteract(GameObject character)
         {
@@ -26,7 +30,14 @@ namespace NeoMecha
             {
                 characterResource.ConsumeResource(loadTo.position);
                 IsLoaded = true;
+                OnLoad.Invoke();
             }
+        }
+
+        public void UnLoad()
+        {
+            IsLoaded = false;
+            OnUnload.Invoke();
         }
 
         public override bool CanInteract(GameObject character)

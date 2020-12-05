@@ -24,7 +24,7 @@ namespace NeoMecha
                     targetInList.Room.OnBreakDefenceReceived();
                 }
             }
-            m_loadConsole.IsLoaded = false;
+            m_loadConsole.UnLoad();
         }
 
         public override bool CanDoAction()

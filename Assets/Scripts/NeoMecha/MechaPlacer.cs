@@ -11,10 +11,10 @@ namespace NeoMecha
         private GameObject leftMecha;
         [SerializeField]
         private GameObject rightMecha;
-        [SerializeField]
-        private GameObject leftSpawn;
-        [SerializeField]
-        private GameObject rightSpawn;
+        //[SerializeField]
+        //private GameObject leftSpawn;
+        //[SerializeField]
+        //private GameObject rightSpawn;
 
         [SerializeField]
         private Camera mainCamera;
@@ -36,16 +36,16 @@ namespace NeoMecha
             pos.x = newX;
             rightMecha.transform.position = pos;
 
-            pos = leftSpawn.transform.position;
-            pos.x = -newX;
-            leftSpawn.transform.position = pos;
+            //pos = leftSpawn.transform.position;
+            //pos.x = -newX;
+            //leftSpawn.transform.position = pos;
 
-            pos = rightSpawn.transform.position;
-            pos.x = newX;
-            rightSpawn.transform.position = pos;
+            //pos = rightSpawn.transform.position;
+            //pos.x = newX;
+            //rightSpawn.transform.position = pos;
 
 
-            float pathOffset = 6 - newX;
+            float pathOffset = 0.68f - newX;
             Canon c = leftMecha.GetComponentInChildren<Canon>();
             c.UpdatePathsWithOffset(pathOffset * (3 / leftMecha.transform.localScale.x));
             c = rightMecha.GetComponentInChildren<Canon>();
