@@ -230,6 +230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4053364684825934038}
   - component: {fileID: 4596707139435945776}
+  - component: {fileID: 4194779736112664935}
   m_Layer: 9
   m_Name: Shield
   m_TagString: Untagged
@@ -273,6 +274,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4194779736112664935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3678210645441503852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0349c5a6cd356f349b7a0a48ba0349c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deployDuration: 1
+  shieldParticles: {fileID: 4596707139057036409}
+  movementSpeed: 0.2
 --- !u!1 &4691758000011162199
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,11 +614,22 @@ PrefabInstance:
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2863376270850944987, guid: 4dd43c4bf6592be48905dcdb03b1fa18,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dd43c4bf6592be48905dcdb03b1fa18, type: 3}
 --- !u!4 &4596707139057036410 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2675631656994417129, guid: 4dd43c4bf6592be48905dcdb03b1fa18,
+    type: 3}
+  m_PrefabInstance: {fileID: 1939652969038218643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4596707139057036409 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2675631656994417130, guid: 4dd43c4bf6592be48905dcdb03b1fa18,
     type: 3}
   m_PrefabInstance: {fileID: 1939652969038218643}
   m_PrefabAsset: {fileID: 0}
