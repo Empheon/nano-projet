@@ -179,10 +179,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a177596a837342edbb9538d1404e888a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indicatorObject: {fileID: 5630528116584677567}
-  team: 1
-  validatedColor: {r: 0.5624181, g: 1, b: 0.16509432, a: 1}
-  checkFrequency: 10
+  circle: {fileID: 1165360150185700598}
+  watchIndex: 1
 --- !u!1 &5630528114733008372
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,6 +192,7 @@ GameObject:
   - component: {fileID: 5630528114733008373}
   - component: {fileID: 5630528114733008371}
   - component: {fileID: 5630528114733008370}
+  - component: {fileID: 3752860391470527935}
   m_Layer: 5
   m_Name: Circle
   m_TagString: Untagged
@@ -257,6 +256,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3752860391470527935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5630528114733008372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0ab1b9961f4ae49bb6313adb7bf4a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  validatedColor: {r: 0.10234961, g: 0.9433962, b: 0.1246253, a: 1}
 --- !u!1 &5630528114768096481
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,10 +1015,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a177596a837342edbb9538d1404e888a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indicatorObject: {fileID: 5630528114733008372}
-  team: 0
-  validatedColor: {r: 0.5624181, g: 1, b: 0.16509432, a: 1}
-  checkFrequency: 10
+  circle: {fileID: 3752860391470527935}
+  watchIndex: 0
 --- !u!1 &5630528116143313055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,6 +1352,7 @@ GameObject:
   - component: {fileID: 5630528116584677564}
   - component: {fileID: 5630528116584677562}
   - component: {fileID: 5630528116584677565}
+  - component: {fileID: 1165360150185700598}
   m_Layer: 5
   m_Name: Circle
   m_TagString: Untagged
@@ -1405,3 +1416,16 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1165360150185700598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5630528116584677567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0ab1b9961f4ae49bb6313adb7bf4a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  validatedColor: {r: 0.10234961, g: 0.9433962, b: 0.1246253, a: 1}

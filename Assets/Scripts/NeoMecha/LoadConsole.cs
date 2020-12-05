@@ -29,8 +29,9 @@ namespace NeoMecha
             }
         }
 
-        public override bool CanInteract(CharacterResource characterResource)
+        public override bool CanInteract(GameObject character)
         {
+            var characterResource = character.GetComponent<CharacterResource>();
             return !IsLoaded && characterResource.HasResource(resourceType);
         }
     }

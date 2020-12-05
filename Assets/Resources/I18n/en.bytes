@@ -1,7 +1,7 @@
 #English translation file
 menu_play_game;Jouer
 menu_tutorial;Tutoriel
-menu_settings;Settings
+menu_settings;Options
 menu_quit;Quitter
 
 tuto_main_1;Terrassez la forteresse ennemie !
@@ -16,10 +16,13 @@ tuto_main_9;Puis choisir lequel de vos systèmes défendre.
 tuto_main_10;Enfin, le système de piratage !
 tuto_main_11;Il permet de paralyser un système ennemi.
 tuto_main_12;Après utilisation, le système de piratage doit se recharger. 
-tuto_main_13;Coordonnez vos actions, 
-tuto_main_14;Observez les mouvements de l'adversaire, 
-tuto_main_15;Et la victoire est à vous !
+tuto_main_13;Coordonnez vos actions\nObservez les mouvements de l'adversaire\nEt la victoire est à vous !
 
-tuto_sub_2;Pressez le bouton dans le système d'attaque.
-tuto_sub_7;Pressez le bouton dans le système de défense.
-tuto_sub_10;Pressez le bouton dans le système de pirate.
+
+tuto_sub_goto_att;Déplacez-vous vers la salle d'attaque.
+tuto_sub_goto_def;Déplacez-vous vers la salle de défense.
+tuto_sub_goto_jam;Déplacez-vous vers la salle de piratage.
+tuto_sub_goto_mun;Déplacez-vous vers la salle des munitions.
+tuto_sub_goto_ene;Déplacez-vous vers la salle des sources d'énergie.
+tuto_sub_goto_fix;Déplacez-vous vers la salle de maintenance.
+tuto_sub_goto_several;Déplacez-vous vers l'une des salles indiquées.

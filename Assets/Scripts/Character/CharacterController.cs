@@ -1,7 +1,6 @@
 ﻿using System.Collections;
-using System.Runtime.InteropServices;
+using Inputs;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Character
 {
@@ -35,7 +34,7 @@ namespace Character
         [SerializeField] private float blinkFrequency = 0.3f;
         [SerializeField] private float scratchFrequency = 0.3f;
         
-        private Gamepad _gamepad;
+        private IGameController _gc;
         private Transform _transform;
         private BoxCollider2D _col;
         private Rigidbody2D _rb;
@@ -47,10 +46,20 @@ namespace Character
         private bool _keepInAir;
         private float _currentTimeJumping;
 
-        public Gamepad GetGamepad()
+        public IGameController GetGamepad()
         {
-            return _gamepad;
-        } 
+            return _gc;
+        }
+
+        /**
+         * Reset the controller's movement
+         * /!\ does not disable the controller 
+         */
+        public void Stop()
+        {
+            _rb.velocity = Vector2.zero;
+            _movement = 0;
+        }
         
         private bool IsGrounded()
         {
@@ -65,9 +74,9 @@ namespace Character
         }
 
         // message is send by CharacterSpawner
-        private void OnSpawn(Gamepad gamepad)
+        private void OnSpawn(IGameController gc)
         {
-            _gamepad = gamepad;
+            _gc = gc;
         }
 
         private void Awake()
@@ -96,7 +105,7 @@ namespace Character
                 _hasJumped = false;
             }
 
-            if (_gamepad.leftStick.y.ReadValue() < stickCrouchThreshold)
+            if (_gc.GetMovement().y < stickCrouchThreshold)
             {
                 var found = Physics2D.OverlapBox(_transform.TransformPoint(groundCastOffset), groundCastSize, 0, whatIsGround);
                 
@@ -106,16 +115,16 @@ namespace Character
                 }
             }
 
-            if (_gamepad.buttonSouth.wasPressedThisFrame && grounded)
+            if (_gc.JumpThisFrame() && grounded)
             {
                 _shouldJump = true;
                 animator.SetTrigger("Jump");
             }
             
-            _keepInAir = _gamepad.buttonSouth.isPressed;
+            _keepInAir = _gc.KeepInAir();
 
             // input for movement
-            _movement = _gamepad.leftStick.x.ReadValue();
+            _movement = _gc.GetMovement().x;
             
             // dead zone
             if (_movement < deadZone && _movement > -deadZone) _movement = 0;

@@ -5,6 +5,6 @@ namespace NeoMecha
 {
     public abstract class Console : MonoBehaviour
     {
-        public abstract bool CanInteract(CharacterResource characterResource);
+        public abstract bool CanInteract(GameObject character);
     }
 }
