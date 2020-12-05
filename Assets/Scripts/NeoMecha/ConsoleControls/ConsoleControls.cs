@@ -91,7 +91,7 @@ namespace NeoMecha.ConsoleControls
                     }
                 }
 
-                if (_gc.InteractThisFrame())
+                if (_gc.InteractThisFrame() || _gc.JumpThisFrame())
                 {
                     _system.Validate();
                     OnStopInteraction();

@@ -30,6 +30,8 @@ namespace NeoMecha
 
         public void OnCharacterInteract(GameObject character)
         {
+            if (!CanInteract(character)) return;
+
             StartCoroutine(WaitAndFix());
         }
 
