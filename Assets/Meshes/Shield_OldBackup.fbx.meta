@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 0cffe337b18f53145bf031bf111f86a0
+guid: bbfe25a5e7e078d40b8fb4d423208a9c
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
-      74: 4781951162920444690
-    second: Armature|ArmatureAction
-  - first:
       74: -623603649343465320
-    second: CannonShot
+    second: ShieldRotate
+  - first:
+      74: -6796110542025529005
+    second: ShieldOpen
   - first:
       74: -3100369314251171874
     second: Idle
@@ -16,8 +16,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Cannon
-    second: {fileID: 2100000, guid: 3f2044d8a6aabaa41a8edcab1c33a503, type: 2}
+      name: No Name
+    second: {fileID: 2100000, guid: 2214005b0511ab444ad065185d370a2b, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -46,11 +46,40 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: CannonShot
+      name: ShieldRotate
       takeName: Scene
       internalID: 0
       firstFrame: 1
-      lastFrame: 100
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: ShieldOpen
+      takeName: Scene
+      internalID: 0
+      firstFrame: 25
+      lastFrame: 45
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -69,14 +98,7 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events:
-      - time: 0.42049474
-        functionName: OnShoot
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
+      events: []
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -85,8 +107,8 @@ ModelImporter:
       name: Idle
       takeName: Scene
       internalID: 0
-      firstFrame: 105
-      lastFrame: 110
+      firstFrame: 50
+      lastFrame: 53
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -113,10 +135,10 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.15
+    globalScale: 0.2
     meshCompression: 0
     addColliders: 0
-    useSRGBMaterialColor: 0
+    useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
@@ -160,7 +182,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.0015
+    globalScale: 0.2
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
