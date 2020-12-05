@@ -17,7 +17,7 @@ namespace NeoMecha
         protected override void DoAction(Room room)
         {
             room.OnAttackReceived();
-            m_loadConsole.IsLoaded = false;
+            m_loadConsole.UnLoad();
         }
 
         public override bool CanDoAction()

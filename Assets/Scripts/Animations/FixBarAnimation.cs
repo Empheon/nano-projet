@@ -44,7 +44,7 @@ namespace Animations
         {
             m_spriteRenderer.sprite = greenBar;
             yield return new WaitForSeconds(1);
-            m_spriteRenderer.sprite = redBar;
+            m_spriteRenderer.sprite = disabledBar;
         }
     }
 }

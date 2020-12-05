@@ -10,7 +10,7 @@ using System.Collections;
 
 namespace Tutorial
 {
-    public class LightController : MonoBehaviour
+    public class TutoLightController : MonoBehaviour
     {
         private const float DEFAULT_DURATION = 0.5f;
 

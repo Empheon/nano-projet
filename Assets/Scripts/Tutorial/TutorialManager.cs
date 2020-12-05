@@ -363,12 +363,12 @@ namespace Tutorial
     [Serializable]
     public struct MechaInfo
     {
-        public LightController AttLight;
-        public LightController DefLight;
-        public LightController JamLight;
-        public LightController MunLight;
-        public LightController EneLight;
-        public LightController FixLight;
+        public TutoLightController AttLight;
+        public TutoLightController DefLight;
+        public TutoLightController JamLight;
+        public TutoLightController MunLight;
+        public TutoLightController EneLight;
+        public TutoLightController FixLight;
 
         public ButtonActivator AttCollider;
         public ButtonActivator DefCollider;
