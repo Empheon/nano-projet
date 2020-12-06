@@ -24,6 +24,7 @@ namespace Tutorial
         private void Awake()
         {
             m_light = GetComponent<Light2D>();
+            Color = Color.white;
         }
 
         public void SwitchOn(float duration = DEFAULT_DURATION)
