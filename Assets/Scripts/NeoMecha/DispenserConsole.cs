@@ -1,4 +1,5 @@
-﻿using Character;
+﻿using Animations;
+using Character;
 using Resources;
 using System;
 using System.Collections;
@@ -16,10 +17,13 @@ namespace NeoMecha
         [SerializeField] private int maxResourcesNb;
         [SerializeField] private float activationDelay;
         [SerializeField] private float dispenseCooldown;
-        [SerializeField] private Transform dispenseFrom;
+        //[SerializeField] private Transform dispenseFrom;
         [SerializeField] private Vector2 velocity;
         [SerializeField] private Transform snapPosition;
         [SerializeField] private PickableResource resourcePrefab;
+
+        [SerializeField]
+        private ConveyerAnimation conveyerAnimation;
 
         private List<Resource> m_resources;
         private float _timeSinceLastDispense;
@@ -54,21 +58,22 @@ namespace NeoMecha
             characterController.enabled = false;
 
             // snap player to right place
-            character.transform.position = snapPosition.position;
+            //character.transform.position = snapPosition.position;
             
             // animate
             characterAnimator.SetTrigger("PushButton");
+            PickableResource pickableResource = conveyerAnimation.OnConvey(resourcePrefab.gameObject).GetComponent<PickableResource>();
             yield return new WaitForSeconds(activationDelay);
             
             // player get controls back
             characterController.enabled = true;
             
             // create resource
-            PickableResource pickableResource = Instantiate(resourcePrefab, dispenseFrom.position, Quaternion.identity);
+            //PickableResource pickableResource = Instantiate(resourcePrefab, dispenseFrom.position, Quaternion.identity);
             pickableResource.Init();
             
             var resourceRb = pickableResource.GetComponent<Rigidbody2D>();
-            resourceRb.AddForce(velocity, ForceMode2D.Impulse);
+            //resourceRb.AddForce(velocity, ForceMode2D.Impulse);
             
             // keep track of resource
             m_resources.Add(pickableResource.ResourceObject);
