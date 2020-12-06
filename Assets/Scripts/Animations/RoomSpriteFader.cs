@@ -19,18 +19,18 @@ namespace Animations
 
         private void Start()
         {
-            damagedRoom.color = m_transparent;
+            //damagedRoom.color = m_transparent;
         }
 
         public void OnFix(float duration)
         {
             normalRoom.DOColor(Color.white, duration);
-            damagedRoom.DOColor(m_transparent, duration);
+            //damagedRoom.DOColor(m_transparent, duration);
         }
 
         public void OnDamage(float duration)
         {
-            damagedRoom.DOColor(Color.white, duration);
+            //damagedRoom.DOColor(Color.white, duration);
             normalRoom.DOColor(m_transparent, duration);
         }
     }
