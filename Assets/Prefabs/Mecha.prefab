@@ -8284,6 +8284,16 @@ PrefabInstance:
       propertyPath: m_spriteRenderer
       value: 
       objectReference: {fileID: 1085522936424313022}
+    - target: {fileID: 6297693103411434437, guid: 953dfa293262f4b45b78e50161b22fde,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297693103411434437, guid: 953dfa293262f4b45b78e50161b22fde,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6983842968433780524, guid: 953dfa293262f4b45b78e50161b22fde,
         type: 3}
       propertyPath: m_Name
