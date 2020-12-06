@@ -17,6 +17,7 @@ namespace Animations
         private Vector3 _targetPosition;
         private Quaternion _targetRotation;
         private float _targetDistance;
+        private Vector3 _laserScale;
 
         public void TurnOn()
         {
@@ -30,11 +31,17 @@ namespace Animations
 
         public void AimAt(Vector3 point)
         {
-            var laserOrigin = laserHandle.position;
-
             _targetPosition = point;
-            _targetRotation = Quaternion.LookRotation(laserOrigin - point);
-            _targetDistance = Vector3.Distance(laserOrigin, point);
+
+            var direction = laserHandle.position - point;
+            direction = new Vector3(
+                direction.x / _laserScale.x,
+                direction.y / _laserScale.y,
+                direction.z / _laserScale.z
+            );
+            
+            _targetRotation = Quaternion.LookRotation(direction);
+            _targetDistance = direction.magnitude;
         }
 
         public void Shoot()
@@ -55,6 +62,7 @@ namespace Animations
         {
             _targetRotation = laserHandle.transform.rotation * Quaternion.Euler(offset);
             _targetDistance = laserParticles.main.startSizeX.constant;
+            _laserScale = laserParticles.transform.lossyScale;
         }
 
         private void Update()

@@ -2228,6 +2228,11 @@ PrefabInstance:
       propertyPath: m_InstanceId
       value: -412886
       objectReference: {fileID: 0}
+    - target: {fileID: 6572994218662086851, guid: 71ab58c4b8984a24d8b7a02a26dea2a9,
+        type: 3}
+      propertyPath: scalingMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7072859498957959574, guid: 71ab58c4b8984a24d8b7a02a26dea2a9,
         type: 3}
       propertyPath: m_Mesh
