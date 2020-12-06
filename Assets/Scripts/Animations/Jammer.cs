@@ -7,6 +7,7 @@ namespace Animations
     public class Jammer : MonoBehaviour
     {
         [SerializeField] private Transform jammerHandle;
+        [SerializeField] private Transform jammerOrigin;
         
         [SerializeField] private ParticleSystem teslaCoil;
         [SerializeField] private ParticleSystem electricBolt;
@@ -37,12 +38,7 @@ namespace Animations
         {
             _targetPosition = point;
 
-            var direction = jammerHandle.position - point;
-            direction = new Vector3(
-                direction.x / _boldScale.x,
-                direction.y / _boldScale.y,
-                direction.z / _boldScale.z
-            );
+            var direction = jammerOrigin.InverseTransformPoint(point);
             
             _targetRotation = Quaternion.LookRotation(direction);
             _targetDistance = direction.magnitude;

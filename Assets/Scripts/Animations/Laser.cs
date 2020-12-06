@@ -9,6 +9,7 @@ namespace Animations
         [SerializeField] private ParticleSystem targetLockedEffect;
         [SerializeField] private ParticleSystem laserParticles;
         [SerializeField] private Transform laserHandle;
+        [SerializeField] private Transform laserOrigin;
 
         [SerializeField] private Vector3 offset;
         [SerializeField] [Range(0f, 1f)] private float movementSmoothing;
@@ -33,12 +34,7 @@ namespace Animations
         {
             _targetPosition = point;
 
-            var direction = laserHandle.position - point;
-            direction = new Vector3(
-                direction.x / _laserScale.x,
-                direction.y / _laserScale.y,
-                direction.z / _laserScale.z
-            );
+            var direction = laserOrigin.InverseTransformPoint(point);
             
             _targetRotation = Quaternion.LookRotation(direction);
             _targetDistance = direction.magnitude;
