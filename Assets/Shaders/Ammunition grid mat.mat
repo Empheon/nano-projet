@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Jam jauge outside
+  m_Name: Ammunition grid mat
   m_Shader: {fileID: -6465566751694194690, guid: 6e2380ad60e15ff409d88250b0b9b126,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
@@ -21,7 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Emission:
-        m_Texture: {fileID: 2800000, guid: 85e51cec20e844a4492555e79fdb5fce, type: 3}
+        m_Texture: {fileID: 2800000, guid: f8b909ad8d1213e438081e84aceadc96, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -30,4 +30,4 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
-    - _Color: {r: 5.992157, g: 4.2980394, b: 0, a: 0}
+    - _Color: {r: 4, g: 0, b: 0, a: 0}
