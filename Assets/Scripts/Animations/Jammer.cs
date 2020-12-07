@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 
 namespace Animations
@@ -7,20 +8,16 @@ namespace Animations
     public class Jammer : MonoBehaviour
     {
         [SerializeField] private Transform jammerHandle;
-        [SerializeField] private Transform jammerOrigin;
         
         [SerializeField] private ParticleSystem teslaCoil;
         [SerializeField] private ParticleSystem electricBolt;
         [SerializeField] private ParticleSystem electricBoltBlast;
         [SerializeField] private ParticleSystem impactBlast;
         
-        [SerializeField] private Vector3 offset;
         [SerializeField] [Range(0f, 1f)] private float movementSmoothing;
         
         private Vector3 _targetPosition;
-        private Quaternion _targetRotation;
         private float _targetDistance;
-        private Vector3 _boldScale;
         
         public void TurnOn()
         {
@@ -36,12 +33,9 @@ namespace Animations
 
         public void AimAt(Vector3 point)
         {
+            jammerHandle.DOLookAt(point, 0.5f);
+            _targetDistance = Vector3.Distance(jammerHandle.position, point) / electricBolt.transform.lossyScale.x;
             _targetPosition = point;
-
-            var direction = jammerOrigin.InverseTransformPoint(point);
-            
-            _targetRotation = Quaternion.LookRotation(direction);
-            _targetDistance = direction.magnitude;
         }
 
         public void Blast()
@@ -54,20 +48,12 @@ namespace Animations
         
         private void Awake()
         {
-            _targetRotation = jammerHandle.transform.rotation * Quaternion.Euler(offset);
             _targetDistance = electricBolt.main.startSizeX.constant;
-            _boldScale = electricBolt.transform.lossyScale;
         }
 
         private void Update()
         {
-            // lerp rotation
-            var correctedAngle = jammerHandle.rotation * Quaternion.Euler(offset);
-            var nextTargetRotation = Quaternion.Slerp(correctedAngle, _targetRotation, movementSmoothing);
-
-            jammerHandle.rotation = nextTargetRotation * Quaternion.Euler(-offset);
-            
-            // lerp laser lenght
+            // lerp bolt lenght
             var boltMain = electricBolt.main;
             var blastMain = electricBoltBlast.main;
             var boltLength = boltMain.startSizeY.constant;

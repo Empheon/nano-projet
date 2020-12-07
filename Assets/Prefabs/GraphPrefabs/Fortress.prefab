@@ -1461,7 +1461,7 @@ PrefabInstance:
     - target: {fileID: 3678210645441503852, guid: e03ee1edcd6ccdb468efcc1097f1e325,
         type: 3}
       propertyPath: m_Name
-      value: Shield (1)
+      value: Shield
       objectReference: {fileID: 0}
     - target: {fileID: 4053364684825934038, guid: e03ee1edcd6ccdb468efcc1097f1e325,
         type: 3}

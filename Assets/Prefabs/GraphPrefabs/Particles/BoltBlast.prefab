@@ -4765,7 +4765,7 @@ GameObject:
   - component: {fileID: 7354356305179370078}
   - component: {fileID: 7354356305179370072}
   - component: {fileID: 7354356305179370079}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: BoltBlast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
