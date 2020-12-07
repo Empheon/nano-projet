@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Animations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,9 @@ namespace NeoMecha
         private float duration;
         [SerializeField]
         private float cooldown;
+
+        [SerializeField]
+        private JamBarAnimation jamBarAnimation;
 
         private bool m_isCoolingDown;
         private bool m_isJamming;
@@ -32,6 +36,7 @@ namespace NeoMecha
         {
             room.OnJammingReceived();
             m_isJamming = true;
+            jamBarAnimation.OnUnload();
 
             yield return new WaitForSeconds(duration);
 
@@ -39,8 +44,9 @@ namespace NeoMecha
 
             m_isJamming = false;
             m_isCoolingDown = true;
+            jamBarAnimation.OnLoad(cooldown);
 
-            yield return new WaitForSeconds(duration);
+            yield return new WaitForSeconds(cooldown);
 
             m_isCoolingDown = false;
         }
@@ -51,6 +57,7 @@ namespace NeoMecha
             m_currentRoom.OnUnjammingReceived();
             m_isCoolingDown = false;
             m_isJamming = false;
+            jamBarAnimation.OnUnload();
         }
 
         public override bool CanDoAction()

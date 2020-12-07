@@ -11,18 +11,19 @@ namespace Animations
 
         protected override void InitialState()
         {
-            m_currentColor = green;
-            SwitchOff(0);
+            OnUnload();
         }
 
         public void OnLoad()
         {
+            m_currentColor = green;
             SwitchOn();
         }
 
         public void OnUnload()
         {
-            SwitchOff();
+            m_currentColor = red;
+            SwitchOn();
         }
 
     }

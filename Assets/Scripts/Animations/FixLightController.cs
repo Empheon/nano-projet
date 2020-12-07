@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace Animations
 {
     class FixLightController : LightController
     {
+        [SerializeField]
+        private FixBarAnimation fixBarAnimation;
+
         private bool m_isFixing;
         private float m_defaultIntensity;
 
@@ -26,6 +30,8 @@ namespace Animations
             m_light.intensity = m_defaultIntensity * 2;
             SwitchOn();
             StopBlink();
+
+            fixBarAnimation.OnDamage();
         }
 
         public void OnStartFix()
@@ -34,6 +40,8 @@ namespace Animations
             m_light.intensity = m_defaultIntensity;
             m_currentColor = yellow;
             StartBlink();
+
+            fixBarAnimation.OnStartFix();
         }
 
         public void OnFixed()
