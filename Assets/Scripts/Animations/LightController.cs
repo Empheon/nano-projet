@@ -22,6 +22,7 @@ namespace Animations
         [SerializeField, ColorUsage(true, true)]
         protected Color off;
 
+        [SerializeField]
         protected Light2D m_light;
         protected SpriteRenderer m_spriteRenderer;
 
@@ -34,7 +35,6 @@ namespace Animations
 
         private void Start()
         {
-            m_light = GetComponentInChildren<Light2D>();
             m_spriteRenderer = GetComponent<SpriteRenderer>();
 
             InitialState();
