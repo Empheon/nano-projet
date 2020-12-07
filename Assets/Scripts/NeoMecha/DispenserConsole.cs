@@ -24,6 +24,8 @@ namespace NeoMecha
 
         [SerializeField]
         private ConveyerAnimation conveyerAnimation;
+        [SerializeField]
+        private SupplyCurtainAnimation supplyCurtainAnimation;
 
         private List<Resource> m_resources;
         private float _timeSinceLastDispense;
@@ -77,10 +79,13 @@ namespace NeoMecha
             
             // keep track of resource
             m_resources.Add(pickableResource.ResourceObject);
-            
+            UpdateCurtainState();
+
+
             pickableResource.ResourceObject.OnConsumed += () =>
             {
                 m_resources.Remove(pickableResource.ResourceObject);
+                UpdateCurtainState();
                 Destroy(pickableResource.gameObject);
             };
         }
@@ -88,6 +93,17 @@ namespace NeoMecha
         public override bool CanInteract(GameObject character)
         {
             return m_resources.Count < maxResourcesNb && _timeSinceLastDispense > dispenseCooldown;
+        }
+
+        private void UpdateCurtainState()
+        {
+            if (m_resources.Count < maxResourcesNb)
+            {
+                supplyCurtainAnimation.OnOpen();
+            } else
+            {
+                supplyCurtainAnimation.OnClose();
+            }
         }
     }
 }
