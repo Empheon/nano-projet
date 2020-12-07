@@ -12,9 +12,10 @@ namespace NeoMecha.ConsoleControls.ShieldAim
     {
         [SerializeField] private GameObject targetContainer;
         [SerializeField] private ShieldPlacement shieldPlacer;
+        [SerializeField] private Shield shield;
 
         private PositionTarget[] _targets;
-        private int _currentTargetIndex;
+        private int _currentTargetIndex = 1;
 
         private void Start()
         {
@@ -41,20 +42,32 @@ namespace NeoMecha.ConsoleControls.ShieldAim
         public override void Next()
         {
             _currentTargetIndex = (_currentTargetIndex + 1) % _targets.Length;
+            var target = _targets[_currentTargetIndex];
             
-            shieldPlacer.PlaceAt(_targets[_currentTargetIndex].target.position);
+            shieldPlacer.PlaceAt(target.target.position);
+
+            if(!target.IsActive) Next();
         }
 
         public override void Previous()
         {
             _currentTargetIndex = (_currentTargetIndex + _targets.Length - 1) % _targets.Length;
+            var target = _targets[_currentTargetIndex];
             
-            shieldPlacer.PlaceAt(_targets[_currentTargetIndex].target.position);
+            shieldPlacer.PlaceAt(target.target.position);
+            
+            if(!target.IsActive) Previous();
         }
 
         public override void Validate()
         {
-            _targets[_currentTargetIndex].Validate();
+            var target = _targets[_currentTargetIndex];
+            
+            target.Validate();
+            shield.MoveTo(target.target.position);
+            
+            // so we dont reactivate the system on an already protected target
+            Next();
         }
     }
 }

@@ -9,6 +9,7 @@ namespace Animations
         [SerializeField] private ParticleSystem targetLockedEffect;
         [SerializeField] private ParticleSystem laserParticles;
         [SerializeField] private Transform laserHandle;
+        [SerializeField] private Transform laserOrigin;
 
         [SerializeField] private Vector3 offset;
         [SerializeField] [Range(0f, 1f)] private float movementSmoothing;
@@ -17,6 +18,7 @@ namespace Animations
         private Vector3 _targetPosition;
         private Quaternion _targetRotation;
         private float _targetDistance;
+        private Vector3 _laserScale;
 
         public void TurnOn()
         {
@@ -30,11 +32,12 @@ namespace Animations
 
         public void AimAt(Vector3 point)
         {
-            var laserOrigin = laserHandle.position;
-
             _targetPosition = point;
-            _targetRotation = Quaternion.LookRotation(laserOrigin - point);
-            _targetDistance = Vector3.Distance(laserOrigin, point);
+
+            var direction = laserOrigin.InverseTransformPoint(point);
+            
+            _targetRotation = Quaternion.LookRotation(direction);
+            _targetDistance = direction.magnitude;
         }
 
         public void Shoot()
@@ -55,6 +58,7 @@ namespace Animations
         {
             _targetRotation = laserHandle.transform.rotation * Quaternion.Euler(offset);
             _targetDistance = laserParticles.main.startSizeX.constant;
+            _laserScale = laserParticles.transform.lossyScale;
         }
 
         private void Update()

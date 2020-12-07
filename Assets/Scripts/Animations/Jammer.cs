@@ -7,6 +7,7 @@ namespace Animations
     public class Jammer : MonoBehaviour
     {
         [SerializeField] private Transform jammerHandle;
+        [SerializeField] private Transform jammerOrigin;
         
         [SerializeField] private ParticleSystem teslaCoil;
         [SerializeField] private ParticleSystem electricBolt;
@@ -19,6 +20,7 @@ namespace Animations
         private Vector3 _targetPosition;
         private Quaternion _targetRotation;
         private float _targetDistance;
+        private Vector3 _boldScale;
         
         public void TurnOn()
         {
@@ -34,11 +36,12 @@ namespace Animations
 
         public void AimAt(Vector3 point)
         {
-            var laserOrigin = jammerHandle.position;
-
             _targetPosition = point;
-            _targetRotation = Quaternion.LookRotation(laserOrigin - point);
-            _targetDistance = Vector3.Distance(laserOrigin, point);
+
+            var direction = jammerOrigin.InverseTransformPoint(point);
+            
+            _targetRotation = Quaternion.LookRotation(direction);
+            _targetDistance = direction.magnitude;
         }
 
         public void Blast()
@@ -53,6 +56,7 @@ namespace Animations
         {
             _targetRotation = jammerHandle.transform.rotation * Quaternion.Euler(offset);
             _targetDistance = electricBolt.main.startSizeX.constant;
+            _boldScale = electricBolt.transform.lossyScale;
         }
 
         private void Update()

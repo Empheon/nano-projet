@@ -30,13 +30,17 @@ namespace NeoMecha
 
         public void OnCharacterInteract(GameObject character)
         {
+            if (!CanInteract(character)) return;
+
             StartCoroutine(WaitAndFix());
         }
 
         private IEnumerator WaitAndFix()
         {
+            OnRepairStart.Invoke();
             _isFixing = true;
             yield return new WaitForSeconds(repairDelay);
+            OnRepairFinished.Invoke();
             _isFixing = false;
             
             foreach (var room in rooms)
