@@ -606,16 +606,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2863376270850944987, guid: 4dd43c4bf6592be48905dcdb03b1fa18,
         type: 3}
-      propertyPath: EmissionModule.rateOverTime.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2863376270850944987, guid: 4dd43c4bf6592be48905dcdb03b1fa18,
-        type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2863376270850944987, guid: 4dd43c4bf6592be48905dcdb03b1fa18,
-        type: 3}
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
