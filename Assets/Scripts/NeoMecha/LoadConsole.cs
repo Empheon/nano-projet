@@ -13,9 +13,7 @@ namespace NeoMecha
     public class LoadConsole : Console
     {
         [SerializeField] private ResourceTypes resourceType;
-        [SerializeField] private Transform loadTo;
-        
-        [HideInInspector] public bool IsLoaded;
+        public bool IsLoaded { get; private set; }
 
         public UnityEvent OnLoad;
         public UnityEvent OnUnload;
@@ -28,7 +26,10 @@ namespace NeoMecha
 
             if (characterResource.HasResource(resourceType))
             {
-                characterResource.ConsumeResource(loadTo.position);
+                var resource = characterResource.GetResource();
+                characterResource.LetResourceDown();
+                resource.Consume();
+
                 IsLoaded = true;
                 OnLoad.Invoke();
             }

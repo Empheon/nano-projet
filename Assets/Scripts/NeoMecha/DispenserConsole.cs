@@ -78,13 +78,13 @@ namespace NeoMecha
             //resourceRb.AddForce(velocity, ForceMode2D.Impulse);
             
             // keep track of resource
-            m_resources.Add(pickableResource.ResourceObject);
+            m_resources.Add(pickableResource.Resource);
             UpdateCurtainState();
 
 
-            pickableResource.ResourceObject.OnConsumed += () =>
+            pickableResource.Resource.OnConsumed += () =>
             {
-                m_resources.Remove(pickableResource.ResourceObject);
+                m_resources.Remove(pickableResource.Resource);
                 UpdateCurtainState();
                 Destroy(pickableResource.gameObject);
             };

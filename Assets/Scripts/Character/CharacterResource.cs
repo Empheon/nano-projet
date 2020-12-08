@@ -1,43 +1,56 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using Resources;
 using System.Collections;
 using DG.Tweening;
+using Inputs;
 
 namespace Character
 {
     public class CharacterResource : MonoBehaviour
     {
-        [SerializeField] private Vector2 storedResourcePosOffset = Vector2.zero;
-        [SerializeField] private float followSmoothing = 0.2f;
+        [SerializeField] private Animator animator;
         
         private Resource _storedResource;
-
         private Transform _transform;
-        private Rigidbody2D _resourceRb;
+        private IGameController _gc;
         
         private void Awake()
         {
             _transform = GetComponent<Transform>();
         }
+        
+        private void OnSpawn(IGameController gamepad)
+        {
+            _gc = gamepad;
+        }
 
         private void Update()
         {
-            if (_storedResource != null)
+            if (_storedResource != null && _gc.CancelThisFrame())
             {
-                var nextPos = Vector2.Lerp(
-                    _storedResource.GO.transform.position, 
-                    _transform.TransformPoint(storedResourcePosOffset), 
-                    followSmoothing);
-                
-                _resourceRb.MovePosition(nextPos);
+                LetResourceDown();
             }
         }
 
         public void StoreResource(Resource resource)
         {
-            _storedResource?.GO.BroadcastMessage("OnStopInteraction");
+            if(_storedResource != null) LetResourceDown();
+            
             _storedResource = resource;
-            _resourceRb = _storedResource.GO.GetComponent<Rigidbody2D>();
+            _storedResource.GameObject.SetActive(false);
+            
+            switch (_storedResource.Type)
+            {
+                case ResourceTypes.Ammunition:
+                    animator.SetBool("HoldAmmo", true);
+                    animator.SetBool("HoldEnergy", false);
+                    break;
+                case ResourceTypes.Energy:
+                    animator.SetBool("HoldAmmo", false);
+                    animator.SetBool("HoldEnergy", true);
+                    break;
+            }
         }
 
         public bool HasResource(ResourceTypes ofType)
@@ -46,44 +59,19 @@ namespace Character
             return _storedResource.Type == ofType;
         }
 
-        public Resource ConsumeResource(Vector3 moveToPosition)
+        public Resource GetResource()
         {
-            _storedResource.GO.transform.DOScale(0,0.4f);
-            _storedResource.GO.transform.DOMove(moveToPosition, 0.4f);
-            
-            StartCoroutine(ConsumeResourceDelayed(_storedResource));
-            
             return _storedResource;
-        }
-
-        private IEnumerator ConsumeResourceDelayed(Resource resource)
-        {
-            yield return new WaitForEndOfFrame();
-            _storedResource = null;
-            _resourceRb = null;
-            yield return new WaitForSeconds(1);
-            resource.Consume();
         }
 
         public void LetResourceDown()
         {
+            _storedResource.GameObject.transform.position = _transform.position;
+            _storedResource.GameObject.SetActive(true);
             _storedResource = null;
-            _resourceRb = null;
+            
+            animator.SetBool("HoldAmmo", false);
+            animator.SetBool("HoldEnergy", false);
         }
-
-        private void OnNoInteractableFound()
-        {
-            _storedResource?.GO.BroadcastMessage("OnStopInteraction");
-        }
-
-#if UNITY_EDITOR
-        
-        private void OnDrawGizmosSelected()
-        {
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(transform.TransformPoint(storedResourcePosOffset), 0.2f);
-        }
-        
-#endif
     }
 }
