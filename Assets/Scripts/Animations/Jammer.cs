@@ -34,7 +34,7 @@ namespace Animations
         public void AimAt(Vector3 point)
         {
             jammerHandle.DOLookAt(point, 0.5f);
-            _targetDistance = Vector3.Distance(jammerHandle.position, point) / electricBolt.transform.lossyScale.x;
+            _targetDistance = Vector3.Distance(jammerHandle.position, point) / Mathf.Abs(electricBolt.transform.lossyScale.x);
             _targetPosition = point;
         }
 
