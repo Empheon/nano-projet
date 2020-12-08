@@ -12,6 +12,7 @@ namespace Animations
         protected override void InitialState()
         {
             m_light.color = Color.white;
+            m_currentColor = Color.white;
         }
     }
 }

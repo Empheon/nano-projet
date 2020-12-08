@@ -13,9 +13,14 @@ namespace Animations
     {
         [SerializeField]
         private Light2D gyrophare;
+        [SerializeField]
+        private RoomLightController roomLightController;
 
         [SerializeField]
         private float rotationSpeed = 1;
+
+        [SerializeField]
+        private bool isJamRoomLight = false;
 
         private float m_gyroIntensity;
 
@@ -27,7 +32,15 @@ namespace Animations
             gyrophare.gameObject.SetActive(true);
             m_gyroIntensity = gyrophare.intensity;
             gyrophare.intensity = 0;
-            OnUnload();
+
+            if (isJamRoomLight)
+            {
+                m_light.gameObject.SetActive(false);
+                SwitchOff(0);
+            } else
+            {
+                OnUnload();
+            }
         }
 
         public void OnLoad()
@@ -54,8 +67,12 @@ namespace Animations
 
         public void OnBreak()
         {
+            if (!isJamRoomLight) m_light.gameObject.SetActive(false);
+
+            roomLightController.SwitchOff();
             m_isBroken = true;
             m_currentColor = red;
+            SwitchOn();
             DOTween.To(() => gyrophare.intensity, (x) => gyrophare.intensity = x, m_gyroIntensity, 1);
         }
 
@@ -63,8 +80,31 @@ namespace Animations
         {
             DOTween.To(() => gyrophare.intensity, (x) => gyrophare.intensity = x, 0, 1).onComplete = () => {
                 m_isBroken = false;
-                if (m_isLoaded) OnLoad(); else OnUnload();
+                roomLightController.SwitchOn();
+
+                if (!isJamRoomLight)
+                {
+                    m_light.gameObject.SetActive(true);
+                    if (m_isLoaded) OnLoad(); else OnUnload();
+                } else
+                {
+                    SwitchOff();
+                }
             };
+        }
+
+        public void OnJam()
+        {
+            if (m_isBroken) return;
+            roomLightController.SwitchOff();
+            SwitchOff();
+        }
+
+        public void OnUnJam()
+        {
+            if (m_isBroken) return;
+            roomLightController.SwitchOn();
+            SwitchOn();
         }
 
         private void Update()

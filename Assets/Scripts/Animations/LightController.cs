@@ -75,14 +75,26 @@ namespace Animations
 
         public void SwitchOnClean(float duration = DEFAULT_DURATION)
         {
-            DOTween.To(() => m_light.color, (x) => m_light.color = x, m_currentColor, duration);
-            DOTween.To(() => m_spriteRenderer.material.color, (x) => m_spriteRenderer.material.color = x, m_currentColor, duration);
+            if (m_light != null)
+            {
+                DOTween.To(() => m_light.color, (x) => m_light.color = x, m_currentColor, duration);
+            }
+            if (m_spriteRenderer != null)
+            {
+                DOTween.To(() => m_spriteRenderer.material.color, (x) => m_spriteRenderer.material.color = x, m_currentColor, duration);
+            }
         }
 
         public void SwitchOffClean(float duration = DEFAULT_DURATION)
         {
-            DOTween.To(() => m_light.color, (x) => m_light.color = x, Color.black, duration);
-            DOTween.To(() => m_spriteRenderer.material.color, (x) => m_spriteRenderer.material.color = x, off, duration);
+            if (m_light != null)
+            {
+                DOTween.To(() => m_light.color, (x) => m_light.color = x, Color.black, duration);
+            }
+            if (m_spriteRenderer != null)
+            {
+                DOTween.To(() => m_spriteRenderer.material.color, (x) => m_spriteRenderer.material.color = x, off, duration);
+            }
         }
 
         public void StartBlink()
