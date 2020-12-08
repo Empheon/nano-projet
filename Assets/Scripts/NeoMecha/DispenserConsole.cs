@@ -17,9 +17,6 @@ namespace NeoMecha
         [SerializeField] private int maxResourcesNb;
         [SerializeField] private float activationDelay;
         [SerializeField] private float dispenseCooldown;
-        //[SerializeField] private Transform dispenseFrom;
-        [SerializeField] private Vector2 velocity;
-        [SerializeField] private Transform snapPosition;
         [SerializeField] private PickableResource resourcePrefab;
 
         [SerializeField]
@@ -54,13 +51,11 @@ namespace NeoMecha
         {
             var characterAnimator = character.GetComponentInChildren<Animator>();
             var characterController = character.GetComponent<CharacterController>();
+            var characterResource = character.GetComponent<CharacterResource>();
 
             // stop player
             characterController.Stop();
             characterController.enabled = false;
-
-            // snap player to right place
-            //character.transform.position = snapPosition.position;
             
             // animate
             characterAnimator.SetTrigger("PushButton");
@@ -69,18 +64,15 @@ namespace NeoMecha
             
             // player get controls back
             characterController.enabled = true;
-            
-            // create resource
-            //PickableResource pickableResource = Instantiate(resourcePrefab, dispenseFrom.position, Quaternion.identity);
+
             pickableResource.Init();
-            
-            var resourceRb = pickableResource.GetComponent<Rigidbody2D>();
-            //resourceRb.AddForce(velocity, ForceMode2D.Impulse);
-            
+
             // keep track of resource
             m_resources.Add(pickableResource.Resource);
             UpdateCurtainState();
-
+            
+            // automatically give resource to character
+            characterResource.StoreResource(pickableResource.Resource);
 
             pickableResource.Resource.OnConsumed += () =>
             {

@@ -84,10 +84,6 @@ namespace Character
                     // prevent from interacting 2 times with object
                     _closest = null;
                 }
-                else
-                {
-                    gameObject.BroadcastMessage("OnNoInteractableFound");
-                }
             }
 
             if (_gc.CancelThisFrame())
