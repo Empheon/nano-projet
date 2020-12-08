@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Cables
+    second: {fileID: 2100000, guid: e7cb41ace886b2943893ae035fb21a9f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Fortress
     second: {fileID: 2100000, guid: f50080438ea5a8749af05a10f517b2bf, type: 2}
   materials:
