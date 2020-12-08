@@ -245,8 +245,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3678210645441503852}
-  m_LocalRotation: {x: 0, y: 0.98212177, z: -0, w: -0.18824685}
-  m_LocalPosition: {x: -2.11, y: 0.5, z: -2}
+  m_LocalRotation: {x: 0.7071064, y: 0.00074042665, z: 0.00074042665, w: 0.7071064}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2861649705954549030}
@@ -254,7 +254,7 @@ Transform:
   - {fileID: 4596707139057036410}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 201.70099, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &4596707139435945776
 Animator:
   serializedVersion: 3
@@ -603,16 +603,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -272.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2863376270850944987, guid: 4dd43c4bf6592be48905dcdb03b1fa18,
-        type: 3}
-      propertyPath: EmissionModule.rateOverTime.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2863376270850944987, guid: 4dd43c4bf6592be48905dcdb03b1fa18,
-        type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2863376270850944987, guid: 4dd43c4bf6592be48905dcdb03b1fa18,
         type: 3}

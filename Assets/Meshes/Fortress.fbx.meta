@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 74b540d30ec0977408833144938d5428
+guid: 9448bf0a0efe9f34281d113fe48ab3cf
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -7,23 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Cannon
-    second: {fileID: 2100000, guid: fbdbf86b1772b194681439e2c11e8c72, type: 2}
+      name: Cables
+    second: {fileID: 2100000, guid: e7cb41ace886b2943893ae035fb21a9f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Coils
-    second: {fileID: 2100000, guid: a9cf4365f0a2abe47a43deda28cc9ab9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: JammingDevice
-    second: {fileID: 2100000, guid: a9cf4365f0a2abe47a43deda28cc9ab9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: None
-    second: {fileID: 2100000, guid: a9cf4365f0a2abe47a43deda28cc9ab9, type: 2}
+      name: Fortress
+    second: {fileID: 2100000, guid: f50080438ea5a8749af05a10f517b2bf, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
