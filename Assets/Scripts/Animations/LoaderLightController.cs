@@ -104,7 +104,11 @@ namespace Animations
         {
             if (m_isBroken) return;
             roomLightController.SwitchOn();
-            SwitchOn();
+
+            if (!isJamRoomLight)
+            {
+                SwitchOn();
+            }
         }
 
         private void Update()
