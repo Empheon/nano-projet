@@ -1,20 +1,313 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="135">
 	<RootPaths>
-		<ProjectRoot>D:\theo\projects\unity\Nano_Project\Nano_Project_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\theo\projects\unity\Nano_Project\Nano_Project_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>D:\theo\projects\unity\Nano_Project\Nano_Project_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>/Users/greg/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/Greg/Cnam Enjmin/JMIN M1/Projets/Nano-Projet/nano-projet/Nano_Project_WwiseProject/</ProjectRoot>
+		<SourceFilesRoot>/Users/greg/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/Greg/Cnam Enjmin/JMIN M1/Projets/Nano-Projet/nano-projet/Nano_Project_WwiseProject/.cache/Mac/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/greg/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/Greg/Cnam Enjmin/JMIN M1/Projets/Nano-Projet/nano-projet/Nano_Project_WwiseProject/GeneratedSoundBanks/Mac/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\theo\projects\unity\Nano_Project\Nano_Project_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/greg/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/Greg/Cnam Enjmin/JMIN M1/Projets/Nano-Projet/nano-projet/Nano_Project_WwiseProject/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2953616821">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3731701743">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<IncludedAuxBusses>
+				<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+			</IncludedAuxBusses>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX" Hash="1348010912">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3402899663" Name="Amb_EXT" ObjectPath="\Events\Bruitages\Amb_EXT" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="955555835" Language="SFX">
+							<ShortName>Amb_EXT.wav</ShortName>
+							<Path>SFX/Amb_EXT_953DA257.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4099086052" Name="ATK_Activation" ObjectPath="\Events\Bruitages\ATK_Activation" DurationType="OneShot" DurationMin="10.415185" DurationMax="10.415185">
+					<IncludedMemoryFiles>
+						<File Id="46611289" Language="SFX">
+							<ShortName>Gun_Shoot_ATK_4.wav</ShortName>
+							<Path>SFX/Gun_Shoot_ATK_4_10C4C929.wem</Path>
+						</File>
+						<File Id="166527931" Language="SFX">
+							<ShortName>Gun_Shoot_ATK_5.wav</ShortName>
+							<Path>SFX/Gun_Shoot_ATK_5_10C4C929.wem</Path>
+						</File>
+						<File Id="262899983" Language="SFX">
+							<ShortName>Gun_Shoot_ATK_8.wav</ShortName>
+							<Path>SFX/Gun_Shoot_ATK_8_10C4C929.wem</Path>
+						</File>
+						<File Id="422613945" Language="SFX">
+							<ShortName>Gun_Shoot_ATK_6.wav</ShortName>
+							<Path>SFX/Gun_Shoot_ATK_6_10C4C929.wem</Path>
+						</File>
+						<File Id="451914008" Language="SFX">
+							<ShortName>Gun_Shoot_ATK_2.wav</ShortName>
+							<Path>SFX/Gun_Shoot_ATK_2_10C4C929.wem</Path>
+						</File>
+						<File Id="464800623" Language="SFX">
+							<ShortName>Damaged_Room_After_Gun_Shoot_A.wav</ShortName>
+							<Path>SFX/Damaged_Room_After_Gun_Shoot_A_10C4C929.wem</Path>
+						</File>
+						<File Id="551307913" Language="SFX">
+							<ShortName>Damaged_Room_After_Gun_Shoot_Alarm.wav</ShortName>
+							<Path>SFX/Damaged_Room_After_Gun_Shoot_Alarm_2E46092F.wem</Path>
+						</File>
+						<File Id="607905522" Language="SFX">
+							<ShortName>Damaged_Room_After_Gun_Shoot_B.wav</ShortName>
+							<Path>SFX/Damaged_Room_After_Gun_Shoot_B_10C4C929.wem</Path>
+						</File>
+						<File Id="655316260" Language="SFX">
+							<ShortName>Gun_Shoot_ATK_1.wav</ShortName>
+							<Path>SFX/Gun_Shoot_ATK_1_10C4C929.wem</Path>
+						</File>
+						<File Id="720503782" Language="SFX">
+							<ShortName>Gun_Shoot_ATK_3.wav</ShortName>
+							<Path>SFX/Gun_Shoot_ATK_3_10C4C929.wem</Path>
+						</File>
+						<File Id="775946827" Language="SFX">
+							<ShortName>Damaged_Room_After_Gun_Shoot_C.wav</ShortName>
+							<Path>SFX/Damaged_Room_After_Gun_Shoot_C_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="2442204352" Name="ATK_Gun_Shoot_Alarm" ObjectPath="\Events\Bruitages\ATK_Gun_Shoot_Alarm" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="796775262" Language="SFX">
+							<ShortName>Gun_Shoot_Alarm.wav</ShortName>
+							<Path>SFX/Gun_Shoot_Alarm_7EB18810.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="3815251225" Name="DEF_Activation" ObjectPath="\Events\Bruitages\DEF_Activation" DurationType="OneShot" DurationMin="7.848000" DurationMax="7.848000">
+					<IncludedMemoryFiles>
+						<File Id="384703938" Language="SFX">
+							<ShortName>DEF_Deactivation_3.wav</ShortName>
+							<Path>SFX/DEF_Deactivation_3_10C4C929.wem</Path>
+						</File>
+						<File Id="507433643" Language="SFX">
+							<ShortName>DEF_Deactivation_4.wav</ShortName>
+							<Path>SFX/DEF_Deactivation_4_10C4C929.wem</Path>
+						</File>
+						<File Id="606172872" Language="SFX">
+							<ShortName>DEF_Deactivation_2.wav</ShortName>
+							<Path>SFX/DEF_Deactivation_2_10C4C929.wem</Path>
+						</File>
+						<File Id="863566075" Language="SFX">
+							<ShortName>DEF_Deactivation_1.wav</ShortName>
+							<Path>SFX/DEF_Deactivation_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="3933200" Name="DEF_Deactivation" ObjectPath="\Events\Bruitages\DEF_Deactivation" DurationType="OneShot" DurationMin="1.557333" DurationMax="1.557333">
+					<IncludedMemoryFiles>
+						<File Id="923719457" Language="SFX">
+							<ShortName>DEF_Deactivation.wav</ShortName>
+							<Path>SFX/DEF_Deactivation_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="3131295202" Name="JAM_Activation" ObjectPath="\Events\Bruitages\JAM_Activation" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="206436918" Language="SFX">
+							<ShortName>Sfx_Activate_Button.wav</ShortName>
+							<Path>SFX/Sfx_Activate_Button_06355EA7.wem</Path>
+						</File>
+						<File Id="583378098" Language="SFX">
+							<ShortName>JAM_Room_Selection_Electricity_Loop.wav</ShortName>
+							<Path>SFX/JAM_Room_Selection_Electricity_Loop_6A4DB5DD.wem</Path>
+						</File>
+						<File Id="616616930" Language="SFX">
+							<ShortName>JAM_Activation.wav</ShortName>
+							<Path>SFX/JAM_Activation_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="4227203051" Name="JAM_Deactivation" ObjectPath="\Events\Bruitages\JAM_Deactivation" DurationType="OneShot" DurationMin="0.429333" DurationMax="0.429333">
+					<IncludedMemoryFiles>
+						<File Id="668761441" Language="SFX">
+							<ShortName>JAM_Deactivation.wav</ShortName>
+							<Path>SFX/JAM_Deactivation_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="2374125340" Name="JAM_Hacked_Room" ObjectPath="\Events\Bruitages\JAM_Hacked_Room" DurationType="OneShot" DurationMin="2.455333" DurationMax="2.477333">
+					<IncludedMemoryFiles>
+						<File Id="204726557" Language="SFX">
+							<ShortName>Sound_Hacked_Room_A.wav</ShortName>
+							<Path>SFX/Sound_Hacked_Room_A_10C4C929.wem</Path>
+						</File>
+						<File Id="318261570" Language="SFX">
+							<ShortName>Sound_Hacked_Room_C.wav</ShortName>
+							<Path>SFX/Sound_Hacked_Room_C_10C4C929.wem</Path>
+						</File>
+						<File Id="803393747" Language="SFX">
+							<ShortName>Sound_Hacked_Room_B.wav</ShortName>
+							<Path>SFX/Sound_Hacked_Room_B_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="188761361" Name="Jump_Character" ObjectPath="\Events\Bruitages\Jump_Character" DurationType="OneShot" DurationMin="0.224800" DurationMax="0.304000">
+					<IncludedMemoryFiles>
+						<File Id="251909760" Language="SFX">
+							<ShortName>Jump_Character_A.wav</ShortName>
+							<Path>SFX/Jump_Character_A_10C4C929.wem</Path>
+						</File>
+						<File Id="744854839" Language="SFX">
+							<ShortName>Jump_Character_B.wav</ShortName>
+							<Path>SFX/Jump_Character_B_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="2833402766" Name="Load_ENE_In_DEF_Room" ObjectPath="\Events\Bruitages\Load_ENE_In_DEF_Room" DurationType="OneShot" DurationMin="0.644410" DurationMax="0.682729">
+					<IncludedMemoryFiles>
+						<File Id="869095628" Language="SFX">
+							<ShortName>Load_ENE_In_DEF_Room.wav</ShortName>
+							<Path>SFX/Load_ENE_In_DEF_Room_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="1546397745" Name="Load_MUN_In_ATK_Room" ObjectPath="\Events\Bruitages\Load_MUN_In_ATK_Room" DurationType="OneShot" DurationMin="0.721682" DurationMax="0.787000">
+					<IncludedMemoryFiles>
+						<File Id="604113550" Language="SFX">
+							<ShortName>Load_MUN_In_ATK_Room.wav</ShortName>
+							<Path>SFX/Load_MUN_In_ATK_Room_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="406646306" Name="Menu_Selection_Button" ObjectPath="\Events\Bruitages\Menu_Selection_Button" DurationType="OneShot" DurationMin="0.012083" DurationMax="0.012083">
+					<IncludedMemoryFiles>
+						<File Id="506184188" Language="SFX">
+							<ShortName>Menu_Selection_Button.wav</ShortName>
+							<Path>SFX/Menu_Selection_Button_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="1740208092" Name="Menu_Selection_Cursor" ObjectPath="\Events\Bruitages\Menu_Selection_Cursor" DurationType="OneShot" DurationMin="0.015490" DurationMax="0.015490">
+					<IncludedMemoryFiles>
+						<File Id="506184188" Language="SFX">
+							<ShortName>Menu_Selection_Button.wav</ShortName>
+							<Path>SFX/Menu_Selection_Button_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="1598298728" Name="Music_Menu" ObjectPath="\Events\Musiques\Music_Menu" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="596567004" Language="SFX">
+							<ShortName>Musique_Menu_Intro_120Bpm_1_4.wav</ShortName>
+							<Path>SFX/Musique_Menu_Intro_120Bpm_1_4_D79FB2B7.wem</Path>
+						</File>
+						<File Id="722614574" Language="SFX">
+							<ShortName>Musique_Menu_Loop_120Bpm_1_4.wav</ShortName>
+							<Path>SFX/Musique_Menu_Loop_120Bpm_1_4_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3975149470" Name="Return_Button_Interface" ObjectPath="\Events\Bruitages\Return_Button_Interface" DurationType="OneShot" DurationMin="0.085500" DurationMax="0.085500">
+					<IncludedMemoryFiles>
+						<File Id="327159191" Language="SFX">
+							<ShortName>Return_Button_Interface.wav</ShortName>
+							<Path>SFX/Return_Button_Interface_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="358592376" Name="Sound_Repair_Room" ObjectPath="\Events\Bruitages\Sound_Repair_Room" DurationType="OneShot" DurationMin="3.164402" DurationMax="3.682667">
+					<IncludedMemoryFiles>
+						<File Id="739036868" Language="SFX">
+							<ShortName>Sound_Repair_Room_B.wav</ShortName>
+							<Path>SFX/Sound_Repair_Room_B_10C4C929.wem</Path>
+						</File>
+						<File Id="785196925" Language="SFX">
+							<ShortName>Sound_Repair_Room_A.wav</ShortName>
+							<Path>SFX/Sound_Repair_Room_A_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="924321492" Name="Take_ENE_In_Energy_Room" ObjectPath="\Events\Bruitages\Take_ENE_In_Energy_Room" DurationType="OneShot" DurationMin="0.369858" DurationMax="0.403333">
+					<IncludedMemoryFiles>
+						<File Id="452687636" Language="SFX">
+							<ShortName>Take_ENE_In_Energy_Room.wav</ShortName>
+							<Path>SFX/Take_ENE_In_Energy_Room_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="1331881583" Name="Take_MUN_In_Munition_Room" ObjectPath="\Events\Bruitages\Take_MUN_In_Munition_Room" DurationType="OneShot" DurationMin="0.165064" DurationMax="0.220333">
+					<IncludedMemoryFiles>
+						<File Id="401766814" Language="SFX">
+							<ShortName>Take_MUN_In_Munition_Room.wav</ShortName>
+							<Path>SFX/Take_MUN_In_Munition_Room_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="1210150642" Name="Validate_Button_Interface" ObjectPath="\Events\Bruitages\Validate_Button_Interface" DurationType="OneShot" DurationMin="0.197250" DurationMax="0.197250">
+					<IncludedMemoryFiles>
+						<File Id="231718174" Language="SFX">
+							<ShortName>Validate_Button_Interface.wav</ShortName>
+							<Path>SFX/Validate_Button_Interface_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+					</AuxBusSends>
+				</Event>
+			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

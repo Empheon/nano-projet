@@ -1,0 +1,61 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3933200	DEF_Deactivation			\Bruitages\DEF_Deactivation	
+	188761361	Jump_Character			\Bruitages\Jump_Character	
+	358592376	Sound_Repair_Room			\Bruitages\Sound_Repair_Room	
+	406646306	Menu_Selection_Button			\Bruitages\Menu_Selection_Button	
+	924321492	Take_ENE_In_Energy_Room			\Bruitages\Take_ENE_In_Energy_Room	
+	1210150642	Validate_Button_Interface			\Bruitages\Validate_Button_Interface	
+	1331881583	Take_MUN_In_Munition_Room			\Bruitages\Take_MUN_In_Munition_Room	
+	1546397745	Load_MUN_In_ATK_Room			\Bruitages\Load_MUN_In_ATK_Room	
+	1598298728	Music_Menu			\Musiques\Music_Menu	
+	1740208092	Menu_Selection_Cursor			\Bruitages\Menu_Selection_Cursor	
+	2374125340	JAM_Hacked_Room			\Bruitages\JAM_Hacked_Room	
+	2442204352	ATK_Gun_Shoot_Alarm			\Bruitages\ATK_Gun_Shoot_Alarm	
+	2833402766	Load_ENE_In_DEF_Room			\Bruitages\Load_ENE_In_DEF_Room	
+	3131295202	JAM_Activation			\Bruitages\JAM_Activation	
+	3402899663	Amb_EXT			\Bruitages\Amb_EXT	
+	3815251225	DEF_Activation			\Bruitages\DEF_Activation	
+	3975149470	Return_Button_Interface			\Bruitages\Return_Button_Interface	
+	4099086052	ATK_Activation			\Bruitages\ATK_Activation	
+	4227203051	JAM_Deactivation			\Bruitages\JAM_Deactivation	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	46611289	Gun_Shoot_ATK_4	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Gun_Shoot_ATK_4_10C4C929.wem		\Actor-Mixer Hierarchy\ATK\ATK_Activation\Gun_Shoot_ATK\Gun_Shoot_ATK_4		405056
+	166527931	Gun_Shoot_ATK_5	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Gun_Shoot_ATK_5_10C4C929.wem		\Actor-Mixer Hierarchy\ATK\ATK_Activation\Gun_Shoot_ATK\Gun_Shoot_ATK_5		405056
+	204726557	Sound_Hacked_Room_A	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Sound_Hacked_Room_A_10C4C929.wem		\Actor-Mixer Hierarchy\JAM\JAM_Hacked_Room\Sound_Hacked_Room_A		237888
+	206436918	Sfx_Activate_Button	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Sfx_Activate_Button_06355EA7.wem		\Actor-Mixer Hierarchy\JAM\JAM_Activation\Sfx_Activate_Button		19764
+	231718174	Validate_Button_Interface	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Validate_Button_Interface_10C4C929.wem		\Actor-Mixer Hierarchy\UI\Validate_Button_Interface		19000
+	251909760	Jump_Character_A	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Jump_Character_A_10C4C929.wem		\Actor-Mixer Hierarchy\Player\Jump_Character\Jump_Character_A		25728
+	262899983	Gun_Shoot_ATK_8	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Gun_Shoot_ATK_8_10C4C929.wem		\Actor-Mixer Hierarchy\ATK\ATK_Activation\Gun_Shoot_ATK\Gun_Shoot_ATK_8		562752
+	318261570	Sound_Hacked_Room_C	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Sound_Hacked_Room_C_10C4C929.wem		\Actor-Mixer Hierarchy\JAM\JAM_Hacked_Room\Sound_Hacked_Room_C		237888
+	327159191	Return_Button_Interface	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Return_Button_Interface_10C4C929.wem		\Actor-Mixer Hierarchy\UI\Return_Button_Interface		8272
+	384703938	DEF_Deactivation_3	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\DEF_Deactivation_3_10C4C929.wem		\Actor-Mixer Hierarchy\DEF\DEF_Activation\DEF_Deactivation_3		753472
+	401766814	Take_MUN_In_Munition_Room	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Take_MUN_In_Munition_Room_10C4C929.wem		\Actor-Mixer Hierarchy\Ressources\Take_MUN_In_Munition_Room		21216
+	422613945	Gun_Shoot_ATK_6	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Gun_Shoot_ATK_6_10C4C929.wem		\Actor-Mixer Hierarchy\ATK\ATK_Activation\Gun_Shoot_ATK\Gun_Shoot_ATK_6		405056
+	451914008	Gun_Shoot_ATK_2	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Gun_Shoot_ATK_2_10C4C929.wem		\Actor-Mixer Hierarchy\ATK\ATK_Activation\Gun_Shoot_ATK\Gun_Shoot_ATK_2		405056
+	452687636	Take_ENE_In_Energy_Room	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Take_ENE_In_Energy_Room_10C4C929.wem		\Actor-Mixer Hierarchy\Ressources\Take_ENE_In_Energy_Room		38784
+	464800623	Damaged_Room_After_Gun_Shoot_A	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Damaged_Room_After_Gun_Shoot_A_10C4C929.wem		\Actor-Mixer Hierarchy\ATK\ATK_Activation\Damaged_Room_After_Gun_Shoot\Damaged_Room_After_Gun_Shoot_A		234048
+	506184188	Menu_Selection_Button	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Menu_Selection_Button_10C4C929.wem		\Actor-Mixer Hierarchy\UI\Menu_Selection_Button		1224
+	507433643	DEF_Deactivation_4	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\DEF_Deactivation_4_10C4C929.wem		\Actor-Mixer Hierarchy\DEF\DEF_Activation\DEF_Deactivation_4		753472
+	551307913	Damaged_Room_After_Gun_Shoot_Alarm	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Damaged_Room_After_Gun_Shoot_Alarm_2E46092F.wem		\Actor-Mixer Hierarchy\ATK\ATK_Activation\Damaged_Room_After_Gun_Shoot_Alarm		423922
+	583378098	JAM_Room_Selection_Electricity_Loop	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\JAM_Room_Selection_Electricity_Loop_6A4DB5DD.wem		\Actor-Mixer Hierarchy\JAM\JAM_Activation\JAM_Activation\JAM_Room_Selection_Electricity_Loop		1326912
+	596567004	Musique_Menu_Intro_120Bpm_1_4	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Musique_Menu_Intro_120Bpm_1_4_D79FB2B7.wem		\Interactive Music Hierarchy\Music_Menu\Music_Menu\Musique_Menu_Intro_120Bpm_1_4\Musique_Menu_Intro_120Bpm_1_4		10368064
+	604113550	Load_MUN_In_ATK_Room	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Load_MUN_In_ATK_Room_10C4C929.wem		\Actor-Mixer Hierarchy\Ressources\Load_MUN_In_ATK_Room		75616
+	606172872	DEF_Deactivation_2	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\DEF_Deactivation_2_10C4C929.wem		\Actor-Mixer Hierarchy\DEF\DEF_Activation\DEF_Deactivation_2		753472
+	607905522	Damaged_Room_After_Gun_Shoot_B	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Damaged_Room_After_Gun_Shoot_B_10C4C929.wem		\Actor-Mixer Hierarchy\ATK\ATK_Activation\Damaged_Room_After_Gun_Shoot\Damaged_Room_After_Gun_Shoot_B		407872
+	616616930	JAM_Activation	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\JAM_Activation_10C4C929.wem		\Actor-Mixer Hierarchy\JAM\JAM_Activation\JAM_Activation\JAM_Activation		188480
+	655316260	Gun_Shoot_ATK_1	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Gun_Shoot_ATK_1_10C4C929.wem		\Actor-Mixer Hierarchy\ATK\ATK_Activation\Gun_Shoot_ATK\Gun_Shoot_ATK_1		405056
+	668761441	JAM_Deactivation	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\JAM_Deactivation_10C4C929.wem		\Actor-Mixer Hierarchy\JAM\JAM_Deactivation		41280
+	720503782	Gun_Shoot_ATK_3	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Gun_Shoot_ATK_3_10C4C929.wem		\Actor-Mixer Hierarchy\ATK\ATK_Activation\Gun_Shoot_ATK\Gun_Shoot_ATK_3		405056
+	722614574	Musique_Menu_Loop_120Bpm_1_4	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Musique_Menu_Loop_120Bpm_1_4_D79FB2B7.wem		\Interactive Music Hierarchy\Music_Menu\Music_Menu\Musique_Menu_Loop_120Bpm_1_4\Musique_Menu_Loop_120Bpm_1_4		9600064
+	739036868	Sound_Repair_Room_B	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Sound_Repair_Room_B_10C4C929.wem		\Actor-Mixer Hierarchy\Actions\Sound_Repair_Room\Sound_Repair_Room_B		353600
+	744854839	Jump_Character_B	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Jump_Character_B_10C4C929.wem		\Actor-Mixer Hierarchy\Player\Jump_Character\Jump_Character_B		29248
+	775946827	Damaged_Room_After_Gun_Shoot_C	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Damaged_Room_After_Gun_Shoot_C_10C4C929.wem		\Actor-Mixer Hierarchy\ATK\ATK_Activation\Damaged_Room_After_Gun_Shoot\Damaged_Room_After_Gun_Shoot_C		390208
+	785196925	Sound_Repair_Room_A	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Sound_Repair_Room_A_10C4C929.wem		\Actor-Mixer Hierarchy\Actions\Sound_Repair_Room\Sound_Repair_Room_A		351040
+	796775262	ATK_Gun_Shoot_Alarm	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Gun_Shoot_Alarm_7EB18810.wem		\Actor-Mixer Hierarchy\ATK\ATK_Gun_Shoot_Alarm		241592
+	803393747	Sound_Hacked_Room_B	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Sound_Hacked_Room_B_10C4C929.wem		\Actor-Mixer Hierarchy\JAM\JAM_Hacked_Room\Sound_Hacked_Room_B		235776
+	863566075	DEF_Deactivation_1	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\DEF_Deactivation_1_10C4C929.wem		\Actor-Mixer Hierarchy\DEF\DEF_Activation\DEF_Deactivation_1		753472
+	869095628	Load_ENE_In_DEF_Room	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Load_ENE_In_DEF_Room_10C4C929.wem		\Actor-Mixer Hierarchy\Ressources\Load_ENE_In_DEF_Room		65606
+	923719457	DEF_Deactivation	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\DEF_Deactivation_10C4C929.wem		\Actor-Mixer Hierarchy\DEF\DEF_Deactivation		149568
+	955555835	Amb_EXT	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Amb_EXT_953DA257.wem		\Actor-Mixer Hierarchy\Ambiances\Amb_EXT		21845744
+
