@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{EF14ECD4-A774-4499-84D2-FD56B67E43EB}" SchemaVersion="97">
+	<AudioObjects>
+		<WorkUnit Name="JAM" ID="{EF14ECD4-A774-4499-84D2-FD56B67E43EB}" PersistMode="Standalone">
+			<ChildrenList>
+				<RandomSequenceContainer Name="JAM_Hacked_Room" ID="{89D8AB8A-A5B0-4F2A-8A30-7627D2D9F777}" ShortID="373447270">
+					<PropertyList>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Reverb" ID="{5339937A-76EC-45DB-9526-2A6B447D0C8E}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Sound_Hacked_Room_C" ID="{76B7F0EA-F2BE-4BB5-8D2E-3A91B154A524}" ShortID="418033713">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Sound_Hacked_Room_C" ID="{D8A60EC1-D403-4468-993C-76AD27D15525}">
+									<Language>SFX</Language>
+									<AudioFile>Sound_Hacked_Room_C.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="318261570"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Sound_Hacked_Room_C" ID="{D8A60EC1-D403-4468-993C-76AD27D15525}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Sound_Hacked_Room_A" ID="{DC64D60D-4AC0-43E1-ADF8-0A5C55E71129}" ShortID="873466683">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Sound_Hacked_Room_A" ID="{F2174B7F-647A-4C4D-8995-E3AF281399E7}">
+									<Language>SFX</Language>
+									<AudioFile>Sound_Hacked_Room_A.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="204726557"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Sound_Hacked_Room_A" ID="{F2174B7F-647A-4C4D-8995-E3AF281399E7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Sound_Hacked_Room_B" ID="{54BA298D-05ED-4C53-BB29-AD236D9EFF0B}" ShortID="472132012">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Sound_Hacked_Room_B" ID="{31D0FA33-AF4E-4C43-A75F-98CD048D31E1}">
+									<Language>SFX</Language>
+									<AudioFile>Sound_Hacked_Room_B.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="803393747"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Sound_Hacked_Room_B" ID="{31D0FA33-AF4E-4C43-A75F-98CD048D31E1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<Sound Name="JAM_Deactivation" ID="{9A35F3F3-8750-40F1-B324-DF6F3BB7375D}" ShortID="932042716">
+					<PropertyList>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Reverb" ID="{5339937A-76EC-45DB-9526-2A6B447D0C8E}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="JAM_Deactivation" ID="{2A94FA61-69CC-483F-A44F-7B2C664B4109}">
+							<Language>SFX</Language>
+							<AudioFile>JAM_Deactivation.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="668761441"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="JAM_Deactivation" ID="{2A94FA61-69CC-483F-A44F-7B2C664B4109}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<BlendContainer Name="JAM_Activation" ID="{D747E2D5-93EB-4143-8AB2-06CCDE1FC0C8}" ShortID="530688886">
+					<PropertyList>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>-5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Reverb" ID="{5339937A-76EC-45DB-9526-2A6B447D0C8E}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="JAM_Activation" ID="{11097AE0-FA6D-449B-97A0-9D237A3058A2}" ShortID="465148919">
+							<PropertyList>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Reverb" ID="{5339937A-76EC-45DB-9526-2A6B447D0C8E}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="JAM_Activation" ID="{C9D02AE1-1431-4323-A46E-7B1F0D4BE0FD}" ShortID="551685814">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JAM_Activation" ID="{B22F2B7C-0A6E-4B41-838B-084DDD62124D}">
+											<Language>SFX</Language>
+											<AudioFile>JAM_Activation.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="616616930"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JAM_Activation" ID="{B22F2B7C-0A6E-4B41-838B-084DDD62124D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JAM_Room_Selection_Electricity_Loop" ID="{17379F0F-3E7D-4E8B-BA2C-3C3F0D7F805F}" ShortID="717600783">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JAM_Room_Selection_Electricity_Loop" ID="{0D7C5456-1913-4F23-91AD-BE754FC1297A}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00696388972004508"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0126374619543377"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>JAM_Room_Selection_Electricity_Loop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="583378098"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JAM_Room_Selection_Electricity_Loop" ID="{0D7C5456-1913-4F23-91AD-BE754FC1297A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<Playlist>
+								<ItemRef Name="JAM_Activation" ID="{C9D02AE1-1431-4323-A46E-7B1F0D4BE0FD}"/>
+								<ItemRef Name="JAM_Room_Selection_Electricity_Loop" ID="{17379F0F-3E7D-4E8B-BA2C-3C3F0D7F805F}"/>
+							</Playlist>
+						</RandomSequenceContainer>
+						<Sound Name="Sfx_Activate_Button" ID="{C2EF0095-BC76-4D39-8961-A229719CA448}" ShortID="356349463">
+							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{40E8CBE9-4308-4103-9883-C83370B2BD28}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="150"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Reverb" ID="{5339937A-76EC-45DB-9526-2A6B447D0C8E}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Sfx_Activate_Button" ID="{9FBF092D-2A70-4F85-BCB3-6D29634C663A}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.205212094907407"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Sfx_Activate_Button.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="206436918"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Sfx_Activate_Button" ID="{9FBF092D-2A70-4F85-BCB3-6D29634C663A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</BlendContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

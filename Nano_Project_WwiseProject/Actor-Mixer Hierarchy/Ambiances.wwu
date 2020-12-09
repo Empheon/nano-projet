@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F5400468-2461-471D-984D-5BD6CC611739}" SchemaVersion="97">
+	<AudioObjects>
+		<WorkUnit Name="Ambiances" ID="{F5400468-2461-471D-984D-5BD6CC611739}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Amb_EXT" ID="{42F529BB-36F4-4EB8-8021-31A4CBB60F3D}" ShortID="189963240">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Amb_EXT" ID="{08E438A9-D325-4B26-BBC6-8968E18A7410}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="1.52569636285922"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="3.88718488068862"/>
+								<Property Name="LoopBegin" Type="Real64" Value="1.43822222222222"/>
+								<Property Name="LoopEnd" Type="Real64" Value="110.7252757065"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.152753974238625"/>
+								<Property Name="TrimEnd" Type="Real64" Value="113.932002244531"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Amb_EXT.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="955555835"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Amb_EXT" ID="{08E438A9-D325-4B26-BBC6-8968E18A7410}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
