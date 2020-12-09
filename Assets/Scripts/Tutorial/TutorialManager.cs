@@ -157,6 +157,12 @@ namespace Tutorial
 
         private IEnumerator Tuto()
         {
+            mainText.text = I18n.GetString("tuto_disclaimer");
+
+            yield return new WaitForSeconds(5);
+            EnableButtons();
+            yield return StartCoroutine(CheckButtonsConfirmed());
+
             mainText.text = I18n.GetString("tuto_main_1");
             yield return new WaitForSeconds(5);
 

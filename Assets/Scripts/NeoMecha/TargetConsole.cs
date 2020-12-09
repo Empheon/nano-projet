@@ -36,6 +36,9 @@ namespace NeoMecha
         [SerializeField]
         protected Room room;
 
+        [SerializeField]
+        private bool forceActionWithoutEventCallback = true;
+
         private bool m_lockAction;
 
         protected virtual void Start()
@@ -52,7 +55,7 @@ namespace NeoMecha
                             DoAction(target.Room);
                         });
 
-                        if (OnActionStart.GetPersistentEventCount() == 0)
+                        if (forceActionWithoutEventCallback)
                         {
                             m_lockAction = false;
                             DoAction(target.Room);
