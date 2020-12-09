@@ -27,7 +27,7 @@ namespace Character
 
         private void OnNoInteractableFound()
         {
-            LetResourceDown();
+            if(_storedResource != null) LetResourceDown();
         }
 
         private void Update()
@@ -71,8 +71,11 @@ namespace Character
 
         public void LetResourceDown()
         {
-            _storedResource.GameObject.transform.position = _transform.position;
-            _storedResource.GameObject.SetActive(true);
+            if (_storedResource.GameObject != null)
+            {
+                _storedResource.GameObject.transform.position = _transform.position;
+                _storedResource.GameObject.SetActive(true);
+            }
             _storedResource = null;
             
             animator.SetBool("HoldAmmo", false);
