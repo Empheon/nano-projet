@@ -6,15 +6,17 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Character;
 using Resources;
+using UnityEngine.Events;
 
 namespace NeoMecha
 {
     public class LoadConsole : Console
     {
         [SerializeField] private ResourceTypes resourceType;
-        [SerializeField] private Transform loadTo;
-        
-        [HideInInspector] public bool IsLoaded;
+        public bool IsLoaded { get; private set; }
+
+        public UnityEvent OnLoad;
+        public UnityEvent OnUnload;
 
         public void OnCharacterInteract(GameObject character)
         {
@@ -24,13 +26,24 @@ namespace NeoMecha
 
             if (characterResource.HasResource(resourceType))
             {
-                characterResource.ConsumeResource(loadTo.position);
+                var resource = characterResource.GetResource();
+                characterResource.LetResourceDown();
+                resource.Consume();
+
                 IsLoaded = true;
+                OnLoad.Invoke();
             }
         }
 
-        public override bool CanInteract(CharacterResource characterResource)
+        public void UnLoad()
         {
+            IsLoaded = false;
+            OnUnload.Invoke();
+        }
+
+        public override bool CanInteract(GameObject character)
+        {
+            var characterResource = character.GetComponent<CharacterResource>();
             return !IsLoaded && characterResource.HasResource(resourceType);
         }
     }

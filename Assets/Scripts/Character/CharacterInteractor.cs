@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Linq;
+using Inputs;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,7 +20,7 @@ namespace Character
         private GameObject _lastClosest;
         private GameObject _closest;
         
-        private Gamepad _gamepad;
+        private IGameController _gc;
         private Transform _transform;
 
         private void Awake()
@@ -27,9 +28,9 @@ namespace Character
             _transform = GetComponent<Transform>();
         }
 
-        private void OnSpawn(Gamepad gamepad)
+        private void OnSpawn(IGameController gamepad)
         {
-            _gamepad = gamepad;
+            _gc = gamepad;
         }
 
         private IEnumerator Start()
@@ -74,22 +75,22 @@ namespace Character
 
         private void Update()
         {
-            if (_gamepad.buttonWest.wasPressedThisFrame)
+            if (_gc.InteractThisFrame())
             {
                 if (_closest != null)
                 {
-                    _closest.BroadcastMessage("OnCharacterInteract", gameObject);
+                    _closest.BroadcastMessage("OnCharacterInteract", gameObject, SendMessageOptions.DontRequireReceiver);
                     
                     // prevent from interacting 2 times with object
                     _closest = null;
                 }
                 else
                 {
-                    gameObject.BroadcastMessage("OnNoInteractableFound");
+                    BroadcastMessage("OnNoInteractableFound", SendMessageOptions.DontRequireReceiver);
                 }
             }
 
-            if (_gamepad.buttonEast.wasPressedThisFrame)
+            if (_gc.CancelThisFrame())
             {
                 for (int i = 0; i < _nbObjectFound; i++)
                 {

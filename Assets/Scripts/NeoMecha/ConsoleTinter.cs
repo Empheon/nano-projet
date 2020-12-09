@@ -13,7 +13,7 @@ namespace NeoMecha
         private bool m_isFocused;
         private bool m_isLight;
 
-        private CharacterResource m_currentCharacterResource;
+        private GameObject m_currentCharacter;
         private Console m_linkedConsole;
 
         protected virtual void Start()
@@ -24,28 +24,28 @@ namespace NeoMecha
 
         private void OnCharacterBlur(GameObject character)
         {
-            m_currentCharacterResource = character.GetComponent<CharacterResource>();
+            m_currentCharacter = character;
             m_isFocused = false;
         }
 
         private void OnCharacterFocus(GameObject character)
         {
-            m_currentCharacterResource = character.GetComponent<CharacterResource>();
+            m_currentCharacter = character;
             m_isFocused = true;
         }
 
         protected virtual void Update()
         {
-            if (m_currentCharacterResource == null)
+            if (m_currentCharacter == null)
             {
                 return;
             }
 
-            if (!m_isLight && m_isFocused && m_linkedConsole.CanInteract(m_currentCharacterResource))
+            if (!m_isLight && m_isFocused && m_linkedConsole.CanInteract(m_currentCharacter))
             {
                 m_isLight = true;
                 m_spriteRenderer.DOColor(m_defaultColor * 1.5f, 0.2f);
-            } else if (m_isLight && (!m_isFocused || !m_linkedConsole.CanInteract(m_currentCharacterResource)))
+            } else if (m_isLight && (!m_isFocused || !m_linkedConsole.CanInteract(m_currentCharacter)))
             {
                 m_isLight = false;
                 m_spriteRenderer.DOColor(m_defaultColor, 0.2f);

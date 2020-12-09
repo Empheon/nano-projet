@@ -1,4 +1,5 @@
 ﻿using System;
+using Inputs;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using CharacterController = Character.CharacterController;
@@ -12,7 +13,7 @@ namespace NeoMecha.ConsoleControls
         [SerializeField] [Range(0, 1)] private float snapValueThreshHold = 0.5f;
         [SerializeField] private float snapCooldown = 0.2f;
         
-        private Gamepad _gamepad;
+        private IGameController _gc;
         private CharacterController _controller;
         private ConsoleControlSystem _system;
         private TargetConsole _console;
@@ -35,8 +36,9 @@ namespace NeoMecha.ConsoleControls
 
             _controller = character.GetComponent<CharacterController>();
             _controller.enabled = false;
+            _controller.Stop();
             
-            _gamepad = _controller.GetGamepad();
+            _gc = _controller.GetGamepad();
             _hasControl = true;
 
             var ok = _system.Activate();
@@ -51,7 +53,7 @@ namespace NeoMecha.ConsoleControls
             _controller.enabled = true;
             _controller = null;
             
-            _gamepad = null;
+            _gc = null;
             _hasControl = false;
             
             _system.Desactivate();
@@ -65,7 +67,7 @@ namespace NeoMecha.ConsoleControls
             
             if (_hasControl)
             {
-                var x = _gamepad.leftStick.x.ReadValue();
+                var x = _gc.GetMovement().x;
             
                 if (x > getOutValueThreshHold || x < -getOutValueThreshHold)
                 {
@@ -75,7 +77,7 @@ namespace NeoMecha.ConsoleControls
 
                 if (_timeSinceLastSnap > snapCooldown)
                 {
-                    var y = _gamepad.leftStick.y.ReadValue();
+                    var y = _gc.GetMovement().y;
 
                     if (y > snapValueThreshHold)
                     {
@@ -89,7 +91,7 @@ namespace NeoMecha.ConsoleControls
                     }
                 }
 
-                if (_gamepad.buttonWest.wasPressedThisFrame)
+                if (_gc.ValidateThisFrame())
                 {
                     _system.Validate();
                     OnStopInteraction();

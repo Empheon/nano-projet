@@ -5,15 +5,15 @@ namespace Resources
 {
     public class Resource
     {
-        public ResourceTypes Type;
-        public GameObject GO;
+        public readonly ResourceTypes Type;
+        public readonly GameObject GameObject;
 
         public Action OnConsumed;
 
-        public Resource(ResourceTypes type, GameObject go)
+        public Resource(ResourceTypes type, GameObject gameObject)
         {
             Type = type;
-            GO = go;
+            GameObject = gameObject;
         }
 
         public void Consume()
@@ -24,7 +24,6 @@ namespace Resources
     
     public enum ResourceTypes
     {
-        None,
         Energy,
         Ammunition
     }

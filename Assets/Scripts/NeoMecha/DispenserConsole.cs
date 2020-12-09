@@ -1,4 +1,5 @@
-﻿using Character;
+﻿using Animations;
+using Character;
 using Resources;
 using System;
 using System.Collections;
@@ -15,20 +16,33 @@ namespace NeoMecha
     {
         [SerializeField] private int maxResourcesNb;
         [SerializeField] private float activationDelay;
-        [SerializeField] private Vector2 velocity;
+        [SerializeField] private float dispenseCooldown;
         [SerializeField] private PickableResource resourcePrefab;
 
+        [SerializeField]
+        private ConveyerAnimation conveyerAnimation;
+        [SerializeField]
+        private SupplyCurtainAnimation supplyCurtainAnimation;
+
         private List<Resource> m_resources;
+        private float _timeSinceLastDispense;
 
         protected void Start()
         {
             m_resources = new List<Resource>();
+            _timeSinceLastDispense = dispenseCooldown;
+        }
+
+        private void Update()
+        {
+            _timeSinceLastDispense += Time.deltaTime;
         }
 
         public void OnCharacterInteract(GameObject character)
         {
-            if (m_resources.Count < maxResourcesNb)
+            if (CanInteract(character))
             {
+                _timeSinceLastDispense = 0f;
                 StartCoroutine(DoInteraction(character));
             }
         }
@@ -37,36 +51,51 @@ namespace NeoMecha
         {
             var characterAnimator = character.GetComponentInChildren<Animator>();
             var characterController = character.GetComponent<CharacterController>();
+            var characterResource = character.GetComponent<CharacterResource>();
 
+            // stop player
+            characterController.Stop();
             characterController.enabled = false;
-            characterAnimator.SetTrigger("PushButton");
             
+            // animate
+            characterAnimator.SetTrigger("PushButton");
+            PickableResource pickableResource = conveyerAnimation.OnConvey(resourcePrefab.gameObject).GetComponent<PickableResource>();
             yield return new WaitForSeconds(activationDelay);
             
+            // player get controls back
             characterController.enabled = true;
-            
-            // create resource
-            PickableResource pickableResource = Instantiate(resourcePrefab, transform.position, Quaternion.identity);
+
             pickableResource.Init();
-            
-            var resourceRb = pickableResource.GetComponent<Rigidbody2D>();
-            resourceRb.AddForce(velocity, ForceMode2D.Impulse);
-            
+
             // keep track of resource
-            pickableResource.ResourceObject.OnConsumed += () => ConsumeResource(pickableResource);
-            m_resources.Add(pickableResource.ResourceObject);
+            m_resources.Add(pickableResource.Resource);
+            UpdateCurtainState();
+            
+            // automatically give resource to character
+            characterResource.StoreResource(pickableResource.Resource);
+
+            pickableResource.Resource.OnConsumed += () =>
+            {
+                m_resources.Remove(pickableResource.Resource);
+                UpdateCurtainState();
+                Destroy(pickableResource.gameObject);
+            };
         }
 
-
-        private void ConsumeResource(PickableResource pickableResource)
+        public override bool CanInteract(GameObject character)
         {
-            m_resources.Remove(pickableResource.ResourceObject);
-            Destroy(pickableResource.gameObject);
+            return m_resources.Count < maxResourcesNb && _timeSinceLastDispense > dispenseCooldown;
         }
 
-        public override bool CanInteract(CharacterResource characterResource)
+        private void UpdateCurtainState()
         {
-            return m_resources.Count < maxResourcesNb;
+            if (m_resources.Count < maxResourcesNb)
+            {
+                supplyCurtainAnimation.OnOpen();
+            } else
+            {
+                supplyCurtainAnimation.OnClose();
+            }
         }
     }
 }

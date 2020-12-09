@@ -1,62 +1,58 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Animations;
 using UnityEngine;
 
 namespace NeoMecha.ConsoleControls.LaserAim
 {
     public class LaserAimSystem : ConsoleControlSystem
     {
+        [SerializeField] private Laser laser;
         [SerializeField] private GameObject targetContainer;
-        [SerializeField] private GameObject laserParticles;
-        [SerializeField] private Transform laser;
-        [SerializeField] private Vector3 laserRotationOffset;
-        
-        
+
         private PositionTarget[] _targets;
-        private int _currentButtonIndex;
+        private int _currentTargetIndex;
 
         private void Start()
         {
             _targets = targetContainer.GetComponentsInChildren<PositionTarget>(true);
-            laserParticles.SetActive(false);
+            laser.TurnOff();
         }
 
         public override bool Activate()
         {
             if (_targets.All(trg => !trg.IsActive)) return false;
             
-            laserParticles.SetActive(true);
+            laser.TurnOn();
+            laser.AimAt(_targets[_currentTargetIndex].target.position);
+            
             return true;
         }
 
         public override void Desactivate()
         {
-            laserParticles.SetActive(false);
+            laser.TurnOff();
         }
 
         public override void Next()
         {
-            _currentButtonIndex = (_currentButtonIndex + 1) % _targets.Length;
-            var target = _targets[_currentButtonIndex];
+            _currentTargetIndex = (_currentTargetIndex + 1) % _targets.Length;
             
-            laser.LookAt(target.target);
-            laser.Rotate(laserRotationOffset);
+            laser.AimAt(_targets[_currentTargetIndex].target.position);
         }
 
         public override void Previous()
         {
-            _currentButtonIndex = (_currentButtonIndex + _targets.Length - 1) % _targets.Length;
-            var target = _targets[_currentButtonIndex];
+            _currentTargetIndex = (_currentTargetIndex + _targets.Length - 1) % _targets.Length;
 
-            laser.LookAt(target.target);
-            laser.Rotate(laserRotationOffset);
+            laser.AimAt(_targets[_currentTargetIndex].target.position);
         }
 
         public override void Validate()
         {
-            var target = _targets[_currentButtonIndex];
-            target.Validate();
+            _targets[_currentTargetIndex].Validate();
+            laser.Shoot();
         }
     }
 }

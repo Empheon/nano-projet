@@ -9,9 +9,13 @@ namespace Inputs
         
         public bool InteractThisFrame() => Keyboard.current.rightCtrlKey.wasPressedThisFrame;
 
+        public bool ValidateThisFrame() => Keyboard.current.rightCtrlKey.wasPressedThisFrame;
+
         public bool CancelThisFrame() => false;
 
         public bool JumpThisFrame() => Keyboard.current.upArrowKey.wasPressedThisFrame;
+
+        public bool KeepInAir() => Keyboard.current.upArrowKey.isPressed;
 
         public Vector2 GetMovement()
         {
@@ -19,6 +23,7 @@ namespace Inputs
             if (Keyboard.current.leftArrowKey.isPressed) baseMove += Vector2.left;
             if (Keyboard.current.rightArrowKey.isPressed) baseMove += Vector2.right;
             if (Keyboard.current.downArrowKey.isPressed) baseMove += Vector2.down;
+            if (Keyboard.current.upArrowKey.isPressed) baseMove += Vector2.up;
 
             return baseMove;
         }
