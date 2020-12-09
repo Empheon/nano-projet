@@ -25,6 +25,11 @@ namespace Character
             _gc = gamepad;
         }
 
+        private void OnNoInteractableFound()
+        {
+            LetResourceDown();
+        }
+
         private void Update()
         {
             if (_storedResource != null && _gc.CancelThisFrame())

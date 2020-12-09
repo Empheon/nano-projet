@@ -84,6 +84,10 @@ namespace Character
                     // prevent from interacting 2 times with object
                     _closest = null;
                 }
+                else
+                {
+                    BroadcastMessage("OnNoInteractableFound", SendMessageOptions.DontRequireReceiver);
+                }
             }
 
             if (_gc.CancelThisFrame())
