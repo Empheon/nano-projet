@@ -79,14 +79,14 @@ namespace Character
             {
                 if (_closest != null)
                 {
-                    _closest.BroadcastMessage("OnCharacterInteract", gameObject);
+                    _closest.BroadcastMessage("OnCharacterInteract", gameObject, SendMessageOptions.DontRequireReceiver);
                     
                     // prevent from interacting 2 times with object
                     _closest = null;
                 }
                 else
                 {
-                    gameObject.BroadcastMessage("OnNoInteractableFound");
+                    BroadcastMessage("OnNoInteractableFound", SendMessageOptions.DontRequireReceiver);
                 }
             }
 

@@ -5,46 +5,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using DG.Tweening;
 
 namespace Animations
 {
     public class FixBarAnimation : MonoBehaviour
     {
         [SerializeField]
-        private Sprite disabledBar;
+        private GameObject jaugeMask;
         [SerializeField]
-        private Sprite redBar;
-        [SerializeField]
-        private Sprite greenBar;
+        private float duration;
 
-        private SpriteRenderer m_spriteRenderer;
-        private Coroutine m_coroutine;
+        private bool m_isFixing;
 
         private void Start()
         {
-            m_spriteRenderer = GetComponent<SpriteRenderer>();
+            var pos = jaugeMask.transform.localPosition;
+            pos.x = jaugeMask.transform.localScale.x + 0.01f;
+            jaugeMask.transform.localPosition = pos;
         }
 
-        public void OnGoRed()
+        public void OnStartFix()
         {
-            if (m_coroutine != null)
-            {
-                StopCoroutine(m_coroutine);
-            }
-
-            m_spriteRenderer.sprite = redBar;
+            if (m_isFixing) return;
+            m_isFixing = true;
+            jaugeMask.transform.DOLocalMoveX(jaugeMask.transform.localScale.x + 0.01f, duration).SetEase(Ease.Linear).onComplete = () => m_isFixing = false;
         }
 
-        public void OnFixComplete()
+        public void OnDamage()
         {
-            m_coroutine = StartCoroutine(Anim());
+            jaugeMask.transform.DOLocalMoveX(0, 1).SetEase(Ease.OutExpo);
         }
 
-        private IEnumerator Anim()
-        {
-            m_spriteRenderer.sprite = greenBar;
-            yield return new WaitForSeconds(1);
-            m_spriteRenderer.sprite = disabledBar;
-        }
     }
 }

@@ -33,7 +33,7 @@ namespace Animations
         public void AimAt(Vector3 point)
         {
             laserHandle.DOLookAt(point, 0.5f);
-            _targetDistance = Vector3.Distance(laserHandle.position, point) / laserParticles.transform.lossyScale.x;
+            _targetDistance = Vector3.Distance(laserHandle.position, point) / Mathf.Abs(laserParticles.transform.lossyScale.x);
             _targetPosition = point;
         }
 

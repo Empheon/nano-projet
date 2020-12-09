@@ -42,6 +42,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: FarBackground
+    uniqueID: 2738785495
+    locked: 0
   - name: Background
     uniqueID: 1033065447
     locked: 0
@@ -50,6 +53,9 @@ TagManager:
     locked: 0
   - name: Gameplay
     uniqueID: 2237366629
+    locked: 0
+  - name: Mecha Structure
+    uniqueID: 2197676445
     locked: 0
   - name: Player
     uniqueID: 652520279

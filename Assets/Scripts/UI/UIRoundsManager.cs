@@ -32,6 +32,9 @@ namespace UI
         [SerializeField]
         private GameObject rightRoundPinWrapper;
 
+        [SerializeField]
+        private List<Color> color;
+
         private void Awake()
         {
             round.OnLeftHPChange += UpdateLeftBar;
@@ -124,6 +127,12 @@ namespace UI
                     }
                 }
             }
+
+            foreach(Image img in lifebar.GetComponentsInChildren<Image>())
+            {
+                img.color = color[Mathf.Max(hp - 1, 0)];
+            }
+
         }
 
         private void DestroyLifebar(Transform trsf)

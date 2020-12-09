@@ -39,6 +39,7 @@ namespace NeoMecha
             //if (IsDamaged) return;
             IsDamaged = true;
             OnDamaged.Invoke();
+            CameraShake.Instance.AddTrauma(1);
         }
 
         public void OnDefenceReceived()

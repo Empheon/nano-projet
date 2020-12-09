@@ -138,7 +138,8 @@ namespace Character
             else if (_movement < 0) spriteRenderer.flipX = false;
 
             animator.SetBool("IsRunning", Mathf.Abs(_movement) > 0f);
-            animator.SetBool("IsFalling",  !grounded && _rb.velocity.y < fallingThreshold);
+            animator.SetBool("IsFalling", !grounded && _rb.velocity.y < fallingThreshold);
+            animator.SetBool("IsJumping", _hasJumped);
 
             if(Random.Range(0f, 1f) < blinkFrequency * Time.deltaTime) animator.SetTrigger("Blink");
             if(Random.Range(0f, 1f) < scratchFrequency * Time.deltaTime) animator.SetTrigger("Scratch");

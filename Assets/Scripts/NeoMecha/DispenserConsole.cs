@@ -17,13 +17,12 @@ namespace NeoMecha
         [SerializeField] private int maxResourcesNb;
         [SerializeField] private float activationDelay;
         [SerializeField] private float dispenseCooldown;
-        //[SerializeField] private Transform dispenseFrom;
-        [SerializeField] private Vector2 velocity;
-        [SerializeField] private Transform snapPosition;
         [SerializeField] private PickableResource resourcePrefab;
 
         [SerializeField]
         private ConveyerAnimation conveyerAnimation;
+        [SerializeField]
+        private SupplyCurtainAnimation supplyCurtainAnimation;
 
         private List<Resource> m_resources;
         private float _timeSinceLastDispense;
@@ -52,13 +51,11 @@ namespace NeoMecha
         {
             var characterAnimator = character.GetComponentInChildren<Animator>();
             var characterController = character.GetComponent<CharacterController>();
+            var characterResource = character.GetComponent<CharacterResource>();
 
             // stop player
             characterController.Stop();
             characterController.enabled = false;
-
-            // snap player to right place
-            //character.transform.position = snapPosition.position;
             
             // animate
             characterAnimator.SetTrigger("PushButton");
@@ -67,20 +64,20 @@ namespace NeoMecha
             
             // player get controls back
             characterController.enabled = true;
-            
-            // create resource
-            //PickableResource pickableResource = Instantiate(resourcePrefab, dispenseFrom.position, Quaternion.identity);
+
             pickableResource.Init();
-            
-            var resourceRb = pickableResource.GetComponent<Rigidbody2D>();
-            //resourceRb.AddForce(velocity, ForceMode2D.Impulse);
-            
+
             // keep track of resource
-            m_resources.Add(pickableResource.ResourceObject);
+            m_resources.Add(pickableResource.Resource);
+            UpdateCurtainState();
             
-            pickableResource.ResourceObject.OnConsumed += () =>
+            // automatically give resource to character
+            characterResource.StoreResource(pickableResource.Resource);
+
+            pickableResource.Resource.OnConsumed += () =>
             {
-                m_resources.Remove(pickableResource.ResourceObject);
+                m_resources.Remove(pickableResource.Resource);
+                UpdateCurtainState();
                 Destroy(pickableResource.gameObject);
             };
         }
@@ -88,6 +85,17 @@ namespace NeoMecha
         public override bool CanInteract(GameObject character)
         {
             return m_resources.Count < maxResourcesNb && _timeSinceLastDispense > dispenseCooldown;
+        }
+
+        private void UpdateCurtainState()
+        {
+            if (m_resources.Count < maxResourcesNb)
+            {
+                supplyCurtainAnimation.OnOpen();
+            } else
+            {
+                supplyCurtainAnimation.OnClose();
+            }
         }
     }
 }
