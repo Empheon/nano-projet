@@ -39,7 +39,9 @@ namespace Animations
 
         public void Shoot()
         {
-            targetLockedEffect.transform.position = _targetPosition;
+            var targetPosition = _targetPosition;
+            targetPosition.z = -5;
+            targetLockedEffect.transform.position = targetPosition;
             targetLockedEffect.Play();
             
             StartCoroutine(WaitAndStop(targetLockedEffect, targetLockedEffectDuration));
