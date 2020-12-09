@@ -3,6 +3,7 @@ menu_play_game;Play
 menu_tutorial;Tutorial
 menu_settings;Settings
 menu_quit;Exit game
+menu_back;Back
 
 tuto_disclaimer;This tutorial does not include interactions with the fortress systems. Please pay attention to the text!
 tuto_main_1;Annihilate the enemy fortress!
@@ -27,3 +28,8 @@ tuto_sub_goto_mun;Please move to the ammunition room.
 tuto_sub_goto_ene;Please move to the energy room.
 tuto_sub_goto_fix;Please move to the maintenance room.
 tuto_sub_goto_several;Please move to one of the highlighted rooms.
+
+settings_volume;Volume
+settings_language;Language
+
+lang_key;English

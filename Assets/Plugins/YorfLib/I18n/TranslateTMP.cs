@@ -25,6 +25,9 @@ namespace YorfLib
 
 		private readonly static Regex s_regex = new Regex("\\<i18n=\"(?<key>\\w+)\"\\>");
 
+		private readonly static float m_refreshTime = 0.05f;
+		private float m_refreshCounter;
+
 		private void OnEnable()
 		{
 			textComponent = GetComponent<TMP_Text>();
@@ -52,8 +55,21 @@ namespace YorfLib
 				textComponent.ForceMeshUpdate();
 			}
 		}
-		
-		public static string GetI18nKey(string key)
+
+        private void Update()
+        {
+			// Could be replaced by events for efficiency
+			if (m_refreshCounter > m_refreshTime)
+			{
+				Refresh();
+				m_refreshCounter = 0;
+			} else
+            {
+				m_refreshCounter += Time.deltaTime;
+            }
+        }
+
+        public static string GetI18nKey(string key)
 		{
 			StringBuilder builder = new StringBuilder("<i18n=\"\">".Length + key.Length);
 			builder.Append("<i18n=\"");
