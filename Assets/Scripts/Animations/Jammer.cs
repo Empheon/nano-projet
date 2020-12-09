@@ -21,12 +21,14 @@ namespace Animations
         
         public void TurnOn()
         {
+            //AkSoundEngine.PostEvent("JAM_Activation", gameObject);
             teslaCoil.Play();
             electricBolt.Play();
         }
         
         public void TurnOff()
         {
+            AkSoundEngine.PostEvent("JAM_Deactivation", gameObject);
             teslaCoil.Stop();
             electricBolt.Stop();
         }

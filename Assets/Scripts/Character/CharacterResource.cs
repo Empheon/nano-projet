@@ -48,10 +48,12 @@ namespace Character
             switch (_storedResource.Type)
             {
                 case ResourceTypes.Ammunition:
+                    AkSoundEngine.PostEvent("Take_MUN_In_Munition_Room", gameObject);
                     animator.SetBool("HoldAmmo", true);
                     animator.SetBool("HoldEnergy", false);
                     break;
                 case ResourceTypes.Energy:
+                    AkSoundEngine.PostEvent("Take_ENE_In_Energy_Room", gameObject);
                     animator.SetBool("HoldAmmo", false);
                     animator.SetBool("HoldEnergy", true);
                     break;
