@@ -14,6 +14,9 @@ namespace Inputs
         }
 
         public bool InteractThisFrame() => Gamepad.buttonWest.wasPressedThisFrame;
+
+        public bool ValidateThisFrame() =>
+            Gamepad.buttonWest.wasPressedThisFrame || Gamepad.buttonSouth.wasPressedThisFrame;
         public bool CancelThisFrame() => Gamepad.buttonEast.wasPressedThisFrame;
         public bool JumpThisFrame() => Gamepad.buttonSouth.wasPressedThisFrame;
 

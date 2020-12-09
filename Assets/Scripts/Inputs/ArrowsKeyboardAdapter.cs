@@ -9,6 +9,8 @@ namespace Inputs
         
         public bool InteractThisFrame() => Keyboard.current.rightCtrlKey.wasPressedThisFrame;
 
+        public bool ValidateThisFrame() => Keyboard.current.rightCtrlKey.wasPressedThisFrame;
+
         public bool CancelThisFrame() => false;
 
         public bool JumpThisFrame() => Keyboard.current.upArrowKey.wasPressedThisFrame;
