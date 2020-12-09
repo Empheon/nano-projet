@@ -4,6 +4,7 @@ menu_tutorial;Tutoriel
 menu_settings;Options
 menu_quit;Quitter
 
+tuto_disclaimer;Ce tutoriel ne propose pas d'interactions avec les systèmes de la forteresse. Prêtez attention au texte !
 tuto_main_1;Terrassez la forteresse ennemie !
 tuto_main_2;Voici votre système d'attaque.
 tuto_main_3;Pour l'utiliser, vous devez y apporter une munition...
