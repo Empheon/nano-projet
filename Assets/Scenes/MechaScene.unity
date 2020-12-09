@@ -7320,6 +7320,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameUI
       objectReference: {fileID: 0}
+    - target: {fileID: 5289135489736953120, guid: d0196bbb97733ef4abfe4f917df98f6a,
+        type: 3}
+      propertyPath: OnTimeout.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5289135489736953120, guid: d0196bbb97733ef4abfe4f917df98f6a,
+        type: 3}
+      propertyPath: OnTimeout.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5289135489736953120, guid: d0196bbb97733ef4abfe4f917df98f6a,
+        type: 3}
+      propertyPath: OnTimeout.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5289135489736953120, guid: d0196bbb97733ef4abfe4f917df98f6a,
+        type: 3}
+      propertyPath: OnTimeout.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 638979994}
+    - target: {fileID: 5289135489736953120, guid: d0196bbb97733ef4abfe4f917df98f6a,
+        type: 3}
+      propertyPath: OnTimeout.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Timeout
+      objectReference: {fileID: 0}
+    - target: {fileID: 5289135489736953120, guid: d0196bbb97733ef4abfe4f917df98f6a,
+        type: 3}
+      propertyPath: OnTimeout.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0196bbb97733ef4abfe4f917df98f6a, type: 3}
 --- !u!1 &1975418604 stripped
