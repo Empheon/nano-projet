@@ -51,8 +51,26 @@ namespace Global
             if (m_teamHp[team] <= 0)
             {
                 WinnerTeam = team == Team.Left ? Team.Right : Team.Left;
+
+                //Trigger Anim
+
                 Match.Instance.FinishRound(this);
             }
+        }
+
+        public void Timeout()
+        {
+            if (m_teamHp[Team.Left] == m_teamHp[Team.Right])
+            {
+                WinnerTeam = Team.None;
+            } else
+            {
+                WinnerTeam = m_teamHp[Team.Left] > m_teamHp[Team.Right] ? Team.Left : Team.Right;
+            }
+
+            //Trigger Anim
+
+            Match.Instance.FinishRound(this);
         }
     }
 }

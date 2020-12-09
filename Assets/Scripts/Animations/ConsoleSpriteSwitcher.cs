@@ -21,6 +21,9 @@ namespace Animations
         [SerializeField]
         private Sprite brokenConsole;
 
+        [SerializeField]
+        private float activatedDuration;
+
         private Coroutine m_coroutine;
 
         public void OnFix()
@@ -39,9 +42,9 @@ namespace Animations
             spriteHolder.sprite = brokenConsole;
         }
 
-        public void OnActivate(float duration)
+        public void OnActivate()
         {
-            m_coroutine = StartCoroutine(ActivateAnim(duration));
+            m_coroutine = StartCoroutine(ActivateAnim(activatedDuration));
         }
 
         private IEnumerator ActivateAnim(float duration)

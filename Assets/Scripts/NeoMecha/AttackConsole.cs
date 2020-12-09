@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.Events;
+using Animations;
 
 namespace NeoMecha
 {
@@ -13,6 +14,21 @@ namespace NeoMecha
     {
         [SerializeField]
         private LoadConsole m_loadConsole;
+        [SerializeField]
+        private ConsoleSpriteSwitcher consoleSpriteSwitcher;
+
+        protected override void Start()
+        {
+            base.Start();
+            room.OnDamaged.AddListener(consoleSpriteSwitcher.OnBreak);
+            room.OnFixed.AddListener(consoleSpriteSwitcher.OnFix);
+        }
+
+        protected override void PreAction()
+        {
+            base.PreAction();
+            consoleSpriteSwitcher.OnActivate();
+        }
 
         protected override void DoAction(Room room)
         {

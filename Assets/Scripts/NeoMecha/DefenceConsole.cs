@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Animations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,20 @@ namespace NeoMecha
     {
         [SerializeField]
         private LoadConsole m_loadConsole;
+        [SerializeField]
+        private ConsoleSpriteSwitcher consoleSpriteSwitcher;
+
+        protected override void Start()
+        {
+            base.Start();
+            room.OnDamaged.AddListener(consoleSpriteSwitcher.OnBreak);
+            room.OnFixed.AddListener(consoleSpriteSwitcher.OnFix);
+        }
+        protected override void PreAction()
+        {
+            base.PreAction();
+            consoleSpriteSwitcher.OnActivate();
+        }
 
         protected override void DoAction(Room room)
         {
