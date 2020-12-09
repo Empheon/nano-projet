@@ -38,7 +38,7 @@ namespace NeoMecha
 
         private bool m_lockAction;
 
-        protected void Start()
+        protected virtual void Start()
         {
             foreach (Target target in TargetList)
             {
@@ -46,6 +46,7 @@ namespace NeoMecha
                     if (CanDoAction())
                     {
                         m_lockAction = true;
+                        PreAction();
                         OnActionStart.Invoke(target.Room, () => {
                             m_lockAction = false;
                             DoAction(target.Room);
@@ -63,6 +64,8 @@ namespace NeoMecha
 
             StartCoroutine(RefreshButtonVisibility());
         }
+
+        protected virtual void PreAction() { }
 
         private IEnumerator RefreshButtonVisibility()
         {
