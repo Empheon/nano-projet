@@ -33,6 +33,13 @@ namespace Global
 
         public void FinishRound(Round round)
         {
+            if (round.WinnerTeam == PlayerManager.Team.None)
+            {
+                DOTween.KillAll();
+                SceneManager.LoadScene(gameSceneIndex);
+                return;
+            }
+
             FinishedRounds.Add(round);
 
             int leftWonRounds = WonRounds(PlayerManager.Team.Left);
