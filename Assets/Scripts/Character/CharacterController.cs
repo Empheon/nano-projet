@@ -119,6 +119,7 @@ namespace Character
             {
                 _shouldJump = true;
                 animator.SetTrigger("Jump");
+                AkSoundEngine.PostEvent("Jump_Character", gameObject);
             }
             
             _keepInAir = _gc.KeepInAir();

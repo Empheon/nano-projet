@@ -6,8 +6,8 @@ namespace Resources
 {
     public class PickableResource : MonoBehaviour
     {
-        [SerializeField] private ResourceTypes type = ResourceTypes.Ammunition;
-
+        public ResourceTypes type = ResourceTypes.Ammunition;
+        
         public Resource Resource;
 
         public void Init()

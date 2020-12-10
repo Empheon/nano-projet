@@ -56,7 +56,7 @@ namespace NeoMecha
             // stop player
             characterController.Stop();
             characterController.enabled = false;
-            
+
             // animate
             characterAnimator.SetTrigger("PushButton");
             PickableResource pickableResource = conveyerAnimation.OnConvey(resourcePrefab.gameObject).GetComponent<PickableResource>();
