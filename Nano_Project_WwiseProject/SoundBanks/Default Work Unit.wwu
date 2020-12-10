@@ -8,6 +8,7 @@
 						<ObjectRef Name="JAM_Deactivation" ID="{714D7B4E-18DA-42BB-B609-EF78CD1929F0}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="DEF_Activation" ID="{0FA74169-4D8D-42D0-9DA9-485A1DB68AFE}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Jump_Character" ID="{A13E396F-5EA5-439F-B1AA-6C9B591BA526}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ATK_Shield_Impact" ID="{EEED4C44-C8C3-43F9-AEC8-E1D705E89160}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Sound_Repair_Room" ID="{0240C629-9DA1-467E-8D22-94A5179420F3}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Return_Button_Interface" ID="{3CCCCF94-B6B1-46A7-BADB-2239F83D5D30}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Amb_EXT" ID="{3F0E0ECC-4300-46D0-9AFC-9CE7D64B90B5}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
@@ -22,6 +23,7 @@
 						<ObjectRef Name="ATK_Gun_Shoot_Alarm" ID="{CAE61FA2-17C8-4BBD-A48B-4DD103AB1A15}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Validate_Button_Interface" ID="{6FF2A9A3-053E-4BBF-A248-80B781A39E7D}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Load_MUN_In_ATK_Room" ID="{4320AA7F-6B12-4C16-A977-16A5A6313ECF}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ATK_Damaged_Room_After_Gun_Shoot" ID="{7A7B3265-936F-4E50-AAA1-5A5F7016865E}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="JAM_Hacked_Room" ID="{ABCD106C-FA26-4E54-8FD2-64B17547E3BF}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Menu_Selection_Cursor" ID="{0AAE57A8-4696-4EFB-A52C-51B3A6309DBC}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
