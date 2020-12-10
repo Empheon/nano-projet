@@ -127,6 +127,20 @@
 				<Event Name="ATK_Gun_Shoot_Alarm" ID="{CAE61FA2-17C8-4BBD-A48B-4DD103AB1A15}">
 					<ChildrenList>
 						<Action Name="" ID="{59362BBE-64E1-4DD2-B70F-86D6175C4E90}" ShortID="44103539">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ATK_Gun_Shoot_Alarm" ID="{F3D6E56A-2B5E-44AD-AE53-60D5C6BC98CA}" WorkUnitID="{2B4BF115-6472-4572-AA62-61BCFD13A547}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0A9CEDEC-D591-4EAE-A838-85DC932FF84B}" ShortID="617398412">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="ATK_Gun_Shoot_Alarm" ID="{F3D6E56A-2B5E-44AD-AE53-60D5C6BC98CA}" WorkUnitID="{2B4BF115-6472-4572-AA62-61BCFD13A547}"/>
@@ -166,6 +180,16 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{C6D51642-E70E-4A58-9374-9ABB3054E6D5}" ShortID="708247545">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="JAM_Activation" ID="{D747E2D5-93EB-4143-8AB2-06CCDE1FC0C8}" WorkUnitID="{EF14ECD4-A774-4499-84D2-FD56B67E43EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="JAM_Deactivation" ID="{714D7B4E-18DA-42BB-B609-EF78CD1929F0}">
@@ -192,10 +216,32 @@
 				</Event>
 				<Event Name="ATK_Activation" ID="{3A572449-9B8D-4769-B99F-6121D0A34C8D}">
 					<ChildrenList>
-						<Action Name="" ID="{2488A8E0-57E3-4CCB-85F9-A29711A1D676}" ShortID="849550370">
+						<Action Name="" ID="{51E91749-0384-4FAD-B647-1FA28D937059}" ShortID="816191428">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="ATK_Activation" ID="{558445C9-0D68-4882-9128-7B29957C06AE}" WorkUnitID="{2B4BF115-6472-4572-AA62-61BCFD13A547}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ATK_Damaged_Room_After_Gun_Shoot" ID="{7A7B3265-936F-4E50-AAA1-5A5F7016865E}">
+					<ChildrenList>
+						<Action Name="" ID="{EF9919C3-A958-4624-82FD-77F773407867}" ShortID="339293645">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ATK_Damaged_Room_After_Gun_Shoot" ID="{AF8D82C3-3D00-4C64-8FC0-44B7A93086D5}" WorkUnitID="{2B4BF115-6472-4572-AA62-61BCFD13A547}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ATK_Shield_Impact" ID="{EEED4C44-C8C3-43F9-AEC8-E1D705E89160}">
+					<ChildrenList>
+						<Action Name="" ID="{927C9CB9-AA76-41F7-B492-21F536C09ABE}" ShortID="939136729">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ATK_Shield_Impact" ID="{9BCD0EE3-1C1E-4796-BC5A-2F0804DD64A0}" WorkUnitID="{2B4BF115-6472-4572-AA62-61BCFD13A547}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
