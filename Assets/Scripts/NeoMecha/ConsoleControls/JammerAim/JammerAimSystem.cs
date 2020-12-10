@@ -35,14 +35,14 @@ namespace NeoMecha.ConsoleControls.JammerAim
 
         public override void Next()
         {
-            _currentTargetIndex = (_currentTargetIndex + 1) % _targets.Length;
+            _currentTargetIndex = Mathf.Min(_currentTargetIndex + 1, _targets.Length - 1);
             
             jammer.AimAt(_targets[_currentTargetIndex].target.position);
         }
 
         public override void Previous()
         {
-            _currentTargetIndex = (_currentTargetIndex + _targets.Length - 1) % _targets.Length;
+            _currentTargetIndex = Mathf.Max(_currentTargetIndex - 1, 0);
 
             jammer.AimAt(_targets[_currentTargetIndex].target.position);
         }

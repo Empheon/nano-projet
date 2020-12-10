@@ -41,7 +41,7 @@ namespace NeoMecha.ConsoleControls.ShieldAim
 
         public override void Next()
         {
-            _currentTargetIndex = (_currentTargetIndex + 1) % _targets.Length;
+            _currentTargetIndex = Mathf.Min(_currentTargetIndex + 1, _targets.Length - 1);
             var target = _targets[_currentTargetIndex];
             
             shieldPlacer.PlaceAt(target.target.position);
@@ -51,7 +51,7 @@ namespace NeoMecha.ConsoleControls.ShieldAim
 
         public override void Previous()
         {
-            _currentTargetIndex = (_currentTargetIndex + _targets.Length - 1) % _targets.Length;
+            _currentTargetIndex = Mathf.Max(_currentTargetIndex - 1, 0);
             var target = _targets[_currentTargetIndex];
             
             shieldPlacer.PlaceAt(target.target.position);
