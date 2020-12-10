@@ -428,6 +428,7 @@ MonoBehaviour:
   - /Nano_Project_WwiseProject
   - /Nano_Project_WwiseProject/Events
   - /Nano_Project_WwiseProject/Events/Bruitages
+  - /Nano_Project_WwiseProject/Events/Musiques
   - /Nano_Project_WwiseProject/SoundBanks
   - /Nano_Project_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
