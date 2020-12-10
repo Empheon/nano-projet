@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Inputs;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -15,7 +16,7 @@ namespace NeoMecha.ConsoleControls
         
         private IGameController _gc;
         private CharacterController _controller;
-        private ConsoleControlSystem _system;
+        private List<ConsoleControlSystem> _systems;
         private TargetConsole _console;
 
         private string _originalTag;
@@ -24,7 +25,7 @@ namespace NeoMecha.ConsoleControls
 
         private void Start()
         {
-            _system = GetComponent<ConsoleControlSystem>();
+            _systems = new List<ConsoleControlSystem>(GetComponents<ConsoleControlSystem>());
             _console = GetComponent<TargetConsole>();
 
             _originalTag = tag;
@@ -41,7 +42,14 @@ namespace NeoMecha.ConsoleControls
             _gc = _controller.GetGamepad();
             _hasControl = true;
 
-            var ok = _system.Activate();
+            bool ok = true;
+            foreach (var consoleControlSystem in _systems)
+            {
+                if (!consoleControlSystem.Activate())
+                {
+                    ok = false;
+                }
+            }
             
             tag = interactingTag;
             
@@ -55,8 +63,11 @@ namespace NeoMecha.ConsoleControls
             
             _gc = null;
             _hasControl = false;
-            
-            _system.Desactivate();
+
+            foreach (var consoleControlSystem in _systems)
+            {
+                consoleControlSystem.Desactivate();
+            }
 
             tag = _originalTag;
         }
@@ -81,19 +92,28 @@ namespace NeoMecha.ConsoleControls
 
                     if (y > snapValueThreshHold)
                     {
-                        _system.Previous();
+                        foreach (var consoleControlSystem in _systems)
+                        {
+                            consoleControlSystem.Previous();
+                        }
                         _timeSinceLastSnap = 0f;
                     }
                     else if (y < -snapValueThreshHold)
                     {
-                        _system.Next();
+                        foreach (var consoleControlSystem in _systems)
+                        {
+                            consoleControlSystem.Next();
+                        }
                         _timeSinceLastSnap = 0f;
                     }
                 }
 
-                if (_gc.InteractThisFrame() || _gc.JumpThisFrame())
+                if (_gc.ValidateThisFrame())
                 {
-                    _system.Validate();
+                    foreach (var consoleControlSystem in _systems)
+                    {
+                        consoleControlSystem.Validate();
+                    }
                     OnStopInteraction();
                 }
             }

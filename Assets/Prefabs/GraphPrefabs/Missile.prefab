@@ -110,6 +110,11 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  explosionPrefab: {fileID: 200168379526558653, guid: b853187619f51004ca99024487b7cb62,
+    type: 3}
+  softExplosionPrefab: {fileID: 866874573597556763, guid: 5af8eb585638d684bb6d5c8ad5fdfa01,
+    type: 3}
+  explosionPositionOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1492765244396930349
 GameObject:
   m_ObjectHideFlags: 0

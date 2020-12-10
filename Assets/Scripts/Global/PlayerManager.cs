@@ -119,6 +119,7 @@ namespace Global
         {
             Left,
             Right,
+            None
         }
     }
 }

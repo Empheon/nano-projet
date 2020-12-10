@@ -15,6 +15,8 @@ namespace UI
         private GameObject titleWrapper;
         [SerializeField]
         private GameObject gamepadCheckerWrapper;
+        [SerializeField]
+        private GameObject settingsWrapper;
 
         [SerializeField]
         private int mechaSceneIndex;
@@ -26,6 +28,7 @@ namespace UI
         private void Start()
         {
             HidePanel(gamepadCheckerWrapper, 0);
+            HidePanel(settingsWrapper, 0);
         }
 
         public void OnClickPlay()
@@ -38,6 +41,16 @@ namespace UI
         {
             nextSceneIndex = tutoSceneIndex;
             SwitchPanel(titleWrapper, gamepadCheckerWrapper);
+        }
+
+        public void OnClickSettings()
+        {
+            SwitchPanel(titleWrapper, settingsWrapper);
+        }
+
+        public void OnClickBackFrom(GameObject from)
+        {
+            SwitchPanel(from, titleWrapper);
         }
 
         public void OnClickQuit()
@@ -66,6 +79,14 @@ namespace UI
         private Tween ShowPanel(GameObject go, float duration = 0.5f)
         {
             go.SetActive(true);
+
+            MenuAutoSelector menuAutoSelector;
+            if (go.TryGetComponent(out menuAutoSelector))
+            {
+                menuAutoSelector.ObjectToTarget.Select();
+            }
+
+
             return go.transform.DOLocalMoveX(0, duration).SetEase(Ease.OutBack);
         }
     }

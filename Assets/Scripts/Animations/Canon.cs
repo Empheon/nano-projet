@@ -47,13 +47,13 @@ namespace Animations
             switch (m_roomToShoot.RoomType)
             {
                 case RoomType.ATTACK:
-                    rocket.Init(pathCreatorAtt, m_callback);
+                    rocket.Init(pathCreatorAtt, m_callback, m_roomToShoot);
                     break;
                 case RoomType.DEFENCE:
-                    rocket.Init(pathCreatorDef, m_callback);
+                    rocket.Init(pathCreatorDef, m_callback, m_roomToShoot);
                     break;
                 case RoomType.JAMMING:
-                    rocket.Init(pathCreatorJam, m_callback);
+                    rocket.Init(pathCreatorJam, m_callback, m_roomToShoot);
                     break;
             }
         }

@@ -3,7 +3,9 @@ menu_play_game;Jouer
 menu_tutorial;Tutoriel
 menu_settings;Options
 menu_quit;Quitter
+menu_back;Retour
 
+tuto_disclaimer;Ce tutoriel ne propose pas d'interactions avec les systèmes de la forteresse. Prêtez attention au texte !
 tuto_main_1;Terrassez la forteresse ennemie !
 tuto_main_2;Voici votre système d'attaque.
 tuto_main_3;Pour l'utiliser, vous devez y apporter une munition...
@@ -14,7 +16,7 @@ tuto_main_7;Voici votre système de défense.
 tuto_main_8;Pour l'utiliser, vous devez y apporter une énergie. 
 tuto_main_9;Puis choisir lequel de vos systèmes défendre.
 tuto_main_10;Enfin, le système de piratage !
-tuto_main_11;Il permet de paralyser un système ennemi.
+tuto_main_11;Il permet de paralyser un système ennemi pendant quelques secondes.
 tuto_main_12;Après utilisation, le système de piratage doit se recharger. 
 tuto_main_13;Coordonnez vos actions\nObservez les mouvements de l'adversaire\nEt la victoire est à vous !\n\n\nVous avez terminé le tutoriel, retour au menu principal dans quelques secondes.
 
@@ -26,3 +28,13 @@ tuto_sub_goto_mun;Déplacez-vous vers la salle des munitions.
 tuto_sub_goto_ene;Déplacez-vous vers la salle des sources d'énergie.
 tuto_sub_goto_fix;Déplacez-vous vers la salle de maintenance.
 tuto_sub_goto_several;Déplacez-vous vers l'une des salles indiquées.
+
+settings_volume;Volume
+settings_language;Langue
+
+lang_key;Francais
+
+intro_1;Il fut un temps où l’humanité contrôlait le monde, ne laissant plus une seule touffe d’herbe disponible pour les autres habitants de cette planète. Les souris vécurent retranchées, dans la peur, pendant des années...
+intro_2;Mais un jour, l’ambition des humains, l’avidité de pouvoir et de contrôle de territoire, les mena à leurs perte. Les souris purent respirer à nouveau, reconstruire leurs habitats, reprendre en main une vie sans peur...
+intro_3;Attendez non... ce n’est pas ça.... Qui a dit que les souris étaient meilleures que les humains ?
+intro_4;LES HUMAINS AYANT DELAISSE LA PLANETE, LES SOURIS SE BATTAIENT POUR DEFENDRE LEURS TERRITOIRES ! ELLES UTILISERENT LA TECHNOLOGIE LAISSE PAR LES HUMAINS, POUR SE BATTRE A COUPS DE GROS MISSILE, DANS D’ENORMES FORTERESSES ROBOTIQUES !

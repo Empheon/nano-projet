@@ -1,28 +1,40 @@
 #English translation file
-menu_play_game;Jouer
-menu_tutorial;Tutoriel
-menu_settings;Options
-menu_quit;Quitter
+menu_play_game;Play
+menu_tutorial;Tutorial
+menu_settings;Settings
+menu_quit;Exit game
+menu_back;Back
 
-tuto_main_1;Terrassez la forteresse ennemie !
-tuto_main_2;Voici votre système d'attaque.
-tuto_main_3;Pour l'utiliser, vous devez y apporter une munition...
-tuto_main_4;Puis choisir quel système ennemi attaquer.
-tuto_main_5;Celui-ci sera alors endommagé, et l'ennemi perdra un point de vie.
-tuto_main_6;Pour retrouver l'usage de cette salle, il devra utiliser son système de réparation.
-tuto_main_7;Voici votre système de défense.
-tuto_main_8;Pour l'utiliser, vous devez y apporter une énergie. 
-tuto_main_9;Puis choisir lequel de vos systèmes défendre.
-tuto_main_10;Enfin, le système de piratage !
-tuto_main_11;Il permet de paralyser un système ennemi.
-tuto_main_12;Après utilisation, le système de piratage doit se recharger. 
-tuto_main_13;Coordonnez vos actions\nObservez les mouvements de l'adversaire\nEt la victoire est à vous !
+tuto_disclaimer;This tutorial does not include interactions with the fortress systems. Please pay attention to the text!
+tuto_main_1;Annihilate the enemy fortress!
+tuto_main_2;This is your attack system.
+tuto_main_3;To use it, you must load in a missile...
+tuto_main_4;Then choose which enemy system to attack.
+tuto_main_5;This one will then be damaged, and the enemy will lose one hit point.
+tuto_main_6;In order to fix this room and re-establish its functions, they will need to use their maintenance system.
+tuto_main_7;This is your defence system.
+tuto_main_8;To use it, you must load in an energy capsule...
+tuto_main_9;Then choose one of your systems to defend.
+tuto_main_10;Finally, the hacking system!
+tuto_main_11;It can be used to paralyze an enemy system for a few seconds.
+tuto_main_12;After use, the hacking system will recharge itself.
+tuto_main_13;Coordinate your actions\nObserve your opponent's moves\nAnd victory is yours!\n\nYou finished the tutorial, you will get back to the main title in a few seconds.
 
 
-tuto_sub_goto_att;Déplacez-vous vers la salle d'attaque.
-tuto_sub_goto_def;Déplacez-vous vers la salle de défense.
-tuto_sub_goto_jam;Déplacez-vous vers la salle de piratage.
-tuto_sub_goto_mun;Déplacez-vous vers la salle des munitions.
-tuto_sub_goto_ene;Déplacez-vous vers la salle des sources d'énergie.
-tuto_sub_goto_fix;Déplacez-vous vers la salle de maintenance.
-tuto_sub_goto_several;Déplacez-vous vers l'une des salles indiquées.
+tuto_sub_goto_att;Please move to the attack room.
+tuto_sub_goto_def;Please move to the defence room.
+tuto_sub_goto_jam;Please move to the hacking room.
+tuto_sub_goto_mun;Please move to the ammunition room.
+tuto_sub_goto_ene;Please move to the energy room.
+tuto_sub_goto_fix;Please move to the maintenance room.
+tuto_sub_goto_several;Please move to one of the highlighted rooms.
+
+settings_volume;Volume
+settings_language;Language
+
+lang_key;English
+
+intro_1;There was a time when humanity controlled the world. There was not a single tuft of grass left for the other inhabitants of this planet. The Mice lived locked in fear for years...
+intro_2;But one day, ambition, greed for power and control of territory, led humans to their doom. The rest of the planet could breathe again, mice were able to rebuild their homes, go back to a life without fear…
+intro_3;Wait… No, that is not what happened… Who Said Mice Are Better Than Humans?
+intro_4;WITH HUMANS NO LONGER RULING THE EARTH, THE MICE WERE FIGHTING TO DEFEND THEIR TERRITORIES! THEY USED TECHNOLOGY LEFT BY HUMANS TO FIGHT WITH BIG MISSILES IN HUGE ROBOTIC FORTRESSES!

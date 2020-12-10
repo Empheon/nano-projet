@@ -21,12 +21,15 @@ namespace Animations
         
         public void TurnOn()
         {
+            AkSoundEngine.PostEvent("JAM_Activation_Play", gameObject);
             teslaCoil.Play();
             electricBolt.Play();
         }
         
         public void TurnOff()
         {
+            AkSoundEngine.PostEvent("JAM_Activation_Stop", gameObject);
+            AkSoundEngine.PostEvent("JAM_Deactivation", gameObject);
             teslaCoil.Stop();
             electricBolt.Stop();
         }
@@ -40,6 +43,7 @@ namespace Animations
 
         public void Blast()
         {
+            AkSoundEngine.PostEvent("JAM_Activation_Stop", gameObject);
             electricBoltBlast.Play();
 
             impactBlast.transform.position = _targetPosition;

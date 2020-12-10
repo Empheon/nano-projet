@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" SchemaVersion="97">
+	<Events>
+		<WorkUnit Name="Bruitages" ID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Menu_Selection_Button" ID="{FE6C414F-1918-48DE-8604-583A6D999019}">
+					<ChildrenList>
+						<Action Name="" ID="{EBA9FA48-31FE-4891-BD12-A4329253D15B}" ShortID="656636497">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu_Selection_Button" ID="{DD0DA2DB-7B72-43F5-BD46-BF9CE89B5B4D}" WorkUnitID="{7D4B3D91-103F-4B69-BC1D-058247F293E6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Menu_Selection_Cursor" ID="{0AAE57A8-4696-4EFB-A52C-51B3A6309DBC}">
+					<ChildrenList>
+						<Action Name="" ID="{C044EC80-4EA5-42CE-8025-030650872931}" ShortID="543075689">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu_Selection_Cursor" ID="{A13236BE-1467-4EB2-B972-5D246C49E2F8}" WorkUnitID="{7D4B3D91-103F-4B69-BC1D-058247F293E6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Menu_Return_Button_Interface" ID="{3CCCCF94-B6B1-46A7-BADB-2239F83D5D30}">
+					<ChildrenList>
+						<Action Name="" ID="{1213CFFB-70DD-43F4-B04B-0D054D807B11}" ShortID="399521890">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Return_Button_Interface" ID="{94E8593A-66E7-4DED-8184-A6E5B5152DDB}" WorkUnitID="{7D4B3D91-103F-4B69-BC1D-058247F293E6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Menu_Validate_Button_Interface" ID="{6FF2A9A3-053E-4BBF-A248-80B781A39E7D}">
+					<ChildrenList>
+						<Action Name="" ID="{5DFD9CCD-0BA4-43C0-B11F-B2129457CF2A}" ShortID="17198186">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Validate_Button_Interface" ID="{CC26D1E4-55C4-41FA-8787-B9E3FD4E73D0}" WorkUnitID="{7D4B3D91-103F-4B69-BC1D-058247F293E6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Load_ENE_In_DEF_Room" ID="{03851AB9-E04F-4B6C-9668-10BEF89C89A5}">
+					<ChildrenList>
+						<Action Name="" ID="{5D98FD24-70F8-4BAE-B54F-4F5F818A0D42}" ShortID="234741789">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Load_ENE_In_DEF_Room" ID="{2C22C5E7-AAB9-4B26-80DE-29486DCB7390}" WorkUnitID="{0826D0AD-C706-480C-A235-0CE47C6DD567}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Load_MUN_In_ATK_Room" ID="{4320AA7F-6B12-4C16-A977-16A5A6313ECF}">
+					<ChildrenList>
+						<Action Name="" ID="{DA0476DB-8602-4EA1-B0A5-991BEE2E30A9}" ShortID="93960792">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Load_MUN_In_ATK_Room" ID="{276D7334-6DD3-4C0B-A972-3B7CA155252C}" WorkUnitID="{0826D0AD-C706-480C-A235-0CE47C6DD567}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Take_ENE_In_Energy_Room" ID="{0D343941-4647-4A68-BF8C-8529D1FBF822}">
+					<ChildrenList>
+						<Action Name="" ID="{08082685-6FBE-4374-BA46-93237BAD1F0E}" ShortID="142368634">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Take_ENE_In_Energy_Room" ID="{D2CCABAF-65FE-4372-B878-63AA78D86F3D}" WorkUnitID="{0826D0AD-C706-480C-A235-0CE47C6DD567}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Take_MUN_In_Munition_Room" ID="{31DBF242-C204-4992-9E12-B314D3BB44D6}">
+					<ChildrenList>
+						<Action Name="" ID="{E1734FA3-324B-4C4F-82FA-4F840444EE65}" ShortID="1057188853">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Take_MUN_In_Munition_Room" ID="{8008DC65-CCFF-4EBD-8772-2D5EBF5DB1D4}" WorkUnitID="{0826D0AD-C706-480C-A235-0CE47C6DD567}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Jump_Character" ID="{A13E396F-5EA5-439F-B1AA-6C9B591BA526}">
+					<ChildrenList>
+						<Action Name="" ID="{288C1E77-2935-4DA4-B9EB-0568EF5D7433}" ShortID="930752607">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Jump_Character" ID="{3E563552-8C85-43F4-80F2-6BCFAB99AD41}" WorkUnitID="{0547996C-61D5-47CF-8962-7AA76CA597D8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="DEF_Activation" ID="{0FA74169-4D8D-42D0-9DA9-485A1DB68AFE}">
+					<ChildrenList>
+						<Action Name="" ID="{E72EBBB5-8DD0-4097-A460-84DCCB9AE48D}" ShortID="787311786">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DEF_Activation" ID="{0F26BCC2-BB8E-4128-AC31-CA05FD6830E3}" WorkUnitID="{93D8FFD3-76FF-4AC5-91C2-8CD6B2F3595F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="DEF_Deactivation" ID="{45666E65-8C59-4820-899B-5A8322E6B67A}">
+					<ChildrenList>
+						<Action Name="" ID="{3FE2092A-7CAE-4512-AA8D-0F70E6880743}" ShortID="1045216742">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DEF_Deactivation" ID="{E95DA536-CCBD-4009-A86E-C9AD0EA1C169}" WorkUnitID="{93D8FFD3-76FF-4AC5-91C2-8CD6B2F3595F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0C075053-2C10-44F0-9324-DF343A8BD597}" ShortID="194531376">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DEF_Activation" ID="{0F26BCC2-BB8E-4128-AC31-CA05FD6830E3}" WorkUnitID="{93D8FFD3-76FF-4AC5-91C2-8CD6B2F3595F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ATK_Gun_Shoot_Alarm_Play" ID="{CAE61FA2-17C8-4BBD-A48B-4DD103AB1A15}">
+					<ChildrenList>
+						<Action Name="" ID="{59362BBE-64E1-4DD2-B70F-86D6175C4E90}" ShortID="44103539">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ATK_Gun_Shoot_Alarm" ID="{F3D6E56A-2B5E-44AD-AE53-60D5C6BC98CA}" WorkUnitID="{2B4BF115-6472-4572-AA62-61BCFD13A547}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Amb_EXT" ID="{3F0E0ECC-4300-46D0-9AFC-9CE7D64B90B5}">
+					<ChildrenList>
+						<Action Name="" ID="{A742768E-F98C-431E-B591-7818A5EC5844}" ShortID="256711676">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Amb_EXT" ID="{42F529BB-36F4-4EB8-8021-31A4CBB60F3D}" WorkUnitID="{F5400468-2461-471D-984D-5BD6CC611739}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Sound_Repair_Room" ID="{0240C629-9DA1-467E-8D22-94A5179420F3}">
+					<ChildrenList>
+						<Action Name="" ID="{DC655CAE-FBE2-44CD-A29E-2388EC157527}" ShortID="547214238">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sound_Repair_Room" ID="{4658BBED-245E-44BF-8482-51F1A09F03D6}" WorkUnitID="{DC2C1FCB-B06E-4175-9567-018CDDE84AB9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="JAM_Activation_Play" ID="{DBE41021-A40E-4743-8105-CA2D37A9372E}">
+					<ChildrenList>
+						<Action Name="" ID="{A122C1BC-6D39-4A5A-B8FC-0F999659DD89}" ShortID="248605204">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="JAM_Activation" ID="{D747E2D5-93EB-4143-8AB2-06CCDE1FC0C8}" WorkUnitID="{EF14ECD4-A774-4499-84D2-FD56B67E43EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="JAM_Deactivation" ID="{714D7B4E-18DA-42BB-B609-EF78CD1929F0}">
+					<ChildrenList>
+						<Action Name="" ID="{D1FFE6E8-BA08-4B4B-B349-C31DE35A6050}" ShortID="1044964538">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="JAM_Deactivation" ID="{9A35F3F3-8750-40F1-B324-DF6F3BB7375D}" WorkUnitID="{EF14ECD4-A774-4499-84D2-FD56B67E43EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="JAM_Hacked_Room" ID="{ABCD106C-FA26-4E54-8FD2-64B17547E3BF}">
+					<ChildrenList>
+						<Action Name="" ID="{552692DB-3857-4714-B9F4-980AE6597405}" ShortID="293918962">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="JAM_Hacked_Room" ID="{89D8AB8A-A5B0-4F2A-8A30-7627D2D9F777}" WorkUnitID="{EF14ECD4-A774-4499-84D2-FD56B67E43EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ATK_Activation" ID="{3A572449-9B8D-4769-B99F-6121D0A34C8D}">
+					<ChildrenList>
+						<Action Name="" ID="{51E91749-0384-4FAD-B647-1FA28D937059}" ShortID="816191428">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ATK_Activation" ID="{558445C9-0D68-4882-9128-7B29957C06AE}" WorkUnitID="{2B4BF115-6472-4572-AA62-61BCFD13A547}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ATK_Damaged_Room_After_Gun_Shoot" ID="{7A7B3265-936F-4E50-AAA1-5A5F7016865E}">
+					<ChildrenList>
+						<Action Name="" ID="{EF9919C3-A958-4624-82FD-77F773407867}" ShortID="339293645">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ATK_Damaged_Room_After_Gun_Shoot" ID="{AF8D82C3-3D00-4C64-8FC0-44B7A93086D5}" WorkUnitID="{2B4BF115-6472-4572-AA62-61BCFD13A547}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ATK_Shield_Impact" ID="{EEED4C44-C8C3-43F9-AEC8-E1D705E89160}">
+					<ChildrenList>
+						<Action Name="" ID="{927C9CB9-AA76-41F7-B492-21F536C09ABE}" ShortID="939136729">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ATK_Shield_Impact" ID="{9BCD0EE3-1C1E-4796-BC5A-2F0804DD64A0}" WorkUnitID="{2B4BF115-6472-4572-AA62-61BCFD13A547}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="JAM_Activation_Stop" ID="{2D2460D1-3388-4C3E-9016-903A74A7AC30}">
+					<ChildrenList>
+						<Action Name="" ID="{B75EF33C-AC71-4141-BAE3-1D5787CC38B8}" ShortID="406319315">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="JAM_Activation" ID="{D747E2D5-93EB-4143-8AB2-06CCDE1FC0C8}" WorkUnitID="{EF14ECD4-A774-4499-84D2-FD56B67E43EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ATK_Gun_Shoot_Alarm_Stop" ID="{8D441C8C-DF10-4AD7-A0D4-94BDBAF7E32B}">
+					<ChildrenList>
+						<Action Name="" ID="{8A8EB375-6FC0-43ED-B723-04A6E85AE20B}" ShortID="1000788297">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ATK_Gun_Shoot_Alarm" ID="{F3D6E56A-2B5E-44AD-AE53-60D5C6BC98CA}" WorkUnitID="{2B4BF115-6472-4572-AA62-61BCFD13A547}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

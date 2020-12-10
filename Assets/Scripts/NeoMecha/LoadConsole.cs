@@ -30,6 +30,16 @@ namespace NeoMecha
                 characterResource.LetResourceDown();
                 resource.Consume();
 
+                switch (resourceType)
+                {
+                    case ResourceTypes.Ammunition:
+                        AkSoundEngine.PostEvent("Load_ENE_In_DEF_Room", gameObject);
+                        break;
+                    case ResourceTypes.Energy: 
+                        AkSoundEngine.PostEvent("Load_MUN_In_ATK_Room", gameObject);
+                        break;
+                }
+
                 IsLoaded = true;
                 OnLoad.Invoke();
             }

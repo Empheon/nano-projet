@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Animations;
+using NeoMecha.ConsoleControls.ButtonControl;
 using UnityEngine;
 
 namespace NeoMecha.ConsoleControls.ShieldAim
@@ -16,6 +17,8 @@ namespace NeoMecha.ConsoleControls.ShieldAim
 
         private PositionTarget[] _targets;
         private int _currentTargetIndex = 1;
+        
+        [SerializeField] private ButtonControlAnimation buttonControlAnimation;
 
         private void Start()
         {
@@ -28,8 +31,15 @@ namespace NeoMecha.ConsoleControls.ShieldAim
         {
             if (_targets.All(trg => !trg.IsActive)) return false;
 
+            // go back and re-check if room is targetable
+            _currentTargetIndex--;
+            Next();
+            
             shieldPlacer.TurnOn();
             shieldPlacer.PlaceAt(_targets[_currentTargetIndex].target.position);
+
+            buttonControlAnimation.Activate(_currentTargetIndex);
+            buttonControlAnimation.Focus(_currentTargetIndex);
 
             return true;
         }
@@ -37,26 +47,40 @@ namespace NeoMecha.ConsoleControls.ShieldAim
         public override void Desactivate()
         {
             shieldPlacer.TurnOff();
+
+            buttonControlAnimation.Desactivate(_currentTargetIndex);
         }
 
         public override void Next()
         {
-            _currentTargetIndex = (_currentTargetIndex + 1) % _targets.Length;
+            _currentTargetIndex = Mathf.Min(_currentTargetIndex + 1, _targets.Length - 1);
             var target = _targets[_currentTargetIndex];
             
             shieldPlacer.PlaceAt(target.target.position);
 
-            if(!target.IsActive) Next();
+            buttonControlAnimation.Focus(_currentTargetIndex);
+
+            if (!target.IsActive)
+            {
+                if(_currentTargetIndex == _targets.Length - 1) Previous();
+                else Next();
+            }
         }
 
         public override void Previous()
         {
-            _currentTargetIndex = (_currentTargetIndex + _targets.Length - 1) % _targets.Length;
+            _currentTargetIndex = Mathf.Max(_currentTargetIndex - 1, 0);
             var target = _targets[_currentTargetIndex];
             
             shieldPlacer.PlaceAt(target.target.position);
-            
-            if(!target.IsActive) Previous();
+
+            buttonControlAnimation.Focus(_currentTargetIndex);
+
+            if (!target.IsActive)
+            {
+                if(_currentTargetIndex == 0) Next();
+                else Previous();
+            }
         }
 
         public override void Validate()

@@ -26,6 +26,21 @@ namespace NeoMecha
 
         private Room m_currentRoom;
 
+        [SerializeField]
+        private ConsoleSpriteSwitcher consoleSpriteSwitcher;
+
+        protected override void Start()
+        {
+            base.Start();
+            room.OnDamaged.AddListener(consoleSpriteSwitcher.OnBreak);
+            room.OnFixed.AddListener(consoleSpriteSwitcher.OnFix);
+        }
+        protected override void PreAction()
+        {
+            base.PreAction();
+            consoleSpriteSwitcher.OnActivate();
+        }
+
         protected override void DoAction(Room room)
         {
             m_currentRoom = room;

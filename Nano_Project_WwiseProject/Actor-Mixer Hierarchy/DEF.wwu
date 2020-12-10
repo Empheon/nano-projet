@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{93D8FFD3-76FF-4AC5-91C2-8CD6B2F3595F}" SchemaVersion="97">
+	<AudioObjects>
+		<WorkUnit Name="DEF" ID="{93D8FFD3-76FF-4AC5-91C2-8CD6B2F3595F}" PersistMode="Standalone">
+			<ChildrenList>
+				<BlendContainer Name="DEF_Activation" ID="{0F26BCC2-BB8E-4128-AC31-CA05FD6830E3}" ShortID="832602367">
+					<PropertyList>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Reverb" ID="{5339937A-76EC-45DB-9526-2A6B447D0C8E}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="DEF_Deactivation_1" ID="{C4021E5C-1902-4CC3-A87A-772642120F9C}" ShortID="444158634">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="DEF_Deactivation_1" ID="{3DB62E81-4FB3-47C5-8A77-37AAECA5D202}">
+									<Language>SFX</Language>
+									<AudioFile>DEF_Deactivation_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="863566075"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="DEF_Deactivation_1" ID="{3DB62E81-4FB3-47C5-8A77-37AAECA5D202}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="DEF_Deactivation_2" ID="{11379CC8-6EA8-4D7E-AC8D-B15B9F6C6D8E}" ShortID="32878966">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="DEF_Deactivation_2" ID="{EB83EFCC-1F77-44A6-A490-1A5BD372F63E}">
+									<Language>SFX</Language>
+									<AudioFile>DEF_Deactivation_2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="606172872"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="DEF_Deactivation_2" ID="{EB83EFCC-1F77-44A6-A490-1A5BD372F63E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="DEF_Deactivation_3" ID="{AB1CDE81-1EAB-4BE5-848A-A931144C2AA2}" ShortID="733203002">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="DEF_Deactivation_3" ID="{6B518729-877A-497E-9DD1-3121DBC5D827}">
+									<Language>SFX</Language>
+									<AudioFile>DEF_Deactivation_3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="384703938"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="DEF_Deactivation_3" ID="{6B518729-877A-497E-9DD1-3121DBC5D827}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="DEF_Deactivation_4" ID="{46C7AC3A-CED3-4804-9A24-22E119069698}" ShortID="731503510">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="DEF_Deactivation_4" ID="{1F39166B-BC87-47B1-B615-2C8CF1DDBFFF}">
+									<Language>SFX</Language>
+									<AudioFile>DEF_Deactivation_4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="507433643"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="DEF_Deactivation_4" ID="{1F39166B-BC87-47B1-B615-2C8CF1DDBFFF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</BlendContainer>
+				<Sound Name="DEF_Deactivation" ID="{E95DA536-CCBD-4009-A86E-C9AD0EA1C169}" ShortID="1025033226">
+					<PropertyList>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Reverb" ID="{5339937A-76EC-45DB-9526-2A6B447D0C8E}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="DEF_Deactivation" ID="{C588D9F1-AE5C-48EA-8E29-28202C48E31E}">
+							<Language>SFX</Language>
+							<AudioFile>DEF_Deactivation.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="923719457"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="DEF_Deactivation" ID="{C588D9F1-AE5C-48EA-8E29-28202C48E31E}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
