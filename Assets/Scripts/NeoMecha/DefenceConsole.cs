@@ -31,14 +31,12 @@ namespace NeoMecha
         {
             foreach (Target targetInList in TargetList)
             {
-                if (targetInList.Room == room)
-                {
-                    targetInList.Room.OnDefenceReceived();
-                } else
-                {
-                    targetInList.Room.OnBreakDefenceReceived();
-                }
+                targetInList.Room.OnBreakDefenceReceived();
             }
+            
+            // we need to call new defence AFTER deactivating other defences
+            room.OnDefenceReceived();
+            
             m_loadConsole.UnLoad();
         }
 
