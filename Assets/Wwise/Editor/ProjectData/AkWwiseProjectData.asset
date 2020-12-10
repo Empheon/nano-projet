@@ -30,7 +30,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 6806d1fcf7d3464ebfd4348b11cfa3b5
     GuidInternal: 
-    m_lastTime: -8585940854284077162
+    m_lastTime: -8585940775357106363
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -60,8 +60,17 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 15d53b9c307fca4f9ee085cc956a3630
     GuidInternal: 
-    m_lastTime: -8585940854257908810
+    m_lastTime: -8585940124883455880
     List:
+    - name: Game_Menu
+      guid: cd62eeeae0ceda48ac519ed9476f3a8b
+      id: 636067499
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Game_Menu
+        ObjectType: 7
+      Path: Default Work Unit\Game_Menu
     - name: Main
       guid: b980d8a3b6c6ba4a8af2b7965e411ba9
       id: 3161908922
@@ -79,7 +88,7 @@ MonoBehaviour:
     ParentPath: Bruitages
     guid: a6f822f6fd73b84593f05ec6db5e4a92
     GuidInternal: 
-    m_lastTime: -8585940854284107203
+    m_lastTime: -8585940124890295960
     List:
     - name: Amb_EXT
       guid: cc0e0e3f0043d0469afc9ce7d64b90b5
@@ -103,20 +112,56 @@ MonoBehaviour:
         ObjectType: 3
       Path: Bruitages\ATK_Activation
       maxAttenuation: 0
-      maxDuration: 10.415185
-      minDuration: 10.415185
-    - name: ATK_Gun_Shoot_Alarm
-      guid: a21fe6cac817bd4ba48b4dd103ab1a15
-      id: 2442204352
+      maxDuration: 5.861333
+      minDuration: 5.073198
+    - name: ATK_Damaged_Room_After_Gun_Shoot
+      guid: 65327b7a6f93504eaaa15a5f7016865e
+      id: 1010736921
       PathAndIcons:
       - ElementName: Bruitages
         ObjectType: 12
-      - ElementName: ATK_Gun_Shoot_Alarm
+      - ElementName: ATK_Damaged_Room_After_Gun_Shoot
         ObjectType: 3
-      Path: Bruitages\ATK_Gun_Shoot_Alarm
+      Path: Bruitages\ATK_Damaged_Room_After_Gun_Shoot
+      maxAttenuation: 0
+      maxDuration: 4.715185
+      minDuration: 4.715185
+    - name: ATK_Gun_Shoot_Alarm_Play
+      guid: a21fe6cac817bd4ba48b4dd103ab1a15
+      id: 1532752073
+      PathAndIcons:
+      - ElementName: Bruitages
+        ObjectType: 12
+      - ElementName: ATK_Gun_Shoot_Alarm_Play
+        ObjectType: 3
+      Path: Bruitages\ATK_Gun_Shoot_Alarm_Play
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: ATK_Gun_Shoot_Alarm_Stop
+      guid: 8c1c448d10dfd74aa0d494bdbaf7e32b
+      id: 3055272175
+      PathAndIcons:
+      - ElementName: Bruitages
+        ObjectType: 12
+      - ElementName: ATK_Gun_Shoot_Alarm_Stop
+        ObjectType: 3
+      Path: Bruitages\ATK_Gun_Shoot_Alarm_Stop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: ATK_Shield_Impact
+      guid: 444cedeec3c8f943aec8e1d705e89160
+      id: 1440017180
+      PathAndIcons:
+      - ElementName: Bruitages
+        ObjectType: 12
+      - ElementName: ATK_Shield_Impact
+        ObjectType: 3
+      Path: Bruitages\ATK_Shield_Impact
+      maxAttenuation: 0
+      maxDuration: 1.852
+      minDuration: 1.852
     - name: DEF_Activation
       guid: 6941a70f8d4dd0429da9485a1db68afe
       id: 3815251225
@@ -141,18 +186,30 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.557333
       minDuration: 1.557333
-    - name: JAM_Activation
+    - name: JAM_Activation_Play
       guid: 2110e4db0ea443478105ca2d37a9372e
-      id: 3131295202
+      id: 3178440203
       PathAndIcons:
       - ElementName: Bruitages
         ObjectType: 12
-      - ElementName: JAM_Activation
+      - ElementName: JAM_Activation_Play
         ObjectType: 3
-      Path: Bruitages\JAM_Activation
+      Path: Bruitages\JAM_Activation_Play
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: JAM_Activation_Stop
+      guid: d160242d88333e4c9016903a74a7ac30
+      id: 2001103521
+      PathAndIcons:
+      - ElementName: Bruitages
+        ObjectType: 12
+      - ElementName: JAM_Activation_Stop
+        ObjectType: 3
+      Path: Bruitages\JAM_Activation_Stop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: JAM_Deactivation
       guid: 4e7b4d71da18bb42b609ef78cd1929f0
       id: 4227203051
@@ -213,6 +270,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.787
       minDuration: 0.721682
+    - name: Menu_Return_Button_Interface
+      guid: 94cfcc3cb1b6a746badb2239f83d5d30
+      id: 3537179580
+      PathAndIcons:
+      - ElementName: Bruitages
+        ObjectType: 12
+      - ElementName: Menu_Return_Button_Interface
+        ObjectType: 3
+      Path: Bruitages\Menu_Return_Button_Interface
+      maxAttenuation: 0
+      maxDuration: 0.0855
+      minDuration: 0.0855
     - name: Menu_Selection_Button
       guid: 4f416cfe1819de488604583a6d999019
       id: 406646306
@@ -237,18 +306,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.01549
       minDuration: 0.01549
-    - name: Return_Button_Interface
-      guid: 94cfcc3cb1b6a746badb2239f83d5d30
-      id: 3975149470
+    - name: Menu_Validate_Button_Interface
+      guid: a3a9f26f3e05bf4ba24880b781a39e7d
+      id: 3462839464
       PathAndIcons:
       - ElementName: Bruitages
         ObjectType: 12
-      - ElementName: Return_Button_Interface
+      - ElementName: Menu_Validate_Button_Interface
         ObjectType: 3
-      Path: Bruitages\Return_Button_Interface
+      Path: Bruitages\Menu_Validate_Button_Interface
       maxAttenuation: 0
-      maxDuration: 0.0855
-      minDuration: 0.0855
+      maxDuration: 0.19725
+      minDuration: 0.19725
     - name: Sound_Repair_Room
       guid: 29c64002a19d7e468d2294a5179420f3
       id: 358592376
@@ -285,18 +354,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.220333
       minDuration: 0.165064
-    - name: Validate_Button_Interface
-      guid: a3a9f26f3e05bf4ba24880b781a39e7d
-      id: 1210150642
-      PathAndIcons:
-      - ElementName: Bruitages
-        ObjectType: 12
-      - ElementName: Validate_Button_Interface
-        ObjectType: 3
-      Path: Bruitages\Validate_Button_Interface
-      maxAttenuation: 0
-      maxDuration: 0.19725
-      minDuration: 0.19725
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Default Work Unit
@@ -313,7 +370,7 @@ MonoBehaviour:
     ParentPath: Musiques
     guid: aedac252a8326e4da8d89994003a8369
     GuidInternal: 
-    m_lastTime: -8585940854284097132
+    m_lastTime: -8585940775434607272
     List:
     - name: Music_Menu
       guid: ecefc1a9ddfd0b48ba816fb2ecb9820a

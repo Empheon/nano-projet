@@ -25,6 +25,7 @@ namespace NeoMecha
         public UnityEvent OnDefended;
         public UnityEvent OnDamaged;
         public UnityEvent OnBreakDefence;
+        public UnityEvent OnDefenceHit;
         public UnityEvent OnJammed;
         public UnityEvent OnUnJammed;
         public UnityEvent OnFixed;
@@ -33,6 +34,7 @@ namespace NeoMecha
         {
             if (IsDefended)
             {
+                OnDefenceHit.Invoke();
                 OnBreakDefenceReceived();
                 return;
             }

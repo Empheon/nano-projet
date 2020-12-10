@@ -20,12 +20,14 @@ namespace Animations
 
         public void TurnOn()
         {
+            AkSoundEngine.PostEvent("ATK_Gun_Shoot_Alarm_Play", gameObject);
             laserParticles.Play();
             laserFlash.Play();
         }
         
         public void TurnOff()
         {
+            AkSoundEngine.PostEvent("ATK_Gun_Shoot_Alarm_Stop", gameObject);
             laserParticles.Stop();
             laserFlash.Stop();
         }

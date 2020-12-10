@@ -6,31 +6,38 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using DG.Tweening;
+using NeoMecha;
 
 namespace Animations
 {
     public class Rocket : MonoBehaviour
     {
-        [SerializeField]
-        private float duration;
-        [SerializeField]
-        private float rotationNumbers;
-        [SerializeField]
-        private Ease easing = Ease.Linear;
+        [SerializeField] private float duration;
+        [SerializeField] private float rotationNumbers;
+        [SerializeField] private Ease easing = Ease.Linear;
 
-        [SerializeField]
-        private AnimationCurve animationCurve;
+        [SerializeField] private AnimationCurve animationCurve;
+        [SerializeField] private GameObject explosionPrefab;
+        [SerializeField] private GameObject softExplosionPrefab;
+        [SerializeField] private Vector3 explosionPositionOffset;
 
         private PathCreator m_pathCreator;
         private float m_timeOnPath;
         private float m_normalAngleOnPath;
 
-        public void Init(PathCreator pathCreator, Action callback)
+        public void Init(PathCreator pathCreator, Action callback, Room room)
         {
             m_pathCreator = pathCreator;
-            DOTween.To(() => m_timeOnPath, (x) => m_timeOnPath = x, 1, duration).SetEase(animationCurve).OnComplete(() => {
-                callback();
-                Destroy(gameObject);
+            DOTween
+                .To(() => m_timeOnPath, (x) => m_timeOnPath = x, 1, duration)
+                .SetEase(animationCurve)
+                .OnComplete(() => {
+                    Instantiate(
+                        room.IsDefended ? softExplosionPrefab : explosionPrefab,
+                        transform.TransformPoint(explosionPositionOffset),
+                        transform.rotation);
+                    callback();
+                    Destroy(gameObject);
             });
 
             DOTween.To(() => m_normalAngleOnPath, (x) => m_normalAngleOnPath = x, 360 * rotationNumbers, duration).SetEase(animationCurve);
