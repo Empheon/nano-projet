@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Animations;
+using NeoMecha.ConsoleControls.ButtonControl;
 using UnityEngine;
 
 namespace NeoMecha.ConsoleControls.ShieldAim
@@ -16,6 +17,8 @@ namespace NeoMecha.ConsoleControls.ShieldAim
 
         private PositionTarget[] _targets;
         private int _currentTargetIndex = 1;
+        
+        [SerializeField] private ButtonControlAnimation buttonControlAnimation;
 
         private void Start()
         {
@@ -31,12 +34,17 @@ namespace NeoMecha.ConsoleControls.ShieldAim
             shieldPlacer.TurnOn();
             shieldPlacer.PlaceAt(_targets[_currentTargetIndex].target.position);
 
+            buttonControlAnimation.Activate(_currentTargetIndex);
+            buttonControlAnimation.Focus(_currentTargetIndex);
+
             return true;
         }
 
         public override void Desactivate()
         {
             shieldPlacer.TurnOff();
+
+            buttonControlAnimation.Desactivate(_currentTargetIndex);
         }
 
         public override void Next()
@@ -46,7 +54,9 @@ namespace NeoMecha.ConsoleControls.ShieldAim
             
             shieldPlacer.PlaceAt(target.target.position);
 
-            if(!target.IsActive) Next();
+            buttonControlAnimation.Focus(_currentTargetIndex);
+
+            if (!target.IsActive) Next();
         }
 
         public override void Previous()
@@ -55,8 +65,10 @@ namespace NeoMecha.ConsoleControls.ShieldAim
             var target = _targets[_currentTargetIndex];
             
             shieldPlacer.PlaceAt(target.target.position);
-            
-            if(!target.IsActive) Previous();
+
+            buttonControlAnimation.Focus(_currentTargetIndex);
+
+            if (!target.IsActive) Previous();
         }
 
         public override void Validate()

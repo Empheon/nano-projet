@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Animations;
+using NeoMecha.ConsoleControls.ButtonControl;
 using UnityEngine;
 
 namespace NeoMecha.ConsoleControls.LaserAim
@@ -13,6 +14,8 @@ namespace NeoMecha.ConsoleControls.LaserAim
 
         private PositionTarget[] _targets;
         private int _currentTargetIndex;
+
+        [SerializeField] private ButtonControlAnimation buttonControlAnimation;
 
         private void Start()
         {
@@ -26,13 +29,17 @@ namespace NeoMecha.ConsoleControls.LaserAim
             
             laser.TurnOn();
             laser.AimAt(_targets[_currentTargetIndex].target.position);
-            
+
+            buttonControlAnimation.Activate(_currentTargetIndex);
+            buttonControlAnimation.Focus(_currentTargetIndex);
+
             return true;
         }
 
         public override void Desactivate()
         {
             laser.TurnOff();
+            buttonControlAnimation.Desactivate(_currentTargetIndex);
         }
 
         public override void Next()
@@ -40,6 +47,8 @@ namespace NeoMecha.ConsoleControls.LaserAim
             _currentTargetIndex = Mathf.Min(_currentTargetIndex + 1, _targets.Length - 1);
             
             laser.AimAt(_targets[_currentTargetIndex].target.position);
+
+            buttonControlAnimation.Focus(_currentTargetIndex);
         }
 
         public override void Previous()
@@ -47,6 +56,8 @@ namespace NeoMecha.ConsoleControls.LaserAim
             _currentTargetIndex = Mathf.Max(_currentTargetIndex - 1, 0);
 
             laser.AimAt(_targets[_currentTargetIndex].target.position);
+
+            buttonControlAnimation.Focus(_currentTargetIndex);
         }
 
         public override void Validate()

@@ -14,6 +14,8 @@ namespace UI
         [SerializeField]
         private float time = 180;
 
+        [SerializeField] private float timeScale = 0.5f;
+
         public UnityEvent OnTimeout;
 
         private TextMeshProUGUI m_text;
@@ -26,7 +28,7 @@ namespace UI
 
         private void Update()
         {
-            time -= Time.deltaTime;
+            time -= Time.deltaTime * timeScale;
             UpdateText(time);
 
             if (time <= 0f)

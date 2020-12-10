@@ -7,43 +7,38 @@ namespace NeoMecha.ConsoleControls.ButtonControl
     public class ButtonTarget : ConsoleTarget
     {
         [Header("Button Look")] 
-        [SerializeField] private Color focusColor;
-        [SerializeField] private Color inactiveColor;
+        [SerializeField] private Sprite focusSprite;
+        [SerializeField] private Sprite inactiveSprite;
         
         private SpriteRenderer _renderer;
-        private Color _originalColor;
         
-        private void Start()
+        private void OnEnable()
         {
             _renderer = GetComponent<SpriteRenderer>();
-            _originalColor = _renderer.color;
         }
         
-        public override void Validate()
-        {
-            OnValidate.Invoke();
-        }
+        public override void Validate() { }
 
         public override void Activate()
         {
             IsActive = true;
-            _renderer.color = _originalColor;
+            _renderer.enabled = true;
         }
 
         public override void Desactivate()
         {
             IsActive = false;
-            _renderer.color = inactiveColor;
+            _renderer.enabled = false;
         }
 
         public void Focus()
         {
-            _renderer.color = focusColor;
+            _renderer.sprite = focusSprite;
         }
 
         public void Blur()
         {
-            _renderer.color = _originalColor;
+            _renderer.sprite = inactiveSprite;
         }
     }
 }

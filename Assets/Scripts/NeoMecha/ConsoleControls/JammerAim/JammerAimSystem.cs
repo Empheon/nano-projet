@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using Animations;
+using NeoMecha.ConsoleControls.ButtonControl;
 using UnityEngine;
 
 namespace NeoMecha.ConsoleControls.JammerAim
@@ -11,6 +12,8 @@ namespace NeoMecha.ConsoleControls.JammerAim
 
         private PositionTarget[] _targets;
         private int _currentTargetIndex;
+
+        [SerializeField] private ButtonControlAnimation buttonControlAnimation;
 
         private void Start()
         {
@@ -24,13 +27,18 @@ namespace NeoMecha.ConsoleControls.JammerAim
             
             jammer.TurnOn();
             jammer.AimAt(_targets[_currentTargetIndex].target.position);
-            
+
+            buttonControlAnimation.Activate(_currentTargetIndex);
+            buttonControlAnimation.Focus(_currentTargetIndex);
+
             return true;
         }
 
         public override void Desactivate()
         {
             jammer.TurnOff();
+
+            buttonControlAnimation.Desactivate(_currentTargetIndex);
         }
 
         public override void Next()
@@ -38,6 +46,8 @@ namespace NeoMecha.ConsoleControls.JammerAim
             _currentTargetIndex = Mathf.Min(_currentTargetIndex + 1, _targets.Length - 1);
             
             jammer.AimAt(_targets[_currentTargetIndex].target.position);
+
+            buttonControlAnimation.Focus(_currentTargetIndex);
         }
 
         public override void Previous()
@@ -45,6 +55,8 @@ namespace NeoMecha.ConsoleControls.JammerAim
             _currentTargetIndex = Mathf.Max(_currentTargetIndex - 1, 0);
 
             jammer.AimAt(_targets[_currentTargetIndex].target.position);
+
+            buttonControlAnimation.Focus(_currentTargetIndex);
         }
 
         public override void Validate()
