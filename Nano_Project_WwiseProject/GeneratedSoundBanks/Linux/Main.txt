@@ -6,11 +6,13 @@ Event	ID	Name			Wwise Object Path	Notes
 	1010736921	ATK_Damaged_Room_After_Gun_Shoot			\Bruitages\ATK_Damaged_Room_After_Gun_Shoot	
 	1331881583	Take_MUN_In_Munition_Room			\Bruitages\Take_MUN_In_Munition_Room	
 	1440017180	ATK_Shield_Impact			\Bruitages\ATK_Shield_Impact	
+	1532752073	ATK_Gun_Shoot_Alarm_Play			\Bruitages\ATK_Gun_Shoot_Alarm_Play	
 	1546397745	Load_MUN_In_ATK_Room			\Bruitages\Load_MUN_In_ATK_Room	
+	2001103521	JAM_Activation_Stop			\Bruitages\JAM_Activation_Stop	
 	2374125340	JAM_Hacked_Room			\Bruitages\JAM_Hacked_Room	
-	2442204352	ATK_Gun_Shoot_Alarm			\Bruitages\ATK_Gun_Shoot_Alarm	
 	2833402766	Load_ENE_In_DEF_Room			\Bruitages\Load_ENE_In_DEF_Room	
-	3131295202	JAM_Activation			\Bruitages\JAM_Activation	
+	3055272175	ATK_Gun_Shoot_Alarm_Stop			\Bruitages\ATK_Gun_Shoot_Alarm_Stop	
+	3178440203	JAM_Activation_Play			\Bruitages\JAM_Activation_Play	
 	3402899663	Amb_EXT			\Bruitages\Amb_EXT	
 	3815251225	DEF_Activation			\Bruitages\DEF_Activation	
 	4099086052	ATK_Activation			\Bruitages\ATK_Activation	

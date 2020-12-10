@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="636067499" Language="SFX" Hash="174323921">
+		<SoundBank Id="636067499" Language="SFX" Hash="2062915709">
 			<ObjectPath>\SoundBanks\Default Work Unit\Game_Menu</ObjectPath>
 			<ShortName>Game_Menu</ShortName>
 			<Path>Game_Menu.bnk</Path>
@@ -74,15 +74,18 @@
 				</Event>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="686008840">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3103207164">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<IncludedAuxBusses>
 				<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
 			</IncludedAuxBusses>
+			<GameParameters>
+				<GameParameter Id="4179668880" Name="Master_Volume" ObjectPath="\Game Parameters\Default Work Unit\Master_Volume"/>
+			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="220338304">
+		<SoundBank Id="3161908922" Language="SFX" Hash="4024754808">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -153,7 +156,7 @@
 						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
 					</AuxBusSends>
 				</Event>
-				<Event Id="2442204352" Name="ATK_Gun_Shoot_Alarm" ObjectPath="\Events\Bruitages\ATK_Gun_Shoot_Alarm" DurationType="Infinite">
+				<Event Id="1532752073" Name="ATK_Gun_Shoot_Alarm_Play" ObjectPath="\Events\Bruitages\ATK_Gun_Shoot_Alarm_Play" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="796775262" Language="SFX">
 							<ShortName>Gun_Shoot_Alarm.wav</ShortName>
@@ -164,6 +167,7 @@
 						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
 					</AuxBusSends>
 				</Event>
+				<Event Id="3055272175" Name="ATK_Gun_Shoot_Alarm_Stop" ObjectPath="\Events\Bruitages\ATK_Gun_Shoot_Alarm_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1440017180" Name="ATK_Shield_Impact" ObjectPath="\Events\Bruitages\ATK_Shield_Impact" DurationType="OneShot" DurationMin="1.852000" DurationMax="1.852000">
 					<IncludedMemoryFiles>
 						<File Id="424883624" Language="SFX">
@@ -209,7 +213,7 @@
 						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
 					</AuxBusSends>
 				</Event>
-				<Event Id="3131295202" Name="JAM_Activation" ObjectPath="\Events\Bruitages\JAM_Activation" DurationType="Infinite">
+				<Event Id="3178440203" Name="JAM_Activation_Play" ObjectPath="\Events\Bruitages\JAM_Activation_Play" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="206436918" Language="SFX">
 							<ShortName>Sfx_Activate_Button.wav</ShortName>
@@ -228,6 +232,7 @@
 						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
 					</AuxBusSends>
 				</Event>
+				<Event Id="2001103521" Name="JAM_Activation_Stop" ObjectPath="\Events\Bruitages\JAM_Activation_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="4227203051" Name="JAM_Deactivation" ObjectPath="\Events\Bruitages\JAM_Deactivation" DurationType="OneShot" DurationMin="0.429333" DurationMax="0.429333">
 					<IncludedMemoryFiles>
 						<File Id="668761441" Language="SFX">
