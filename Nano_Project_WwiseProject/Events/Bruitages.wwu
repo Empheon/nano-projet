@@ -122,6 +122,16 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{0C075053-2C10-44F0-9324-DF343A8BD597}" ShortID="194531376">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DEF_Activation" ID="{0F26BCC2-BB8E-4128-AC31-CA05FD6830E3}" WorkUnitID="{93D8FFD3-76FF-4AC5-91C2-8CD6B2F3595F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="ATK_Gun_Shoot_Alarm_Play" ID="{CAE61FA2-17C8-4BBD-A48B-4DD103AB1A15}">
