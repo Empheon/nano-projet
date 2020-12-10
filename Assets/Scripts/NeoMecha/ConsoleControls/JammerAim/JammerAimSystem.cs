@@ -25,6 +25,10 @@ namespace NeoMecha.ConsoleControls.JammerAim
         {
             if (_targets.All(trg => !trg.IsActive)) return false;
             
+            // go back and re-check if room is targetable
+            _currentTargetIndex--;
+            Next();
+            
             jammer.TurnOn();
             jammer.AimAt(_targets[_currentTargetIndex].target.position);
 
@@ -44,19 +48,43 @@ namespace NeoMecha.ConsoleControls.JammerAim
         public override void Next()
         {
             _currentTargetIndex = Mathf.Min(_currentTargetIndex + 1, _targets.Length - 1);
+            var target = _targets[_currentTargetIndex];
             
-            jammer.AimAt(_targets[_currentTargetIndex].target.position);
+            jammer.AimAt(target.target.position);
 
             buttonControlAnimation.Focus(_currentTargetIndex);
+
+            if (!target.IsActive)
+            {
+                // if at the end go back and loop (works because we only have 3 targets)
+                if (_currentTargetIndex == _targets.Length - 1)
+                {
+                    _currentTargetIndex = -1;
+                }
+                    
+                Next();
+            }
         }
 
         public override void Previous()
         {
             _currentTargetIndex = Mathf.Max(_currentTargetIndex - 1, 0);
+            var target = _targets[_currentTargetIndex];
 
-            jammer.AimAt(_targets[_currentTargetIndex].target.position);
+            jammer.AimAt(target.target.position);
 
             buttonControlAnimation.Focus(_currentTargetIndex);
+            
+            if (!target.IsActive)
+            {
+                // if at the end go back and loop (works because we only have 3 targets)
+                if (_currentTargetIndex == 0)
+                {
+                    _currentTargetIndex = _targets.Length;
+                }
+                    
+                Previous();
+            }
         }
 
         public override void Validate()

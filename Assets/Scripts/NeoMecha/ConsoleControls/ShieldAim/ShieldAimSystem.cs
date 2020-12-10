@@ -31,6 +31,10 @@ namespace NeoMecha.ConsoleControls.ShieldAim
         {
             if (_targets.All(trg => !trg.IsActive)) return false;
 
+            // go back and re-check if room is targetable
+            _currentTargetIndex--;
+            Next();
+            
             shieldPlacer.TurnOn();
             shieldPlacer.PlaceAt(_targets[_currentTargetIndex].target.position);
 
@@ -56,7 +60,11 @@ namespace NeoMecha.ConsoleControls.ShieldAim
 
             buttonControlAnimation.Focus(_currentTargetIndex);
 
-            if (!target.IsActive) Next();
+            if (!target.IsActive)
+            {
+                if(_currentTargetIndex == _targets.Length - 1) Previous();
+                else Next();
+            }
         }
 
         public override void Previous()
@@ -68,7 +76,11 @@ namespace NeoMecha.ConsoleControls.ShieldAim
 
             buttonControlAnimation.Focus(_currentTargetIndex);
 
-            if (!target.IsActive) Previous();
+            if (!target.IsActive)
+            {
+                if(_currentTargetIndex == 0) Next();
+                else Previous();
+            }
         }
 
         public override void Validate()
