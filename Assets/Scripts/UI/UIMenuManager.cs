@@ -63,7 +63,7 @@ namespace UI
 
         public void LoadNextScene()
         {
-            SceneManager.LoadScene(nextSceneIndex);
+            LoadingScreen.Instance.LoadScene(nextSceneIndex);
         }
 
         private void SwitchPanel(GameObject from, GameObject to)
