@@ -5,29 +5,24 @@ menu_settings;Options
 menu_quit;Quitter
 menu_back;Retour
 
-tuto_disclaimer;Ce tutoriel ne propose pas d'interactions avec les systèmes de la forteresse. Prêtez attention au texte !
+tuto_disclaimer;Ce tutoriel ne propose pas d'interactions avec les commandes de la forteresse.
 tuto_main_1;Terrassez la forteresse ennemie !
-tuto_main_2;Voici votre système d'attaque.
-tuto_main_3;Pour l'utiliser, vous devez y apporter une munition...
+tuto_main_2;Voici votre\n<size=65>système d'attaque</size>.
+tuto_main_3;Pour l'utiliser, vous devez y apporter une <size=65>munition</size>
 tuto_main_4;Puis choisir quel système ennemi attaquer.
-tuto_main_5;Celui-ci sera alors endommagé, et l'ennemi perdra un point de vie.
-tuto_main_6;Pour retrouver l'usage de cette salle, il devra utiliser son système de réparation.
-tuto_main_7;Voici votre système de défense.
-tuto_main_8;Pour l'utiliser, vous devez y apporter une énergie. 
+tuto_main_5;Celui-ci sera alors <size=65>endommagé</size>, et l'ennemi perdra un <size=65>point de vie</size>.
+tuto_main_6;Pour retrouver l'usage de cette salle, il devra utiliser son <size=65>système de réparation</size>.
+tuto_main_7;Voici votre\n<size=65>système de défense</size>.
+tuto_main_8;Pour l'utiliser, vous devez y apporter une <size=65>énergie</size>. 
 tuto_main_9;Puis choisir lequel de vos systèmes défendre.
-tuto_main_10;Enfin, le système de piratage !
-tuto_main_11;Il permet de paralyser un système ennemi pendant quelques secondes.
-tuto_main_12;Après utilisation, le système de piratage doit se recharger. 
+tuto_main_10;Enfin,\n<size=65>le système de piratage !</size>
+tuto_main_11;Il permet de <size=65>paralyser</size> un système ennemi pendant quelques secondes.
+tuto_main_12;Après utilisation, le système de piratage doit se <size=65>recharger</size>. 
 tuto_main_13;Coordonnez vos actions\nObservez les mouvements de l'adversaire\nEt la victoire est à vous !\n\n\nVous avez terminé le tutoriel, retour au menu principal dans quelques secondes.
 
-
-tuto_sub_goto_att;Déplacez-vous vers la salle d'attaque.
-tuto_sub_goto_def;Déplacez-vous vers la salle de défense.
-tuto_sub_goto_jam;Déplacez-vous vers la salle de piratage.
-tuto_sub_goto_mun;Déplacez-vous vers la salle des munitions.
-tuto_sub_goto_ene;Déplacez-vous vers la salle des sources d'énergie.
-tuto_sub_goto_fix;Déplacez-vous vers la salle de maintenance.
-tuto_sub_goto_several;Déplacez-vous vers l'une des salles indiquées.
+tuto_sub_pay_attention;Prêtez attention au texte !
+tuto_sub_goto_one;Allez vers la salle indiquée !
+tuto_sub_goto_several;Allez dans une des salles indiquées !
 
 settings_volume;Volume
 settings_language;Langue

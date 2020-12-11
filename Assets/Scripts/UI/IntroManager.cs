@@ -28,12 +28,18 @@ namespace UI
             {
                 splashScreenItem.Wrapper.SetActive(false);
             }
+        }
 
+        private void Start()
+        {
             m_coroutine = StartCoroutine(RunIntro());
         }
 
         private IEnumerator RunIntro()
         {
+            // Wait before everything loads
+            yield return new WaitForSeconds(0.5f);
+
             for (int i = 0; i < splashScreenItems.Count; i++)
             {
                 foreach (var splashScreenItem in splashScreenItems)

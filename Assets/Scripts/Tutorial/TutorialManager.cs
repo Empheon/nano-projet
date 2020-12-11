@@ -158,17 +158,19 @@ namespace Tutorial
         private IEnumerator Tuto()
         {
             mainText.text = I18n.GetString("tuto_disclaimer");
+            subText.text = I18n.GetString("tuto_sub_pay_attention");
 
             yield return new WaitForSeconds(5);
             EnableButtons();
             yield return StartCoroutine(CheckButtonsConfirmed());
 
             mainText.text = I18n.GetString("tuto_main_1");
+            subText.text = "";
             yield return new WaitForSeconds(5);
 
 
             mainText.text = I18n.GetString("tuto_main_2");
-            subText.text = I18n.GetString("tuto_sub_goto_att");
+            subText.text = I18n.GetString("tuto_sub_goto_one");
             leftMechaInfo.AttLight.SwitchOn();
             rightMechaInfo.AttLight.SwitchOn();
 
@@ -180,7 +182,7 @@ namespace Tutorial
 
             subText.text = "";
             mainText.text = I18n.GetString("tuto_main_3");
-            subText.text = I18n.GetString("tuto_sub_goto_mun");
+            subText.text = I18n.GetString("tuto_sub_goto_one");
             leftMechaInfo.MunLight.StartBlink();
             rightMechaInfo.MunLight.StartBlink();
 
@@ -226,7 +228,7 @@ namespace Tutorial
             yield return StartCoroutine(CheckButtonsConfirmed());
 
             mainText.text = I18n.GetString("tuto_main_6");
-            subText.text = I18n.GetString("tuto_sub_goto_fix");
+            subText.text = I18n.GetString("tuto_sub_goto_one");
             leftMechaInfo.AttLight.StopBlink();
             leftMechaInfo.DefLight.StopBlink();
             leftMechaInfo.JamLight.StopBlink();
@@ -252,7 +254,7 @@ namespace Tutorial
             DisableAllColliders();
 
             mainText.text = I18n.GetString("tuto_main_7");
-            subText.text = I18n.GetString("tuto_sub_goto_def");
+            subText.text = I18n.GetString("tuto_sub_goto_one");
             leftMechaInfo.FixLight.StopBlink();
             rightMechaInfo.FixLight.StopBlink();
             leftMechaInfo.DefLight.SwitchOn();
@@ -265,7 +267,7 @@ namespace Tutorial
             DisableAllColliders();
 
             mainText.text = I18n.GetString("tuto_main_8");
-            subText.text = I18n.GetString("tuto_sub_goto_ene");
+            subText.text = I18n.GetString("tuto_sub_goto_one");
             leftMechaInfo.EneLight.StartBlink();
             rightMechaInfo.EneLight.StartBlink();
 
@@ -297,7 +299,7 @@ namespace Tutorial
             DisableAllColliders();
 
             mainText.text = I18n.GetString("tuto_main_10");
-            subText.text = I18n.GetString("tuto_sub_goto_jam");
+            subText.text = I18n.GetString("tuto_sub_goto_one");
             leftMechaInfo.AttLight.StopBlink();
             leftMechaInfo.DefLight.StopBlink();
             leftMechaInfo.JamLight.StopBlink();
