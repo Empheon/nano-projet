@@ -7,16 +7,16 @@ namespace Animations
     public class ConnexionCircle : MonoBehaviour
     {
         [SerializeField] private Color validatedColor;
+        [SerializeField] private Image renderer;
 
         private Color _baseColor;
-        private Image _renderer;
         private Transform _transform;
 
         private void Start()
         {
             _transform = GetComponent<Transform>();
-            _renderer = GetComponent<Image>();
-            _baseColor = _renderer.color;
+            //renderer = GetComponent<Image>();
+            _baseColor = renderer.color;
             
             gameObject.SetActive(false);
             _transform.localScale = Vector3.zero;
@@ -34,10 +34,10 @@ namespace Animations
 
         public void Validate()
         {
-            _renderer.DOKill();
+            renderer.DOKill();
             _transform.DOKill();
 
-            _renderer
+            renderer
                 .DOColor(validatedColor, 0.1f)
                 .SetEase(Ease.InOutQuad);
             
@@ -50,10 +50,10 @@ namespace Animations
 
         public void UnValidate()
         {
-            _renderer.DOKill();
+            renderer.DOKill();
             _transform.DOKill();
             
-            _renderer
+            renderer
                 .DOColor(_baseColor, 0.1f)
                 .SetEase(Ease.InOutQuad);
             
@@ -73,7 +73,7 @@ namespace Animations
                 .OnComplete(() =>
                 {
                     gameObject.SetActive(false);
-                    _renderer.color = _baseColor;
+                    renderer.color = _baseColor;
                 });
         }
     }
