@@ -112,6 +112,20 @@ MonoBehaviour:
       m_Height: 66
     m_Scale: 1
     m_AtlasIndex: 0
+  - m_Index: 5
+    m_Metrics:
+      m_Width: 32.578125
+      m_Height: 65.171875
+      m_HorizontalBearingX: 0
+      m_HorizontalBearingY: 65.4375
+      m_HorizontalAdvance: 37.265625
+    m_GlyphRect:
+      m_X: 218
+      m_Y: 171
+      m_Width: 33
+      m_Height: 66
+    m_Scale: 1
+    m_AtlasIndex: 0
   - m_Index: 6
     m_Metrics:
       m_Width: 34.5625
@@ -207,6 +221,20 @@ MonoBehaviour:
       m_X: 62
       m_Y: 893
       m_Width: 33
+      m_Height: 66
+    m_Scale: 1
+    m_AtlasIndex: 0
+  - m_Index: 18
+    m_Metrics:
+      m_Width: 9.265625
+      m_Height: 65.171875
+      m_HorizontalBearingX: 0
+      m_HorizontalBearingY: 65.4375
+      m_HorizontalAdvance: 13.953125
+    m_GlyphRect:
+      m_X: 166
+      m_Y: 180
+      m_Width: 10
       m_Height: 66
     m_Scale: 1
     m_AtlasIndex: 0
@@ -672,34 +700,6 @@ MonoBehaviour:
       m_Height: 10
     m_Scale: 1
     m_AtlasIndex: 0
-  - m_Index: 5
-    m_Metrics:
-      m_Width: 32.578125
-      m_Height: 65.171875
-      m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 65.4375
-      m_HorizontalAdvance: 37.265625
-    m_GlyphRect:
-      m_X: 218
-      m_Y: 171
-      m_Width: 33
-      m_Height: 66
-    m_Scale: 1
-    m_AtlasIndex: 0
-  - m_Index: 18
-    m_Metrics:
-      m_Width: 9.265625
-      m_Height: 65.171875
-      m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 65.4375
-      m_HorizontalAdvance: 13.953125
-    m_GlyphRect:
-      m_X: 166
-      m_Y: 180
-      m_Width: 10
-      m_Height: 66
-    m_Scale: 1
-    m_AtlasIndex: 0
   - m_Index: 78
     m_Metrics:
       m_Width: 32.671875
@@ -760,6 +760,10 @@ MonoBehaviour:
     m_GlyphIndex: 58
     m_Scale: 1
   - m_ElementType: 1
+    m_Unicode: 65
+    m_GlyphIndex: 78
+    m_Scale: 1
+  - m_ElementType: 1
     m_Unicode: 66
     m_GlyphIndex: 1
     m_Scale: 1
@@ -770,6 +774,10 @@ MonoBehaviour:
   - m_ElementType: 1
     m_Unicode: 70
     m_GlyphIndex: 21
+    m_Scale: 1
+  - m_ElementType: 1
+    m_Unicode: 73
+    m_GlyphIndex: 18
     m_Scale: 1
   - m_ElementType: 1
     m_Unicode: 74
@@ -802,6 +810,10 @@ MonoBehaviour:
   - m_ElementType: 1
     m_Unicode: 84
     m_GlyphIndex: 13
+    m_Scale: 1
+  - m_ElementType: 1
+    m_Unicode: 85
+    m_GlyphIndex: 5
     m_Scale: 1
   - m_ElementType: 1
     m_Unicode: 86
@@ -882,18 +894,6 @@ MonoBehaviour:
   - m_ElementType: 1
     m_Unicode: 8230
     m_GlyphIndex: 77
-    m_Scale: 1
-  - m_ElementType: 1
-    m_Unicode: 85
-    m_GlyphIndex: 5
-    m_Scale: 1
-  - m_ElementType: 1
-    m_Unicode: 73
-    m_GlyphIndex: 18
-    m_Scale: 1
-  - m_ElementType: 1
-    m_Unicode: 65
-    m_GlyphIndex: 78
     m_Scale: 1
   m_AtlasTextures:
   - {fileID: -8045720138280309327}
@@ -1233,7 +1233,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Police pour HUD - DagestaN  Atlas Material
   m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
-  m_ShaderKeywords: GLOW_ON
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -1289,7 +1289,7 @@ Material:
     - _OutlineSoftness: 0
     - _OutlineUVSpeedX: 0
     - _OutlineUVSpeedY: 0
-    - _OutlineWidth: 0.15
+    - _OutlineWidth: 0.1
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
     - _ScaleRatioA: 0.9
@@ -1321,7 +1321,7 @@ Material:
     - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
     - _GlowColor: {r: 1, g: 1, b: 1, a: 1}
     - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
