@@ -399,6 +399,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameSceneIndex: 2
   menuSceneIndex: 1
+  winScreenPrefab: {fileID: 8764540323385010117, guid: 8cbce36660bd8da4fabc1ce5f1be92d5,
+    type: 3}
+  winScreenDisplayTime: 4
   RequiredWinningRounds: 2
 --- !u!1001 &4110886354270056658
 PrefabInstance:

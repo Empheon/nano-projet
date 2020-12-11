@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
+using Animations;
 using UnityEngine;
 using DG.Tweening;
 using Global.Loading;
@@ -10,6 +12,9 @@ namespace Global
     {
         [SerializeField] private int gameSceneIndex = -1;
         [SerializeField] private int menuSceneIndex = -1;
+
+        [SerializeField] private WinScreen winScreenPrefab;
+        [SerializeField] private float winScreenDisplayTime;
 
         public static Match Instance { get; private set; }
 
@@ -50,8 +55,22 @@ namespace Global
             {
                 DOTween.KillAll();
                 Reset();
-                LoadingScreen.Instance.LoadScene(menuSceneIndex);
+                
+                StartCoroutine(WinScreenAndMenu(
+                    leftWonRounds == RequiredWinningRounds ? 
+                        PlayerManager.Team.Left : 
+                        PlayerManager.Team.Right));
             }
+        }
+
+        private IEnumerator WinScreenAndMenu(PlayerManager.Team winningTeam)
+        {
+            WinScreen screen = Instantiate(winScreenPrefab, Vector3.zero, Quaternion.identity);
+            screen.DisplayWinner(winningTeam);
+            
+            yield return new WaitForSeconds(winScreenDisplayTime);
+            
+            LoadingScreen.Instance.LoadScene(menuSceneIndex);
         }
         
         private int WonRounds(PlayerManager.Team team)
