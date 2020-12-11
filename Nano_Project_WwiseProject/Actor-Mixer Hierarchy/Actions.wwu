@@ -81,7 +81,7 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
-				<BlendContainer Name="Door_End_Round_Open" ID="{C8E26606-D429-48B4-96CF-91673FE87C53}" ShortID="424172072">
+				<BlendContainer Name="Door_End_Round" ID="{C8E26606-D429-48B4-96CF-91673FE87C53}" ShortID="424172072">
 					<PropertyList>
 						<Property Name="UserAuxSendVolume0" Type="Real64">
 							<ValueList>

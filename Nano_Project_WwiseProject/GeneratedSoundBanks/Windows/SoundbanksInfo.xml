@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="636067499" Language="SFX" Hash="1510456923">
+		<SoundBank Id="636067499" Language="SFX" Hash="2062915709">
 			<ObjectPath>\SoundBanks\Default Work Unit\Game_Menu</ObjectPath>
 			<ShortName>Game_Menu</ShortName>
 			<Path>Game_Menu.bnk</Path>
@@ -60,54 +60,6 @@
 						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
 					</AuxBusSends>
 				</Event>
-				<Event Id="3944980085" Name="Music_Combat" ObjectPath="\Events\Musiques\Music_Combat" DurationType="Infinite">
-					<IncludedMemoryFiles>
-						<File Id="235989224" Language="SFX">
-							<ShortName>Combat_Part1_130Bpm_1-4.wav</ShortName>
-							<Path>SFX/Combat_Part1_130Bpm_1-4_D79FB2B7.wem</Path>
-						</File>
-						<File Id="472953875" Language="SFX">
-							<ShortName>Combat_TimeLow_Part1_130Bpm_1-4.wav</ShortName>
-							<Path>SFX/Combat_TimeLow_Part1_130Bpm_1-4_D79FB2B7.wem</Path>
-						</File>
-						<File Id="633273924" Language="SFX">
-							<ShortName>Combat_LowHealth_130Bpm_1-4.wav</ShortName>
-							<Path>SFX/Combat_LowHealth_130Bpm_1-4_D79FB2B7.wem</Path>
-						</File>
-						<File Id="664377651" Language="SFX">
-							<ShortName>Combat_Intro_130Bpm_1-4.wav</ShortName>
-							<Path>SFX/Combat_Intro_130Bpm_1-4_D79FB2B7.wem</Path>
-						</File>
-						<File Id="1044836261" Language="SFX">
-							<ShortName>Combat_TimeLow_Part2_130Bpm_1-4.wav</ShortName>
-							<Path>SFX/Combat_TimeLow_Part2_130Bpm_1-4_D79FB2B7.wem</Path>
-						</File>
-						<File Id="1065324813" Language="SFX">
-							<ShortName>Combat_Part2_130Bpm_1-4.wav</ShortName>
-							<Path>SFX/Combat_Part2_130Bpm_1-4_D79FB2B7.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-					<SwitchContainers>
-						<SwitchContainer SwitchValue="{80533F1E-38E1-4176-97E0-88F1D211B808}">
-							<Media>
-								<File Id="664377651"/>
-								<File Id="235989224"/>
-								<File Id="1065324813"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{C3372D1D-72E5-4C22-BED1-3885FC271F33}">
-							<Media>
-								<File Id="633273924"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{D6EC3C66-940F-40B2-82AD-A71308660049}">
-							<Media>
-								<File Id="472953875"/>
-								<File Id="1044836261"/>
-							</Media>
-						</SwitchContainer>
-					</SwitchContainers>
-				</Event>
 				<Event Id="1598298728" Name="Music_Menu" ObjectPath="\Events\Musiques\Music_Menu" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="596567004" Language="SFX">
@@ -121,15 +73,6 @@
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
-			<SwitchGroups>
-				<SwitchGroup Id="2724869341" Name="Music_Switch" ObjectPath="\Switches\Default Work Unit\Music_Switch">
-					<Switches>
-						<Switch Id="4007961327" Name="Combat_Begin" ObjectPath="\Switches\Default Work Unit\Music_Switch\Combat_Begin"/>
-						<Switch Id="3601294720" Name="Combat_LowHealth" ObjectPath="\Switches\Default Work Unit\Music_Switch\Combat_LowHealth"/>
-						<Switch Id="3606057529" Name="Combat_TimeOut" ObjectPath="\Switches\Default Work Unit\Music_Switch\Combat_TimeOut"/>
-					</Switches>
-				</SwitchGroup>
-			</SwitchGroups>
 		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX" Hash="1822639885">
 			<ObjectPath>Init</ObjectPath>
