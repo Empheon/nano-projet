@@ -28,12 +28,12 @@ namespace NeoMecha
         {
             base.PreAction();
             consoleSpriteSwitcher.OnActivate();
+            m_loadConsole.UnLoad();
         }
 
         protected override void DoAction(Room room)
         {
             room.OnAttackReceived();
-            m_loadConsole.UnLoad();
         }
 
         public override bool CanDoAction()
