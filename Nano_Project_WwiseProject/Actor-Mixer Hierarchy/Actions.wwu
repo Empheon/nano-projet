@@ -81,6 +81,79 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
+				<BlendContainer Name="Door_End_Round" ID="{C8E26606-D429-48B4-96CF-91673FE87C53}" ShortID="424172072">
+					<PropertyList>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>-8</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Reverb" ID="{5339937A-76EC-45DB-9526-2A6B447D0C8E}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Door_End_Round_1" ID="{862000B9-31E2-4E24-B2CD-3559D42EC404}" ShortID="1066892406">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Door_End_Round_1" ID="{C5D06921-7198-494F-8AC9-E1AC23C5B7FC}">
+									<Language>SFX</Language>
+									<AudioFile>Door_End_Round_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="589463429"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Door_End_Round_1" ID="{C5D06921-7198-494F-8AC9-E1AC23C5B7FC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Door_End_Round_2" ID="{0C677771-FB92-4506-876A-9CBA2F031BDA}" ShortID="905874551">
+							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Door_End_Round_2" ID="{FDE44C5A-0764-4966-9E7B-E3A732B5C318}">
+									<Language>SFX</Language>
+									<AudioFile>Door_End_Round_2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="327191815"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Door_End_Round_2" ID="{FDE44C5A-0764-4966-9E7B-E3A732B5C318}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</BlendContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

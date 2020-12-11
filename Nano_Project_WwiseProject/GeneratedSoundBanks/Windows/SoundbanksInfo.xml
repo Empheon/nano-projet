@@ -85,7 +85,7 @@
 				<GameParameter Id="4179668880" Name="Master_Volume" ObjectPath="\Game Parameters\Default Work Unit\Master_Volume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="4024754808">
+		<SoundBank Id="3161908922" Language="SFX" Hash="1976867322">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -207,6 +207,21 @@
 						<File Id="923719457" Language="SFX">
 							<ShortName>DEF_Deactivation.wav</ShortName>
 							<Path>SFX/DEF_Deactivation_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="1016987306" Name="Door_End_Round" ObjectPath="\Events\Bruitages\Door_End_Round" DurationType="OneShot" DurationMin="2.630667" DurationMax="2.630667">
+					<IncludedMemoryFiles>
+						<File Id="327191815" Language="SFX">
+							<ShortName>Door_End_Round_2.wav</ShortName>
+							<Path>SFX/Door_End_Round_2_10C4C929.wem</Path>
+						</File>
+						<File Id="589463429" Language="SFX">
+							<ShortName>Door_End_Round_1.wav</ShortName>
+							<Path>SFX/Door_End_Round_1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>

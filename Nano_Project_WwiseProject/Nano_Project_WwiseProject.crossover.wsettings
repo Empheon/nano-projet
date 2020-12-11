@@ -3,7 +3,7 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{91E4CD93-5A1F-42D3-94C7-3D213D8F2075}">
 			<PropertyList>
-				<Property Name="AudioFilesImporter\Path" Type="string" Value="Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\Assets Sons V2\Attaque\"/>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\Assets Sons V2\Door\"/>
 				<Property Name="Event Action List\{0240C629-9DA1-467E-8D22-94A5179420F3}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{03851AB9-E04F-4B6C-9668-10BEF89C89A5}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{0AAE57A8-4696-4EFB-A52C-51B3A6309DBC}\x64_Expand States" Type="string" Value=""/>
@@ -85,13 +85,14 @@
 				<Property Name="ProjectExplorer\x64_Expanded_1_1" Type="string" Value="2KQUFaYdKkGhfnXKDCFJ82gG0fz300ZOv9Q0ixHPo7U="/>
 				<Property Name="ProjectExplorer\x64_Expanded_20_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_21_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value="1OwU73SnmUSE0v1Wtn5D68lFhFVoDYJIkSh7KZV8Bq61SBAgV3P5SZl7dfCvNuZ90//Yk/92xUqRwozWsvNZX8OCja8APWRMj8BEt6kwhtU="/>
+				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value="1OwU73SnmUSE0v1Wtn5D6xXxSytyZHJFqmJhvP0TpUfJRYRVaA2CSJEoeymVfAautUgQIFdz+UmZe3XwrzbmfdP/2JP/dsVKkcKM1rLzWV/Dgo2vAD1kTI/ARLepMIbV"/>
 				<Property Name="ProjectExplorer\x64_Expanded_3_1" Type="string" Value="pvgi9v1zuEWT8F7G215Kklrqeo8MWExNq9cxPiGR65uu2sJSqDJuTajYmZQAOoNp"/>
 				<Property Name="ProjectExplorer\x64_Expanded_4_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_5_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_6_1" Type="string" Value="FdU7nDB/yk+e4IXMlWo2MA=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_7_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_8_1" Type="string" Value=""/>
+				<Property Name="RTPC\GameParameterSimValue\{7BB8D7F1-225A-4C3D-9125-DCACE0F2008C}" Type="Real64" Value="100"/>
 				<Property Name="SoundBank Manager\x64_Expand States" Type="string" Value="FdU7nDB/yk+e4IXMlWo2MA=="/>
 				<Property Name="SoundBankHeaderFilePath" Type="string" Value="GeneratedSoundBanks\"/>
 				<Property Name="SoundBankPaths" Type="string">
