@@ -44,10 +44,10 @@ namespace Tutorial
             if (!IsEnabled)
             {
                 image.color = _originalColor;
-                transform.localScale = Vector3.zero;
+                transform.DOScale(0, 0.1f);
             } else if (!IsReady)
             {
-                transform.localScale = Vector3.one;
+                transform.DOScale(1, 0.1f);
             }
 
             if (IsEnabled && _player.GameController.InteractThisFrame())

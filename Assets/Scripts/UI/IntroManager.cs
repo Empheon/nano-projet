@@ -37,8 +37,6 @@ namespace UI
 
         private IEnumerator RunIntro()
         {
-            // Wait before everything loads
-            yield return new WaitForSeconds(0.5f);
 
             for (int i = 0; i < splashScreenItems.Count; i++)
             {
@@ -48,6 +46,13 @@ namespace UI
                 }
                 var item = splashScreenItems[i];
                 item.Wrapper.SetActive(true);
+
+                if (i == 0)
+                {
+                    // Wait before everything loads (especially the sound)
+                    yield return new WaitForSeconds(0.5f);
+                }
+
                 item.Wrapper.transform.DOScale(1.1f, item.Duration).From(1).SetEase(Ease.Linear);
 
                 yield return new WaitForSeconds(item.Duration);
