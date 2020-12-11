@@ -7,6 +7,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
 using Global.Loading;
+using System.Collections;
+using UnityEngine.EventSystems;
 
 namespace UI
 {
@@ -61,7 +63,7 @@ namespace UI
 
         public void LoadNextScene()
         {
-            LoadingScreen.Instance.LoadScene(nextSceneIndex);
+            SceneManager.LoadScene(nextSceneIndex);
         }
 
         private void SwitchPanel(GameObject from, GameObject to)

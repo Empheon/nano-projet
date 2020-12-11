@@ -186,6 +186,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 205024671198570038, guid: 746c18ef97329554ab15e5fa5f346938,
+        type: 3}
+      propertyPath: m_text
+      value: ou "Espace" pour passer
+      objectReference: {fileID: 0}
+    - target: {fileID: 205024671198570038, guid: 746c18ef97329554ab15e5fa5f346938,
+        type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134055418222894343, guid: 746c18ef97329554ab15e5fa5f346938,
+        type: 3}
+      propertyPath: m_text
+      value: "Mais un jour, leur avidit\xE9 de pouvoir les mena \xE0 leur perte.
+        De leurs cendres, les souris purent reconstruire une nouvelle civilisation."
+      objectReference: {fileID: 0}
     - target: {fileID: 1748275291643196623, guid: 746c18ef97329554ab15e5fa5f346938,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -301,6 +317,103 @@ PrefabInstance:
       propertyPath: menuCanvas
       value: 
       objectReference: {fileID: 5630528115467820247}
+    - target: {fileID: 1781285808921278279, guid: 746c18ef97329554ab15e5fa5f346938,
+        type: 3}
+      propertyPath: EventSystem
+      value: 
+      objectReference: {fileID: 1945077877}
+    - target: {fileID: 1898356051533232531, guid: 746c18ef97329554ab15e5fa5f346938,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1898356051533232531, guid: 746c18ef97329554ab15e5fa5f346938,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1898356051533232531, guid: 746c18ef97329554ab15e5fa5f346938,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1898356051533232531, guid: 746c18ef97329554ab15e5fa5f346938,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1898356051533232531, guid: 746c18ef97329554ab15e5fa5f346938,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1898356051533232531, guid: 746c18ef97329554ab15e5fa5f346938,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2765514018835023149, guid: 746c18ef97329554ab15e5fa5f346938,
+        type: 3}
+      propertyPath: m_text
+      value: "Peu de temps passa avant qu'elles ne se d\xE9clar\xE8rent la guerre
+        en utilisant les restes des technologies humaines..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595869089901055380, guid: 746c18ef97329554ab15e5fa5f346938,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595869089901055380, guid: 746c18ef97329554ab15e5fa5f346938,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -269.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4651594581784672465, guid: 746c18ef97329554ab15e5fa5f346938,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052404816704580608, guid: 746c18ef97329554ab15e5fa5f346938,
+        type: 3}
+      propertyPath: m_text
+      value: "Peu de temps passa avant qu'elles ne se d\xE9clar\xE8rent la guerre
+        en utilisant les restes des technologies humaines..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6098419328612625340, guid: 746c18ef97329554ab15e5fa5f346938,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6098419328612625340, guid: 746c18ef97329554ab15e5fa5f346938,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6098419328612625340, guid: 746c18ef97329554ab15e5fa5f346938,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6098419328612625340, guid: 746c18ef97329554ab15e5fa5f346938,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6098419328612625340, guid: 746c18ef97329554ab15e5fa5f346938,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 6098419328612625340, guid: 746c18ef97329554ab15e5fa5f346938,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6098419328612625340, guid: 746c18ef97329554ab15e5fa5f346938,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746c18ef97329554ab15e5fa5f346938, type: 3}
 --- !u!1 &1314963572
