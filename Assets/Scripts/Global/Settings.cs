@@ -50,7 +50,7 @@ namespace Global
         public void SetVolume(float volume)
         {
             Volume = volume;
-            AkSoundEngine.SetRTPCValue("Master_Volume", volume);
+            AkSoundEngine.SetRTPCValue("Master_Volume", volume * 10);
         }
     }
 }
