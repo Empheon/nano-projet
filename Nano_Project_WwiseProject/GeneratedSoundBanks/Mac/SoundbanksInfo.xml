@@ -85,7 +85,7 @@
 				<GameParameter Id="4179668880" Name="Master_Volume" ObjectPath="\Game Parameters\Default Work Unit\Master_Volume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1976867322">
+		<SoundBank Id="3161908922" Language="SFX" Hash="1637384947">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -98,7 +98,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4099086052" Name="ATK_Activation" ObjectPath="\Events\Bruitages\ATK_Activation" DurationType="OneShot" DurationMin="5.073198" DurationMax="5.861333">
+				<Event Id="4099086052" Name="ATK_Activation" ObjectPath="\Events\Bruitages\ATK_Activation" DurationType="OneShot" DurationMin="5.073198" DurationMax="6.579124">
 					<IncludedMemoryFiles>
 						<File Id="46611289" Language="SFX">
 							<ShortName>Gun_Shoot_ATK_4.wav</ShortName>
