@@ -14,6 +14,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Music_Combat" ID="{8700862A-C0E8-49D6-B7C5-88386411008E}">
+					<ChildrenList>
+						<Action Name="" ID="{7CDD6E0E-2E66-4317-8D34-517F6D260412}" ShortID="613713581">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Switch" ID="{C6225863-A6F8-42D1-9BAA-B537F5AF3228}" WorkUnitID="{08BEF351-7448-4191-B2C6-8A72FDEBD3C3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

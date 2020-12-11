@@ -7,20 +7,20 @@
 					<PropertyList>
 						<Property Name="BusVolume" Type="Real64">
 							<RTPCList>
-								<RTPC Name="" ID="{4993C749-C9A8-49A1-9C9B-8B41C102BB72}" ShortID="755731220">
+								<RTPC Name="" ID="{686B6F53-AF49-47BC-BA32-1037B6EA55DE}" ShortID="487044431">
 									<ReferenceList>
 										<Reference Name="ControlInput">
 											<ObjectRef Name="Master_Volume" ID="{7BB8D7F1-225A-4C3D-9125-DCACE0F2008C}" WorkUnitID="{637221BF-607D-4A45-9E72-206C76888413}"/>
 										</Reference>
 									</ReferenceList>
-									<Curve Name="" ID="{37EECCF5-73AC-49B1-BE0C-0236C8916EB1}">
+									<Curve Name="" ID="{A19F768C-79DF-4560-9E51-70478DC9241E}">
 										<PropertyList>
 											<Property Name="Flags" Type="int32" Value="3"/>
 										</PropertyList>
 										<PointList>
 											<Point>
 												<XPos>0</XPos>
-												<YPos>-200</YPos>
+												<YPos>-100</YPos>
 												<Flags>5</Flags>
 											</Point>
 											<Point>

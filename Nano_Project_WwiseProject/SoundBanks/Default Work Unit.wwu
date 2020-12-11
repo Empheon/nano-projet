@@ -33,6 +33,7 @@
 						<ObjectRef Name="Menu_Return_Button_Interface" ID="{3CCCCF94-B6B1-46A7-BADB-2239F83D5D30}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Music_Menu" ID="{A9C1EFEC-FDDD-480B-BA81-6FB2ECB9820A}" WorkUnitID="{52C2DAAE-32A8-4D6E-A8D8-9994003A8369}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Menu_Selection_Button" ID="{FE6C414F-1918-48DE-8604-583A6D999019}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Music_Combat" ID="{8700862A-C0E8-49D6-B7C5-88386411008E}" WorkUnitID="{52C2DAAE-32A8-4D6E-A8D8-9994003A8369}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Menu_Validate_Button_Interface" ID="{6FF2A9A3-053E-4BBF-A248-80B781A39E7D}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Menu_Selection_Cursor" ID="{0AAE57A8-4696-4EFB-A52C-51B3A6309DBC}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
