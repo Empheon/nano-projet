@@ -574,13 +574,18 @@ MonoBehaviour:
   splashScreenItems:
   - Wrapper: {fileID: 4882249552629984930}
     Duration: 3
+    MustScale: 1
   - Wrapper: {fileID: 5638524707397617998}
     Duration: 3
+    MustScale: 1
   - Wrapper: {fileID: 864357254090207500}
     Duration: 3
+    MustScale: 0
   - Wrapper: {fileID: 6697206379584977429}
     Duration: 3
+    MustScale: 1
   menuCanvas: {fileID: 0}
+  EventSystem: {fileID: 0}
 --- !u!1 &2816970363262674779
 GameObject:
   m_ObjectHideFlags: 0

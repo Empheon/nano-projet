@@ -63,7 +63,10 @@ namespace UI
                     yield return new WaitForSeconds(0.5f);
                 }
 
-                item.Wrapper.transform.DOScale(1.1f, item.Duration).From(1).SetEase(Ease.Linear);
+                if (item.MustScale)
+                {
+                    item.Wrapper.transform.DOScale(1.1f, item.Duration).From(1).SetEase(Ease.Linear);
+                }
 
                 yield return new WaitForSeconds(item.Duration);
             }
@@ -104,9 +107,10 @@ namespace UI
     }
 
     [Serializable]
-    public struct SplashScreenItem
+    public class SplashScreenItem
     {
         public GameObject Wrapper;
         public float Duration;
+        public bool MustScale = true;
     }
 }
