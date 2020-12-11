@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using DG.Tweening;
+using Global.Loading;
 
 namespace Global
 {
@@ -36,7 +33,7 @@ namespace Global
             if (round.WinnerTeam == PlayerManager.Team.None)
             {
                 DOTween.KillAll();
-                SceneManager.LoadScene(gameSceneIndex);
+                LoadingScreen.Instance.LoadScene(gameSceneIndex);
                 return;
             }
 
@@ -48,15 +45,15 @@ namespace Global
             if (leftWonRounds < RequiredWinningRounds && rightWonRounds < RequiredWinningRounds)
             {
                 DOTween.KillAll();
-                SceneManager.LoadScene(gameSceneIndex);
+                LoadingScreen.Instance.LoadScene(gameSceneIndex);
             } else
             {
                 DOTween.KillAll();
                 Reset();
-                SceneManager.LoadScene(menuSceneIndex);
+                LoadingScreen.Instance.LoadScene(menuSceneIndex);
             }
         }
-
+        
         private int WonRounds(PlayerManager.Team team)
         {
             return FinishedRounds.Where((x) => x.WinnerTeam == team).ToArray().Length;
