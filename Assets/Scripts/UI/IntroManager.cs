@@ -16,12 +16,22 @@ namespace UI
         [SerializeField] private List<SplashScreenItem> splashScreenItems;
 
         [SerializeField] private GameObject menuCanvas;
+        [SerializeField]
+        private GameObject EventSystem;
 
         private readonly float m_checkFrequency = 0.01f;
         private Coroutine m_coroutine;
 
+        private static bool m_wasPlayed = false;
+
         private void Awake()
         {
+            if (m_wasPlayed)
+            {
+                FinishIntro();
+                return;
+            }
+            EventSystem.SetActive(false);
             menuCanvas.SetActive(false);
 
             foreach (var splashScreenItem in splashScreenItems)
@@ -85,7 +95,9 @@ namespace UI
                 splashScreenItem.Wrapper.transform.DOKill();
             }
 
+            m_wasPlayed = true;
             menuCanvas.SetActive(true);
+            EventSystem.SetActive(true);
             Destroy(gameObject);
         }
 

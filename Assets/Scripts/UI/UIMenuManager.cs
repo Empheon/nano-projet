@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
+using System.Collections;
+using UnityEngine.EventSystems;
 
 namespace UI
 {
     public class UIMenuManager : MonoBehaviour
     {
         [SerializeField]
-        private GameObject titleWrapper;
+        public GameObject titleWrapper;
         [SerializeField]
         private GameObject gamepadCheckerWrapper;
         [SerializeField]

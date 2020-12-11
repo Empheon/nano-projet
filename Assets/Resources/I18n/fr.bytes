@@ -29,7 +29,9 @@ settings_language;Langue
 
 lang_key;Francais
 
-intro_1;Il fut un temps où l’humanité contrôlait le monde, ne laissant plus une seule touffe d’herbe disponible pour les autres habitants de cette planète. Les souris vécurent retranchées, dans la peur, pendant des années...
-intro_2;Mais un jour, l’ambition des humains, l’avidité de pouvoir et de contrôle de territoire, les mena à leurs perte. Les souris purent respirer à nouveau, reconstruire leurs habitats, reprendre en main une vie sans peur...
-intro_3;Attendez non... ce n’est pas ça.... Qui a dit que les souris étaient meilleures que les humains ?
-intro_4;LES HUMAINS AYANT DELAISSE LA PLANETE, LES SOURIS SE BATTAIENT POUR DEFENDRE LEURS TERRITOIRES ! ELLES UTILISERENT LA TECHNOLOGIE LAISSE PAR LES HUMAINS, POUR SE BATTRE A COUPS DE GROS MISSILE, DANS D’ENORMES FORTERESSES ROBOTIQUES !
+intro_1;Il fut un temps où l’humanité contrôlait le monde. Les souris vivaient retranchées dans la peur pendant des années...
+intro_2;Mais un jour, leur avidité de pouvoir les mena à leur perte. De leurs cendres, les souris purent reconstruire une nouvelle civilisation.
+intro_3;Attendez non... ce n’est pas ça.... Qui a dit que les souris étaient plus sages que les humains ?
+intro_4;Peu de temps passa avant qu'elles ne se déclarèrent la guerre en utilisant les restes des technologies humaines...
+
+intro_skip;ou "Espace" pour passer
