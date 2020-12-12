@@ -168,6 +168,80 @@
 						<ActiveSource Name="Menu_Selection_Button" ID="{B35415A3-5E41-4EAE-BF2F-CD1A2EA608C4}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="LoadingScreen_Door_Close" ID="{A3F1C78A-07F8-4A91-88B7-8CD8BB85FEA2}" ShortID="387698053">
+					<PropertyList>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>6</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Reverb" ID="{5339937A-76EC-45DB-9526-2A6B447D0C8E}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="LoadingScreen_Door_Close" ID="{0E89C4AA-CDDD-42FF-AD8E-98A4E3E14DBA}">
+							<Language>SFX</Language>
+							<AudioFile>LoadingScreen_Door_Close.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="160641533"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="LoadingScreen_Door_Close" ID="{0E89C4AA-CDDD-42FF-AD8E-98A4E3E14DBA}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="LoadingScreen_Door_Open" ID="{5816AF3A-B72F-4EBE-9DBA-5A74712A6101}" ShortID="133941197">
+					<PropertyList>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>6</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>-8</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Reverb" ID="{5339937A-76EC-45DB-9526-2A6B447D0C8E}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="LoadingScreen_Door_Open" ID="{630348B8-CC75-4800-A1A8-8A6AA6C147A8}">
+							<Language>SFX</Language>
+							<AudioFile>LoadingScreen_Door_Open.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="823509908"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="LoadingScreen_Door_Open" ID="{630348B8-CC75-4800-A1A8-8A6AA6C147A8}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

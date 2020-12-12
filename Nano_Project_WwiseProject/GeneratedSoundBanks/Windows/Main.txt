@@ -4,7 +4,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	358592376	Sound_Repair_Room			\Bruitages\Sound_Repair_Room	
 	924321492	Take_ENE_In_Energy_Room			\Bruitages\Take_ENE_In_Energy_Room	
 	1010736921	ATK_Damaged_Room_After_Gun_Shoot			\Bruitages\ATK_Damaged_Room_After_Gun_Shoot	
-	1016987306	Door_End_Round			\Bruitages\Door_End_Round	
+	1019552089	LoadingScreen_Door_Open			\Bruitages\LoadingScreen_Door_Open	
 	1331881583	Take_MUN_In_Munition_Room			\Bruitages\Take_MUN_In_Munition_Room	
 	1440017180	ATK_Shield_Impact			\Bruitages\ATK_Shield_Impact	
 	1532752073	ATK_Gun_Shoot_Alarm_Play			\Bruitages\ATK_Gun_Shoot_Alarm_Play	
@@ -16,18 +16,19 @@ Event	ID	Name			Wwise Object Path	Notes
 	3178440203	JAM_Activation_Play			\Bruitages\JAM_Activation_Play	
 	3402899663	Amb_EXT			\Bruitages\Amb_EXT	
 	3815251225	DEF_Activation			\Bruitages\DEF_Activation	
+	4073936959	LoadingScreen_Door_Close			\Bruitages\LoadingScreen_Door_Close	
 	4099086052	ATK_Activation			\Bruitages\ATK_Activation	
 	4227203051	JAM_Deactivation			\Bruitages\JAM_Deactivation	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	46611289	Gun_Shoot_ATK_4	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\Gun_Shoot_ATK_4_10C4C929.wem		\Actor-Mixer Hierarchy\ATK\ATK_Activation\Gun_Shoot_ATK\Gun_Shoot_ATK_4		405056
+	160641533	LoadingScreen_Door_Close	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\LoadingScreen_Door_Close_10C4C929.wem		\Actor-Mixer Hierarchy\UI\LoadingScreen_Door_Close		143552
 	166527931	Gun_Shoot_ATK_5	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\Gun_Shoot_ATK_5_10C4C929.wem		\Actor-Mixer Hierarchy\ATK\ATK_Activation\Gun_Shoot_ATK\Gun_Shoot_ATK_5		405056
 	204726557	Sound_Hacked_Room_A	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\Sound_Hacked_Room_A_10C4C929.wem		\Actor-Mixer Hierarchy\JAM\JAM_Hacked_Room\Sound_Hacked_Room_A		237888
 	206436918	Sfx_Activate_Button	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\Sfx_Activate_Button_06355EA7.wem		\Actor-Mixer Hierarchy\JAM\JAM_Activation\Sfx_Activate_Button		19764
 	251909760	Jump_Character_A	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\Jump_Character_A_10C4C929.wem		\Actor-Mixer Hierarchy\Player\Jump_Character\Jump_Character_A		25728
 	262899983	Gun_Shoot_ATK_8	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\Gun_Shoot_ATK_8_10C4C929.wem		\Actor-Mixer Hierarchy\ATK\ATK_Activation\Gun_Shoot_ATK\Gun_Shoot_ATK_8		562752
 	318261570	Sound_Hacked_Room_C	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\Sound_Hacked_Room_C_10C4C929.wem		\Actor-Mixer Hierarchy\JAM\JAM_Hacked_Room\Sound_Hacked_Room_C		237888
-	327191815	Door_End_Round_2	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\Door_End_Round_2_10C4C929.wem		\Actor-Mixer Hierarchy\Actions\Door_End_Round\Door_End_Round_2		252608
 	384703938	DEF_Deactivation_3	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\DEF_Deactivation_3_10C4C929.wem		\Actor-Mixer Hierarchy\DEF\DEF_Activation\DEF_Deactivation_3		753472
 	401766814	Take_MUN_In_Munition_Room	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\Take_MUN_In_Munition_Room_10C4C929.wem		\Actor-Mixer Hierarchy\Ressources\Take_MUN_In_Munition_Room		21216
 	422613945	Gun_Shoot_ATK_6	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\Gun_Shoot_ATK_6_10C4C929.wem		\Actor-Mixer Hierarchy\ATK\ATK_Activation\Gun_Shoot_ATK\Gun_Shoot_ATK_6		405056
@@ -38,7 +39,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	507433643	DEF_Deactivation_4	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\DEF_Deactivation_4_10C4C929.wem		\Actor-Mixer Hierarchy\DEF\DEF_Activation\DEF_Deactivation_4		753472
 	551307913	Damaged_Room_After_Gun_Shoot_Alarm	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\Damaged_Room_After_Gun_Shoot_Alarm_DBA9B8CE.wem		\Actor-Mixer Hierarchy\ATK\ATK_Damaged_Room_After_Gun_Shoot\Damaged_Room_After_Gun_Shoot_Alarm		423922
 	583378098	JAM_Room_Selection_Electricity_Loop	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\JAM_Room_Selection_Electricity_Loop_6A4DB5DD.wem		\Actor-Mixer Hierarchy\JAM\JAM_Activation\JAM_Activation\JAM_Room_Selection_Electricity_Loop		1326912
-	589463429	Door_End_Round_1	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\Door_End_Round_1_10C4C929.wem		\Actor-Mixer Hierarchy\Actions\Door_End_Round\Door_End_Round_1		252608
 	604113550	Load_MUN_In_ATK_Room	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\Load_MUN_In_ATK_Room_10C4C929.wem		\Actor-Mixer Hierarchy\Ressources\Load_MUN_In_ATK_Room		75616
 	606172872	DEF_Deactivation_2	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\DEF_Deactivation_2_10C4C929.wem		\Actor-Mixer Hierarchy\DEF\DEF_Activation\DEF_Deactivation_2		753472
 	607905522	Damaged_Room_After_Gun_Shoot_B	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\Damaged_Room_After_Gun_Shoot_B_10C4C929.wem		\Actor-Mixer Hierarchy\ATK\ATK_Damaged_Room_After_Gun_Shoot\Damaged_Room_After_Gun_Shoot\Damaged_Room_After_Gun_Shoot_B		407872
@@ -52,6 +52,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	785196925	Sound_Repair_Room_A	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\Sound_Repair_Room_A_10C4C929.wem		\Actor-Mixer Hierarchy\Actions\Sound_Repair_Room\Sound_Repair_Room_A		351040
 	796775262	ATK_Gun_Shoot_Alarm	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\Gun_Shoot_Alarm_7EB18810.wem		\Actor-Mixer Hierarchy\ATK\ATK_Gun_Shoot_Alarm		241592
 	803393747	Sound_Hacked_Room_B	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\Sound_Hacked_Room_B_10C4C929.wem		\Actor-Mixer Hierarchy\JAM\JAM_Hacked_Room\Sound_Hacked_Room_B		235776
+	823509908	LoadingScreen_Door_Open	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\LoadingScreen_Door_Open_10C4C929.wem		\Actor-Mixer Hierarchy\UI\LoadingScreen_Door_Open		163648
 	863566075	DEF_Deactivation_1	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\DEF_Deactivation_1_10C4C929.wem		\Actor-Mixer Hierarchy\DEF\DEF_Activation\DEF_Deactivation_1		753472
 	869095628	Load_ENE_In_DEF_Room	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\Load_ENE_In_DEF_Room_10C4C929.wem		\Actor-Mixer Hierarchy\Ressources\Load_ENE_In_DEF_Room		65606
 	923719457	DEF_Deactivation	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\DEF_Deactivation_10C4C929.wem		\Actor-Mixer Hierarchy\DEF\DEF_Deactivation		149568
