@@ -38,6 +38,7 @@
 				</SoundBank>
 				<SoundBank Name="Game_Menu" ID="{EAEE62CD-CEE0-48DA-AC51-9ED9476F3A8B}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Voice_Intro_StoryTell" ID="{99FE5D73-F0D3-41C7-84F6-480BBE823CB6}" WorkUnitID="{A495E05A-D29F-4504-B6AF-4994CAD6A2C5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Menu_Return_Button_Interface" ID="{3CCCCF94-B6B1-46A7-BADB-2239F83D5D30}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Music_Menu" ID="{A9C1EFEC-FDDD-480B-BA81-6FB2ECB9820A}" WorkUnitID="{52C2DAAE-32A8-4D6E-A8D8-9994003A8369}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Menu_Selection_Button" ID="{FE6C414F-1918-48DE-8604-583A6D999019}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>

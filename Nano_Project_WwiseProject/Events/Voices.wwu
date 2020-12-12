@@ -80,6 +80,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Voice_Intro_StoryTell" ID="{99FE5D73-F0D3-41C7-84F6-480BBE823CB6}">
+					<ChildrenList>
+						<Action Name="" ID="{1B3476A4-419D-4127-AEB9-CEC28395B4CD}" ShortID="376052871">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Voice_Intro_StoryTell" ID="{5A212A85-77F7-4A68-9F73-69792D338E48}" WorkUnitID="{D5DD1F13-2AE1-455A-8102-40E632C98BED}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
