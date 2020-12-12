@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{D5DD1F13-2AE1-455A-8102-40E632C98BED}" SchemaVersion="97" RootDocumentID="{201048B5-7357-49F9-997B-75F0AF36E67D}">
+<WwiseDocument Type="WorkUnit" ID="{D5DD1F13-2AE1-455A-8102-40E632C98BED}" SchemaVersion="97">
 	<AudioObjects>
-		<WorkUnit Name="Voices" ID="{D5DD1F13-2AE1-455A-8102-40E632C98BED}" OwnerID="{201048B5-7357-49F9-997B-75F0AF36E67D}" PersistMode="Nested">
+		<WorkUnit Name="Voices" ID="{D5DD1F13-2AE1-455A-8102-40E632C98BED}" PersistMode="Standalone">
 			<ChildrenList>
 				<Sound Name="Voice_Gameplay_Fight" ID="{F803EDC4-9FB9-4E01-B4BD-838015B123E9}" ShortID="361055230">
 					<ReferenceList>
