@@ -3,6 +3,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	58586296	Voice_Gameplay_Player1Wins			\Voices\Voice_Gameplay_Player1Wins	
 	188761361	Jump_Character			\Bruitages\Jump_Character	
 	358592376	Sound_Repair_Room			\Bruitages\Sound_Repair_Room	
+	679670224	Tapis_Rouland			\Bruitages\Tapis_Rouland	
 	924321492	Take_ENE_In_Energy_Room			\Bruitages\Take_ENE_In_Energy_Room	
 	1010736921	ATK_Damaged_Room_After_Gun_Shoot			\Bruitages\ATK_Damaged_Room_After_Gun_Shoot	
 	1331881583	Take_MUN_In_Munition_Room			\Bruitages\Take_MUN_In_Munition_Room	
@@ -66,5 +67,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	923719457	DEF_Deactivation	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\DEF_Deactivation_10C4C929.wem		\Actor-Mixer Hierarchy\DEF\DEF_Deactivation		149568
 	955555835	Amb_EXT	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Amb_EXT_953DA257.wem		\Actor-Mixer Hierarchy\Ambiances\Amb_EXT		21845744
 	987931763	Voice_Gameplay_Round1	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Voice_Gameplay_Round1_10C4C929.wem		\Actor-Mixer Hierarchy\Voices\Voice_Gameplay_Round1		183872
+	1054606890	Tapis_Roulant	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Tapis_Roulant_10C4C929.wem		\Actor-Mixer Hierarchy\Ressources\Tapis_Roulant		40512
 	1067019328	Voice_Gameplay_Player2Wins	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Voice_Gameplay_Player2Wins_10C4C929.wem		\Actor-Mixer Hierarchy\Voices\Voice_Gameplay_Player2Wins		271552
 

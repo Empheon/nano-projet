@@ -4,6 +4,16 @@
 		<WorkUnit Name="Default Work Unit" ID="{20D839CA-D291-406D-B3EF-A822183D4FEE}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundcasterSession Name="New Soundcaster Session" ID="{4CEF8F01-03D4-46E1-B4A8-892E09624378}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Take_MUN_In_Munition_Room" ID="{8008DC65-CCFF-4EBD-8772-2D5EBF5DB1D4}" WorkUnitID="{0826D0AD-C706-480C-A235-0CE47C6DD567}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Tapis_Roulant" ID="{BAB3F61D-9AC8-471B-8C08-E890EEECE13C}" WorkUnitID="{0826D0AD-C706-480C-A235-0CE47C6DD567}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="Master_Volume" ID="{7BB8D7F1-225A-4C3D-9125-DCACE0F2008C}"/>
