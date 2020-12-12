@@ -11,15 +11,12 @@ namespace Animations
 {
     public class Canon : MonoBehaviour
     {
-        [SerializeField]
-        private Rocket rocketPrefab;
+        [SerializeField] private Rocket rocketPrefab;
+        [SerializeField] private ParticleSystem shootParticles;
 
-        [SerializeField]
-        private PathCreator pathCreatorAtt;
-        [SerializeField]
-        private PathCreator pathCreatorDef;
-        [SerializeField]
-        private PathCreator pathCreatorJam;
+        [SerializeField] private PathCreator pathCreatorAtt;
+        [SerializeField] private PathCreator pathCreatorDef;
+        [SerializeField] private PathCreator pathCreatorJam;
 
         private Animator m_animator;
         private Room m_roomToShoot;
@@ -39,6 +36,7 @@ namespace Animations
 
         public void OnShoot()
         {
+            shootParticles.Play();
             Rocket rocket = Instantiate(rocketPrefab);
             var pos = rocket.transform.position;
             pos.z = transform.position.z;

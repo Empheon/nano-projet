@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +11,11 @@ namespace Global
 {
     public class Round : MonoBehaviour
     {
-        [SerializeField]
-        private int baseHitPoints;
-
+        [SerializeField] private int baseHitPoints;
+        [SerializeField] private float secondsBeforeNextRound;
+        [SerializeField] private ParticleSystem mechaExplosionLeft;
+        [SerializeField] private ParticleSystem mechaExplosionRight;
+        
         private Dictionary<Team, int> m_teamHp;
 
         public Action<int> OnLeftHPChange;
@@ -52,10 +55,18 @@ namespace Global
             {
                 WinnerTeam = team == Team.Left ? Team.Right : Team.Left;
 
-                //Trigger Anim
-
-                Match.Instance.FinishRound(this);
+                StartCoroutine(ExplodeAndFinishRound());
             }
+        }
+
+        private IEnumerator ExplodeAndFinishRound()
+        {
+            var expl = WinnerTeam == Team.Left ? mechaExplosionRight : mechaExplosionLeft;
+            expl.Play();
+            
+            yield return new WaitForSeconds(secondsBeforeNextRound);
+            
+            Match.Instance.FinishRound(this);
         }
 
         public void Timeout()
