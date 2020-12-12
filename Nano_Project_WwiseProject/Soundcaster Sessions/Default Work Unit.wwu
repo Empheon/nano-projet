@@ -18,7 +18,7 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="Combat_TimeOut" ID="{D6EC3C66-940F-40B2-82AD-A71308660049}"/>
+						<CurrentSwitchRef Name="Combat_End" ID="{0860DA83-B3D3-47B6-AA36-E2FD64BDE144}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

@@ -3,7 +3,7 @@
 	<InteractiveMusic>
 		<WorkUnit Name="Music_Combat" ID="{08BEF351-7448-4191-B2C6-8A72FDEBD3C3}" PersistMode="Standalone">
 			<ChildrenList>
-				<MusicSwitchContainer Name="Music_Switch" ID="{C6225863-A6F8-42D1-9BAA-B537F5AF3228}" ShortID="846337277">
+				<MusicSwitchContainer Name="Music_Combat" ID="{C6225863-A6F8-42D1-9BAA-B537F5AF3228}" ShortID="846337277">
 					<PropertyList>
 						<Property Name="Tempo" Type="Real64" Value="130"/>
 						<Property Name="TimeSignatureUpper" Type="int16" Value="1"/>
@@ -788,6 +788,68 @@
 								</MusicPlaylistItem>
 							</Playlist>
 						</MusicPlaylistContainer>
+						<MusicSegment Name="Musique_End_Victory" ID="{EDCCCABC-77D6-4210-B18D-AA8B1421D84F}" ShortID="178928388">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="7384.625"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="Musique_End_Victory" ID="{9698D100-2B0F-4FF4-952E-9B332C27807E}" ShortID="306341578">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Musique_End_Victory" ID="{8301D214-C7DF-4A90-9798-FBC7266842BE}">
+											<Language>SFX</Language>
+											<AudioFile>Musique_End_Victory.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="87556965"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{E4EBD0A8-D80E-4F35-AEAB-D314DC18D4DB}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{C1FDA9F5-8E38-4FB9-8B07-542F0B8995C9}">
+											<ClipList>
+												<MusicClip Name="Musique_End_Victory" ID="{D80E81F1-3581-4AAB-9285-5CDCD01FA8FE}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="7384.625"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="Musique_End_Victory" ID="{8301D214-C7DF-4A90-9798-FBC7266842BE}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{D496BCA1-66E0-4783-8E75-28AD79415F8F}"/>
+								<MusicCue Name="Exit Cue" ID="{C9A3E04F-2DCD-470F-A3C7-0FAD8AA8ADA7}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="7384.625"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
 					</ChildrenList>
 					<TransitionList>
 						<MusicTransition Name="Root" ID="{0C4D542A-DEF6-4F37-B012-CEBDBCA7B904}">
@@ -1049,6 +1111,14 @@
 							</Path>
 							<AudioNodeInfo>
 								<AudioNodeRef Name="Combat_TimeLow" ID="{2AE19B34-C4D1-4FA5-AD30-3D532385B10E}" WorkUnitID="{08BEF351-7448-4191-B2C6-8A72FDEBD3C3}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Combat_End" ID="{0860DA83-B3D3-47B6-AA36-E2FD64BDE144}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Musique_End_Victory" ID="{EDCCCABC-77D6-4210-B18D-AA8B1421D84F}" WorkUnitID="{08BEF351-7448-4191-B2C6-8A72FDEBD3C3}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 					</EntryList>

@@ -14,6 +14,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Music_Combat" ID="{B4EEBFB8-AD6F-46DE-83E2-F4E0A3943253}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
