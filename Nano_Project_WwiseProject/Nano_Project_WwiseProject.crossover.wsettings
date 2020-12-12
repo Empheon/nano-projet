@@ -3,7 +3,7 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{91E4CD93-5A1F-42D3-94C7-3D213D8F2075}">
 			<PropertyList>
-				<Property Name="AudioFilesImporter\Path" Type="string" Value="Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\Assets Sons V2\Ressources\"/>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\Assets Sons V2\Towers\"/>
 				<Property Name="Event Action List\{0240C629-9DA1-467E-8D22-94A5179420F3}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{03851AB9-E04F-4B6C-9668-10BEF89C89A5}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{0AAE57A8-4696-4EFB-A52C-51B3A6309DBC}\x64_Expand States" Type="string" Value=""/>

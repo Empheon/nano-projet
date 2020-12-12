@@ -297,6 +297,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Tower_Defeat_Destroyed" ID="{24BAD3CF-82EA-471C-9DF5-E7B399201A4A}">
+					<ChildrenList>
+						<Action Name="" ID="{CF91AD33-4B21-48B5-A66A-4528E9FF0183}" ShortID="1032243091">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Tower_Defeat_Destroyed" ID="{E4AFE136-5EC5-4D3E-BB9F-B8AFAF3DD1D9}" WorkUnitID="{0547996C-61D5-47CF-8962-7AA76CA597D8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

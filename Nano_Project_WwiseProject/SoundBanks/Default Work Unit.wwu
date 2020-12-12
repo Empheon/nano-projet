@@ -13,6 +13,7 @@
 						<ObjectRef Name="ATK_Shield_Impact" ID="{EEED4C44-C8C3-43F9-AEC8-E1D705E89160}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Sound_Repair_Room" ID="{0240C629-9DA1-467E-8D22-94A5179420F3}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Amb_EXT" ID="{3F0E0ECC-4300-46D0-9AFC-9CE7D64B90B5}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Tower_Defeat_Destroyed" ID="{24BAD3CF-82EA-471C-9DF5-E7B399201A4A}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="JAM_Activation_Play" ID="{DBE41021-A40E-4743-8105-CA2D37A9372E}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="ATK_Activation" ID="{3A572449-9B8D-4769-B99F-6121D0A34C8D}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="DEF_Deactivation" ID="{45666E65-8C59-4820-899B-5A8322E6B67A}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>

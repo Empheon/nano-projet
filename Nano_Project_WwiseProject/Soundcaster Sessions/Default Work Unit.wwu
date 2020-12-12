@@ -6,12 +6,8 @@
 				<SoundcasterSession Name="New Soundcaster Session" ID="{4CEF8F01-03D4-46E1-B4A8-892E09624378}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Take_MUN_In_Munition_Room" ID="{8008DC65-CCFF-4EBD-8772-2D5EBF5DB1D4}" WorkUnitID="{0826D0AD-C706-480C-A235-0CE47C6DD567}"/>
+							<ObjectRef Name="Tower_Defeat_Destroyed" ID="{E4AFE136-5EC5-4D3E-BB9F-B8AFAF3DD1D9}" WorkUnitID="{0547996C-61D5-47CF-8962-7AA76CA597D8}"/>
 							<Position X="0" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Tapis_Roulant" ID="{BAB3F61D-9AC8-471B-8C08-E890EEECE13C}" WorkUnitID="{0826D0AD-C706-480C-A235-0CE47C6DD567}"/>
-							<Position X="0" Y="1"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">

@@ -12,6 +12,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1546397745	Load_MUN_In_ATK_Room			\Bruitages\Load_MUN_In_ATK_Room	
 	1681694257	Voice_Gameplay_Round2			\Voices\Voice_Gameplay_Round2	
 	1681694258	Voice_Gameplay_Round1			\Voices\Voice_Gameplay_Round1	
+	1941882394	Tower_Defeat_Destroyed			\Bruitages\Tower_Defeat_Destroyed	
 	2001103521	JAM_Activation_Stop			\Bruitages\JAM_Activation_Stop	
 	2064600639	Voice_Gameplay_FinalRound			\Voices\Voice_Gameplay_FinalRound	
 	2374125340	JAM_Hacked_Room			\Bruitages\JAM_Hacked_Room	
@@ -46,6 +47,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	507433643	DEF_Deactivation_4	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\DEF_Deactivation_4_10C4C929.wem		\Actor-Mixer Hierarchy\DEF\DEF_Activation\DEF_Deactivation_4		753472
 	551307913	Damaged_Room_After_Gun_Shoot_Alarm	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Damaged_Room_After_Gun_Shoot_Alarm_DBA9B8CE.wem		\Actor-Mixer Hierarchy\ATK\ATK_Damaged_Room_After_Gun_Shoot\Damaged_Room_After_Gun_Shoot_Alarm		423922
 	567790465	Voice_Gameplay_Fight	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Voice_Gameplay_Fight_10C4C929.wem		\Actor-Mixer Hierarchy\Voices\Voice_Gameplay_Fight		139328
+	572578341	Tower_Defeat_Destroyed	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Tower_Defeat_Destroyed_10C4C929.wem		\Actor-Mixer Hierarchy\Player\Tower_Defeat_Destroyed		299584
 	583378098	JAM_Room_Selection_Electricity_Loop	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\JAM_Room_Selection_Electricity_Loop_6A4DB5DD.wem		\Actor-Mixer Hierarchy\JAM\JAM_Activation\JAM_Activation\JAM_Room_Selection_Electricity_Loop		1326912
 	604113550	Load_MUN_In_ATK_Room	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\Load_MUN_In_ATK_Room_10C4C929.wem		\Actor-Mixer Hierarchy\Ressources\Load_MUN_In_ATK_Room		75616
 	606172872	DEF_Deactivation_2	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\DEF_Deactivation_2_10C4C929.wem		\Actor-Mixer Hierarchy\DEF\DEF_Activation\DEF_Deactivation_2		753472
