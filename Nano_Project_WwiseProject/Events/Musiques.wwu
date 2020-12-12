@@ -14,7 +14,31 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Music_Combat" ID="{B4EEBFB8-AD6F-46DE-83E2-F4E0A3943253}"/>
+				<Event Name="Music_Combat_Start" ID="{B4EEBFB8-AD6F-46DE-83E2-F4E0A3943253}">
+					<ChildrenList>
+						<Action Name="" ID="{BE5125B9-4170-487C-AE7E-D93B229E6D06}" ShortID="606257553">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Combat" ID="{C6225863-A6F8-42D1-9BAA-B537F5AF3228}" WorkUnitID="{08BEF351-7448-4191-B2C6-8A72FDEBD3C3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Music_Combat_Stop" ID="{A4002AA7-934A-41A2-A724-84E91B6B475E}">
+					<ChildrenList>
+						<Action Name="" ID="{FDA0100E-47A1-4BB0-8772-BA3638B72BC2}" ShortID="21595821">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Combat" ID="{C6225863-A6F8-42D1-9BAA-B537F5AF3228}" WorkUnitID="{08BEF351-7448-4191-B2C6-8A72FDEBD3C3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

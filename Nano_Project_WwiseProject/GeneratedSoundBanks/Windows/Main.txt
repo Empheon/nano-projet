@@ -10,11 +10,13 @@ Event	ID	Name			Wwise Object Path	Notes
 	1440017180	ATK_Shield_Impact			\Bruitages\ATK_Shield_Impact	
 	1532752073	ATK_Gun_Shoot_Alarm_Play			\Bruitages\ATK_Gun_Shoot_Alarm_Play	
 	1546397745	Load_MUN_In_ATK_Room			\Bruitages\Load_MUN_In_ATK_Room	
+	1639008996	Music_Combat_Start			\Musiques\Music_Combat_Start	
 	1681694257	Voice_Gameplay_Round2			\Voices\Voice_Gameplay_Round2	
 	1681694258	Voice_Gameplay_Round1			\Voices\Voice_Gameplay_Round1	
 	1941882394	Tower_Defeat_Destroyed			\Bruitages\Tower_Defeat_Destroyed	
 	2001103521	JAM_Activation_Stop			\Bruitages\JAM_Activation_Stop	
 	2064600639	Voice_Gameplay_FinalRound			\Voices\Voice_Gameplay_FinalRound	
+	2145806360	Music_Combat_Stop			\Musiques\Music_Combat_Stop	
 	2374125340	JAM_Hacked_Room			\Bruitages\JAM_Hacked_Room	
 	2426403883	Voice_Gameplay_Player2Wins			\Voices\Voice_Gameplay_Player2Wins	
 	2833402766	Load_ENE_In_DEF_Room			\Bruitages\Load_ENE_In_DEF_Room	
@@ -23,7 +25,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	3402899663	Amb_EXT			\Bruitages\Amb_EXT	
 	3815251225	DEF_Activation			\Bruitages\DEF_Activation	
 	3911605056	Voice_Gameplay_TimeOut			\Voices\Voice_Gameplay_TimeOut	
-	3944980085	Music_Combat			\Musiques\Music_Combat	
 	4099086052	ATK_Activation			\Bruitages\ATK_Activation	
 	4140801355	Voice_Gameplay_Fight			\Voices\Voice_Gameplay_Fight	
 	4227203051	JAM_Deactivation			\Bruitages\JAM_Deactivation	
