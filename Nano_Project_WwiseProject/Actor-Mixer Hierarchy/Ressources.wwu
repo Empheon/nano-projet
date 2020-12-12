@@ -179,6 +179,38 @@
 						<ActiveSource Name="Take_MUN_In_Munition_Room" ID="{7A52BCE4-5210-46D1-AA2E-1B135BFB4851}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="Tapis_Roulant" ID="{BAB3F61D-9AC8-471B-8C08-E890EEECE13C}" ShortID="337293665">
+					<PropertyList>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>-13</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Reverb" ID="{5339937A-76EC-45DB-9526-2A6B447D0C8E}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Tapis_Roulant" ID="{C50A4E30-636C-4E16-B2B0-E3594863C779}">
+							<Language>SFX</Language>
+							<AudioFile>Tapis_Roulant.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1054606890"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Tapis_Roulant" ID="{C50A4E30-636C-4E16-B2B0-E3594863C779}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

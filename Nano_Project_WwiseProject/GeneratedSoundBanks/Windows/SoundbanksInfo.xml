@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="135">
 	<RootPaths>
-		<ProjectRoot>/Users/greg/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/Greg/Cnam Enjmin/JMIN M1/Projets/Nano-Projet/nano-projet/Nano_Project_WwiseProject/</ProjectRoot>
-		<SourceFilesRoot>/Users/greg/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/Greg/Cnam Enjmin/JMIN M1/Projets/Nano-Projet/nano-projet/Nano_Project_WwiseProject/.cache/Windows/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/greg/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/Greg/Cnam Enjmin/JMIN M1/Projets/Nano-Projet/nano-projet/Nano_Project_WwiseProject/GeneratedSoundBanks/Windows/</SoundBanksRoot>
+		<ProjectRoot>D:\theo\projects\unity\Mad Mice\Nano_Project_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\theo\projects\unity\Mad Mice\Nano_Project_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\theo\projects\unity\Mad Mice\Nano_Project_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/greg/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/Greg/Cnam Enjmin/JMIN M1/Projets/Nano-Projet/nano-projet/Nano_Project_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\theo\projects\unity\Mad Mice\Nano_Project_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="636067499" Language="SFX" Hash="2062915709">
+		<SoundBank Id="636067499" Language="SFX" Hash="2993034146">
 			<ObjectPath>\SoundBanks\Default Work Unit\Game_Menu</ObjectPath>
 			<ShortName>Game_Menu</ShortName>
 			<Path>Game_Menu.bnk</Path>
@@ -20,7 +20,7 @@
 					<IncludedMemoryFiles>
 						<File Id="327159191" Language="SFX">
 							<ShortName>Return_Button_Interface.wav</ShortName>
-							<Path>SFX/Return_Button_Interface_10C4C929.wem</Path>
+							<Path>SFX\Return_Button_Interface_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -31,7 +31,7 @@
 					<IncludedMemoryFiles>
 						<File Id="506184188" Language="SFX">
 							<ShortName>Menu_Selection_Button.wav</ShortName>
-							<Path>SFX/Menu_Selection_Button_10C4C929.wem</Path>
+							<Path>SFX\Menu_Selection_Button_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -42,7 +42,7 @@
 					<IncludedMemoryFiles>
 						<File Id="506184188" Language="SFX">
 							<ShortName>Menu_Selection_Button.wav</ShortName>
-							<Path>SFX/Menu_Selection_Button_10C4C929.wem</Path>
+							<Path>SFX\Menu_Selection_Button_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -53,7 +53,7 @@
 					<IncludedMemoryFiles>
 						<File Id="231718174" Language="SFX">
 							<ShortName>Validate_Button_Interface.wav</ShortName>
-							<Path>SFX/Validate_Button_Interface_10C4C929.wem</Path>
+							<Path>SFX\Validate_Button_Interface_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -64,28 +64,52 @@
 					<IncludedMemoryFiles>
 						<File Id="596567004" Language="SFX">
 							<ShortName>Musique_Menu_Intro_120Bpm_1_4.wav</ShortName>
-							<Path>SFX/Musique_Menu_Intro_120Bpm_1_4_D79FB2B7.wem</Path>
+							<Path>SFX\Musique_Menu_Intro_120Bpm_1_4_D79FB2B7.wem</Path>
 						</File>
 						<File Id="722614574" Language="SFX">
 							<ShortName>Musique_Menu_Loop_120Bpm_1_4.wav</ShortName>
-							<Path>SFX/Musique_Menu_Loop_120Bpm_1_4_D79FB2B7.wem</Path>
+							<Path>SFX\Musique_Menu_Loop_120Bpm_1_4_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="829643961" Name="Voice_Intro_StoryTell" ObjectPath="\Events\Voices\Voice_Intro_StoryTell" DurationType="OneShot" DurationMin="37.365334" DurationMax="37.365334">
+					<IncludedMemoryFiles>
+						<File Id="866541837" Language="SFX">
+							<ShortName>Voice_Intro_StoryTell.wav</ShortName>
+							<Path>SFX\Voice_Intro_StoryTell_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="1333084261">
+		<SoundBank Id="708634017" Language="SFX" Hash="2600989502">
+			<ObjectPath>\SoundBanks\Default Work Unit\Globale</ObjectPath>
+			<ShortName>Globale</ShortName>
+			<Path>Globale.bnk</Path>
+			<IncludedEvents>
+				<Event Id="4073936959" Name="LoadingScreen_Door_Close" ObjectPath="\Events\Bruitages\LoadingScreen_Door_Close" DurationType="OneShot" DurationMin="1.494667" DurationMax="1.494667"/>
+				<Event Id="1019552089" Name="LoadingScreen_Door_Open" ObjectPath="\Events\Bruitages\LoadingScreen_Door_Open" DurationType="OneShot" DurationMin="1.704000" DurationMax="1.704000"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="160641533" Language="SFX">
+					<ShortName>LoadingScreen_Door_Close.wav</ShortName>
+					<Path>SFX\LoadingScreen_Door_Close_10C4C929.wem</Path>
+				</File>
+				<File Id="823509908" Language="SFX">
+					<ShortName>LoadingScreen_Door_Open.wav</ShortName>
+					<Path>SFX\LoadingScreen_Door_Open_10C4C929.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX" Hash="1374988347">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<IncludedAuxBusses>
 				<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
 			</IncludedAuxBusses>
-			<GameParameters>
-				<GameParameter Id="4179668880" Name="Master_Volume" ObjectPath="\Game Parameters\Default Work Unit\Master_Volume"/>
-			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1637384947">
+		<SoundBank Id="3161908922" Language="SFX" Hash="3515312952">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -94,7 +118,7 @@
 					<IncludedMemoryFiles>
 						<File Id="955555835" Language="SFX">
 							<ShortName>Amb_EXT.wav</ShortName>
-							<Path>SFX/Amb_EXT_953DA257.wem</Path>
+							<Path>SFX\Amb_EXT_953DA257.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -102,31 +126,31 @@
 					<IncludedMemoryFiles>
 						<File Id="46611289" Language="SFX">
 							<ShortName>Gun_Shoot_ATK_4.wav</ShortName>
-							<Path>SFX/Gun_Shoot_ATK_4_10C4C929.wem</Path>
+							<Path>SFX\Gun_Shoot_ATK_4_10C4C929.wem</Path>
 						</File>
 						<File Id="166527931" Language="SFX">
 							<ShortName>Gun_Shoot_ATK_5.wav</ShortName>
-							<Path>SFX/Gun_Shoot_ATK_5_10C4C929.wem</Path>
+							<Path>SFX\Gun_Shoot_ATK_5_10C4C929.wem</Path>
 						</File>
 						<File Id="262899983" Language="SFX">
 							<ShortName>Gun_Shoot_ATK_8.wav</ShortName>
-							<Path>SFX/Gun_Shoot_ATK_8_10C4C929.wem</Path>
+							<Path>SFX\Gun_Shoot_ATK_8_10C4C929.wem</Path>
 						</File>
 						<File Id="422613945" Language="SFX">
 							<ShortName>Gun_Shoot_ATK_6.wav</ShortName>
-							<Path>SFX/Gun_Shoot_ATK_6_10C4C929.wem</Path>
+							<Path>SFX\Gun_Shoot_ATK_6_10C4C929.wem</Path>
 						</File>
 						<File Id="451914008" Language="SFX">
 							<ShortName>Gun_Shoot_ATK_2.wav</ShortName>
-							<Path>SFX/Gun_Shoot_ATK_2_10C4C929.wem</Path>
+							<Path>SFX\Gun_Shoot_ATK_2_10C4C929.wem</Path>
 						</File>
 						<File Id="655316260" Language="SFX">
 							<ShortName>Gun_Shoot_ATK_1.wav</ShortName>
-							<Path>SFX/Gun_Shoot_ATK_1_10C4C929.wem</Path>
+							<Path>SFX\Gun_Shoot_ATK_1_10C4C929.wem</Path>
 						</File>
 						<File Id="720503782" Language="SFX">
 							<ShortName>Gun_Shoot_ATK_3.wav</ShortName>
-							<Path>SFX/Gun_Shoot_ATK_3_10C4C929.wem</Path>
+							<Path>SFX\Gun_Shoot_ATK_3_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -137,19 +161,19 @@
 					<IncludedMemoryFiles>
 						<File Id="464800623" Language="SFX">
 							<ShortName>Damaged_Room_After_Gun_Shoot_A.wav</ShortName>
-							<Path>SFX/Damaged_Room_After_Gun_Shoot_A_10C4C929.wem</Path>
+							<Path>SFX\Damaged_Room_After_Gun_Shoot_A_10C4C929.wem</Path>
 						</File>
 						<File Id="551307913" Language="SFX">
 							<ShortName>Damaged_Room_After_Gun_Shoot_Alarm.wav</ShortName>
-							<Path>SFX/Damaged_Room_After_Gun_Shoot_Alarm_DBA9B8CE.wem</Path>
+							<Path>SFX\Damaged_Room_After_Gun_Shoot_Alarm_DBA9B8CE.wem</Path>
 						</File>
 						<File Id="607905522" Language="SFX">
 							<ShortName>Damaged_Room_After_Gun_Shoot_B.wav</ShortName>
-							<Path>SFX/Damaged_Room_After_Gun_Shoot_B_10C4C929.wem</Path>
+							<Path>SFX\Damaged_Room_After_Gun_Shoot_B_10C4C929.wem</Path>
 						</File>
 						<File Id="775946827" Language="SFX">
 							<ShortName>Damaged_Room_After_Gun_Shoot_C.wav</ShortName>
-							<Path>SFX/Damaged_Room_After_Gun_Shoot_C_10C4C929.wem</Path>
+							<Path>SFX\Damaged_Room_After_Gun_Shoot_C_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -160,7 +184,7 @@
 					<IncludedMemoryFiles>
 						<File Id="796775262" Language="SFX">
 							<ShortName>Gun_Shoot_Alarm.wav</ShortName>
-							<Path>SFX/Gun_Shoot_Alarm_7EB18810.wem</Path>
+							<Path>SFX\Gun_Shoot_Alarm_7EB18810.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -172,7 +196,7 @@
 					<IncludedMemoryFiles>
 						<File Id="424883624" Language="SFX">
 							<ShortName>ATK_Shield_Impact.wav</ShortName>
-							<Path>SFX/ATK_Shield_Impact_10C4C929.wem</Path>
+							<Path>SFX\ATK_Shield_Impact_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -183,19 +207,19 @@
 					<IncludedMemoryFiles>
 						<File Id="384703938" Language="SFX">
 							<ShortName>DEF_Deactivation_3.wav</ShortName>
-							<Path>SFX/DEF_Deactivation_3_10C4C929.wem</Path>
+							<Path>SFX\DEF_Deactivation_3_10C4C929.wem</Path>
 						</File>
 						<File Id="507433643" Language="SFX">
 							<ShortName>DEF_Deactivation_4.wav</ShortName>
-							<Path>SFX/DEF_Deactivation_4_10C4C929.wem</Path>
+							<Path>SFX\DEF_Deactivation_4_10C4C929.wem</Path>
 						</File>
 						<File Id="606172872" Language="SFX">
 							<ShortName>DEF_Deactivation_2.wav</ShortName>
-							<Path>SFX/DEF_Deactivation_2_10C4C929.wem</Path>
+							<Path>SFX\DEF_Deactivation_2_10C4C929.wem</Path>
 						</File>
 						<File Id="863566075" Language="SFX">
 							<ShortName>DEF_Deactivation_1.wav</ShortName>
-							<Path>SFX/DEF_Deactivation_1_10C4C929.wem</Path>
+							<Path>SFX\DEF_Deactivation_1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -206,22 +230,7 @@
 					<IncludedMemoryFiles>
 						<File Id="923719457" Language="SFX">
 							<ShortName>DEF_Deactivation.wav</ShortName>
-							<Path>SFX/DEF_Deactivation_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-					<AuxBusSends>
-						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
-					</AuxBusSends>
-				</Event>
-				<Event Id="1016987306" Name="Door_End_Round" ObjectPath="\Events\Bruitages\Door_End_Round" DurationType="OneShot" DurationMin="2.630667" DurationMax="2.630667">
-					<IncludedMemoryFiles>
-						<File Id="327191815" Language="SFX">
-							<ShortName>Door_End_Round_2.wav</ShortName>
-							<Path>SFX/Door_End_Round_2_10C4C929.wem</Path>
-						</File>
-						<File Id="589463429" Language="SFX">
-							<ShortName>Door_End_Round_1.wav</ShortName>
-							<Path>SFX/Door_End_Round_1_10C4C929.wem</Path>
+							<Path>SFX\DEF_Deactivation_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -232,15 +241,15 @@
 					<IncludedMemoryFiles>
 						<File Id="206436918" Language="SFX">
 							<ShortName>Sfx_Activate_Button.wav</ShortName>
-							<Path>SFX/Sfx_Activate_Button_06355EA7.wem</Path>
+							<Path>SFX\Sfx_Activate_Button_06355EA7.wem</Path>
 						</File>
 						<File Id="583378098" Language="SFX">
 							<ShortName>JAM_Room_Selection_Electricity_Loop.wav</ShortName>
-							<Path>SFX/JAM_Room_Selection_Electricity_Loop_6A4DB5DD.wem</Path>
+							<Path>SFX\JAM_Room_Selection_Electricity_Loop_6A4DB5DD.wem</Path>
 						</File>
 						<File Id="616616930" Language="SFX">
 							<ShortName>JAM_Activation.wav</ShortName>
-							<Path>SFX/JAM_Activation_10C4C929.wem</Path>
+							<Path>SFX\JAM_Activation_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -252,7 +261,7 @@
 					<IncludedMemoryFiles>
 						<File Id="668761441" Language="SFX">
 							<ShortName>JAM_Deactivation.wav</ShortName>
-							<Path>SFX/JAM_Deactivation_10C4C929.wem</Path>
+							<Path>SFX\JAM_Deactivation_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -263,15 +272,15 @@
 					<IncludedMemoryFiles>
 						<File Id="204726557" Language="SFX">
 							<ShortName>Sound_Hacked_Room_A.wav</ShortName>
-							<Path>SFX/Sound_Hacked_Room_A_10C4C929.wem</Path>
+							<Path>SFX\Sound_Hacked_Room_A_10C4C929.wem</Path>
 						</File>
 						<File Id="318261570" Language="SFX">
 							<ShortName>Sound_Hacked_Room_C.wav</ShortName>
-							<Path>SFX/Sound_Hacked_Room_C_10C4C929.wem</Path>
+							<Path>SFX\Sound_Hacked_Room_C_10C4C929.wem</Path>
 						</File>
 						<File Id="803393747" Language="SFX">
 							<ShortName>Sound_Hacked_Room_B.wav</ShortName>
-							<Path>SFX/Sound_Hacked_Room_B_10C4C929.wem</Path>
+							<Path>SFX\Sound_Hacked_Room_B_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -282,11 +291,11 @@
 					<IncludedMemoryFiles>
 						<File Id="251909760" Language="SFX">
 							<ShortName>Jump_Character_A.wav</ShortName>
-							<Path>SFX/Jump_Character_A_10C4C929.wem</Path>
+							<Path>SFX\Jump_Character_A_10C4C929.wem</Path>
 						</File>
 						<File Id="744854839" Language="SFX">
 							<ShortName>Jump_Character_B.wav</ShortName>
-							<Path>SFX/Jump_Character_B_10C4C929.wem</Path>
+							<Path>SFX\Jump_Character_B_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -297,7 +306,7 @@
 					<IncludedMemoryFiles>
 						<File Id="869095628" Language="SFX">
 							<ShortName>Load_ENE_In_DEF_Room.wav</ShortName>
-							<Path>SFX/Load_ENE_In_DEF_Room_10C4C929.wem</Path>
+							<Path>SFX\Load_ENE_In_DEF_Room_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -308,7 +317,7 @@
 					<IncludedMemoryFiles>
 						<File Id="604113550" Language="SFX">
 							<ShortName>Load_MUN_In_ATK_Room.wav</ShortName>
-							<Path>SFX/Load_MUN_In_ATK_Room_10C4C929.wem</Path>
+							<Path>SFX\Load_MUN_In_ATK_Room_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -319,11 +328,11 @@
 					<IncludedMemoryFiles>
 						<File Id="739036868" Language="SFX">
 							<ShortName>Sound_Repair_Room_B.wav</ShortName>
-							<Path>SFX/Sound_Repair_Room_B_10C4C929.wem</Path>
+							<Path>SFX\Sound_Repair_Room_B_10C4C929.wem</Path>
 						</File>
 						<File Id="785196925" Language="SFX">
 							<ShortName>Sound_Repair_Room_A.wav</ShortName>
-							<Path>SFX/Sound_Repair_Room_A_10C4C929.wem</Path>
+							<Path>SFX\Sound_Repair_Room_A_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -334,7 +343,7 @@
 					<IncludedMemoryFiles>
 						<File Id="452687636" Language="SFX">
 							<ShortName>Take_ENE_In_Energy_Room.wav</ShortName>
-							<Path>SFX/Take_ENE_In_Energy_Room_10C4C929.wem</Path>
+							<Path>SFX\Take_ENE_In_Energy_Room_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -345,12 +354,90 @@
 					<IncludedMemoryFiles>
 						<File Id="401766814" Language="SFX">
 							<ShortName>Take_MUN_In_Munition_Room.wav</ShortName>
-							<Path>SFX/Take_MUN_In_Munition_Room_10C4C929.wem</Path>
+							<Path>SFX\Take_MUN_In_Munition_Room_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
 						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
 					</AuxBusSends>
+				</Event>
+				<Event Id="679670224" Name="Tapis_Rouland" ObjectPath="\Events\Bruitages\Tapis_Rouland" DurationType="OneShot" DurationMin="0.421333" DurationMax="0.421333">
+					<IncludedMemoryFiles>
+						<File Id="1054606890" Language="SFX">
+							<ShortName>Tapis_Roulant.wav</ShortName>
+							<Path>SFX\Tapis_Roulant_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="1941882394" Name="Tower_Defeat_Destroyed" ObjectPath="\Events\Bruitages\Tower_Defeat_Destroyed" DurationType="OneShot" DurationMin="2.700474" DurationMax="3.502081">
+					<IncludedMemoryFiles>
+						<File Id="572578341" Language="SFX">
+							<ShortName>Tower_Defeat_Destroyed.wav</ShortName>
+							<Path>SFX\Tower_Defeat_Destroyed_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="4140801355" Name="Voice_Gameplay_Fight" ObjectPath="\Events\Voices\Voice_Gameplay_Fight" DurationType="OneShot" DurationMin="1.450667" DurationMax="1.450667">
+					<IncludedMemoryFiles>
+						<File Id="567790465" Language="SFX">
+							<ShortName>Voice_Gameplay_Fight.wav</ShortName>
+							<Path>SFX\Voice_Gameplay_Fight_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2064600639" Name="Voice_Gameplay_FinalRound" ObjectPath="\Events\Voices\Voice_Gameplay_FinalRound" DurationType="OneShot" DurationMin="1.813333" DurationMax="1.813333">
+					<IncludedMemoryFiles>
+						<File Id="499103916" Language="SFX">
+							<ShortName>Voice_Gameplay_FinalRound.wav</ShortName>
+							<Path>SFX\Voice_Gameplay_FinalRound_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="58586296" Name="Voice_Gameplay_Player1Wins" ObjectPath="\Events\Voices\Voice_Gameplay_Player1Wins" DurationType="OneShot" DurationMin="3.034667" DurationMax="3.034667">
+					<IncludedMemoryFiles>
+						<File Id="207334017" Language="SFX">
+							<ShortName>Voice_Gameplay_Player1Wins.wav</ShortName>
+							<Path>SFX\Voice_Gameplay_Player1Wins_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2426403883" Name="Voice_Gameplay_Player2Wins" ObjectPath="\Events\Voices\Voice_Gameplay_Player2Wins" DurationType="OneShot" DurationMin="2.828000" DurationMax="2.828000">
+					<IncludedMemoryFiles>
+						<File Id="1067019328" Language="SFX">
+							<ShortName>Voice_Gameplay_Player2Wins.wav</ShortName>
+							<Path>SFX\Voice_Gameplay_Player2Wins_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1681694258" Name="Voice_Gameplay_Round1" ObjectPath="\Events\Voices\Voice_Gameplay_Round1" DurationType="OneShot" DurationMin="1.914667" DurationMax="1.914667">
+					<IncludedMemoryFiles>
+						<File Id="987931763" Language="SFX">
+							<ShortName>Voice_Gameplay_Round1.wav</ShortName>
+							<Path>SFX\Voice_Gameplay_Round1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1681694257" Name="Voice_Gameplay_Round2" ObjectPath="\Events\Voices\Voice_Gameplay_Round2" DurationType="OneShot" DurationMin="1.658667" DurationMax="1.658667">
+					<IncludedMemoryFiles>
+						<File Id="713655879" Language="SFX">
+							<ShortName>Voice_Gameplay_Round2.wav</ShortName>
+							<Path>SFX\Voice_Gameplay_Round2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3911605056" Name="Voice_Gameplay_TimeOut" ObjectPath="\Events\Voices\Voice_Gameplay_TimeOut" DurationType="OneShot" DurationMin="1.730667" DurationMax="1.730667">
+					<IncludedMemoryFiles>
+						<File Id="665380694" Language="SFX">
+							<ShortName>Voice_Gameplay_TimeOut.wav</ShortName>
+							<Path>SFX\Voice_Gameplay_TimeOut_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
 		</SoundBank>

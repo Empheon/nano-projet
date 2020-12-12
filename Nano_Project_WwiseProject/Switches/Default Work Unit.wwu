@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{615C32EF-6CFA-4882-8474-20448657B8F3}" SchemaVersion="97">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{615C32EF-6CFA-4882-8474-20448657B8F3}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{615C32EF-6CFA-4882-8474-20448657B8F3}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Music_Switch" ID="{2F30236D-FBCD-43E2-B4B1-60C52C7ED019}">
+					<ChildrenList>
+						<Switch Name="Combat_Begin" ID="{80533F1E-38E1-4176-97E0-88F1D211B808}"/>
+						<Switch Name="Combat_LowHealth" ID="{C3372D1D-72E5-4C22-BED1-3885FC271F33}"/>
+						<Switch Name="Combat_TimeOut" ID="{D6EC3C66-940F-40B2-82AD-A71308660049}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>

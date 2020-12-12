@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A495E05A-D29F-4504-B6AF-4994CAD6A2C5}" SchemaVersion="97">
+	<Events>
+		<WorkUnit Name="Voices" ID="{A495E05A-D29F-4504-B6AF-4994CAD6A2C5}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Voice_Gameplay_Fight" ID="{3C8743E1-E670-4FDC-8EB4-B4C14B18734D}">
+					<ChildrenList>
+						<Action Name="" ID="{364482BA-8CEA-42F1-A6DA-3B225370C427}" ShortID="739264216">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Voice_Gameplay_Fight" ID="{F803EDC4-9FB9-4E01-B4BD-838015B123E9}" WorkUnitID="{D5DD1F13-2AE1-455A-8102-40E632C98BED}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Voice_Gameplay_FinalRound" ID="{F20EE2D8-152C-4AB0-941F-60443ACB7FF7}">
+					<ChildrenList>
+						<Action Name="" ID="{9CAB2261-0FBC-427E-8973-386E4F8A7341}" ShortID="61079454">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Voice_Gameplay_FinalRound" ID="{2B7BC6F6-CBDA-42C7-879D-96B055B66F6A}" WorkUnitID="{D5DD1F13-2AE1-455A-8102-40E632C98BED}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Voice_Gameplay_Player1Wins" ID="{D56A1B5A-ECCC-4867-B0C3-33AD40C79425}">
+					<ChildrenList>
+						<Action Name="" ID="{4CD7C8A6-FC99-4B21-BBD2-FB09502DCB74}" ShortID="636707507">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Voice_Gameplay_Player1Wins" ID="{8C82E2F4-B420-4196-8554-780700174C54}" WorkUnitID="{D5DD1F13-2AE1-455A-8102-40E632C98BED}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Voice_Gameplay_Player2Wins" ID="{BCFBA8E0-2D4C-41BC-BF3A-BC1F2E5DA3D6}">
+					<ChildrenList>
+						<Action Name="" ID="{43AA9FD8-93D4-42A4-8136-EF60E550A1C1}" ShortID="733749081">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Voice_Gameplay_Player2Wins" ID="{3DC13443-6684-4486-8530-120FF3EEB333}" WorkUnitID="{D5DD1F13-2AE1-455A-8102-40E632C98BED}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Voice_Gameplay_Round1" ID="{0D6A6C92-8050-48FB-A939-3A143DB9C0D6}">
+					<ChildrenList>
+						<Action Name="" ID="{AD333032-67E5-42CA-91CD-77F1D35F0CCA}" ShortID="1055546471">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Voice_Gameplay_Round1" ID="{A9AD1FF9-697A-4184-ACF9-2C50B710F06A}" WorkUnitID="{D5DD1F13-2AE1-455A-8102-40E632C98BED}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Voice_Gameplay_Round2" ID="{BF321203-226D-4DFD-9B07-5F1DBF287720}">
+					<ChildrenList>
+						<Action Name="" ID="{A95BCD9E-3983-4A16-A8A0-965E510E7099}" ShortID="56629432">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Voice_Gameplay_Round2" ID="{9689FDE2-4C63-407E-90E2-591D623828B6}" WorkUnitID="{D5DD1F13-2AE1-455A-8102-40E632C98BED}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Voice_Gameplay_TimeOut" ID="{A213192F-1890-4F3B-83EE-95B574CB9921}">
+					<ChildrenList>
+						<Action Name="" ID="{DBA471DF-1A59-44E6-812A-864B5EFC859C}" ShortID="706170518">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Voice_Gameplay_TimeOut" ID="{86D433EF-2450-478A-953A-851FEAE709FB}" WorkUnitID="{D5DD1F13-2AE1-455A-8102-40E632C98BED}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Voice_Intro_StoryTell" ID="{99FE5D73-F0D3-41C7-84F6-480BBE823CB6}">
+					<ChildrenList>
+						<Action Name="" ID="{1B3476A4-419D-4127-AEB9-CEC28395B4CD}" ShortID="376052871">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Voice_Intro_StoryTell" ID="{5A212A85-77F7-4A68-9F73-69792D338E48}" WorkUnitID="{D5DD1F13-2AE1-455A-8102-40E632C98BED}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

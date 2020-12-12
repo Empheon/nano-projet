@@ -264,12 +264,45 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Door_End_Round" ID="{B5A13EA3-C888-40B7-833E-0E22267942D5}">
+				<Event Name="LoadingScreen_Door_Close" ID="{48FB2198-6894-4C64-9A2E-2AB3196740A5}">
 					<ChildrenList>
-						<Action Name="" ID="{B0FEEEAC-9CF3-44F9-AD22-AFD908DD7EBE}" ShortID="773815992">
+						<Action Name="" ID="{9456F8B6-7C31-48DF-A767-D7FC91C40F54}" ShortID="298090366">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Door_End_Round" ID="{C8E26606-D429-48B4-96CF-91673FE87C53}" WorkUnitID="{DC2C1FCB-B06E-4175-9567-018CDDE84AB9}"/>
+									<ObjectRef Name="LoadingScreen_Door_Close" ID="{A3F1C78A-07F8-4A91-88B7-8CD8BB85FEA2}" WorkUnitID="{7D4B3D91-103F-4B69-BC1D-058247F293E6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="LoadingScreen_Door_Open" ID="{1B8F2277-5474-487E-A8D9-5A9F78191E26}">
+					<ChildrenList>
+						<Action Name="" ID="{1ACFFAB8-8689-45AC-AF28-A211A6085C92}" ShortID="114391417">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="LoadingScreen_Door_Open" ID="{5816AF3A-B72F-4EBE-9DBA-5A74712A6101}" WorkUnitID="{7D4B3D91-103F-4B69-BC1D-058247F293E6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Tapis_Rouland" ID="{53749560-62C7-41E0-AB13-A23865967F3D}">
+					<ChildrenList>
+						<Action Name="" ID="{CABB64A0-B163-4A46-9EF7-D8E48EF90970}" ShortID="673291586">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Tapis_Roulant" ID="{BAB3F61D-9AC8-471B-8C08-E890EEECE13C}" WorkUnitID="{0826D0AD-C706-480C-A235-0CE47C6DD567}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Tower_Defeat_Destroyed" ID="{24BAD3CF-82EA-471C-9DF5-E7B399201A4A}">
+					<ChildrenList>
+						<Action Name="" ID="{CF91AD33-4B21-48B5-A66A-4528E9FF0183}" ShortID="1032243091">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Tower_Defeat_Destroyed" ID="{E4AFE136-5EC5-4D3E-BB9F-B8AFAF3DD1D9}" WorkUnitID="{0547996C-61D5-47CF-8962-7AA76CA597D8}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

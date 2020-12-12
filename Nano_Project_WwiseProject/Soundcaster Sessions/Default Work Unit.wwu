@@ -4,6 +4,12 @@
 		<WorkUnit Name="Default Work Unit" ID="{20D839CA-D291-406D-B3EF-A822183D4FEE}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundcasterSession Name="New Soundcaster Session" ID="{4CEF8F01-03D4-46E1-B4A8-892E09624378}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Tower_Defeat_Destroyed" ID="{E4AFE136-5EC5-4D3E-BB9F-B8AFAF3DD1D9}" WorkUnitID="{0547996C-61D5-47CF-8962-7AA76CA597D8}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="Master_Volume" ID="{7BB8D7F1-225A-4C3D-9125-DCACE0F2008C}"/>
@@ -11,7 +17,9 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
-					<CurrentSwitchList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Combat_TimeOut" ID="{D6EC3C66-940F-40B2-82AD-A71308660049}"/>
+					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>

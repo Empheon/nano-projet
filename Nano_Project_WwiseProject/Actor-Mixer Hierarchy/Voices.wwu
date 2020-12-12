@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D5DD1F13-2AE1-455A-8102-40E632C98BED}" SchemaVersion="97">
+	<AudioObjects>
+		<WorkUnit Name="Voices" ID="{D5DD1F13-2AE1-455A-8102-40E632C98BED}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Voice_Gameplay_Fight" ID="{F803EDC4-9FB9-4E01-B4BD-838015B123E9}" ShortID="361055230">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Voice_Gameplay_Fight" ID="{BEF21734-BDA6-4D3D-814D-318773855B17}">
+							<Language>SFX</Language>
+							<AudioFile>Voice_Gameplay_Fight.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="567790465"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Voice_Gameplay_Fight" ID="{BEF21734-BDA6-4D3D-814D-318773855B17}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Voice_Gameplay_FinalRound" ID="{2B7BC6F6-CBDA-42C7-879D-96B055B66F6A}" ShortID="31627466">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Voice_Gameplay_FinalRound" ID="{F7225C43-15FD-4BB3-AD8C-10F2241199E2}">
+							<Language>SFX</Language>
+							<AudioFile>Voice_Gameplay_FinalRound.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="499103916"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Voice_Gameplay_FinalRound" ID="{F7225C43-15FD-4BB3-AD8C-10F2241199E2}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Voice_Gameplay_Player1Wins" ID="{8C82E2F4-B420-4196-8554-780700174C54}" ShortID="950821747">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Voice_Gameplay_Player1Wins" ID="{B5502F84-9C85-4557-A3B4-088CA86D5D38}">
+							<Language>SFX</Language>
+							<AudioFile>Voice_Gameplay_Player1Wins.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="207334017"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Voice_Gameplay_Player1Wins" ID="{B5502F84-9C85-4557-A3B4-088CA86D5D38}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Voice_Gameplay_Player2Wins" ID="{3DC13443-6684-4486-8530-120FF3EEB333}" ShortID="511969629">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Voice_Gameplay_Player2Wins" ID="{7D65EABE-665B-434E-88CD-EECBF4B04931}">
+							<Language>SFX</Language>
+							<AudioFile>Voice_Gameplay_Player2Wins.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1067019328"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Voice_Gameplay_Player2Wins" ID="{7D65EABE-665B-434E-88CD-EECBF4B04931}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Voice_Gameplay_Round1" ID="{A9AD1FF9-697A-4184-ACF9-2C50B710F06A}" ShortID="306276719">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Voice_Gameplay_Round1" ID="{FC62B34D-0085-4D0A-A8FA-5C1E9B5E6E4F}">
+							<Language>SFX</Language>
+							<AudioFile>Voice_Gameplay_Round1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="987931763"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Voice_Gameplay_Round1" ID="{FC62B34D-0085-4D0A-A8FA-5C1E9B5E6E4F}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Voice_Gameplay_Round2" ID="{9689FDE2-4C63-407E-90E2-591D623828B6}" ShortID="644707385">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Voice_Gameplay_Round2" ID="{9DAB2A60-FC0F-4667-9E89-0504221B1F24}">
+							<Language>SFX</Language>
+							<AudioFile>Voice_Gameplay_Round2.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="713655879"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Voice_Gameplay_Round2" ID="{9DAB2A60-FC0F-4667-9E89-0504221B1F24}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Voice_Gameplay_TimeOut" ID="{86D433EF-2450-478A-953A-851FEAE709FB}" ShortID="943123965">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Voice_Gameplay_TimeOut" ID="{3ABEAB25-EC83-48E1-BDD4-2891370EE90E}">
+							<Language>SFX</Language>
+							<AudioFile>Voice_Gameplay_TimeOut.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="665380694"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Voice_Gameplay_TimeOut" ID="{3ABEAB25-EC83-48E1-BDD4-2891370EE90E}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Voice_Intro_StoryTell" ID="{5A212A85-77F7-4A68-9F73-69792D338E48}" ShortID="295799879">
+					<PropertyList>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>-35</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBDEA322-A737-48B4-8EB6-FB399756291F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Voice_Intro_StoryTell" ID="{1A550796-F196-4EAF-9144-7BFF2F3D02EA}">
+							<Language>SFX</Language>
+							<AudioFile>Voice_Intro_StoryTell.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="866541837"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Voice_Intro_StoryTell" ID="{1A550796-F196-4EAF-9144-7BFF2F3D02EA}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
