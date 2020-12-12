@@ -2,9 +2,12 @@
 menu_play_game;Play
 menu_tutorial;Tutorial
 menu_settings;Settings
+menu_credits;Credits
 menu_quit;Exit game
 menu_back;Back
 menu_back_prompt;or "Escape" to cancel
+
+menu_get_ready;Get ready!
 
 tuto_disclaimer;This tutorial does not include interactions with the fortress commands.
 tuto_main_1;Annihilate the enemy fortress!

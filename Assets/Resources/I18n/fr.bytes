@@ -2,9 +2,12 @@
 menu_play_game;Jouer
 menu_tutorial;Tutoriel
 menu_settings;Options
+menu_credits;Credits
 menu_quit;Quitter
 menu_back;Retour
 menu_back_prompt;ou "Echap." pour annuler
+
+menu_get_ready;Preparez-vous !
 
 tuto_disclaimer;Ce tutoriel ne propose pas d'interactions avec les commandes de la forteresse.
 tuto_main_1;Terrassez la forteresse ennemie !
@@ -41,4 +44,4 @@ tip_1;Pirater le système de défense de l'ennemi annulera son bouclier !
 tip_2;Vous pouvez lâcher l'objet que vous portez avec la touche Action.
 tip_3;Pensez à déposer d'autres munitions près de votre réservoir de missiles, ne laissez pas l'ennemi respirer !
 tip_4;Endommager ou pirater le système de piratage ennemi en cours de fonctionnement permettra de restaurer vos systèmes !
-tip_5;Gardez un oeil sur les lumières au dessus de vos réservoirs de munition et d'énergie. Elles indiquent s'ils sont chargés ou pas !
+tip_5;Gardez un oeil sur les lumières au-dessus de vos réservoirs de munition et d'énergie. Elles indiquent s'ils sont chargés ou pas !
