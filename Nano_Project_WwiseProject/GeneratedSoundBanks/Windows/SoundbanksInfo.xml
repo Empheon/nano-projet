@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="636067499" Language="SFX" Hash="2062915709">
+		<SoundBank Id="636067499" Language="SFX" Hash="103173631">
 			<ObjectPath>\SoundBanks\Default Work Unit\Game_Menu</ObjectPath>
 			<ShortName>Game_Menu</ShortName>
 			<Path>Game_Menu.bnk</Path>
@@ -72,7 +72,34 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="829643961" Name="Voice_Intro_StoryTell" ObjectPath="\Events\Voices\Voice_Intro_StoryTell" DurationType="OneShot" DurationMin="37.365334" DurationMax="37.365334">
+					<IncludedMemoryFiles>
+						<File Id="866541837" Language="SFX">
+							<ShortName>Voice_Intro_StoryTell.wav</ShortName>
+							<Path>SFX/Voice_Intro_StoryTell_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 			</IncludedEvents>
+		</SoundBank>
+		<SoundBank Id="708634017" Language="SFX" Hash="3075708304">
+			<ObjectPath>\SoundBanks\Default Work Unit\Globale</ObjectPath>
+			<ShortName>Globale</ShortName>
+			<Path>Globale.bnk</Path>
+			<IncludedEvents>
+				<Event Id="4073936959" Name="LoadingScreen_Door_Close" ObjectPath="\Events\Bruitages\LoadingScreen_Door_Close" DurationType="OneShot" DurationMin="1.494667" DurationMax="1.494667"/>
+				<Event Id="1019552089" Name="LoadingScreen_Door_Open" ObjectPath="\Events\Bruitages\LoadingScreen_Door_Open" DurationType="OneShot" DurationMin="1.704000" DurationMax="1.704000"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="160641533" Language="SFX">
+					<ShortName>LoadingScreen_Door_Close.wav</ShortName>
+					<Path>SFX/LoadingScreen_Door_Close_10C4C929.wem</Path>
+				</File>
+				<File Id="823509908" Language="SFX">
+					<ShortName>LoadingScreen_Door_Open.wav</ShortName>
+					<Path>SFX/LoadingScreen_Door_Open_10C4C929.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX" Hash="1374988347">
 			<ObjectPath>Init</ObjectPath>
@@ -82,7 +109,7 @@
 				<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="2131345188">
+		<SoundBank Id="3161908922" Language="SFX" Hash="2367625237">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -291,28 +318,6 @@
 						<File Id="604113550" Language="SFX">
 							<ShortName>Load_MUN_In_ATK_Room.wav</ShortName>
 							<Path>SFX/Load_MUN_In_ATK_Room_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-					<AuxBusSends>
-						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
-					</AuxBusSends>
-				</Event>
-				<Event Id="4073936959" Name="LoadingScreen_Door_Close" ObjectPath="\Events\Bruitages\LoadingScreen_Door_Close" DurationType="OneShot" DurationMin="1.494667" DurationMax="1.494667">
-					<IncludedMemoryFiles>
-						<File Id="160641533" Language="SFX">
-							<ShortName>LoadingScreen_Door_Close.wav</ShortName>
-							<Path>SFX/LoadingScreen_Door_Close_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-					<AuxBusSends>
-						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
-					</AuxBusSends>
-				</Event>
-				<Event Id="1019552089" Name="LoadingScreen_Door_Open" ObjectPath="\Events\Bruitages\LoadingScreen_Door_Open" DurationType="OneShot" DurationMin="1.704000" DurationMax="1.704000">
-					<IncludedMemoryFiles>
-						<File Id="823509908" Language="SFX">
-							<ShortName>LoadingScreen_Door_Open.wav</ShortName>
-							<Path>SFX/LoadingScreen_Door_Open_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>

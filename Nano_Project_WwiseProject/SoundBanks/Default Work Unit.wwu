@@ -16,7 +16,6 @@
 						<ObjectRef Name="ATK_Activation" ID="{3A572449-9B8D-4769-B99F-6121D0A34C8D}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="DEF_Deactivation" ID="{45666E65-8C59-4820-899B-5A8322E6B67A}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Voice_Gameplay_Player1Wins" ID="{D56A1B5A-ECCC-4867-B0C3-33AD40C79425}" WorkUnitID="{A495E05A-D29F-4504-B6AF-4994CAD6A2C5}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="LoadingScreen_Door_Open" ID="{1B8F2277-5474-487E-A8D9-5A9F78191E26}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Voice_Gameplay_Round1" ID="{0D6A6C92-8050-48FB-A939-3A143DB9C0D6}" WorkUnitID="{A495E05A-D29F-4504-B6AF-4994CAD6A2C5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Take_MUN_In_Munition_Room" ID="{31DBF242-C204-4992-9E12-B314D3BB44D6}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Take_ENE_In_Energy_Room" ID="{0D343941-4647-4A68-BF8C-8529D1FBF822}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
@@ -26,7 +25,6 @@
 						<ObjectRef Name="ATK_Gun_Shoot_Alarm_Play" ID="{CAE61FA2-17C8-4BBD-A48B-4DD103AB1A15}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Load_MUN_In_ATK_Room" ID="{4320AA7F-6B12-4C16-A977-16A5A6313ECF}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="JAM_Activation_Stop" ID="{2D2460D1-3388-4C3E-9016-903A74A7AC30}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="LoadingScreen_Door_Close" ID="{48FB2198-6894-4C64-9A2E-2AB3196740A5}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Voice_Gameplay_Round2" ID="{BF321203-226D-4DFD-9B07-5F1DBF287720}" WorkUnitID="{A495E05A-D29F-4504-B6AF-4994CAD6A2C5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="ATK_Damaged_Room_After_Gun_Shoot" ID="{7A7B3265-936F-4E50-AAA1-5A5F7016865E}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="JAM_Hacked_Room" ID="{ABCD106C-FA26-4E54-8FD2-64B17547E3BF}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
@@ -44,6 +42,14 @@
 						<ObjectRef Name="Menu_Selection_Button" ID="{FE6C414F-1918-48DE-8604-583A6D999019}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Menu_Validate_Button_Interface" ID="{6FF2A9A3-053E-4BBF-A248-80B781A39E7D}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Menu_Selection_Cursor" ID="{0AAE57A8-4696-4EFB-A52C-51B3A6309DBC}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Globale" ID="{144A69F1-C273-4BAA-A6FD-0AFE2AA74192}">
+					<ObjectInclusionList>
+						<ObjectRef Name="LoadingScreen_Door_Close" ID="{A3F1C78A-07F8-4A91-88B7-8CD8BB85FEA2}" WorkUnitID="{7D4B3D91-103F-4B69-BC1D-058247F293E6}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="LoadingScreen_Door_Open" ID="{5816AF3A-B72F-4EBE-9DBA-5A74712A6101}" WorkUnitID="{7D4B3D91-103F-4B69-BC1D-058247F293E6}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
