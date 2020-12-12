@@ -30,7 +30,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 6806d1fcf7d3464ebfd4348b11cfa3b5
     GuidInternal: 
-    m_lastTime: -8585938228081060061
+    m_lastTime: -8585938193781470485
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -60,7 +60,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 15d53b9c307fca4f9ee085cc956a3630
     GuidInternal: 
-    m_lastTime: -8585938227992680711
+    m_lastTime: -8585938105240770364
     List:
     - name: Game_Menu
       guid: cd62eeeae0ceda48ac519ed9476f3a8b
@@ -97,7 +97,7 @@ MonoBehaviour:
     ParentPath: Bruitages
     guid: a6f822f6fd73b84593f05ec6db5e4a92
     GuidInternal: 
-    m_lastTime: -8585938228129582319
+    m_lastTime: -8585938193841490640
     List:
     - name: Amb_EXT
       guid: cc0e0e3f0043d0469afc9ce7d64b90b5
@@ -427,8 +427,32 @@ MonoBehaviour:
     ParentPath: Musiques
     guid: aedac252a8326e4da8d89994003a8369
     GuidInternal: 
-    m_lastTime: -8585938835775565271
+    m_lastTime: -8585938105254812662
     List:
+    - name: Music_Combat_Start
+      guid: b8bfeeb46fadde4683e2f4e0a3943253
+      id: 1639008996
+      PathAndIcons:
+      - ElementName: Musiques
+        ObjectType: 12
+      - ElementName: Music_Combat_Start
+        ObjectType: 3
+      Path: Musiques\Music_Combat_Start
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Music_Combat_Stop
+      guid: a72a00a44a93a241a72484e91b6b475e
+      id: 2145806360
+      PathAndIcons:
+      - ElementName: Musiques
+        ObjectType: 12
+      - ElementName: Music_Combat_Stop
+        ObjectType: 3
+      Path: Musiques\Music_Combat_Stop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Music_Menu
       guid: ecefc1a9ddfd0b48ba816fb2ecb9820a
       id: 1598298728
@@ -448,7 +472,7 @@ MonoBehaviour:
     ParentPath: Voices
     guid: 5ae095a49fd20445b6af4994cad6a2c5
     GuidInternal: 
-    m_lastTime: -8585938228129305795
+    m_lastTime: -8585938193841299984
     List:
     - name: Voice_Gameplay_Fight
       guid: e143873c70e6dc4f8eb4b4c14b18734d
@@ -583,7 +607,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: ef325c61fa6c8248847420448657b8f3
     GuidInternal: 
-    m_lastTime: -8585938227992457320
+    m_lastTime: -8585938123979951272
     List:
     - name: Music_Switch
       guid: 6d23302fcdfbe243b4b160c52c7ed019
@@ -600,6 +624,12 @@ MonoBehaviour:
         id: 4007961327
         PathAndIcons:
         - ElementName: Combat_Begin
+          ObjectType: 10
+      - name: Combat_End
+        guid: 83da6008d3b3b647aa36e2fd64bde144
+        id: 2887812511
+        PathAndIcons:
+        - ElementName: Combat_End
           ObjectType: 10
       - name: Combat_LowHealth
         guid: 1d2d37c3e572224cbed13885fc271f33
@@ -633,5 +663,8 @@ MonoBehaviour:
   - /Nano_Project_WwiseProject/Events/Musiques
   - /Nano_Project_WwiseProject/SoundBanks
   - /Nano_Project_WwiseProject/SoundBanks/Default Work Unit
+  - /Nano_Project_WwiseProject/Switches
+  - /Nano_Project_WwiseProject/Switches/Default Work Unit
+  - /Nano_Project_WwiseProject/Switches/Default Work Unit/Music_Switch
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

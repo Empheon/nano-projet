@@ -2,9 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Character;
+using UI;
 using UnityEngine;
 using static Global.PlayerManager;
 using CharacterController = Character.CharacterController;
@@ -14,7 +13,8 @@ namespace Global
     public class Round : MonoBehaviour
     {
         [SerializeField] private int baseHitPoints;
-
+        [SerializeField] private Timer timer;
+        
         [Header("Round Start")] 
         [SerializeField] private float beforeRoundDuration = 0.5f;
         [SerializeField] private float roundNumberAnnouncementDuration = 2.5f;
@@ -41,6 +41,9 @@ namespace Global
 
             OnLeftHPChange?.Invoke(m_teamHp[Team.Left]);
             OnRightHPChange?.Invoke(m_teamHp[Team.Right]);
+            
+            UpdateSound();
+            AkSoundEngine.PostEvent("Music_Combat_Start", gameObject);
             
             // wait for characters to spawn
             yield return new WaitForEndOfFrame();
@@ -76,11 +79,17 @@ namespace Global
             AkSoundEngine.PostEvent("Voice_Gameplay_Fight", gameObject);
         }
 
+        private void OnDestroy()
+        {
+            AkSoundEngine.PostEvent("Music_Combat_Stop", gameObject);
+        }
+
         public void LeftGetHit()
         {
             m_teamHp[Team.Left] -= 1;
             OnLeftHPChange?.Invoke(m_teamHp[Team.Left]);
             CheckEndGame(Team.Left);
+            UpdateSound();
         }
 
         public void RightGetHit()
@@ -88,6 +97,7 @@ namespace Global
             m_teamHp[Team.Right] -= 1;
             OnRightHPChange?.Invoke(m_teamHp[Team.Right]);
             CheckEndGame(Team.Right);
+            UpdateSound();
         }
 
         private void CheckEndGame(Team team)
@@ -97,6 +107,22 @@ namespace Global
                 WinnerTeam = team == Team.Left ? Team.Right : Team.Left;
 
                 StartCoroutine(ExplodeAndFinishRound());
+            }
+        }
+
+        private void UpdateSound()
+        {
+            if (m_teamHp.Any(pair => pair.Value <= 1))
+            {
+                AkSoundEngine.SetSwitch("Music_Switch", "Combat_TimeOut", gameObject);
+            }
+            else if(m_teamHp.Any(pair => pair.Value <= 2))
+            {
+                AkSoundEngine.SetSwitch("Music_Switch", "Combat_LowHealth", gameObject);
+            }
+            else
+            {
+                AkSoundEngine.SetSwitch("Music_Switch", "Combat_Begin", gameObject);
             }
         }
 

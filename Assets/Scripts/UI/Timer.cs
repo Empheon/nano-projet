@@ -11,13 +11,10 @@ namespace UI
 {
     public class Timer : MonoBehaviour
     {
-        [SerializeField]
-        private float time = 180;
-
+        [SerializeField] private float time = 180;
         [SerializeField] private float timeScale = 0.5f;
 
         public UnityEvent OnTimeout;
-
         private TextMeshProUGUI m_text;
 
         private void Start()

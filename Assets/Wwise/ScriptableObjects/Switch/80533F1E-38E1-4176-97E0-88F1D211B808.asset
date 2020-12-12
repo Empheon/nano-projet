@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a33ad942c723e48ad3952464ebfe9c, type: 3}
+  m_Name: 80533F1E-38E1-4176-97E0-88F1D211B808
+  m_EditorClassIdentifier: 
+  objectName: Combat_Begin
+  id: 4007961327
+  guid: 80533F1E-38E1-4176-97E0-88F1D211B808
+  WwiseSwitchGroupReference: {fileID: 11400000, guid: 165654f774e61504f814fd1aadfa6ea9,
+    type: 2}
