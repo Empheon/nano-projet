@@ -16,7 +16,8 @@ namespace Global
         [SerializeField] private int baseHitPoints;
 
         [Header("Round Start")] 
-        [SerializeField] private float roundNumberAnnouncementDuration = 3f;
+        [SerializeField] private float beforeRoundDuration = 0.5f;
+        [SerializeField] private float roundNumberAnnouncementDuration = 2.5f;
         [SerializeField] private CharacterSpawner spawner;
         
         [Header("Round End")]
@@ -50,6 +51,8 @@ namespace Global
                 var controller = character.GetComponent<CharacterController>();
                 controller.enabled = false;
             }
+            
+            yield return new WaitForSeconds(beforeRoundDuration);
             
             // play right sound announcing round number
             string voiceEvent; 

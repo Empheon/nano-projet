@@ -11,6 +11,7 @@ namespace Menu
     public class GamepadCheckManager : MonoBehaviour
     {
         private GamepadCheck[] _checkers;
+        private bool _eventSent;
 
         public UnityEvent LoadNextScene;
         
@@ -26,10 +27,11 @@ namespace Menu
 
         private void Update()
         {
-            if (EveryOneIsReady())
+            if (EveryOneIsReady() && !_eventSent)
             {
                 PlayerManager.Instance.Locked = true;
                 LoadNextScene.Invoke();
+                _eventSent = true;
             }
         }
     }

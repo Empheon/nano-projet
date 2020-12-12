@@ -60,7 +60,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 15d53b9c307fca4f9ee085cc956a3630
     GuidInternal: 
-    m_lastTime: -8585938305372943331
+    m_lastTime: -8585938243706804224
     List:
     - name: Game_Menu
       guid: cd62eeeae0ceda48ac519ed9476f3a8b
@@ -71,6 +71,15 @@ MonoBehaviour:
       - ElementName: Game_Menu
         ObjectType: 7
       Path: Default Work Unit\Game_Menu
+    - name: Globale
+      guid: f1694a1473c2aa4ba6fd0afe2aa74192
+      id: 708634017
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Globale
+        ObjectType: 7
+      Path: Default Work Unit\Globale
     - name: Main
       guid: b980d8a3b6c6ba4a8af2b7965e411ba9
       id: 3161908922
@@ -88,7 +97,7 @@ MonoBehaviour:
     ParentPath: Bruitages
     guid: a6f822f6fd73b84593f05ec6db5e4a92
     GuidInternal: 
-    m_lastTime: -8585938305395559887
+    m_lastTime: -8585938243741790503
     List:
     - name: Amb_EXT
       guid: cc0e0e3f0043d0469afc9ce7d64b90b5
@@ -378,6 +387,30 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.220333
       minDuration: 0.165064
+    - name: Tapis_Rouland
+      guid: 60957453c762e041ab13a23865967f3d
+      id: 679670224
+      PathAndIcons:
+      - ElementName: Bruitages
+        ObjectType: 12
+      - ElementName: Tapis_Rouland
+        ObjectType: 3
+      Path: Bruitages\Tapis_Rouland
+      maxAttenuation: 0
+      maxDuration: 0.421333
+      minDuration: 0.421333
+    - name: Tower_Defeat_Destroyed
+      guid: cfd3ba24ea821c479df5e7b399201a4a
+      id: 1941882394
+      PathAndIcons:
+      - ElementName: Bruitages
+        ObjectType: 12
+      - ElementName: Tower_Defeat_Destroyed
+        ObjectType: 3
+      Path: Bruitages\Tower_Defeat_Destroyed
+      maxAttenuation: 0
+      maxDuration: 3.502081
+      minDuration: 2.700474
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Default Work Unit
