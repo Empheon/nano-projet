@@ -8,6 +8,7 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using TMPro;
 
 namespace UI
 {
@@ -36,8 +37,10 @@ namespace UI
 
             foreach (var splashScreenItem in splashScreenItems)
             {
-                splashScreenItem.Wrapper.SetActive(false);
+                splashScreenItem.Wrapper.SetActive(true);
             }
+
+            HideAllScreens(0);
         }
 
         private void Start()
@@ -50,34 +53,62 @@ namespace UI
 
             for (int i = 0; i < splashScreenItems.Count; i++)
             {
-                foreach (var splashScreenItem in splashScreenItems)
-                {
-                    splashScreenItem.Wrapper.SetActive(false);
-                }
+                HideAllScreens();
+                yield return new WaitForSeconds(0.5f);
+
                 var item = splashScreenItems[i];
-                item.Wrapper.SetActive(true);
+                ShowScreen(item);
 
                 if (i == 0)
                 {
                     // Wait before everything loads (especially the sound)
-                    yield return new WaitForSeconds(0.5f);
+                    yield return new WaitForSeconds(0.3f);
+
+                    // ---------------- Start intro music here
                 }
 
-                if (item.MustScale)
-                {
-                    item.Wrapper.transform.DOScale(1.1f, item.Duration).From(1).SetEase(Ease.Linear);
-                }
+                item.Wrapper.transform.DOScale(item.ToScale, item.Duration).From(item.FromScale).SetEase(Ease.Linear);
 
-                yield return new WaitForSeconds(item.Duration);
+
+                yield return new WaitForSeconds(item.Duration - 0.5f);
             }
+
+            HideAllScreens();
+            yield return new WaitForSeconds(0.5f);
             FinishIntro();
+        }
+
+        private void HideAllScreens(float duration = 0.5f)
+        {
+            foreach (var splashScreenItem in splashScreenItems)
+            {
+                foreach (Image img in splashScreenItem.Wrapper.GetComponentsInChildren<Image>())
+                {
+                    img.DOFade(0, duration).SetEase(Ease.Linear);
+                }
+                foreach (TextMeshProUGUI text in splashScreenItem.Wrapper.GetComponentsInChildren<TextMeshProUGUI>())
+                {
+                    text.DOFade(0, duration).SetEase(Ease.Linear);
+                }
+            }
+        }
+
+        private void ShowScreen(SplashScreenItem item, float duration = 0.5f)
+        {
+            foreach (Image img in item.Wrapper.GetComponentsInChildren<Image>())
+            {
+                img.DOFade(1, duration).SetEase(Ease.Linear);
+            }
+            foreach (TextMeshProUGUI text in item.Wrapper.GetComponentsInChildren<TextMeshProUGUI>())
+            {
+                text.DOFade(1, duration).SetEase(Ease.Linear);
+            }
         }
 
         private void Update()
         {
             if (Gamepad.all.Any((g) => g.buttonWest.wasPressedThisFrame)
-                || InputSystem.devices.Any((g) =>
-                {
+                || InputSystem.devices.Any((g) => {
                     if (g is Keyboard keyboard)
                     {
                         return keyboard.spaceKey.wasPressedThisFrame;
@@ -96,6 +127,14 @@ namespace UI
             foreach (var splashScreenItem in splashScreenItems)
             {
                 splashScreenItem.Wrapper.transform.DOKill();
+                foreach (Image img in splashScreenItem.Wrapper.GetComponentsInChildren<Image>())
+                {
+                    img.DOKill();
+                }
+                foreach (TextMeshProUGUI text in splashScreenItem.Wrapper.GetComponentsInChildren<TextMeshProUGUI>())
+                {
+                    text.DOKill();
+                }
             }
 
             m_wasPlayed = true;
@@ -111,6 +150,7 @@ namespace UI
     {
         public GameObject Wrapper;
         public float Duration;
-        public bool MustScale = true;
+        public float FromScale = 1;
+        public float ToScale = 1;
     }
 }
