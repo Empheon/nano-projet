@@ -4,6 +4,7 @@ menu_tutorial;Tutoriel
 menu_settings;Options
 menu_quit;Quitter
 menu_back;Retour
+menu_back_prompt;ou "Echap." pour annuler
 
 tuto_disclaimer;Ce tutoriel ne propose pas d'interactions avec les commandes de la forteresse.
 tuto_main_1;Terrassez la forteresse ennemie !
