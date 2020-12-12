@@ -8,6 +8,7 @@
 						<Switch Name="Combat_Begin" ID="{80533F1E-38E1-4176-97E0-88F1D211B808}"/>
 						<Switch Name="Combat_LowHealth" ID="{C3372D1D-72E5-4C22-BED1-3885FC271F33}"/>
 						<Switch Name="Combat_TimeOut" ID="{D6EC3C66-940F-40B2-82AD-A71308660049}"/>
+						<Switch Name="Combat_End" ID="{0860DA83-B3D3-47B6-AA36-E2FD64BDE144}"/>
 					</ChildrenList>
 				</SwitchGroup>
 			</ChildrenList>
