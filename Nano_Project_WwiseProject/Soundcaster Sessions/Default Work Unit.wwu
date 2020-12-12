@@ -4,6 +4,32 @@
 		<WorkUnit Name="Default Work Unit" ID="{20D839CA-D291-406D-B3EF-A822183D4FEE}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundcasterSession Name="New Soundcaster Session" ID="{4CEF8F01-03D4-46E1-B4A8-892E09624378}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Voice_Gameplay_Fight" ID="{F803EDC4-9FB9-4E01-B4BD-838015B123E9}" WorkUnitID="{D5DD1F13-2AE1-455A-8102-40E632C98BED}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Voice_Gameplay_FinalRound" ID="{2B7BC6F6-CBDA-42C7-879D-96B055B66F6A}" WorkUnitID="{D5DD1F13-2AE1-455A-8102-40E632C98BED}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Voice_Gameplay_Player2Wins" ID="{3DC13443-6684-4486-8530-120FF3EEB333}" WorkUnitID="{D5DD1F13-2AE1-455A-8102-40E632C98BED}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Voice_Gameplay_Round1" ID="{A9AD1FF9-697A-4184-ACF9-2C50B710F06A}" WorkUnitID="{D5DD1F13-2AE1-455A-8102-40E632C98BED}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Voice_Gameplay_Round2" ID="{9689FDE2-4C63-407E-90E2-591D623828B6}" WorkUnitID="{D5DD1F13-2AE1-455A-8102-40E632C98BED}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Voice_Gameplay_TimeOut" ID="{86D433EF-2450-478A-953A-851FEAE709FB}" WorkUnitID="{D5DD1F13-2AE1-455A-8102-40E632C98BED}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="Master_Volume" ID="{7BB8D7F1-225A-4C3D-9125-DCACE0F2008C}"/>

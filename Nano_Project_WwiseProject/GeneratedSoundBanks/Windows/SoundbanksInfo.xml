@@ -82,7 +82,7 @@
 				<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="236402903">
+		<SoundBank Id="3161908922" Language="SFX" Hash="2131345188">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -355,6 +355,62 @@
 					<AuxBusSends>
 						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
 					</AuxBusSends>
+				</Event>
+				<Event Id="4140801355" Name="Voice_Gameplay_Fight" ObjectPath="\Events\Voices\Voice_Gameplay_Fight" DurationType="OneShot" DurationMin="1.450667" DurationMax="1.450667">
+					<IncludedMemoryFiles>
+						<File Id="567790465" Language="SFX">
+							<ShortName>Voice_Gameplay_Fight.wav</ShortName>
+							<Path>SFX/Voice_Gameplay_Fight_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2064600639" Name="Voice_Gameplay_FinalRound" ObjectPath="\Events\Voices\Voice_Gameplay_FinalRound" DurationType="OneShot" DurationMin="1.813333" DurationMax="1.813333">
+					<IncludedMemoryFiles>
+						<File Id="499103916" Language="SFX">
+							<ShortName>Voice_Gameplay_FinalRound.wav</ShortName>
+							<Path>SFX/Voice_Gameplay_FinalRound_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="58586296" Name="Voice_Gameplay_Player1Wins" ObjectPath="\Events\Voices\Voice_Gameplay_Player1Wins" DurationType="OneShot" DurationMin="3.034667" DurationMax="3.034667">
+					<IncludedMemoryFiles>
+						<File Id="207334017" Language="SFX">
+							<ShortName>Voice_Gameplay_Player1Wins.wav</ShortName>
+							<Path>SFX/Voice_Gameplay_Player1Wins_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2426403883" Name="Voice_Gameplay_Player2Wins" ObjectPath="\Events\Voices\Voice_Gameplay_Player2Wins" DurationType="OneShot" DurationMin="2.828000" DurationMax="2.828000">
+					<IncludedMemoryFiles>
+						<File Id="1067019328" Language="SFX">
+							<ShortName>Voice_Gameplay_Player2Wins.wav</ShortName>
+							<Path>SFX/Voice_Gameplay_Player2Wins_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1681694258" Name="Voice_Gameplay_Round1" ObjectPath="\Events\Voices\Voice_Gameplay_Round1" DurationType="OneShot" DurationMin="1.914667" DurationMax="1.914667">
+					<IncludedMemoryFiles>
+						<File Id="987931763" Language="SFX">
+							<ShortName>Voice_Gameplay_Round1.wav</ShortName>
+							<Path>SFX/Voice_Gameplay_Round1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1681694257" Name="Voice_Gameplay_Round2" ObjectPath="\Events\Voices\Voice_Gameplay_Round2" DurationType="OneShot" DurationMin="1.658667" DurationMax="1.658667">
+					<IncludedMemoryFiles>
+						<File Id="713655879" Language="SFX">
+							<ShortName>Voice_Gameplay_Round2.wav</ShortName>
+							<Path>SFX/Voice_Gameplay_Round2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3911605056" Name="Voice_Gameplay_TimeOut" ObjectPath="\Events\Voices\Voice_Gameplay_TimeOut" DurationType="OneShot" DurationMin="1.730667" DurationMax="1.730667">
+					<IncludedMemoryFiles>
+						<File Id="665380694" Language="SFX">
+							<ShortName>Voice_Gameplay_TimeOut.wav</ShortName>
+							<Path>SFX/Voice_Gameplay_TimeOut_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
 		</SoundBank>
