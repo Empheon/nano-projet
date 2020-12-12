@@ -30,6 +30,7 @@ namespace Global.Loading
         {
             _targetSceneIndex = sceneIndex;
             _animator.SetBool("Loading", true);
+            AkSoundEngine.PostEvent("LoadingScreen_Door_Close", gameObject);
         }
 
         public void OnLoadingAnimationFinished()
@@ -38,6 +39,7 @@ namespace Global.Loading
             op.completed += operation =>
             {
                 _animator.SetBool("Loading", false);
+                AkSoundEngine.PostEvent("LoadingScreen_Door_Open", gameObject);
                 _targetSceneIndex = -1;
             };
         }

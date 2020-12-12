@@ -30,7 +30,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 6806d1fcf7d3464ebfd4348b11cfa3b5
     GuidInternal: 
-    m_lastTime: -8585939806674659654
+    m_lastTime: -8585938305376347398
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -60,7 +60,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 15d53b9c307fca4f9ee085cc956a3630
     GuidInternal: 
-    m_lastTime: -8585939806567313969
+    m_lastTime: -8585938305372943331
     List:
     - name: Game_Menu
       guid: cd62eeeae0ceda48ac519ed9476f3a8b
@@ -88,7 +88,7 @@ MonoBehaviour:
     ParentPath: Bruitages
     guid: a6f822f6fd73b84593f05ec6db5e4a92
     GuidInternal: 
-    m_lastTime: -8585939806723342020
+    m_lastTime: -8585938305395559887
     List:
     - name: Amb_EXT
       guid: cc0e0e3f0043d0469afc9ce7d64b90b5
@@ -112,7 +112,7 @@ MonoBehaviour:
         ObjectType: 3
       Path: Bruitages\ATK_Activation
       maxAttenuation: 0
-      maxDuration: 5.861333
+      maxDuration: 6.579124
       minDuration: 5.073198
     - name: ATK_Damaged_Room_After_Gun_Shoot
       guid: 65327b7a6f93504eaaa15a5f7016865e
@@ -270,6 +270,30 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.787
       minDuration: 0.721682
+    - name: LoadingScreen_Door_Close
+      guid: 9821fb489468644c9a2e2ab3196740a5
+      id: 4073936959
+      PathAndIcons:
+      - ElementName: Bruitages
+        ObjectType: 12
+      - ElementName: LoadingScreen_Door_Close
+        ObjectType: 3
+      Path: Bruitages\LoadingScreen_Door_Close
+      maxAttenuation: 0
+      maxDuration: 1.494667
+      minDuration: 1.494667
+    - name: LoadingScreen_Door_Open
+      guid: 77228f1b74547e48a8d95a9f78191e26
+      id: 1019552089
+      PathAndIcons:
+      - ElementName: Bruitages
+        ObjectType: 12
+      - ElementName: LoadingScreen_Door_Open
+        ObjectType: 3
+      Path: Bruitages\LoadingScreen_Door_Open
+      maxAttenuation: 0
+      maxDuration: 1.704
+      minDuration: 1.704
     - name: Menu_Return_Button_Interface
       guid: 94cfcc3cb1b6a746badb2239f83d5d30
       id: 3537179580
@@ -370,7 +394,7 @@ MonoBehaviour:
     ParentPath: Musiques
     guid: aedac252a8326e4da8d89994003a8369
     GuidInternal: 
-    m_lastTime: -8585939806723331977
+    m_lastTime: -8585938835775565271
     List:
     - name: Music_Menu
       guid: ecefc1a9ddfd0b48ba816fb2ecb9820a
@@ -384,6 +408,111 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+  - PhysicalPath: Events\Voices.wwu
+    PathAndIcons:
+    - ElementName: Voices
+      ObjectType: 12
+    ParentPath: Voices
+    guid: 5ae095a49fd20445b6af4994cad6a2c5
+    GuidInternal: 
+    m_lastTime: -8585938305395499576
+    List:
+    - name: Voice_Gameplay_Fight
+      guid: e143873c70e6dc4f8eb4b4c14b18734d
+      id: 4140801355
+      PathAndIcons:
+      - ElementName: Voices
+        ObjectType: 12
+      - ElementName: Voice_Gameplay_Fight
+        ObjectType: 3
+      Path: Voices\Voice_Gameplay_Fight
+      maxAttenuation: 0
+      maxDuration: 1.450667
+      minDuration: 1.450667
+    - name: Voice_Gameplay_FinalRound
+      guid: d8e20ef22c15b04a941f60443acb7ff7
+      id: 2064600639
+      PathAndIcons:
+      - ElementName: Voices
+        ObjectType: 12
+      - ElementName: Voice_Gameplay_FinalRound
+        ObjectType: 3
+      Path: Voices\Voice_Gameplay_FinalRound
+      maxAttenuation: 0
+      maxDuration: 1.813333
+      minDuration: 1.813333
+    - name: Voice_Gameplay_Player1Wins
+      guid: 5a1b6ad5ccec6748b0c333ad40c79425
+      id: 58586296
+      PathAndIcons:
+      - ElementName: Voices
+        ObjectType: 12
+      - ElementName: Voice_Gameplay_Player1Wins
+        ObjectType: 3
+      Path: Voices\Voice_Gameplay_Player1Wins
+      maxAttenuation: 0
+      maxDuration: 3.034667
+      minDuration: 3.034667
+    - name: Voice_Gameplay_Player2Wins
+      guid: e0a8fbbc4c2dbc41bf3abc1f2e5da3d6
+      id: 2426403883
+      PathAndIcons:
+      - ElementName: Voices
+        ObjectType: 12
+      - ElementName: Voice_Gameplay_Player2Wins
+        ObjectType: 3
+      Path: Voices\Voice_Gameplay_Player2Wins
+      maxAttenuation: 0
+      maxDuration: 2.828
+      minDuration: 2.828
+    - name: Voice_Gameplay_Round1
+      guid: 926c6a0d5080fb48a9393a143db9c0d6
+      id: 1681694258
+      PathAndIcons:
+      - ElementName: Voices
+        ObjectType: 12
+      - ElementName: Voice_Gameplay_Round1
+        ObjectType: 3
+      Path: Voices\Voice_Gameplay_Round1
+      maxAttenuation: 0
+      maxDuration: 1.914667
+      minDuration: 1.914667
+    - name: Voice_Gameplay_Round2
+      guid: 031232bf6d22fd4d9b075f1dbf287720
+      id: 1681694257
+      PathAndIcons:
+      - ElementName: Voices
+        ObjectType: 12
+      - ElementName: Voice_Gameplay_Round2
+        ObjectType: 3
+      Path: Voices\Voice_Gameplay_Round2
+      maxAttenuation: 0
+      maxDuration: 1.658667
+      minDuration: 1.658667
+    - name: Voice_Gameplay_TimeOut
+      guid: 2f1913a290183b4f83ee95b574cb9921
+      id: 3911605056
+      PathAndIcons:
+      - ElementName: Voices
+        ObjectType: 12
+      - ElementName: Voice_Gameplay_TimeOut
+        ObjectType: 3
+      Path: Voices\Voice_Gameplay_TimeOut
+      maxAttenuation: 0
+      maxDuration: 1.730667
+      minDuration: 1.730667
+    - name: Voice_Intro_StoryTell
+      guid: 735dfe99d3f0c74184f6480bbe823cb6
+      id: 829643961
+      PathAndIcons:
+      - ElementName: Voices
+        ObjectType: 12
+      - ElementName: Voice_Intro_StoryTell
+        ObjectType: 3
+      Path: Voices\Voice_Intro_StoryTell
+      maxAttenuation: 0
+      maxDuration: 37.365334
+      minDuration: 37.365334
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -392,8 +521,17 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: bf2172637d60454a9e72206c76888413
     GuidInternal: 
-    m_lastTime: -8585960039636850225
-    List: []
+    m_lastTime: -8585939126059908906
+    List:
+    - name: Master_Volume
+      guid: f1d7b87b5a223d4c9125dcace0f2008c
+      id: 4179668880
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master_Volume
+        ObjectType: 13
+      Path: Default Work Unit\Master_Volume
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -412,8 +550,39 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: ef325c61fa6c8248847420448657b8f3
     GuidInternal: 
-    m_lastTime: -8585960039636580204
-    List: []
+    m_lastTime: -8585938305471106394
+    List:
+    - name: Music_Switch
+      guid: 6d23302fcdfbe243b4b160c52c7ed019
+      id: 2724869341
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music_Switch
+        ObjectType: 11
+      Path: Default Work Unit\Music_Switch
+      values:
+      - name: Combat_Begin
+        guid: 1e3f5380e138764197e088f1d211b808
+        id: 4007961327
+        PathAndIcons:
+        - ElementName: Combat_Begin
+          ObjectType: 10
+      - name: Combat_LowHealth
+        guid: 1d2d37c3e572224cbed13885fc271f33
+        id: 3601294720
+        PathAndIcons:
+        - ElementName: Combat_LowHealth
+          ObjectType: 10
+      - name: Combat_TimeOut
+        guid: 663cecd60f94b24082ada71308660049
+        id: 3606057529
+        PathAndIcons:
+        - ElementName: Combat_TimeOut
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -429,6 +598,7 @@ MonoBehaviour:
   - /Nano_Project_WwiseProject/Events
   - /Nano_Project_WwiseProject/Events/Bruitages
   - /Nano_Project_WwiseProject/Events/Musiques
+  - /Nano_Project_WwiseProject/Events/Voices
   - /Nano_Project_WwiseProject/SoundBanks
   - /Nano_Project_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
