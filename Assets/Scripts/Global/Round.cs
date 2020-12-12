@@ -102,8 +102,18 @@ namespace Global
 
         private IEnumerator ExplodeAndFinishRound()
         {
+            // prevent characters from moving
+            foreach (var character in spawner.Characters)
+            {
+                var controller = character.GetComponent<CharacterController>();
+                controller.Stop();
+                controller.enabled = false;
+            }
+            
             var expl = WinnerTeam == Team.Left ? mechaExplosionRight : mechaExplosionLeft;
             expl.Play();
+            
+            AkSoundEngine.PostEvent("Tower_Defeat_Destroyed", gameObject);
             
             yield return new WaitForSeconds(secondsBeforeNextRound);
             

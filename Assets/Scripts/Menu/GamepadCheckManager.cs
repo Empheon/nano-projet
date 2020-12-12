@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using Global;
 using UnityEngine;
@@ -30,9 +32,15 @@ namespace Menu
             if (EveryOneIsReady() && !_eventSent)
             {
                 PlayerManager.Instance.Locked = true;
-                LoadNextScene.Invoke();
                 _eventSent = true;
+                StartCoroutine(WaitAndLoadNextScene());
             }
+        }
+
+        private IEnumerator WaitAndLoadNextScene()
+        {
+            yield return new WaitForSeconds(0.5f);
+            LoadNextScene.Invoke();
         }
     }
 }

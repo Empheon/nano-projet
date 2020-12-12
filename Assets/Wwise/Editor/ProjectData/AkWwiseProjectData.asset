@@ -30,7 +30,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 6806d1fcf7d3464ebfd4348b11cfa3b5
     GuidInternal: 
-    m_lastTime: -8585938305376347398
+    m_lastTime: -8585938228081060061
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -60,7 +60,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 15d53b9c307fca4f9ee085cc956a3630
     GuidInternal: 
-    m_lastTime: -8585938243706804224
+    m_lastTime: -8585938227992680711
     List:
     - name: Game_Menu
       guid: cd62eeeae0ceda48ac519ed9476f3a8b
@@ -97,7 +97,7 @@ MonoBehaviour:
     ParentPath: Bruitages
     guid: a6f822f6fd73b84593f05ec6db5e4a92
     GuidInternal: 
-    m_lastTime: -8585938243741790503
+    m_lastTime: -8585938228129582319
     List:
     - name: Amb_EXT
       guid: cc0e0e3f0043d0469afc9ce7d64b90b5
@@ -448,7 +448,7 @@ MonoBehaviour:
     ParentPath: Voices
     guid: 5ae095a49fd20445b6af4994cad6a2c5
     GuidInternal: 
-    m_lastTime: -8585938305395499576
+    m_lastTime: -8585938228129305795
     List:
     - name: Voice_Gameplay_Fight
       guid: e143873c70e6dc4f8eb4b4c14b18734d
@@ -583,7 +583,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: ef325c61fa6c8248847420448657b8f3
     GuidInternal: 
-    m_lastTime: -8585938305471106394
+    m_lastTime: -8585938227992457320
     List:
     - name: Music_Switch
       guid: 6d23302fcdfbe243b4b160c52c7ed019
@@ -631,7 +631,6 @@ MonoBehaviour:
   - /Nano_Project_WwiseProject/Events
   - /Nano_Project_WwiseProject/Events/Bruitages
   - /Nano_Project_WwiseProject/Events/Musiques
-  - /Nano_Project_WwiseProject/Events/Voices
   - /Nano_Project_WwiseProject/SoundBanks
   - /Nano_Project_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1

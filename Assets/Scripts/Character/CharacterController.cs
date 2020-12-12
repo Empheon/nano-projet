@@ -59,6 +59,7 @@ namespace Character
         {
             _rb.velocity = Vector2.zero;
             _movement = 0;
+            animator.SetBool("IsRunning", false);
         }
         
         private bool IsGrounded()
