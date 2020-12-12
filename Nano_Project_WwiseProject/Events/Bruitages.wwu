@@ -264,6 +264,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Door_End_Round" ID="{B5A13EA3-C888-40B7-833E-0E22267942D5}">
+					<ChildrenList>
+						<Action Name="" ID="{B0FEEEAC-9CF3-44F9-AD22-AFD908DD7EBE}" ShortID="773815992">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Door_End_Round" ID="{C8E26606-D429-48B4-96CF-91673FE87C53}" WorkUnitID="{DC2C1FCB-B06E-4175-9567-018CDDE84AB9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

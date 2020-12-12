@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{A3D880B9-C6B6-4ABA-8AF2-B7965E411BA9}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Door_End_Round" ID="{B5A13EA3-C888-40B7-833E-0E22267942D5}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="JAM_Deactivation" ID="{714D7B4E-18DA-42BB-B609-EF78CD1929F0}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="DEF_Activation" ID="{0FA74169-4D8D-42D0-9DA9-485A1DB68AFE}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Jump_Character" ID="{A13E396F-5EA5-439F-B1AA-6C9B591BA526}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
