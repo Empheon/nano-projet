@@ -7,10 +7,10 @@ Event	ID	Name			Wwise Object Path	Notes
 	3537179580	Menu_Return_Button_Interface			\Bruitages\Menu_Return_Button_Interface	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	231718174	Validate_Button_Interface	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Linux\SFX\Validate_Button_Interface_10C4C929.wem		\Actor-Mixer Hierarchy\UI\Validate_Button_Interface		19000
-	327159191	Return_Button_Interface	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Linux\SFX\Return_Button_Interface_10C4C929.wem		\Actor-Mixer Hierarchy\UI\Return_Button_Interface		8272
-	506184188	Menu_Selection_Button	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Linux\SFX\Menu_Selection_Button_10C4C929.wem		\Actor-Mixer Hierarchy\UI\Menu_Selection_Button		1224
-	596567004	Musique_Menu_Intro_120Bpm_1_4	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Linux\SFX\Musique_Menu_Intro_120Bpm_1_4_D79FB2B7.wem		\Interactive Music Hierarchy\Music_Menu\Music_Menu\Musique_Menu_Intro_120Bpm_1_4\Musique_Menu_Intro_120Bpm_1_4		10368064
-	722614574	Musique_Menu_Loop_120Bpm_1_4	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Linux\SFX\Musique_Menu_Loop_120Bpm_1_4_D79FB2B7.wem		\Interactive Music Hierarchy\Music_Menu\Music_Menu\Musique_Menu_Loop_120Bpm_1_4\Musique_Menu_Loop_120Bpm_1_4		9600064
-	866541837	Voice_Intro_StoryTell	Y:\Documents\Greg\Cnam Enjmin\JMIN M1\Projets\Nano-Projet\nano-projet\Nano_Project_WwiseProject\.cache\Linux\SFX\Voice_Intro_StoryTell_10C4C929.wem		\Actor-Mixer Hierarchy\Voices\Voice_Intro_StoryTell		7174208
+	231718174	Validate_Button_Interface	C:\Users\Greg\Documents\GitHub\nano-projet\Nano_Project_WwiseProject\.cache\Linux\SFX\Validate_Button_Interface_10C4C929.wem		\Actor-Mixer Hierarchy\UI\Validate_Button_Interface		19000
+	327159191	Return_Button_Interface	C:\Users\Greg\Documents\GitHub\nano-projet\Nano_Project_WwiseProject\.cache\Linux\SFX\Return_Button_Interface_10C4C929.wem		\Actor-Mixer Hierarchy\UI\Return_Button_Interface		8272
+	506184188	Menu_Selection_Button	C:\Users\Greg\Documents\GitHub\nano-projet\Nano_Project_WwiseProject\.cache\Linux\SFX\Menu_Selection_Button_10C4C929.wem		\Actor-Mixer Hierarchy\UI\Menu_Selection_Button		1224
+	596567004	Musique_Menu_Intro_120Bpm_1_4	C:\Users\Greg\Documents\GitHub\nano-projet\Nano_Project_WwiseProject\.cache\Linux\SFX\Musique_Menu_Intro_120Bpm_1_4_D79FB2B7.wem		\Interactive Music Hierarchy\Music_Menu\Music_Menu\Musique_Menu_Intro_120Bpm_1_4\Musique_Menu_Intro_120Bpm_1_4		10368064
+	722614574	Musique_Menu_Loop_120Bpm_1_4	C:\Users\Greg\Documents\GitHub\nano-projet\Nano_Project_WwiseProject\.cache\Linux\SFX\Musique_Menu_Loop_120Bpm_1_4_D79FB2B7.wem		\Interactive Music Hierarchy\Music_Menu\Music_Menu\Musique_Menu_Loop_120Bpm_1_4\Musique_Menu_Loop_120Bpm_1_4		9600064
+	866541837	Voice_Intro_StoryTell	C:\Users\Greg\Documents\GitHub\nano-projet\Nano_Project_WwiseProject\.cache\Linux\SFX\Voice_Intro_StoryTell_10C4C929.wem		\Actor-Mixer Hierarchy\Voices\Voice_Intro_StoryTell		7174208
 

@@ -5,6 +5,11 @@
 			<ChildrenList>
 				<Sound Name="Load_ENE_In_DEF_Room" ID="{2C22C5E7-AAB9-4B26-80DE-29486DCB7390}" ShortID="628860093">
 					<PropertyList>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>2</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
