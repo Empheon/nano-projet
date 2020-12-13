@@ -10,5 +10,10 @@ namespace Utils
         {
             akEvent.Post(gameObject);
         }
+
+        public void Stop()
+        {
+            akEvent.Stop(gameObject);
+        }
     }
 }

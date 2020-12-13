@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -186,6 +186,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 205024671198570038, guid: 746c18ef97329554ab15e5fa5f346938,
+        type: 3}
+      propertyPath: m_text
+      value: ou "Espace" pour passer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134055418222894343, guid: 746c18ef97329554ab15e5fa5f346938,
+        type: 3}
+      propertyPath: m_text
+      value: "Mais un jour, leur avidit\xE9 de pouvoir les mena \xE0 leur perte.
+        De leurs cendres, les souris purent reconstruire une nouvelle civilisation."
+      objectReference: {fileID: 0}
     - target: {fileID: 1748275291643196623, guid: 746c18ef97329554ab15e5fa5f346938,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -224,7 +235,7 @@ PrefabInstance:
     - target: {fileID: 1748275291643196623, guid: 746c18ef97329554ab15e5fa5f346938,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1748275291643196623, guid: 746c18ef97329554ab15e5fa5f346938,
         type: 3}
@@ -296,11 +307,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Intro Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 1748275291643196659, guid: 746c18ef97329554ab15e5fa5f346938,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1781285808921278279, guid: 746c18ef97329554ab15e5fa5f346938,
         type: 3}
       propertyPath: menuCanvas
@@ -311,10 +317,17 @@ PrefabInstance:
       propertyPath: EventSystem
       value: 
       objectReference: {fileID: 1945077877}
-    - target: {fileID: 1898356051533232531, guid: 746c18ef97329554ab15e5fa5f346938,
+    - target: {fileID: 3729898061598105151, guid: 746c18ef97329554ab15e5fa5f346938,
         type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 197.91
+      propertyPath: m_text
+      value: "Attendez non... ce n\u2019est pas \xE7a.... Qui a dit que les souris
+        \xE9taient plus sages que les humains ?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4318397609111368153, guid: 746c18ef97329554ab15e5fa5f346938,
+        type: 3}
+      propertyPath: m_text
+      value: "Il fut un temps o\xF9 l\u2019humanit\xE9 contr\xF4lait le monde. Les
+        souris vivaient retranch\xE9es dans la peur pendant des ann\xE9es..."
       objectReference: {fileID: 0}
     - target: {fileID: 6052404816704580608, guid: 746c18ef97329554ab15e5fa5f346938,
         type: 3}
@@ -324,90 +337,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746c18ef97329554ab15e5fa5f346938, type: 3}
---- !u!1 &1314963572
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1314963575}
-  - component: {fileID: 1314963574}
-  - component: {fileID: 1314963573}
-  m_Layer: 0
-  m_Name: Music
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1314963573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1314963572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b461307449a0ca540aed4d4bbff78227, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: baac82ea9af7b4e4faaae1310002f267,
-      type: 2}
-  useCallbacks: 0
-  Callbacks: []
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  eventIdInternal: 0
-  valueGuidInternal: 
-  m_callbackDataInternal: {fileID: 0}
---- !u!114 &1314963574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1314963572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6415b5743bbb8d04a9ca37c1dbd5c69d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 0
-  isStaticObject: 0
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
---- !u!4 &1314963575
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1314963572}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.9921391, y: -1.1094999, z: -2.6247675}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1490897993 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5630528116143313055, guid: c5ec1f1d51de74a4a8fd0177cee78287,
@@ -676,54 +605,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1473349235, guid: c5ec1f1d51de74a4a8fd0177cee78287, type: 3}
-      propertyPath: m_text
-      value: Langue
-      objectReference: {fileID: 0}
-    - target: {fileID: 1589330172, guid: c5ec1f1d51de74a4a8fd0177cee78287, type: 3}
-      propertyPath: m_text
-      value: Francais
-      objectReference: {fileID: 0}
-    - target: {fileID: 487391089519889039, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_text
-      value: "Int\xE9ragir / S\xE9lectionner (Menus)"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1680266461801122617, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_text
-      value: "L\xE2cher / Annuler"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1924528550843641875, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_text
-      value: Preparez-vous !
-      objectReference: {fileID: 0}
-    - target: {fileID: 2350826174437244830, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_text
-      value: Options
-      objectReference: {fileID: 0}
-    - target: {fileID: 4272146506641308011, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_text
-      value: Options
-      objectReference: {fileID: 0}
-    - target: {fileID: 4344532271655544261, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_text
-      value: ou "Echap." pour annuler
-      objectReference: {fileID: 0}
-    - target: {fileID: 5428267728991815267, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_text
-      value: "Int\xE9ragir"
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630528114768096492, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_text
-      value: Quitter
-      objectReference: {fileID: 0}
     - target: {fileID: 5630528115192357297, guid: c5ec1f1d51de74a4a8fd0177cee78287,
         type: 3}
       propertyPath: m_Name
@@ -834,16 +715,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5630528115522105476, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_text
-      value: Tutoriel
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630528115968266100, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_text
-      value: Jouer
-      objectReference: {fileID: 0}
     - target: {fileID: 5692689521646085883, guid: c5ec1f1d51de74a4a8fd0177cee78287,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -853,26 +724,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6280354999426404684, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_text
-      value: Sauter
-      objectReference: {fileID: 0}
-    - target: {fileID: 6502958712848242420, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_text
-      value: "Int\xE9ragir / S\xE9lectionner (Menus)"
-      objectReference: {fileID: 0}
-    - target: {fileID: 6996040396186043000, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_text
-      value: ou "Echap." pour annuler
-      objectReference: {fileID: 0}
-    - target: {fileID: 7401141313002627528, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_text
-      value: Sauter
       objectReference: {fileID: 0}
     - target: {fileID: 7548241735513200507, guid: c5ec1f1d51de74a4a8fd0177cee78287,
         type: 3}
@@ -888,36 +739,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7702998961153255162, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_text
-      value: "L\xE2cher / Annuler"
-      objectReference: {fileID: 0}
-    - target: {fileID: 7863034860505281762, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_text
-      value: "L\xE2cher / Annuler"
-      objectReference: {fileID: 0}
-    - target: {fileID: 7959774506218693552, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_text
-      value: "Sauter / S\xE9lectionner (Menus)"
-      objectReference: {fileID: 0}
-    - target: {fileID: 7961098614875268779, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_text
-      value: "Se d\xE9placer"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8192722932973294164, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_text
-      value: "Se d\xE9placer"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8852028890592459278, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_text
-      value: ou "Echap." pour annuler
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5ec1f1d51de74a4a8fd0177cee78287, type: 3}

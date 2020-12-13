@@ -140,8 +140,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Peu de temps passa avant qu'elles ne se d\xE9clar\xE8rent la guerre en
-    utilisant les restes des technologies humaines..."
+  m_text: They didn't wait long before waging war upon themselves, using remnants
+    of human technologies to their means...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a394fb73f206aad43ada1b8dea4d81b0, type: 2}
   m_sharedMaterial: {fileID: -4128810442978578077, guid: a394fb73f206aad43ada1b8dea4d81b0,
@@ -371,8 +371,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Il fut un temps o\xF9 l\u2019humanit\xE9 contr\xF4lait le monde. Les souris
-    vivaient retranch\xE9es dans la peur pendant des ann\xE9es..."
+  m_text: 'There was a time when humanity controlled the world.
+
+    The Mice lived
+    locked up in fear for years...'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a394fb73f206aad43ada1b8dea4d81b0, type: 2}
   m_sharedMaterial: {fileID: -4128810442978578077, guid: a394fb73f206aad43ada1b8dea4d81b0,
@@ -491,6 +493,7 @@ RectTransform:
   - {fileID: 8291814947697649222}
   - {fileID: 1437218119785854363}
   - {fileID: 4595869089901055380}
+  - {fileID: 2540235913431050168}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -573,23 +576,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   splashScreenItems:
   - Wrapper: {fileID: 4882249552629984930}
-    Duration: 3
+    Duration: 8.3
     FromScale: 1
     ToScale: 1.1
   - Wrapper: {fileID: 5638524707397617998}
-    Duration: 3
+    Duration: 10.5
     FromScale: 1.1
     ToScale: 1
   - Wrapper: {fileID: 864357254090207500}
-    Duration: 3
+    Duration: 7
     FromScale: 1
     ToScale: 1
   - Wrapper: {fileID: 6697206379584977429}
-    Duration: 3
+    Duration: 11.5
     FromScale: 1
     ToScale: 1.1
   menuCanvas: {fileID: 0}
   EventSystem: {fileID: 0}
+  OnStartIntro:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8329771821890052520}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnFinishIntro:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8329771821890052520}
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2816970363262674779
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,7 +686,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ou "Espace" pour passer
+  m_text: or "Space" to skip
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a394fb73f206aad43ada1b8dea4d81b0, type: 2}
   m_sharedMaterial: {fileID: -4128810442978578077, guid: a394fb73f206aad43ada1b8dea4d81b0,
@@ -738,6 +769,59 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_text: <i18n="intro_skip">
+--- !u!1 &3266210313488673028
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2540235913431050168}
+  - component: {fileID: 8329771821890052520}
+  m_Layer: 5
+  m_Name: Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2540235913431050168
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3266210313488673028}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1748275291643196623}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8329771821890052520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3266210313488673028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc05d5ca60394e70847c01e6c6f9ac07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  akEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1917fb69b0d91bb40b2e350c889e84e6,
+      type: 2}
 --- !u!1 &4122820560658392999
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,8 +962,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Mais un jour, leur avidit\xE9 de pouvoir les mena \xE0 leur perte. De
-    leurs cendres, les souris purent reconstruire une nouvelle civilisation."
+  m_text: 'But one day, greed for power led humans to their doom.
+
+    Mice could
+    rebuild a new civilization from the ashes.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a394fb73f206aad43ada1b8dea4d81b0, type: 2}
   m_sharedMaterial: {fileID: -4128810442978578077, guid: a394fb73f206aad43ada1b8dea4d81b0,
@@ -1177,8 +1263,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Attendez non... ce n\u2019est pas \xE7a.... Qui a dit que les souris \xE9taient
-    plus sages que les humains ?"
+  m_text: Wait... No, that is not what happened... Who said Mice were wisier than
+    humans?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a394fb73f206aad43ada1b8dea4d81b0, type: 2}
   m_sharedMaterial: {fileID: -4128810442978578077, guid: a394fb73f206aad43ada1b8dea4d81b0,
@@ -1511,7 +1597,7 @@ PrefabInstance:
     - target: {fileID: 7825457362033672869, guid: abf4d97247eed2b49b8bb6e7c68b83c5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 120.6
+      value: 197.91
       objectReference: {fileID: 0}
     - target: {fileID: 7825457362033672869, guid: abf4d97247eed2b49b8bb6e7c68b83c5,
         type: 3}
