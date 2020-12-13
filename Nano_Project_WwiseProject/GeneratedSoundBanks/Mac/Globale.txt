@@ -3,6 +3,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	4073936959	LoadingScreen_Door_Close			\Bruitages\LoadingScreen_Door_Close	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	160641533	LoadingScreen_Door_Close	D:\theo\projects\unity\Mad Mice\Nano_Project_WwiseProject\.cache\Mac\SFX\LoadingScreen_Door_Close_10C4C929.wem		\Actor-Mixer Hierarchy\UI\LoadingScreen_Door_Close		143552
-	823509908	LoadingScreen_Door_Open	D:\theo\projects\unity\Mad Mice\Nano_Project_WwiseProject\.cache\Mac\SFX\LoadingScreen_Door_Open_10C4C929.wem		\Actor-Mixer Hierarchy\UI\LoadingScreen_Door_Open		163648
+	160641533	LoadingScreen_Door_Close	C:\Users\Greg\Documents\GitHub\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\LoadingScreen_Door_Close_10C4C929.wem		\Actor-Mixer Hierarchy\UI\LoadingScreen_Door_Close		143552
+	823509908	LoadingScreen_Door_Open	C:\Users\Greg\Documents\GitHub\nano-projet\Nano_Project_WwiseProject\.cache\Mac\SFX\LoadingScreen_Door_Open_10C4C929.wem		\Actor-Mixer Hierarchy\UI\LoadingScreen_Door_Open		163648
 

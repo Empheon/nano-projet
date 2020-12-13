@@ -5,6 +5,11 @@
 			<ChildrenList>
 				<BlendContainer Name="ATK_Activation" ID="{558445C9-0D68-4882-9128-7B29957C06AE}" ShortID="45986214">
 					<PropertyList>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>-2</Value>
+							</ValueList>
+						</Property>
 						<Property Name="UserAuxSendVolume0" Type="Real64">
 							<ValueList>
 								<Value>-7</Value>
@@ -468,7 +473,7 @@
 					<PropertyList>
 						<Property Name="MakeUpGain" Type="Real64">
 							<ValueList>
-								<Value>11</Value>
+								<Value>9</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
