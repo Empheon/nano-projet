@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -186,27 +186,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 205024671198570038, guid: 746c18ef97329554ab15e5fa5f346938,
-        type: 3}
-      propertyPath: m_text
-      value: ou "Espace" pour passer
-      objectReference: {fileID: 0}
-    - target: {fileID: 205024671198570038, guid: 746c18ef97329554ab15e5fa5f346938,
-        type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 864357254090207500, guid: 746c18ef97329554ab15e5fa5f346938,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1134055418222894343, guid: 746c18ef97329554ab15e5fa5f346938,
-        type: 3}
-      propertyPath: m_text
-      value: "Mais un jour, leur avidit\xE9 de pouvoir les mena \xE0 leur perte.
-        De leurs cendres, les souris purent reconstruire une nouvelle civilisation."
-      objectReference: {fileID: 0}
     - target: {fileID: 1748275291643196623, guid: 746c18ef97329554ab15e5fa5f346938,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -317,6 +296,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Intro Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1748275291643196659, guid: 746c18ef97329554ab15e5fa5f346938,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1781285808921278279, guid: 746c18ef97329554ab15e5fa5f346938,
         type: 3}
       propertyPath: menuCanvas
@@ -329,110 +313,14 @@ PrefabInstance:
       objectReference: {fileID: 1945077877}
     - target: {fileID: 1898356051533232531, guid: 746c18ef97329554ab15e5fa5f346938,
         type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1898356051533232531, guid: 746c18ef97329554ab15e5fa5f346938,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1898356051533232531, guid: 746c18ef97329554ab15e5fa5f346938,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1898356051533232531, guid: 746c18ef97329554ab15e5fa5f346938,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1898356051533232531, guid: 746c18ef97329554ab15e5fa5f346938,
-        type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1898356051533232531, guid: 746c18ef97329554ab15e5fa5f346938,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2765514018835023149, guid: 746c18ef97329554ab15e5fa5f346938,
-        type: 3}
-      propertyPath: m_text
-      value: "Peu de temps passa avant qu'elles ne se d\xE9clar\xE8rent la guerre
-        en utilisant les restes des technologies humaines..."
-      objectReference: {fileID: 0}
-    - target: {fileID: 4595869089901055380, guid: 746c18ef97329554ab15e5fa5f346938,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 4595869089901055380, guid: 746c18ef97329554ab15e5fa5f346938,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -269.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4651594581784672465, guid: 746c18ef97329554ab15e5fa5f346938,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4882249552629984930, guid: 746c18ef97329554ab15e5fa5f346938,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5638524707397617998, guid: 746c18ef97329554ab15e5fa5f346938,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      value: 197.91
       objectReference: {fileID: 0}
     - target: {fileID: 6052404816704580608, guid: 746c18ef97329554ab15e5fa5f346938,
         type: 3}
       propertyPath: m_text
       value: "Peu de temps passa avant qu'elles ne se d\xE9clar\xE8rent la guerre
         en utilisant les restes des technologies humaines..."
-      objectReference: {fileID: 0}
-    - target: {fileID: 6098419328612625340, guid: 746c18ef97329554ab15e5fa5f346938,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6098419328612625340, guid: 746c18ef97329554ab15e5fa5f346938,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6098419328612625340, guid: 746c18ef97329554ab15e5fa5f346938,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6098419328612625340, guid: 746c18ef97329554ab15e5fa5f346938,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6098419328612625340, guid: 746c18ef97329554ab15e5fa5f346938,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 350
-      objectReference: {fileID: 0}
-    - target: {fileID: 6098419328612625340, guid: 746c18ef97329554ab15e5fa5f346938,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6098419328612625340, guid: 746c18ef97329554ab15e5fa5f346938,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 6697206379584977429, guid: 746c18ef97329554ab15e5fa5f346938,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746c18ef97329554ab15e5fa5f346938, type: 3}
@@ -788,84 +676,53 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 477321308, guid: c5ec1f1d51de74a4a8fd0177cee78287, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 477321308, guid: c5ec1f1d51de74a4a8fd0177cee78287, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 477321308, guid: c5ec1f1d51de74a4a8fd0177cee78287, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 960
-      objectReference: {fileID: 0}
-    - target: {fileID: 477321308, guid: c5ec1f1d51de74a4a8fd0177cee78287, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -365
-      objectReference: {fileID: 0}
     - target: {fileID: 1473349235, guid: c5ec1f1d51de74a4a8fd0177cee78287, type: 3}
       propertyPath: m_text
-      value: Language
+      value: Langue
       objectReference: {fileID: 0}
     - target: {fileID: 1589330172, guid: c5ec1f1d51de74a4a8fd0177cee78287, type: 3}
       propertyPath: m_text
-      value: English
+      value: Francais
+      objectReference: {fileID: 0}
+    - target: {fileID: 487391089519889039, guid: c5ec1f1d51de74a4a8fd0177cee78287,
+        type: 3}
+      propertyPath: m_text
+      value: "Int\xE9ragir / S\xE9lectionner (Menus)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1680266461801122617, guid: c5ec1f1d51de74a4a8fd0177cee78287,
+        type: 3}
+      propertyPath: m_text
+      value: "L\xE2cher / Annuler"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924528550843641875, guid: c5ec1f1d51de74a4a8fd0177cee78287,
+        type: 3}
+      propertyPath: m_text
+      value: Preparez-vous !
       objectReference: {fileID: 0}
     - target: {fileID: 2350826174437244830, guid: c5ec1f1d51de74a4a8fd0177cee78287,
         type: 3}
       propertyPath: m_text
-      value: Settings
+      value: Options
       objectReference: {fileID: 0}
     - target: {fileID: 4272146506641308011, guid: c5ec1f1d51de74a4a8fd0177cee78287,
         type: 3}
       propertyPath: m_text
-      value: Settings
+      value: Options
       objectReference: {fileID: 0}
-    - target: {fileID: 5129315678665690634, guid: c5ec1f1d51de74a4a8fd0177cee78287,
+    - target: {fileID: 4344532271655544261, guid: c5ec1f1d51de74a4a8fd0177cee78287,
         type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
+      propertyPath: m_text
+      value: ou "Echap." pour annuler
       objectReference: {fileID: 0}
-    - target: {fileID: 5129315678665690634, guid: c5ec1f1d51de74a4a8fd0177cee78287,
+    - target: {fileID: 5428267728991815267, guid: c5ec1f1d51de74a4a8fd0177cee78287,
         type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5129315678665690634, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5129315678665690634, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630528114499778304, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630528114499778304, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630528114499778304, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630528114499778304, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
+      propertyPath: m_text
+      value: "Int\xE9ragir"
       objectReference: {fileID: 0}
     - target: {fileID: 5630528114768096492, guid: c5ec1f1d51de74a4a8fd0177cee78287,
         type: 3}
       propertyPath: m_text
-      value: Exit game
+      value: Quitter
       objectReference: {fileID: 0}
     - target: {fileID: 5630528115192357297, guid: c5ec1f1d51de74a4a8fd0177cee78287,
         type: 3}
@@ -980,107 +837,87 @@ PrefabInstance:
     - target: {fileID: 5630528115522105476, guid: c5ec1f1d51de74a4a8fd0177cee78287,
         type: 3}
       propertyPath: m_text
-      value: Tutorial
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630528115606408632, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      value: Tutoriel
       objectReference: {fileID: 0}
     - target: {fileID: 5630528115968266100, guid: c5ec1f1d51de74a4a8fd0177cee78287,
         type: 3}
       propertyPath: m_text
-      value: Play
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630528116143313052, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630528116143313052, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630528116143313052, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630528116143313052, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630528116164373389, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630528116164373389, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630528116164373389, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630528116164373389, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: Jouer
       objectReference: {fileID: 0}
     - target: {fileID: 5692689521646085883, guid: c5ec1f1d51de74a4a8fd0177cee78287,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5692689521646085883, guid: c5ec1f1d51de74a4a8fd0177cee78287,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6850778577636513843, guid: c5ec1f1d51de74a4a8fd0177cee78287,
+    - target: {fileID: 6280354999426404684, guid: c5ec1f1d51de74a4a8fd0177cee78287,
         type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
+      propertyPath: m_text
+      value: Sauter
       objectReference: {fileID: 0}
-    - target: {fileID: 6850778577636513843, guid: c5ec1f1d51de74a4a8fd0177cee78287,
+    - target: {fileID: 6502958712848242420, guid: c5ec1f1d51de74a4a8fd0177cee78287,
         type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
+      propertyPath: m_text
+      value: "Int\xE9ragir / S\xE9lectionner (Menus)"
       objectReference: {fileID: 0}
-    - target: {fileID: 6850778577636513843, guid: c5ec1f1d51de74a4a8fd0177cee78287,
+    - target: {fileID: 6996040396186043000, guid: c5ec1f1d51de74a4a8fd0177cee78287,
         type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 960
+      propertyPath: m_text
+      value: ou "Echap." pour annuler
       objectReference: {fileID: 0}
-    - target: {fileID: 6850778577636513843, guid: c5ec1f1d51de74a4a8fd0177cee78287,
+    - target: {fileID: 7401141313002627528, guid: c5ec1f1d51de74a4a8fd0177cee78287,
         type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -235
+      propertyPath: m_text
+      value: Sauter
       objectReference: {fileID: 0}
     - target: {fileID: 7548241735513200507, guid: c5ec1f1d51de74a4a8fd0177cee78287,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7548241735513200507, guid: c5ec1f1d51de74a4a8fd0177cee78287,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7548241735513200507, guid: c5ec1f1d51de74a4a8fd0177cee78287,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8459832297068749032, guid: c5ec1f1d51de74a4a8fd0177cee78287,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702998961153255162, guid: c5ec1f1d51de74a4a8fd0177cee78287,
+        type: 3}
+      propertyPath: m_text
+      value: "L\xE2cher / Annuler"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863034860505281762, guid: c5ec1f1d51de74a4a8fd0177cee78287,
+        type: 3}
+      propertyPath: m_text
+      value: "L\xE2cher / Annuler"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7959774506218693552, guid: c5ec1f1d51de74a4a8fd0177cee78287,
+        type: 3}
+      propertyPath: m_text
+      value: "Sauter / S\xE9lectionner (Menus)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7961098614875268779, guid: c5ec1f1d51de74a4a8fd0177cee78287,
+        type: 3}
+      propertyPath: m_text
+      value: "Se d\xE9placer"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192722932973294164, guid: c5ec1f1d51de74a4a8fd0177cee78287,
+        type: 3}
+      propertyPath: m_text
+      value: "Se d\xE9placer"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852028890592459278, guid: c5ec1f1d51de74a4a8fd0177cee78287,
+        type: 3}
+      propertyPath: m_text
+      value: ou "Echap." pour annuler
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5ec1f1d51de74a4a8fd0177cee78287, type: 3}

@@ -20,6 +20,11 @@ namespace UI
         private GameObject gamepadCheckerWrapper;
         [SerializeField]
         private GameObject settingsWrapper;
+        [SerializeField]
+        private GameObject creditsWrapper;
+
+        [SerializeField]
+        private GameObject logo;
 
         [SerializeField]
         private int mechaSceneIndex;
@@ -32,18 +37,21 @@ namespace UI
         {
             HidePanel(gamepadCheckerWrapper, 0);
             HidePanel(settingsWrapper, 0);
+            HidePanel(creditsWrapper, 0);
         }
 
         public void OnClickPlay()
         {
             nextSceneIndex = mechaSceneIndex;
             SwitchPanel(titleWrapper, gamepadCheckerWrapper);
+            HidePanel(logo, 0.5f, -1);
         }
 
         public void OnClickTutorial()
         {
             nextSceneIndex = tutoSceneIndex;
             SwitchPanel(titleWrapper, gamepadCheckerWrapper);
+            HidePanel(logo, 0.5f, -1);
         }
 
         public void OnClickSettings()
@@ -51,9 +59,22 @@ namespace UI
             SwitchPanel(titleWrapper, settingsWrapper);
         }
 
+        public void OnClickCredits()
+        {
+            SwitchPanel(titleWrapper, creditsWrapper);
+            HidePanel(logo, 0.5f, -1);
+        }
+
         public void OnClickBackFrom(GameObject from)
         {
             SwitchPanel(from, titleWrapper);
+            StartCoroutine(DelayedShowLogo(1));
+        }
+
+        private IEnumerator DelayedShowLogo(float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            ShowPanel(logo, 0.7f, Ease.OutBack);
         }
 
         public void OnClickQuit()
@@ -74,12 +95,12 @@ namespace UI
             seq.Append(ShowPanel(to));
         }
 
-        private Tween HidePanel(GameObject go, float duration = 0.5f)
+        private Tween HidePanel(GameObject go, float duration = 0.5f, int sens = 1)
         {
-            return go.transform.DOLocalMoveX(-1920, duration).SetEase(Ease.OutBack).OnComplete(() => go.SetActive(false));
+            return go.transform.DOLocalMoveX(1920 * sens, duration).SetEase(Ease.OutQuad).OnComplete(() => go.SetActive(false));
         }
 
-        private Tween ShowPanel(GameObject go, float duration = 0.5f)
+        private Tween ShowPanel(GameObject go, float duration = 0.5f, Ease easing = Ease.OutQuad)
         {
             go.SetActive(true);
 
@@ -90,7 +111,7 @@ namespace UI
             }
 
 
-            return go.transform.DOLocalMoveX(0, duration).SetEase(Ease.OutBack);
+            return go.transform.DOLocalMoveX(0, duration).SetEase(easing);
         }
     }
 }

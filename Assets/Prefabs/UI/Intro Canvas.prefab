@@ -140,8 +140,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: They didn't wait long before waging war upon themselves, using remnants
-    of human technologies to their means...
+  m_text: "Peu de temps passa avant qu'elles ne se d\xE9clar\xE8rent la guerre en
+    utilisant les restes des technologies humaines..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a394fb73f206aad43ada1b8dea4d81b0, type: 2}
   m_sharedMaterial: {fileID: -4128810442978578077, guid: a394fb73f206aad43ada1b8dea4d81b0,
@@ -240,7 +240,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8291814947697649222
 RectTransform:
   m_ObjectHideFlags: 0
@@ -979,7 +979,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &757188472677450943
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1054,7 +1054,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3580002888639068746
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1278,7 +1278,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1437218119785854363
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1511,7 +1511,7 @@ PrefabInstance:
     - target: {fileID: 7825457362033672869, guid: abf4d97247eed2b49b8bb6e7c68b83c5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 100.6
+      value: 120.6
       objectReference: {fileID: 0}
     - target: {fileID: 7825457362033672869, guid: abf4d97247eed2b49b8bb6e7c68b83c5,
         type: 3}
@@ -1557,6 +1557,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7825457362033672869, guid: abf4d97247eed2b49b8bb6e7c68b83c5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7825457362033672869, guid: abf4d97247eed2b49b8bb6e7c68b83c5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8953964681033276742, guid: abf4d97247eed2b49b8bb6e7c68b83c5, type: 3}
