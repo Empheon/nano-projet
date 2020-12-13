@@ -56,9 +56,9 @@ player_2;Player 2
 
 control_interact;Interact
 control_drop_cancel;Drop / Cancel
-control_jump_select;Jump / Select (Menus)
+control_jump_select;Jump / <color=#FFCB36>Select (Menus)</color>
 control_move;Move
-control_interact_select;Interact / Select (Menus)
+control_interact_select;Interact / <color=#FFCB36>Select (Menus)</color>
 control_jump;Jump
 
 final_round;Final Round
