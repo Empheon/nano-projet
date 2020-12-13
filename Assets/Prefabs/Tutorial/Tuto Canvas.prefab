@@ -64,8 +64,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 4d31e32046c74984685318b1f5be93c1, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -139,12 +139,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Coordonnez vos actions\r\nObservez les mouvements de l'adversaire\r\nEt
-    la victoire est \xE0 vous !\r\n\r\n\r\nVous avez termin\xE9 le tutoriel, retour
-    au menu principal dans quelques secondes."
+  m_text: 'Coordinate your actions
+
+    Observe your opponent''s moves
+
+    And
+    victory is yours!
+
+    
+
+    You finished the tutorial, you will get back to
+    the main title in a few seconds.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2b28da54b01cc3d4ba7e41f5171ae416, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -4128810442978578077, guid: 2b28da54b01cc3d4ba7e41f5171ae416,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -810,7 +819,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tutoriel
+  m_text: Tutorial
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 377d7018fdd82e747819e7eca7199fca, type: 2}
   m_sharedMaterial: {fileID: 4212861790755840686, guid: 377d7018fdd82e747819e7eca7199fca,
