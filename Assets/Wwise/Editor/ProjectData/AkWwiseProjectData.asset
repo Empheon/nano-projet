@@ -60,7 +60,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 15d53b9c307fca4f9ee085cc956a3630
     GuidInternal: 
-    m_lastTime: -8585937460346565673
+    m_lastTime: -8585937411682375364
     List:
     - name: Game_Menu
       guid: cd62eeeae0ceda48ac519ed9476f3a8b
@@ -427,7 +427,7 @@ MonoBehaviour:
     ParentPath: Musiques
     guid: aedac252a8326e4da8d89994003a8369
     GuidInternal: 
-    m_lastTime: -8585937460421293528
+    m_lastTime: -8585937411698725017
     List:
     - name: Music_Combat_Start
       guid: b8bfeeb46fadde4683e2f4e0a3943253
@@ -451,8 +451,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Musiques\Music_Combat_Stop
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Music_Menu
       guid: ecefc1a9ddfd0b48ba816fb2ecb9820a
       id: 1598298728
@@ -607,7 +607,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: ef325c61fa6c8248847420448657b8f3
     GuidInternal: 
-    m_lastTime: -8585937460346082815
+    m_lastTime: -8585937411682365355
     List:
     - name: Music_Switch
       guid: 6d23302fcdfbe243b4b160c52c7ed019

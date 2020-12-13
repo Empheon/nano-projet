@@ -60,3 +60,6 @@ control_jump_select;Jump / Select (Menus)
 control_move;Move
 control_interact_select;Interact / Select (Menus)
 control_jump;Jump
+
+final_round;Final Round
+fight;Fight!
