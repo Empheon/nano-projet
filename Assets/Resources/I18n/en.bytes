@@ -5,7 +5,7 @@ menu_settings;Settings
 menu_credits;Credits
 menu_quit;Exit game
 menu_back;Back
-menu_back_prompt;or "Escape" to cancel
+menu_back_prompt;or "Escape" to return
 
 menu_get_ready;Get ready!
 
@@ -45,3 +45,13 @@ tip_2;You can drop the item you are carrying with the action key.
 tip_3;Get another ammunition near your attack loader to shoot twice in a row, don't let the enemy breathe!
 tip_4;Breaking or hacking the enemy's hacking system while in use will restore your systems!
 tip_5;Pay attention to the light color above your ammunition and energy deposits, they indicate whether your system is loaded or not!
+
+player_1;Player 1
+player_2;Player 2
+
+control_interact;Interact
+control_drop_cancel;Drop / Cancel
+control_jump_select;Jump / Select (Menus)
+control_move;Move
+control_interact_select;Interact / Select (Menus)
+control_jump;Jump

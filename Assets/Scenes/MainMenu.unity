@@ -311,6 +311,11 @@ PrefabInstance:
       propertyPath: EventSystem
       value: 
       objectReference: {fileID: 1945077877}
+    - target: {fileID: 1898356051533232531, guid: 746c18ef97329554ab15e5fa5f346938,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 197.91
+      objectReference: {fileID: 0}
     - target: {fileID: 6052404816704580608, guid: 746c18ef97329554ab15e5fa5f346938,
         type: 3}
       propertyPath: m_text
@@ -683,6 +688,16 @@ PrefabInstance:
       propertyPath: m_text
       value: Francais
       objectReference: {fileID: 0}
+    - target: {fileID: 487391089519889039, guid: c5ec1f1d51de74a4a8fd0177cee78287,
+        type: 3}
+      propertyPath: m_text
+      value: "Int\xE9ragir / S\xE9lectionner (Menus)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1680266461801122617, guid: c5ec1f1d51de74a4a8fd0177cee78287,
+        type: 3}
+      propertyPath: m_text
+      value: "L\xE2cher / Annuler"
+      objectReference: {fileID: 0}
     - target: {fileID: 1924528550843641875, guid: c5ec1f1d51de74a4a8fd0177cee78287,
         type: 3}
       propertyPath: m_text
@@ -702,6 +717,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: ou "Echap." pour annuler
+      objectReference: {fileID: 0}
+    - target: {fileID: 5428267728991815267, guid: c5ec1f1d51de74a4a8fd0177cee78287,
+        type: 3}
+      propertyPath: m_text
+      value: "Int\xE9ragir"
       objectReference: {fileID: 0}
     - target: {fileID: 5630528114768096492, guid: c5ec1f1d51de74a4a8fd0177cee78287,
         type: 3}
@@ -838,10 +858,25 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6280354999426404684, guid: c5ec1f1d51de74a4a8fd0177cee78287,
+        type: 3}
+      propertyPath: m_text
+      value: Sauter
+      objectReference: {fileID: 0}
+    - target: {fileID: 6502958712848242420, guid: c5ec1f1d51de74a4a8fd0177cee78287,
+        type: 3}
+      propertyPath: m_text
+      value: "Int\xE9ragir / S\xE9lectionner (Menus)"
+      objectReference: {fileID: 0}
     - target: {fileID: 6996040396186043000, guid: c5ec1f1d51de74a4a8fd0177cee78287,
         type: 3}
       propertyPath: m_text
       value: ou "Echap." pour annuler
+      objectReference: {fileID: 0}
+    - target: {fileID: 7401141313002627528, guid: c5ec1f1d51de74a4a8fd0177cee78287,
+        type: 3}
+      propertyPath: m_text
+      value: Sauter
       objectReference: {fileID: 0}
     - target: {fileID: 7548241735513200507, guid: c5ec1f1d51de74a4a8fd0177cee78287,
         type: 3}
@@ -857,6 +892,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702998961153255162, guid: c5ec1f1d51de74a4a8fd0177cee78287,
+        type: 3}
+      propertyPath: m_text
+      value: "L\xE2cher / Annuler"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863034860505281762, guid: c5ec1f1d51de74a4a8fd0177cee78287,
+        type: 3}
+      propertyPath: m_text
+      value: "L\xE2cher / Annuler"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7959774506218693552, guid: c5ec1f1d51de74a4a8fd0177cee78287,
+        type: 3}
+      propertyPath: m_text
+      value: "Sauter / S\xE9lectionner (Menus)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7961098614875268779, guid: c5ec1f1d51de74a4a8fd0177cee78287,
+        type: 3}
+      propertyPath: m_text
+      value: "Se d\xE9placer"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192722932973294164, guid: c5ec1f1d51de74a4a8fd0177cee78287,
+        type: 3}
+      propertyPath: m_text
+      value: "Se d\xE9placer"
       objectReference: {fileID: 0}
     - target: {fileID: 8852028890592459278, guid: c5ec1f1d51de74a4a8fd0177cee78287,
         type: 3}

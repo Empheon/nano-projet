@@ -45,3 +45,13 @@ tip_2;Vous pouvez lâcher l'objet que vous portez avec la touche Action.
 tip_3;Pensez à déposer d'autres munitions près de votre réservoir de missiles, ne laissez pas l'ennemi respirer !
 tip_4;Endommager ou pirater le système de piratage ennemi en cours de fonctionnement permettra de restaurer vos systèmes !
 tip_5;Gardez un oeil sur les lumières au-dessus de vos réservoirs de munition et d'énergie. Elles indiquent s'ils sont chargés ou pas !
+
+player_1;Joueur 1
+player_2;Joueur 2
+
+control_interact;Intéragir
+control_drop_cancel;Lâcher / Annuler
+control_jump_select;Sauter / Sélectionner (Menus)
+control_move;Se déplacer
+control_interact_select;Intéragir / Sélectionner (Menus)
+control_jump;Sauter
