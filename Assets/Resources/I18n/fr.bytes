@@ -7,6 +7,11 @@ menu_quit;Quitter
 menu_back;Retour
 menu_back_prompt;ou "Echap." pour annuler
 
+menu_pause_title;Pause
+menu_pause_resume;Reprendre
+menu_pause_main_menu;Menu Principal
+menu_pause_quit;Quitter
+
 menu_get_ready;Preparez-vous !
 
 tuto_disclaimer;Ce tutoriel ne propose pas d'interactions avec les commandes de la forteresse.

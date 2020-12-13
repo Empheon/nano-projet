@@ -10,6 +10,8 @@ namespace Inputs
         bool JumpThisFrame();
         bool KeepInAir();
         Vector2 GetMovement();
+        
+        bool PauseThisFrame();
 
 
         void UpdateState();

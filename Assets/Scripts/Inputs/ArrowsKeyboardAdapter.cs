@@ -28,6 +28,8 @@ namespace Inputs
             return baseMove;
         }
 
+        public bool PauseThisFrame() => Keyboard.current.backspaceKey.wasPressedThisFrame;
+
         public void UpdateState()
         {
             if (Keyboard.current.upArrowKey.wasPressedThisFrame)

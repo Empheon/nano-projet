@@ -7,6 +7,11 @@ menu_quit;Exit game
 menu_back;Back
 menu_back_prompt;or "Escape" to return
 
+menu_pause_title;Paused
+menu_pause_resume;Resume
+menu_pause_main_menu;Main Menu
+menu_pause_quit;Quit
+
 menu_get_ready;Get ready!
 
 tuto_disclaimer;This tutorial does not include interactions with the fortress commands.
