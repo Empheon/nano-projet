@@ -25,11 +25,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2978086159128760030}
-  m_LocalRotation: {x: -0.47796986, y: -0.52109957, z: 0.0919523, w: -0.7011027}
-  m_LocalPosition: {x: 0.22, y: 0.18, z: 0}
+  m_LocalRotation: {x: -0.47796983, y: -0.52109945, z: 0.091952324, w: -0.7011027}
+  m_LocalPosition: {x: -0.12999997, y: -0.109999925, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 270439560906369010}
+  m_Father: {fileID: 270439560990992996}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50.000004, y: 90.00001, z: 35.056004}
 --- !u!198 &1278040874229950960
@@ -48,7 +48,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 0
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -115,7 +115,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.4
+      scalar: 1.5
       minScalar: 0.0001
       maxCurve:
         serializedVersion: 2
@@ -1320,9 +1320,9 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 19468
+        atime1: 39899
         atime2: 65535
-        atime3: 0
+        atime3: 65535
         atime4: 0
         atime5: 0
         atime6: 0
@@ -2513,7 +2513,7 @@ ParticleSystem:
     magnitude:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -2567,11 +2567,11 @@ ParticleSystem:
     inWorldSpace: 0
     multiplyDragByParticleSize: 1
     multiplyDragByParticleVelocity: 1
-    dampen: 0
+    dampen: 0.01
     drag:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.25
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -4779,13 +4779,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4317289655080448918}
-  m_LocalRotation: {x: -0.10993193, y: -0.6985091, z: 0.10993199, w: -0.69850916}
-  m_LocalPosition: {x: 0.22, y: 0.18, z: 0}
+  m_LocalRotation: {x: 0.698509, y: -0.109933175, z: 0.6985089, w: 0.10993318}
+  m_LocalPosition: {x: -0.12999997, y: -0.109999925, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 270439560906369010}
+  m_Father: {fileID: 270439560990992996}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: -32.112003, z: 90.00001}
+  m_LocalEulerAnglesHint: {x: 17.888, y: 90.00001, z: 180}
 --- !u!198 &3262432534342352487
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4802,7 +4802,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 0
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -7325,7 +7325,7 @@ ParticleSystem:
     magnitude:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -7379,7 +7379,7 @@ ParticleSystem:
     inWorldSpace: 0
     multiplyDragByParticleSize: 1
     multiplyDragByParticleVelocity: 1
-    dampen: 0
+    dampen: 0.47
     drag:
       serializedVersion: 2
       minMaxState: 0
@@ -9646,12 +9646,12 @@ PrefabInstance:
     - target: {fileID: 936799958684621250, guid: b853187619f51004ca99024487b7cb62,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.35
+      value: 0.84
       objectReference: {fileID: 0}
     - target: {fileID: 936799958684621250, guid: b853187619f51004ca99024487b7cb62,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.29
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 936799958684621251, guid: b853187619f51004ca99024487b7cb62,
         type: 3}
@@ -9666,7 +9666,7 @@ PrefabInstance:
     - target: {fileID: 936799958733067350, guid: b853187619f51004ca99024487b7cb62,
         type: 3}
       propertyPath: playOnAwake
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 936799958733067350, guid: b853187619f51004ca99024487b7cb62,
         type: 3}
@@ -9990,9 +9990,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b853187619f51004ca99024487b7cb62, type: 3}
---- !u!4 &270439560906369010 stripped
+--- !u!4 &270439560990992996 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 936799958733067348, guid: b853187619f51004ca99024487b7cb62,
+  m_CorrespondingSourceObject: {fileID: 936799958684621250, guid: b853187619f51004ca99024487b7cb62,
     type: 3}
   m_PrefabInstance: {fileID: 1063102126280668070}
   m_PrefabAsset: {fileID: 0}
