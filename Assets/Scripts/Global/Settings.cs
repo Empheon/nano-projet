@@ -30,7 +30,7 @@ namespace Global
 
         public void Load()
         {
-            SetVolume(PlayerPrefs.GetFloat("Volume", 1));
+            SetVolume(PlayerPrefs.GetFloat("Volume", 0.8f));
             SetLanguage(PlayerPrefs.GetString("LanguageKey", "en"));
         }
 
@@ -50,7 +50,7 @@ namespace Global
         public void SetVolume(float volume)
         {
             Volume = volume;
-            AkSoundEngine.SetRTPCValue("Master_Volume", volume * 10);
+            AkSoundEngine.SetRTPCValue("Master_Control_Volume", volume * 100);
         }
     }
 }
