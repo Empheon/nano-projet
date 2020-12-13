@@ -38,6 +38,18 @@ Switch	ID	Name	Switch Group			Notes
 	3606057529	Combat_TimeOut	Music_Switch			
 	4007961327	Combat_Begin	Music_Switch			
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1862738594	Master_Control_Volume			\Default Work Unit\Master_Control_Volume	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	348963605	Reverb			\Default Work Unit\Master Audio Bus\Reverb	
+
+Effect plug-ins	ID	Name	Type				Notes
+	2995775460	Room_Small	Wwise RoomVerb			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	46611289	Gun_Shoot_ATK_4	C:\Users\Greg\Documents\GitHub\nano-projet\Nano_Project_WwiseProject\.cache\Linux\SFX\Gun_Shoot_ATK_4_10C4C929.wem		\Actor-Mixer Hierarchy\ATK\ATK_Activation\Gun_Shoot_ATK\Gun_Shoot_ATK_4		405056
 	87556965	Musique_End_Victory	C:\Users\Greg\Documents\GitHub\nano-projet\Nano_Project_WwiseProject\.cache\Linux\SFX\Musique_End_Victory_D79FB2B7.wem		\Interactive Music Hierarchy\Music_Combat\Music_Combat\Musique_End_Victory\Musique_End_Victory		1417912

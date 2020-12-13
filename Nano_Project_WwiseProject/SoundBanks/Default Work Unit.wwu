@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{A3D880B9-C6B6-4ABA-8AF2-B7965E411BA9}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Music_Combat_Stop" ID="{A4002AA7-934A-41A2-A724-84E91B6B475E}" WorkUnitID="{52C2DAAE-32A8-4D6E-A8D8-9994003A8369}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Voice_Gameplay_Player2Wins" ID="{BCFBA8E0-2D4C-41BC-BF3A-BC1F2E5DA3D6}" WorkUnitID="{A495E05A-D29F-4504-B6AF-4994CAD6A2C5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Tapis_Rouland" ID="{53749560-62C7-41E0-AB13-A23865967F3D}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
@@ -40,6 +41,7 @@
 				</SoundBank>
 				<SoundBank Name="Game_Menu" ID="{EAEE62CD-CEE0-48DA-AC51-9ED9476F3A8B}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Voice_Intro_StoryTell" ID="{99FE5D73-F0D3-41C7-84F6-480BBE823CB6}" WorkUnitID="{A495E05A-D29F-4504-B6AF-4994CAD6A2C5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Menu_Return_Button_Interface" ID="{3CCCCF94-B6B1-46A7-BADB-2239F83D5D30}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Music_Menu" ID="{A9C1EFEC-FDDD-480B-BA81-6FB2ECB9820A}" WorkUnitID="{52C2DAAE-32A8-4D6E-A8D8-9994003A8369}" Origin="Manual" Filter="7"/>
@@ -52,6 +54,7 @@
 				</SoundBank>
 				<SoundBank Name="Globale" ID="{144A69F1-C273-4BAA-A6FD-0AFE2AA74192}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCD10668-D3F7-4E46-BFD4-348B11CFA3B5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="LoadingScreen_Door_Close" ID="{A3F1C78A-07F8-4A91-88B7-8CD8BB85FEA2}" WorkUnitID="{7D4B3D91-103F-4B69-BC1D-058247F293E6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="LoadingScreen_Door_Open" ID="{5816AF3A-B72F-4EBE-9DBA-5A74712A6101}" WorkUnitID="{7D4B3D91-103F-4B69-BC1D-058247F293E6}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>

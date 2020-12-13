@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="636067499" Language="SFX" Hash="3277930999">
+		<SoundBank Id="636067499" Language="SFX" Hash="2193889839">
 			<ObjectPath>\SoundBanks\Default Work Unit\Game_Menu</ObjectPath>
 			<ShortName>Game_Menu</ShortName>
 			<Path>Game_Menu.bnk</Path>
@@ -81,8 +81,14 @@
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
+			<IncludedAuxBusses>
+				<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+			</IncludedAuxBusses>
+			<GameParameters>
+				<GameParameter Id="1862738594" Name="Master_Control_Volume" ObjectPath="\Game Parameters\Default Work Unit\Master_Control_Volume"/>
+			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="708634017" Language="SFX" Hash="608707312">
+		<SoundBank Id="708634017" Language="SFX" Hash="1798096786">
 			<ObjectPath>\SoundBanks\Default Work Unit\Globale</ObjectPath>
 			<ShortName>Globale</ShortName>
 			<Path>Globale.bnk</Path>
@@ -90,6 +96,9 @@
 				<Event Id="4073936959" Name="LoadingScreen_Door_Close" ObjectPath="\Events\Bruitages\LoadingScreen_Door_Close" DurationType="OneShot" DurationMin="1.494667" DurationMax="1.494667"/>
 				<Event Id="1019552089" Name="LoadingScreen_Door_Open" ObjectPath="\Events\Bruitages\LoadingScreen_Door_Open" DurationType="OneShot" DurationMin="1.704000" DurationMax="1.704000"/>
 			</IncludedEvents>
+			<IncludedAuxBusses>
+				<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+			</IncludedAuxBusses>
 			<IncludedMemoryFiles>
 				<File Id="160641533" Language="SFX">
 					<ShortName>LoadingScreen_Door_Close.wav</ShortName>
@@ -100,6 +109,9 @@
 					<Path>SFX\LoadingScreen_Door_Open_10C4C929.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
+			<GameParameters>
+				<GameParameter Id="1862738594" Name="Master_Control_Volume" ObjectPath="\Game Parameters\Default Work Unit\Master_Control_Volume"/>
+			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX" Hash="2099799292">
 			<ObjectPath>Init</ObjectPath>
@@ -112,7 +124,7 @@
 				<GameParameter Id="1862738594" Name="Master_Control_Volume" ObjectPath="\Game Parameters\Default Work Unit\Master_Control_Volume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="881686573">
+		<SoundBank Id="3161908922" Language="SFX" Hash="2712044616">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -505,6 +517,12 @@
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
+			<IncludedAuxBusses>
+				<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+			</IncludedAuxBusses>
+			<GameParameters>
+				<GameParameter Id="1862738594" Name="Master_Control_Volume" ObjectPath="\Game Parameters\Default Work Unit\Master_Control_Volume"/>
+			</GameParameters>
 			<SwitchGroups>
 				<SwitchGroup Id="2724869341" Name="Music_Switch" ObjectPath="\Switches\Default Work Unit\Music_Switch">
 					<Switches>

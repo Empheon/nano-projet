@@ -6,6 +6,18 @@ Event	ID	Name			Wwise Object Path	Notes
 	3462839464	Menu_Validate_Button_Interface			\Bruitages\Menu_Validate_Button_Interface	
 	3537179580	Menu_Return_Button_Interface			\Bruitages\Menu_Return_Button_Interface	
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1862738594	Master_Control_Volume			\Default Work Unit\Master_Control_Volume	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	348963605	Reverb			\Default Work Unit\Master Audio Bus\Reverb	
+
+Effect plug-ins	ID	Name	Type				Notes
+	2995775460	Room_Small	Wwise RoomVerb			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	231718174	Validate_Button_Interface	C:\Users\Greg\Documents\GitHub\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\Validate_Button_Interface_10C4C929.wem		\Actor-Mixer Hierarchy\UI\Validate_Button_Interface		19000
 	327159191	Return_Button_Interface	C:\Users\Greg\Documents\GitHub\nano-projet\Nano_Project_WwiseProject\.cache\Windows\SFX\Return_Button_Interface_10C4C929.wem		\Actor-Mixer Hierarchy\UI\Return_Button_Interface		8272
