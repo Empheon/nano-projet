@@ -47,9 +47,9 @@ namespace NeoMecha
 
             float pathOffset = 0.68f - newX;
             Canon c = leftMecha.GetComponentInChildren<Canon>();
-            c.UpdatePathsWithOffset(pathOffset * (3 / leftMecha.transform.localScale.x));
+            c.UpdatePathsWithOffset(pathOffset * (4 / leftMecha.transform.localScale.x));
             c = rightMecha.GetComponentInChildren<Canon>();
-            c.UpdatePathsWithOffset(pathOffset * (3 / rightMecha.transform.localScale.x));
+            c.UpdatePathsWithOffset(-pathOffset * (4 / rightMecha.transform.localScale.x));
         }
     }
 }
