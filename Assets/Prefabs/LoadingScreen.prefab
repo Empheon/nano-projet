@@ -363,7 +363,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: -1920, y: 200}
-  m_SizeDelta: {x: 1500, y: 200}
+  m_SizeDelta: {x: 1700, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2952979620272982125
 CanvasRenderer:
@@ -392,8 +392,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Gardez un oeil sur les lumi\xE8res au dessus de vos r\xE9servoirs de munition
-    et d'\xE9nergie. Elles indiquent s'ils sont charg\xE9s ou pas !"
+  m_text: Pay attention to the light color above your ammunition and energy deposits,
+    they indicate whether your system is loaded or not!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9706d21595cd2c14ebf1594dd92fd292, type: 2}
   m_sharedMaterial: {fileID: -4128810442978578077, guid: 9706d21595cd2c14ebf1594dd92fd292,
@@ -421,8 +421,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
