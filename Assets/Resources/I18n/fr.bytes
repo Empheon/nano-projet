@@ -56,9 +56,9 @@ player_2;Joueur 2
 
 control_interact;Intéragir
 control_drop_cancel;Lâcher / Annuler
-control_jump_select;Sauter / Sélectionner (Menus)
+control_jump_select;Sauter / <color=#FFCB36>Sélectionner (Menus)</color>
 control_move;Se déplacer
-control_interact_select;Intéragir / Sélectionner (Menus)
+control_interact_select;Intéragir / <color=#FFCB36>Sélectionner (Menus)</color>
 control_jump;Sauter
 
 final_round;Dernier round

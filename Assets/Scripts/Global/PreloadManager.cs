@@ -19,6 +19,9 @@ namespace Global
         private void Awake()
         {
             DontDestroyOnLoad(globalGO);
+
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
 
 #if UNITY_EDITOR // if we are building, we dont need this system to run
