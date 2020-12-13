@@ -9,6 +9,7 @@ using DG.Tweening;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 
 namespace UI
 {
@@ -20,10 +21,13 @@ namespace UI
         [SerializeField]
         private GameObject EventSystem;
 
-        private readonly float m_checkFrequency = 0.01f;
+        private const float DEFAULT_FADE_DURATION = 0.8f;
         private Coroutine m_coroutine;
 
         private static bool m_wasPlayed = false;
+
+        public UnityEvent OnStartIntro;
+        public UnityEvent OnFinishIntro;
 
         private void Awake()
         {
@@ -54,7 +58,7 @@ namespace UI
             for (int i = 0; i < splashScreenItems.Count; i++)
             {
                 HideAllScreens();
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(DEFAULT_FADE_DURATION);
 
                 var item = splashScreenItems[i];
                 ShowScreen(item);
@@ -63,22 +67,21 @@ namespace UI
                 {
                     // Wait before everything loads (especially the sound)
                     yield return new WaitForSeconds(0.3f);
-
-                    // ---------------- Start intro music here
+                    OnStartIntro.Invoke();
                 }
 
                 item.Wrapper.transform.DOScale(item.ToScale, item.Duration).From(item.FromScale).SetEase(Ease.Linear);
 
 
-                yield return new WaitForSeconds(item.Duration - 0.5f);
+                yield return new WaitForSeconds(item.Duration - DEFAULT_FADE_DURATION);
             }
 
             HideAllScreens();
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(DEFAULT_FADE_DURATION);
             FinishIntro();
         }
 
-        private void HideAllScreens(float duration = 0.5f)
+        private void HideAllScreens(float duration = DEFAULT_FADE_DURATION)
         {
             foreach (var splashScreenItem in splashScreenItems)
             {
@@ -93,7 +96,7 @@ namespace UI
             }
         }
 
-        private void ShowScreen(SplashScreenItem item, float duration = 0.5f)
+        private void ShowScreen(SplashScreenItem item, float duration = DEFAULT_FADE_DURATION)
         {
             foreach (Image img in item.Wrapper.GetComponentsInChildren<Image>())
             {
@@ -136,6 +139,8 @@ namespace UI
                     text.DOKill();
                 }
             }
+
+            OnFinishIntro.Invoke();
 
             m_wasPlayed = true;
             menuCanvas.SetActive(true);
