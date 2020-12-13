@@ -7,11 +7,11 @@ namespace Inputs
     {
         private bool _ready;
         
-        public bool InteractThisFrame() => Keyboard.current.rightCtrlKey.wasPressedThisFrame;
+        public bool InteractThisFrame() => Keyboard.current.rightShiftKey.wasPressedThisFrame;
 
-        public bool ValidateThisFrame() => Keyboard.current.rightCtrlKey.wasPressedThisFrame;
+        public bool ValidateThisFrame() => Keyboard.current.rightShiftKey.wasPressedThisFrame;
 
-        public bool CancelThisFrame() => false;
+        public bool CancelThisFrame() => Keyboard.current.rightCtrlKey.wasPressedThisFrame;
 
         public bool JumpThisFrame() => Keyboard.current.upArrowKey.wasPressedThisFrame;
 
