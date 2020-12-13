@@ -27,6 +27,8 @@ namespace Inputs
 
             return baseMove;
         }
+        
+        public bool PauseThisFrame() => Keyboard.current.escapeKey.wasPressedThisFrame;
 
         public void UpdateState()
         {

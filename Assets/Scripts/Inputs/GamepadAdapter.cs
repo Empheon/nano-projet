@@ -24,6 +24,8 @@ namespace Inputs
 
         public Vector2 GetMovement() => Gamepad.leftStick.ReadValue();
 
+        public bool PauseThisFrame() => Gamepad.startButton.wasPressedThisFrame;
+
         public void UpdateState()
         {
             if (Gamepad.buttonSouth.wasPressedThisFrame)

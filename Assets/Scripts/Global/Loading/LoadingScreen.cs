@@ -48,6 +48,7 @@ namespace Global.Loading
             var op = SceneManager.LoadSceneAsync(_targetSceneIndex);
             op.completed += operation =>
             {
+                AkSoundEngine.StopAll();
                 _animator.SetBool("Loading", false);
                 AkSoundEngine.PostEvent("LoadingScreen_Door_Open", gameObject);
                 _targetSceneIndex = -1;
