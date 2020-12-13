@@ -5,6 +5,11 @@
 			<ChildrenList>
 				<RandomSequenceContainer Name="JAM_Hacked_Room" ID="{89D8AB8A-A5B0-4F2A-8A30-7627D2D9F777}" ShortID="373447270">
 					<PropertyList>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>-2</Value>
+							</ValueList>
+						</Property>
 						<Property Name="UserAuxSendVolume0" Type="Real64">
 							<ValueList>
 								<Value>-6</Value>

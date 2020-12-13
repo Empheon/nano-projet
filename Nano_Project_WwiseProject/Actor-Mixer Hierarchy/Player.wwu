@@ -5,6 +5,11 @@
 			<ChildrenList>
 				<RandomSequenceContainer Name="Jump_Character" ID="{3E563552-8C85-43F4-80F2-6BCFAB99AD41}" ShortID="128234414">
 					<PropertyList>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>8</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>

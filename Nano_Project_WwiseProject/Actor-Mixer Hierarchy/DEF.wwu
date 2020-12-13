@@ -115,6 +115,11 @@
 				</BlendContainer>
 				<Sound Name="DEF_Deactivation" ID="{E95DA536-CCBD-4009-A86E-C9AD0EA1C169}" ShortID="1025033226">
 					<PropertyList>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
 						<Property Name="UserAuxSendVolume0" Type="Real64">
 							<ValueList>
 								<Value>-6</Value>
