@@ -57,6 +57,8 @@ namespace NeoMecha
             characterController.Stop();
             characterController.enabled = false;
 
+            AkSoundEngine.PostEvent("Tapis_Rouland", gameObject);
+            
             // animate
             characterAnimator.SetTrigger("PushButton");
             PickableResource pickableResource = conveyerAnimation.OnConvey(resourcePrefab.gameObject).GetComponent<PickableResource>();

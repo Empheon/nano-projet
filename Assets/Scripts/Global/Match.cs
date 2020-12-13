@@ -68,6 +68,8 @@ namespace Global
             WinScreen screen = Instantiate(winScreenPrefab, Vector3.zero, Quaternion.identity);
             screen.DisplayWinner(winningTeam);
             
+            AkSoundEngine.SetSwitch("Music_Switch", "Combat_End", GameObject.Find("Round"));
+            
             yield return new WaitForSeconds(winScreenDisplayTime);
             
             LoadingScreen.Instance.LoadScene(menuSceneIndex);

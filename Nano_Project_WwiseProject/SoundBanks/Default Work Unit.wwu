@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{A3D880B9-C6B6-4ABA-8AF2-B7965E411BA9}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Music_Combat_Stop" ID="{A4002AA7-934A-41A2-A724-84E91B6B475E}" WorkUnitID="{52C2DAAE-32A8-4D6E-A8D8-9994003A8369}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Voice_Gameplay_Player2Wins" ID="{BCFBA8E0-2D4C-41BC-BF3A-BC1F2E5DA3D6}" WorkUnitID="{A495E05A-D29F-4504-B6AF-4994CAD6A2C5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Tapis_Rouland" ID="{53749560-62C7-41E0-AB13-A23865967F3D}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="JAM_Deactivation" ID="{714D7B4E-18DA-42BB-B609-EF78CD1929F0}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
@@ -13,6 +14,7 @@
 						<ObjectRef Name="ATK_Shield_Impact" ID="{EEED4C44-C8C3-43F9-AEC8-E1D705E89160}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Sound_Repair_Room" ID="{0240C629-9DA1-467E-8D22-94A5179420F3}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Amb_EXT" ID="{3F0E0ECC-4300-46D0-9AFC-9CE7D64B90B5}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Music_Combat_Start" ID="{B4EEBFB8-AD6F-46DE-83E2-F4E0A3943253}" WorkUnitID="{52C2DAAE-32A8-4D6E-A8D8-9994003A8369}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Tower_Defeat_Destroyed" ID="{24BAD3CF-82EA-471C-9DF5-E7B399201A4A}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="JAM_Activation_Play" ID="{DBE41021-A40E-4743-8105-CA2D37A9372E}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="ATK_Activation" ID="{3A572449-9B8D-4769-B99F-6121D0A34C8D}" WorkUnitID="{F622F8A6-73FD-45B8-93F0-5EC6DB5E4A92}" Origin="Manual" Filter="7"/>
