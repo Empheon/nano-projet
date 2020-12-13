@@ -55,3 +55,6 @@ control_jump_select;Sauter / Sélectionner (Menus)
 control_move;Se déplacer
 control_interact_select;Intéragir / Sélectionner (Menus)
 control_jump;Sauter
+
+final_round;Dernier round
+fight;Combattez !

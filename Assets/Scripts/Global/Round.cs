@@ -5,6 +5,7 @@ using System.Linq;
 using Character;
 using UI;
 using UnityEngine;
+using UnityEngine.Events;
 using static Global.PlayerManager;
 using CharacterController = Character.CharacterController;
 
@@ -29,6 +30,11 @@ namespace Global
 
         public Action<int> OnLeftHPChange;
         public Action<int> OnRightHPChange;
+
+        public UnityEvent OnRound1Start;
+        public UnityEvent OnRound2Start;
+        public UnityEvent OnRound3Start;
+
         public Team WinnerTeam { get; private set; }
 
         private IEnumerator Start()
@@ -61,9 +67,18 @@ namespace Global
             string voiceEvent; 
             switch (Match.Instance.FinishedRounds.Count)
             {
-                case 0: voiceEvent = "Voice_Gameplay_Round1"; break;
-                case 1: voiceEvent = "Voice_Gameplay_Round2"; break;
-                case 2: default: voiceEvent = "Voice_Gameplay_FinalRound"; break;
+                case 0: 
+                    voiceEvent = "Voice_Gameplay_Round1";
+                    OnRound1Start.Invoke();
+                    break;
+                case 1: 
+                    voiceEvent = "Voice_Gameplay_Round2";
+                    OnRound2Start.Invoke(); 
+                    break;
+                case 2: default:
+                    voiceEvent = "Voice_Gameplay_FinalRound";
+                    OnRound3Start.Invoke(); 
+                    break;
             }
             
             AkSoundEngine.PostEvent(voiceEvent, gameObject);
