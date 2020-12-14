@@ -7,9 +7,9 @@ namespace Inputs
     {
         private bool _ready;
         
-        public bool InteractThisFrame() => Keyboard.current.leftShiftKey.wasPressedThisFrame;
-        public bool ValidateThisFrame() => Keyboard.current.leftShiftKey.wasPressedThisFrame;
-        public bool CancelThisFrame() => false;
+        public bool InteractThisFrame() => Keyboard.current.eKey.wasPressedThisFrame;
+        public bool ValidateThisFrame() => Keyboard.current.eKey.wasPressedThisFrame;
+        public bool CancelThisFrame() => Keyboard.current.qKey.wasPressedThisFrame;
 
         public bool JumpThisFrame() =>
             Keyboard.current.wKey.wasPressedThisFrame || Keyboard.current.spaceKey.wasPressedThisFrame;
@@ -32,7 +32,7 @@ namespace Inputs
 
         public void UpdateState()
         {
-            if (Keyboard.current.spaceKey.wasPressedThisFrame)
+            if (Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.eKey.wasPressedThisFrame)
                 _ready = !_ready;
         }
 

@@ -140,8 +140,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: They didn't wait long before waging war upon themselves, using remnants
-    of human technologies to their means...
+  m_text: "Peu de temps passa avant qu'elles ne se d\xE9clar\xE8rent la guerre en
+    utilisant les restes des technologies humaines..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a394fb73f206aad43ada1b8dea4d81b0, type: 2}
   m_sharedMaterial: {fileID: -4128810442978578077, guid: a394fb73f206aad43ada1b8dea4d81b0,
@@ -371,10 +371,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'There was a time when humanity controlled the world.
-
-    The Mice lived
-    locked up in fear for years...'
+  m_text: "Il fut un temps o\xF9 l\u2019humanit\xE9 contr\xF4lait le monde. Les souris
+    vivaient retranch\xE9es dans la peur pendant des ann\xE9es..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a394fb73f206aad43ada1b8dea4d81b0, type: 2}
   m_sharedMaterial: {fileID: -4128810442978578077, guid: a394fb73f206aad43ada1b8dea4d81b0,
@@ -656,8 +654,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -280, y: 0}
-  m_SizeDelta: {x: 500, y: 50}
+  m_AnchoredPosition: {x: -129.5, y: 0}
+  m_SizeDelta: {x: 364.1, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1533443357133645463
 CanvasRenderer:
@@ -686,7 +684,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: or "Space" to skip
+  m_text: ou "Espace" pour passer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a394fb73f206aad43ada1b8dea4d81b0, type: 2}
   m_sharedMaterial: {fileID: -4128810442978578077, guid: a394fb73f206aad43ada1b8dea4d81b0,
@@ -721,7 +719,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 4
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -962,10 +960,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'But one day, greed for power led humans to their doom.
-
-    Mice could
-    rebuild a new civilization from the ashes.'
+  m_text: "Mais un jour, leur avidit\xE9 de pouvoir les mena \xE0 leur perte. De
+    leurs cendres, les souris purent reconstruire une nouvelle civilisation."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a394fb73f206aad43ada1b8dea4d81b0, type: 2}
   m_sharedMaterial: {fileID: -4128810442978578077, guid: a394fb73f206aad43ada1b8dea4d81b0,
@@ -1263,8 +1259,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Wait... No, that is not what happened... Who said Mice were wisier than
-    humans?
+  m_text: "Attendez non... ce n\u2019est pas \xE7a.... Qui a dit que les souris \xE9taient
+    plus sages que les humains ?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a394fb73f206aad43ada1b8dea4d81b0, type: 2}
   m_sharedMaterial: {fileID: -4128810442978578077, guid: a394fb73f206aad43ada1b8dea4d81b0,
@@ -1597,7 +1593,7 @@ PrefabInstance:
     - target: {fileID: 7825457362033672869, guid: abf4d97247eed2b49b8bb6e7c68b83c5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 197.91
+      value: 127.77
       objectReference: {fileID: 0}
     - target: {fileID: 7825457362033672869, guid: abf4d97247eed2b49b8bb6e7c68b83c5,
         type: 3}

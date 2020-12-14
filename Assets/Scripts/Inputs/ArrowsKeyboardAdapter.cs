@@ -32,7 +32,7 @@ namespace Inputs
 
         public void UpdateState()
         {
-            if (Keyboard.current.upArrowKey.wasPressedThisFrame)
+            if (Keyboard.current.rightShiftKey.wasPressedThisFrame)
                 _ready = !_ready;
         }
 
